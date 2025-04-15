@@ -1049,6 +1049,17 @@ SMPL-X, that extends SMPL with fully articulated hands and facial expressions (5
 </details>
 
 <details close>
+<summary>🔥 Topic 5: Physics-based AIGC</summary>
+
+#### Survey
+- [Exploring the Evolution of Physics Cognition in Video Generation: A Survey](https://arxiv.org/abs/2503.21765), ArXiv 2025
+	
+#### Awesome Repos
+- Resource1: [Awesome-Physics-Cognition-based-Video-Generation](https://github.com/minnie-lin/Awesome-Physics-Cognition-based-Video-Generation)
+
+</details>
+
+<details close>
 <summary>Dynamic Gaussian Splatting</summary>
 <details close>
 <summary>Neural Deformable 3D Gaussians</summary>
