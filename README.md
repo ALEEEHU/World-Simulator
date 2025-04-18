@@ -41,6 +41,7 @@ This repository is divided into two main sections:
     * [ArXiv Papers](#-t2v-arxiv-papers)
     * [Additional Info](#video-other-additional-info)
   - [Text to 3D Scene](#text-to-scene)
+    * [Accepted Papers](#-3d-scene-accepted-papers)
     * [ArXiv Papers](#-3d-scene-arxiv-papers)
   - [Text to Human Motion](#text-to-human-motion)
     * [Accepted Papers](#-motion-accepted-papers)
@@ -364,20 +365,23 @@ An open collection of state-of-the-art (SOTA), novel **Text to X (X can be every
 
 
 ## Update Logs
-* `2025.03.10` - [CVPR 2025 Accepted Papers](https://cvpr.thecvf.com/Conferences/2025/AcceptedPapers)🎉
-* `2025.02.28` - update several papers status "CVPR 2025" to accepted papers, congrats to all 🎉
+
+* `2025.04.18` - update layout on section [Related Resources](#related-resources).
+
   
 <details span>
 <summary><b>2025 Update Logs:</b></summary>
-<br>	
+
+* `2025.03.10` - [CVPR 2025 Accepted Papers](https://cvpr.thecvf.com/Conferences/2025/AcceptedPapers)🎉
+* `2025.02.28` - update several papers status "CVPR 2025" to accepted papers, congrats to all 🎉
 * `2025.01.23` - update several papers status "ICLR 2025" to accepted papers, congrats to all 🎉
 * `2025.01.09` - update layout.
-
   
 </details>
 
 <details close>
 <summary><b>Previous 2024 Update Logs:</b></summary>
+
 * `2024.12.21` adjusted the layouts of several sections and _Happy Winter Solstice_ ⚪🥣.
 * `2024.09.26` - update several papers status "NeurIPS 2024" to accepted papers, congrats to all 🎉
 * `2024.09.03` - add one new section 'text to model'.
@@ -393,7 +397,6 @@ An open collection of state-of-the-art (SOTA), novel **Text to X (X can be every
 * update some papers accepted by CVPR 2024! Congratulations🎉
   
 </details>
-<br>
 
 ## Text to 4D
 (Also, Image/Video to 4D)
@@ -401,7 +404,9 @@ An open collection of state-of-the-art (SOTA), novel **Text to X (X can be every
 ### 🎉 4D Accepted Papers
 | Year | Title                                                        | Venue  |                           Paper                            |                      Code                      | Project Page                      |
 | ---- | ------------------------------------------------------------ | :----: | :--------------------------------------------------------: | :--------------------------------------------: | :--------------------------------------------: |
+| 2025 | **Optimizing 4D Gaussians for Dynamic Scene Video from Single Landscape Images**  | ICLR 2025 |          [Link](https://arxiv.org/abs/2504.05458)          | [Link](https://github.com/cvsp-lab/ICLR2025_3D-MOM)  | [Link](https://paper.pnu-cvsp.com/ICLR2025_3D-MOM/)  |
 | 2025 | **GS-DiT: Advancing Video Generation with Pseudo 4D Gaussian Fields through Efficient Dense 3D Point Tracking**  | CVPR 2025 |          [Link](https://arxiv.org/abs/2501.02690)          | [Link](https://github.com/wkbian/GS-DiT)  | [Link](https://wkbian.github.io/Projects/GS-DiT/)  |
+| 2025 | **Stereo4D: Learning How Things Move in 3D from Internet Stereo Videos**  | CVPR 2025 Oral |          [Link](https://arxiv.org/abs/2412.09621)          | [Link](https://github.com/Stereo4d/stereo4d-code)  | [Link](https://stereo4d.github.io/)  |
 
 <details close>
 <summary>Accepted Papers References</summary>
@@ -409,12 +414,27 @@ An open collection of state-of-the-art (SOTA), novel **Text to X (X can be every
 ```
 %accepted papers
 
+@inproceedings{jinoptimizing,
+  title={Optimizing 4D Gaussians for Dynamic Scene Video from Single Landscape Images},
+  author={Jin, In-Hwan and Choo, Haesoo and Jeong, Seong-Hun and Heemoon, Park and Kim, Junghwan and Kwon, Oh-joon and Kong, Kyeongbo},
+  booktitle={The Thirteenth International Conference on Learning Representations},
+  year={2025}
+}
+
 @article{bian2025gsdit,
   title={GS-DiT: Advancing Video Generation with Pseudo 4D Gaussian Fields through Efficient Dense 3D Point Tracking},
   author={Bian, Weikang and Huang, Zhaoyang and Shi, Xiaoyu and and Li, Yijin and Wang, Fu-Yun and Li, Hongsheng},
   journal={arXiv preprint arXiv:2501.02690},
   year={2025}
 }
+
+@article{jin2024stereo4d,
+  title={Stereo4D: Learning How Things Move in 3D from Internet Stereo Videos}, 
+  author={Jin, Linyi and Tucker, Richard and Li, Zhengqi and Fouhey, David and Snavely, Noah and Holynski, Aleksander},
+  journal={CVPR},
+  year={2025},
+}
+
 ```
 </details>
 
@@ -456,6 +476,24 @@ Tianqi Liu, Zihao Huang, Zhaoxi Chen, Guangcong Wang, Shoukang Hu, Liao Shen, Hu
 We present Free4D, a novel tuning-free framework for 4D scene generation from a single image. Existing methods either focus on object-level generation, making scene-level generation infeasible, or rely on large-scale multi-view video datasets for expensive training, with limited generalization ability due to the scarcity of 4D scene data. In contrast, our key insight is to distill pre-trained foundation models for consistent 4D scene representation, which offers promising advantages such as efficiency and generalizability. 1) To achieve this, we first animate the input image using image-to-video diffusion models followed by 4D geometric structure initialization. 2) To turn this coarse structure into spatial-temporal consistent multiview videos, we design an adaptive guidance mechanism with a point-guided denoising strategy for spatial consistency and a novel latent replacement strategy for temporal coherence. 3) To lift these generated observations into consistent 4D representation, we propose a modulation-based refinement to mitigate inconsistencies while fully leveraging the generated information. The resulting 4D representation enables real-time, controllable rendering, marking a significant advancement in single-image-based 4D scene generation.
 </details>
 
+#### 5. Geo4D: Leveraging Video Generators for Geometric 4D Scene Reconstruction
+Zeren Jiang, Chuanxia Zheng, Iro Laina, Diane Larlus, Andrea Vedaldi
+
+(Visual Geometry Group University of Oxford, Naver Labs Europe)
+<details span>
+<summary><b>Abstract</b></summary>
+We introduce Geo4D, a method to repurpose video diffusion models for monocular 3D reconstruction of dynamic scenes. By leveraging the strong dynamic prior captured by such video models, Geo4D can be trained using only synthetic data while generalizing well to real data in a zero-shot manner. Geo4D predicts several complementary geometric modalities, namely point, depth, and ray maps. It uses a new multi-modal alignment algorithm to align and fuse these modalities, as well as multiple sliding windows, at inference time, thus obtaining robust and accurate 4D reconstruction of long videos. Extensive experiments across multiple benchmarks show that Geo4D significantly surpasses state-of-the-art video depth estimation methods, including recent methods such as MonST3R, which are also designed to handle dynamic scenes.
+</details>
+
+#### 6. In-2-4D: Inbetweening from Two Single-View Images to 4D Generation
+Sauradip Nag, Daniel Cohen-Or, Hao Zhang, Ali Mahdavi-Amiri
+
+(Simon Fraser University, Tel Aviv University)
+<details span>
+<summary><b>Abstract</b></summary>
+We propose a new problem, In-2-4D, for generative 4D (i.e., 3D + motion) inbetweening from a minimalistic input setting: two single-view images capturing an object in two distinct motion states. Given two images representing the start and end states of an object in motion, our goal is to generate and reconstruct the motion in 4D. We utilize a video interpolation model to predict the motion, but large frame-to-frame motions can lead to ambiguous interpretations. To overcome this, we employ a hierarchical approach to identify keyframes that are visually close to the input states and show significant motion, then generate smooth fragments between them. For each fragment, we construct the 3D representation of the keyframe using Gaussian Splatting. The temporal frames within the fragment guide the motion, enabling their transformation into dynamic Gaussians through a deformation field. To improve temporal consistency and refine 3D motion, we expand the self-attention of multi-view diffusion across timesteps and apply rigid transformation regularization. Finally, we merge the independently generated 3D motion segments by interpolating boundary deformation fields and optimizing them to align with the guiding video, ensuring smooth and flicker-free transitions. Through extensive qualitative and quantitiave experiments as well as a user study, we show the effectiveness of our method and its components. 
+</details>
+
 -----
 
 </details>
@@ -466,6 +504,9 @@ We present Free4D, a novel tuning-free framework for 4D scene generation from a 
 | 2025 | **WideRange4D: Enabling High-Quality 4D Reconstruction with Wide-Range Movements and Scenes**  | 17 Mar 2025 |          [Link](https://arxiv.org/abs/2503.13435)          | [Link](https://github.com/Gen-Verse/WideRange4D)  | [Dataset Page](https://huggingface.co/datasets/Gen-Verse/WideRange4D)  |
 | 2025 | **SV4D 2.0: Enhancing Spatio-Temporal Consistency in Multi-View Video Diffusion for High-Quality 4D Generation**  | 20 Mar 2025 |          [Link](https://arxiv.org/abs/2503.16396)          | --  | [Link](https://sv4d2.0.github.io/)  |
 | 2025 | **Free4D: Tuning-free 4D Scene Generation with Spatial-Temporal Consistency**  | 26 Mar 2025 |          [Link](https://arxiv.org/abs/2503.20785)          | [Link](https://github.com/TQTQliu/Free4D)  | [Link](https://free4d.github.io/)  |
+| 2025 | **Geo4D: Leveraging Video Generators for Geometric 4D Scene Reconstruction**  | 10 Apr 2025 |          [Link](https://arxiv.org/abs/2504.07961)          | [Link](https://github.com/jzr99/Geo4D)  | [Link](https://geo4d.github.io/)  |
+| 2025 | **In-2-4D: Inbetweening from Two Single-View Images to 4D Generation**  | 11 Apr 2025 |          [Link](https://arxiv.org/abs/2504.08366)          | [Link](https://github.com/sauradip/In-2-4D)  | [Link](https://in-2-4d.github.io/)  |
+
 
 <details close>
 <summary>ArXiv Papers References</summary>
@@ -505,7 +546,25 @@ We present Free4D, a novel tuning-free framework for 4D scene generation from a 
      author={Liu, Tianqi and Huang, Zihao and Chen, Zhaoxi and Wang, Guangcong and Hu, Shoukang and Shen, liao and Sun, Huiqiang and Cao, Zhiguo and Li, Wei and Liu, Ziwei},
      journal={arXiv preprint arXiv:2503.20785},
      year={2025}
- }
+}
+
+@article{jiang2025geo4d,
+  title={Geo4D: Leveraging Video Generators for Geometric 4D Scene Reconstruction},
+  author={Jiang, Zeren and Zheng, Chuanxia and Laina, Iro and Larlus, Diane and Vedaldi, Andrea},
+  journal={arXiv preprint arXiv:2504.07961},
+  year={2025}
+}
+
+@misc{nag2025in24dinbetweeningsingleviewimages,
+      title={In-2-4D: Inbetweening from Two Single-View Images to 4D Generation}, 
+      author={Sauradip Nag and Daniel Cohen-Or and Hao Zhang and Ali Mahdavi-Amiri},
+      year={2025},
+      eprint={2504.08366},
+      archivePrefix={arXiv},
+      primaryClass={cs.GR},
+      url={https://arxiv.org/abs/2504.08366}, 
+}
+
 ```
 </details>
 
@@ -661,6 +720,29 @@ The quality of video-text pairs fundamentally determines the upper bound of text
 
 ## Text to Scene
 
+### 🎉 3D Scene Accepted Papers
+| Year | Title                                                        | Venue  |                           Paper                            |                      Code                      | Project Page                      |
+| ---- | ------------------------------------------------------------ | :----: | :--------------------------------------------------------: | :--------------------------------------------: | :--------------------------------------------: |
+| 2025 | **Scene Splatter: Momentum 3D Scene Generation from Single Image with Video Diffusion Model**  | CVPR 2025 |          [Link](https://arxiv.org/abs/2504.02764)          | --  | [Link](https://shengjun-zhang.github.io/SceneSplatter/)  |
+
+<details close>
+<summary>Accepted Papers References</summary>
+
+```
+%accepted papers
+
+@article{Scene Splatter,
+        title   = {Scene Splatter: Momentum 3D Scene Generation from Single Image with Video Diffusion Model},
+        author  = {Zhang, Shengjun and Li, Jinzhao and Fei, Xin and Liu, Hao and Duan, Yueqi},
+        journal = {IEEE / CVF Computer Vision and Pattern Recognition Conference (CVPR)},
+        year    = {2025},
+}
+
+```
+</details>
+
+-------
+
 ### 💡 3D Scene ArXiv Papers
 
 #### 1. LAYOUTDREAMER: Physics-guided Layout for Text-to-3D Compositional Scene Generation
@@ -771,11 +853,21 @@ Lixing Xiao, Shunlin Lu, Huaijin Pi, Ke Fan, Liang Pan, Yueer Zhou, Ziyong Feng,
 This paper addresses the challenge of text-conditioned streaming motion generation, which requires us to predict the next-step human pose based on variable-length historical motions and incoming texts. Existing methods struggle to achieve streaming motion generation, e.g., diffusion models are constrained by pre-defined motion lengths, while GPT-based methods suffer from delayed response and error accumulation problem due to discretized non-causal tokenization. To solve these problems, we propose MotionStreamer, a novel framework that incorporates a continuous causal latent space into a probabilistic autoregressive model. The continuous latents mitigate information loss caused by discretization and effectively reduce error accumulation during long-term autoregressive generation. In addition, by establishing temporal causal dependencies between current and historical motion latents, our model fully utilizes the available information to achieve accurate online motion decoding. Experiments show that our method outperforms existing approaches while offering more applications, including multi-round generation, long-term generation, and dynamic motion composition. 
 </details>
 
+#### 4. Animating the Uncaptured: Humanoid Mesh Animation with Video Diffusion Models
+Marc Benedí San Millán, Angela Dai, Matthias Nießner
+
+(Technical University of Munich)
+<details span>
+<summary><b>Abstract</b></summary>
+Animation of humanoid characters is essential in various graphics applications, but requires significant time and cost to create realistic animations. We propose an approach to synthesize 4D animated sequences of input static 3D humanoid meshes, leveraging strong generalized motion priors from generative video models -- as such video models contain powerful motion information covering a wide variety of human motions. From an input static 3D humanoid mesh and a text prompt describing the desired animation, we synthesize a corresponding video conditioned on a rendered image of the 3D mesh. We then employ an underlying SMPL representation to animate the corresponding 3D mesh according to the video-generated motion, based on our motion optimization. This enables a cost-effective and accessible solution to enable the synthesis of diverse and realistic 4D animations.
+</details>
+
 | Year | Title                                                        | ArXiv Time  |                           Paper                            |                      Code                      | Project Page                      |
 | ---- | ------------------------------------------------------------ | :----: | :--------------------------------------------------------: | :--------------------------------------------: | :--------------------------------------------: |
 | 2025 | **MotionLab: Unified Human Motion Generation and Editing via the Motion-Condition-Motion Paradigm**  | 6 Feb 2025 |          [Link](https://arxiv.org/abs/2502.02358)          | [Link](https://github.com/Diouo/MotionLab)  | [Link](https://diouo.github.io/motionlab.github.io/)  |
 | 2025 | **Motion Anything: Any to Motion Generation**  | 12 Mar 2025 |          [Link](https://arxiv.org/abs/2503.06955)          | [Link](https://github.com/steve-zeyu-zhang/MotionAnything)  | [Link](https://steve-zeyu-zhang.github.io/MotionAnything/)  |
 | 2025 | **MotionStreamer: Streaming Motion Generation via Diffusion-based Autoregressive Model in Causal Latent Space**  | 19 Mar 2025 |          [Link](https://arxiv.org/abs/2503.15451)          | [Link](https://github.com/zju3dv/MotionStreamer)  | [Link](https://zju3dv.github.io/MotionStreamer/)  |
+| 2025 | **Animating the Uncaptured: Humanoid Mesh Animation with Video Diffusion Models**  | 20 Mar 2025 |          [Link](https://arxiv.org/abs/2503.15996)          | --  | [Link](https://marcb.pro/atu/)  |
 
 <details close>
 <summary>ArXiv Papers References</summary>
@@ -803,6 +895,17 @@ This paper addresses the challenge of text-conditioned streaming motion generati
       journal={arXiv preprint arXiv:2503.15451},
       year={2025}
 }
+
+@misc{millán2025animatinguncapturedhumanoidmesh,
+        title={Animating the Uncaptured: Humanoid Mesh Animation with Video Diffusion Models}, 
+        author={Marc Benedí San Millán and Angela Dai and Matthias Nießner},
+        year={2025},
+        eprint={2503.15996},
+        archivePrefix={arXiv},
+        primaryClass={cs.GR},
+        url={https://arxiv.org/abs/2503.15996}, 
+}
+
 ```
 </details>
 
@@ -889,10 +992,30 @@ Yisheng He, Xiaodong Gu, Xiaodan Ye, Chao Xu, Zhengyi Zhao, Yuan Dong, Weihao Yu
 We present LAM, an innovative Large Avatar Model for animatable Gaussian head reconstruction from a single image. Unlike previous methods that require extensive training on captured video sequences or rely on auxiliary neural networks for animation and rendering during inference, our approach generates Gaussian heads that are immediately animatable and renderable. Specifically, LAM creates an animatable Gaussian head in a single forward pass, enabling reenactment and rendering without additional networks or post-processing steps. This capability allows for seamless integration into existing rendering pipelines, ensuring real-time animation and rendering across a wide range of platforms, including mobile phones. The centerpiece of our framework is the canonical Gaussian attributes generator, which utilizes FLAME canonical points as queries. These points interact with multi-scale image features through a Transformer to accurately predict Gaussian attributes in the canonical space. The reconstructed canonical Gaussian avatar can then be animated utilizing standard linear blend skinning (LBS) with corrective blendshapes as the FLAME model did and rendered in real-time on various platforms. Our experimental results demonstrate that LAM outperforms state-of-the-art methods on existing benchmarks. 
 </details>
 
+#### 3. HumanDreamer-X: Photorealistic Single-image Human Avatars Reconstruction via Gaussian Restoration
+Boyuan Wang, Runqi Ouyang, Xiaofeng Wang, Zheng Zhu, Guosheng Zhao, Chaojun Ni, Guan Huang, Lihong Liu, Xingang Wang
+
+(GigaAI, Institute of Automation Chinese Academy of Sciences, Peking University)
+<details span>
+<summary><b>Abstract</b></summary>
+Single-image human reconstruction is vital for digital human modeling applications but remains an extremely challenging task. Current approaches rely on generative models to synthesize multi-view images for subsequent 3D reconstruction and animation. However, directly generating multiple views from a single human image suffers from geometric inconsistencies, resulting in issues like fragmented or blurred limbs in the reconstructed models. To tackle these limitations, we introduce \textbf{HumanDreamer-X}, a novel framework that integrates multi-view human generation and reconstruction into a unified pipeline, which significantly enhances the geometric consistency and visual fidelity of the reconstructed 3D models. In this framework, 3D Gaussian Splatting serves as an explicit 3D representation to provide initial geometry and appearance priority. Building upon this foundation, \textbf{HumanFixer} is trained to restore 3DGS renderings, which guarantee photorealistic results. Furthermore, we delve into the inherent challenges associated with attention mechanisms in multi-view human generation, and propose an attention modulation strategy that effectively enhances geometric details identity consistency across multi-view. Experimental results demonstrate that our approach markedly improves generation and reconstruction PSNR quality metrics by 16.45% and 12.65%, respectively, achieving a PSNR of up to 25.62 dB, while also showing generalization capabilities on in-the-wild data and applicability to various human reconstruction backbone models.
+</details>
+
+#### 4. SIGMAN:Scaling 3D Human Gaussian Generation with Millions of Assets
+Yuhang Yang, Fengqi Liu, Yixing Lu, Qin Zhao, Pingyu Wu, Wei Zhai, Ran Yi, Yang Cao, Lizhuang Ma, Zheng-Jun Zha, Junting Dong
+
+(USTC, Shanghai AI Lab, SJTU, CMU)
+<details span>
+<summary><b>Abstract</b></summary>
+3D human digitization has long been a highly pursued yet challenging task. Existing methods aim to generate high-quality 3D digital humans from single or multiple views, but remain primarily constrained by current paradigms and the scarcity of 3D human assets. Specifically, recent approaches fall into several paradigms: optimization-based and feed-forward (both single-view regression and multi-view generation with reconstruction). However, they are limited by slow speed, low quality, cascade reasoning, and ambiguity in mapping low-dimensional planes to high-dimensional space due to occlusion and invisibility, respectively. Furthermore, existing 3D human assets remain small-scale, insufficient for large-scale training. To address these challenges, we propose a latent space generation paradigm for 3D human digitization, which involves compressing multi-view images into Gaussians via a UV-structured VAE, along with DiT-based conditional generation, we transform the ill-posed low-to-high-dimensional mapping problem into a learnable distribution shift, which also supports end-to-end inference. In addition, we employ the multi-view optimization approach combined with synthetic data to construct the HGS-1M dataset, which contains 1 million 3D Gaussian assets to support the large-scale training. Experimental results demonstrate that our paradigm, powered by large-scale training, produces high-quality 3D human Gaussians with intricate textures, facial details, and loose clothing deformation.
+</details>
+
 | Year | Title                                                        | ArXiv Time  |                           Paper                            |                      Code                      | Project Page                      |
 | ---- | ------------------------------------------------------------ | :----: | :--------------------------------------------------------: | :--------------------------------------------: | :--------------------------------------------: |
 | 2025 | **Avat3r: Large Animatable Gaussian Reconstruction Model for High-fidelity 3D Head Avatars**  | 27 Feb 2025 |          [Link](https://arxiv.org/abs/2502.20220)          | --  | [Link](https://tobias-kirschstein.github.io/avat3r/)  |
 | 2025 | **LAM: Large Avatar Model for One-shot Animatable Gaussian Head**  | 4 Apr 2025 |          [Link](https://arxiv.org/abs/2502.17796)          | [Link](https://github.com/aigc3d/LAM)  | [Link](https://aigc3d.github.io/projects/LAM/)  |
+| 2025 | **HumanDreamer-X: Photorealistic Single-image Human Avatars Reconstruction via Gaussian Restoration**  | 4 Apr 2025 |          [Link](https://arxiv.org/abs/2504.03536)          | [Link](https://github.com/GigaAI-research/HumanDreamer-X)  | [Link](https://humandreamer-x.github.io/)  |
+| 2025 | **SIGMAN:Scaling 3D Human Gaussian Generation with Millions of Assets**  | 9 Apr 2025 |          [Link](https://arxiv.org/abs/2504.06982)          | [Link](hhttps://github.com/yyvhang/SIGMAN_release)  | [Link](https://yyvhang.github.io/SIGMAN_3D/)  |
 
 <details close>
 <summary>ArXiv Papers References</summary>
@@ -914,6 +1037,20 @@ We present LAM, an innovative Large Avatar Model for animatable Gaussian head re
   title={LAM: Large Avatar Model for One-shot Animatable Gaussian Head},
   author={He, Yisheng and Gu, Xiaodong and Ye, Xiaodan and Xu, Chao and Zhao, Zhengyi and Dong, Yuan and Yuan, Weihao and Dong, Zilong and Bo, Liefeng},
   journal={arXiv preprint arXiv:2502.17796},
+  year={2025}
+}
+
+@article{wang2025humandreamerx,
+  title={HumanDreamer-X: Photorealistic Single-image Human Avatars Reconstruction via Gaussian Restoration}, 
+  author={Boyuan Wang and Runqi Ouyang and Xiaofeng Wang and Zheng Zhu and Guosheng Zhao and Chaojun Ni and Guan Huang and Lihong Liu and Xingang Wang},
+  journal={arXiv preprint arXiv:2504.03536},
+  year={2025}
+}
+
+@article{yang2025sigman,
+  title={SIGMAN: Scaling 3D Human Gaussian Generation with Millions of Assets},
+  author={Yang, Yuhang and Liu, Fengqi and Lu, Yixing and Zhao, Qin and Wu, Pingyu and Zhai, Wei and Yi, Ran and Cao, Yang and Ma, Lizhuang and Zha, Zheng-Jun and others},
+  journal={arXiv preprint arXiv:2504.06982},
   year={2025}
 }
 
@@ -971,32 +1108,34 @@ SMPL-X, that extends SMPL with fully articulated hands and facial expressions (5
 ## Related Resources
 
 ### Text to 'other tasks'
-(Here other tasks refer to *CAD*, *Model* and *Music* etc.)
+Here, other tasks refer to CAD, 3D modeling, music generation, and so on.
 
-#### Text to CAD
-+ 2024 | CAD-MLLM: Unifying Multimodality-Conditioned CAD Generation With MLLM | arXiv 7 Nov 2024 | [Paper](https://arxiv.org/abs/2411.04954)  | [Code](https://github.com/CAD-MLLM/CAD-MLLM) | [Project Page](https://cad-mllm.github.io/) 
-+ 2024 | Text2CAD: Generating Sequential CAD Designs from Beginner-to-Expert Level Text Prompts | NeurIPS 2024 Spotlight | [Paper](https://arxiv.org/abs/2409.17106)  | [Project Page](https://sadilkhan.github.io/text2cad-project/)
+> ##### Text to CAD
+* [arXiv 7 Nov 2024] **CAD-MLLM: Unifying Multimodality-Conditioned CAD Generation With MLLM** [[Paper](https://arxiv.org/abs/2411.04954)] [[GitHub](https://github.com/CAD-MLLM/CAD-MLLM)] [[Project Page](https://cad-mllm.github.io/)]
+* [NeurIPS 2024 Spotlight] **Text2CAD: Generating Sequential CAD Designs from Beginner-to-Expert Level Text Prompts** [[Paper](https://arxiv.org/abs/2409.17106)] [[GitHub](https://github.com/SadilKhan/Text2CAD)] [[Project Page](https://sadilkhan.github.io/text2cad-project/)] [[Dataset](https://huggingface.co/datasets/SadilKhan/Text2CAD)]
 
-#### Text to Music
-+ 2024 | FLUX that Plays Music | arXiv 1 Sep 2024 | [Paper](https://arxiv.org/abs/2409.00587) | [Code](https://github.com/feizc/FluxMusic) | [Hugging Face](https://huggingface.co/feizhengcong/FluxMusic)
-</details>
 
-#### Text to Model
-+ 2024 | Text-to-Model: Text-Conditioned Neural Network Diffusion for Train-Once-for-All Personalization | arXiv 23 May 2024 | [Paper](https://arxiv.org/abs/2405.14132)
+> ##### Text to Music
+* [arXiv 1 Sep 2024] **FLUX that Plays Music** [[Paper](https://arxiv.org/abs/2409.00587)] [[GitHub](https://github.com/feizc/FluxMusic)] 
+
+
+> ##### Text to Model
+* [ICLR Workshop on Neural Network Weights as a New Data Modality 2025] **Text-to-Model: Text-Conditioned Neural Network Diffusion for Train-Once-for-All Personalization** [[Paper](https://arxiv.org/abs/2405.14132)]
 
 
 
 ### Survey and Awesome Repos 
+
 <details close>
 <summary>🔥 Topic 1: 3D Gaussian Splatting</summary>
- 
-#### Survey
-- [Gaussian Splatting: 3D Reconstruction and Novel View Synthesis, a Review](https://arxiv.org/abs/2405.03417), ArXiv Mon, 6 May 2024
-- [Recent Advances in 3D Gaussian Splatting](https://arxiv.org/abs/2403.11134), ArXiv Sun, 17 Mar 2024
-- [3D Gaussian as a New Vision Era: A Survey](https://arxiv.org/abs/2402.07181), ArXiv Sun, 11 Feb 2024
-- [A Survey on 3D Gaussian Splatting](https://arxiv.org/pdf/2401.03890.pdf), ArXiv 2024
+
+> ##### Survey
+* [arXiv 6 May 2024] **Gaussian Splatting: 3D Reconstruction and Novel View Synthesis, a Review** [[Paper](https://arxiv.org/abs/2405.03417)]
+* [arXiv 17 Mar 2024] **Recent Advances in 3D Gaussian Splatting** [[Paper](https://arxiv.org/abs/2403.11134)]
+* [IEEE TVCG 2024] **3D Gaussian as a New Vision Era: A Survey** [[Paper](https://arxiv.org/abs/2402.07181)]
+* [arXiv 8 Jan 2024] **A Survey on 3D Gaussian Splatting** [[Paper](https://arxiv.org/abs/2401.03890)] [[GitHub](https://github.com/guikunchen/Awesome3DGS)] [[Benchmark](https://github.com/guikunchen/3DGS-Benchmarks)]
   
-#### Awesome Repos
+> ##### Awesome Repos
 - Resource1: [Awesome 3D Gaussian Splatting Resources](https://github.com/MrNeRF/awesome-3D-gaussian-splatting)
 - Resource2: [3D Gaussian Splatting Papers](https://github.com/Awesome3DGS/3D-Gaussian-Splatting-Papers)
 - Resource3: [3DGS and Beyond Docs](https://github.com/yangjiheng/3DGS_and_Beyond_Docs)
@@ -1005,45 +1144,47 @@ SMPL-X, that extends SMPL with fully articulated hands and facial expressions (5
 
 <details close>
 <summary>🔥 Topic 2: AIGC 3D </summary>
-
-#### Foundation Model
-- [Cube](https://github.com/Roblox/cube), [ArXiv Report](https://arxiv.org/abs/2503.15475)
  
-#### Survey
-- [Advances in 3D Generation: A Survey](https://arxiv.org/abs/2401.17807), ArXiv 2024
-- [A Comprehensive Survey on 3D Content Generation](https://arxiv.org/abs/2402.01166), ArXiv 2024
-- [A Survey On Text-to-3D Contents Generation In The Wild](https://arxiv.org/pdf/2405.09431), ArXiv 2024
+> ##### Survey
+* [arXiv 15 May 2024] **A Survey On Text-to-3D Contents Generation In The Wild** [[Paper](https://arxiv.org/abs/2405.09431)]
+* [arXiv 2 Feb 2024] **A Comprehensive Survey on 3D Content Generation** [[Paper](https://arxiv.org/abs/2402.01166)] [[GitHub](https://github.com/hitcslj/Awesome-AIGC-3D)]
+* [arXiv 31 Jan 2024] **Advances in 3D Generation: A Survey** [[Paper](https://arxiv.org/abs/2401.17807)]
 
-#### Awesome Repos
-- Resource1: [Awesome 3D AIGC 1](https://github.com/mdyao/Awesome-3D-AIGC) and [Awesome 3D AIGC 2](https://github.com/hitcslj/Awesome-AIGC-3D)
-- Awesome Text-to-3D: [Resource1](https://github.com/StellarCheng/Awesome-Text-to-3D) and [Resource2](https://github.com/yyeboah/Awesome-Text-to-3D)
+> ##### Awesome Repos
+- Resource1: [Awesome 3D AIGC Resources](https://github.com/mdyao/Awesome-3D-AIGC)
+- Resource2: [Awesome-Text/Image-to-3D](https://github.com/StellarCheng/Awesome-Text-to-3D)
+- Resource3: [Awesome Text-to-3D](https://github.com/yyeboah/Awesome-Text-to-3D)
 
-#### Benchmars
-- text-to-3d generation: [GPT-4V(ision) is a Human-Aligned Evaluator for Text-to-3D Generation](https://arxiv.org/abs/2401.04092), Wu et al., arXiv 2024 | [Code](https://github.com/3DTopia/GPTEval3D)
+
+> ##### Benchmark
+* [CVPR 2024] **GPT-4V(ision) is a Human-Aligned Evaluator for Text-to-3D Generation** [[Paper](https://arxiv.org/abs/2401.04092)] [[GitHub](https://github.com/3DTopia/GPTEval3D)] [[Project Page](https://gpteval3d.github.io/)]
+  
+> ##### Foundation Model
+* [arXiv 19 Mar 2025] **Cube: A Roblox View of 3D Intelligence** [[Paper](https://arxiv.org/abs/2503.15475)] [[GitHub](https://github.com/Roblox/cube)]
+
 </details>
 
 <details close>
-<summary>🔥 Topic 3: LLM 3D </summary>
- 
-#### Awesome Repos
+<summary>🔥 Topic 3: 3D Human & LLM 3D</summary>
+
+> ##### Survey
+* [arXiv 6 June 2024] **A Survey on 3D Human Avatar Modeling -- From Reconstruction to Generation** [[Paper](https://arxiv.org/abs/2406.04253)]
+* [arXiv 5 Jan 2024] **Progress and Prospects in 3D Generative AI: A Technical Overview including 3D human** [[Paper](https://arxiv.org/abs/2401.02620)] 
+
+> ##### Awesome Repos
 - Resource1: [Awesome LLM 3D](https://github.com/ActiveVisionLab/Awesome-LLM-3D)
-
-
-#### 3D Human
-- Survey: [PROGRESS AND PROSPECTS IN 3D GENERATIVE AI: A TECHNICAL OVERVIEW INCLUDING 3D HUMAN](https://arxiv.org/pdf/2401.02620.pdf), ArXiv 2024
-- Survey: [A Survey on 3D Human Avatar Modeling -- From Reconstruction to Generation](https://arxiv.org/abs/2406.04253), ArXiv 6 June 2024
-- Resource1: [Awesome Digital Human](https://github.com/weihaox/awesome-digital-human)
-- Resource2: [Awesome-Avatars](https://github.com/pansanity666/Awesome-Avatars)
+- Resource2: [Awesome Digital Human](https://github.com/weihaox/awesome-digital-human)
+- Resource3: [Awesome-Avatars](https://github.com/pansanity666/Awesome-Avatars)
 
 </details>
 
 <details close>
 <summary>🔥 Topic 4: AIGC 4D </summary>
 
-#### Survey
-- [Advances in 4D Generation: A Survey](https://arxiv.org/abs/2503.14501), ArXiv 2025
+> ##### Survey
+* [arXiv 18 Mar 2025] **Advances in 4D Generation: A Survey** [[Paper](https://arxiv.org/abs/2503.14501)] [[GitHub](https://github.com/MiaoQiaowei/Awesome-4D)]
 	
-#### Awesome Repos
+> ##### Awesome Repos
 - Resource1: [Awesome 4D Generation](https://github.com/cwchenwang/awesome-4d-generation)
 
 </details>
@@ -1051,46 +1192,31 @@ SMPL-X, that extends SMPL with fully articulated hands and facial expressions (5
 <details close>
 <summary>🔥 Topic 5: Physics-based AIGC</summary>
 
-#### Survey
-- [Exploring the Evolution of Physics Cognition in Video Generation: A Survey](https://arxiv.org/abs/2503.21765), ArXiv 2025
-	
-#### Awesome Repos
-- Resource1: [Awesome-Physics-Cognition-based-Video-Generation](https://github.com/minnie-lin/Awesome-Physics-Cognition-based-Video-Generation)
+> ##### Survey
+* [arXiv 27 Mar 2025] **Exploring the Evolution of Physics Cognition in Video Generation: A Survey** [[Paper](https://arxiv.org/abs/2503.21765)] [[GitHub](https://github.com/minnie-lin/Awesome-Physics-Cognition-based-Video-Generation)]
+* [arXiv 19 Jan 2025] **Generative Physical AI in Vision: A Survey** [[Paper](https://arxiv.org/abs/2501.10928)] [[GitHub](https://github.com/BestJunYu/Awesome-Physics-aware-Generation)]
 
 </details>
 
 <details close>
 <summary>Dynamic Gaussian Splatting</summary>
-<details close>
-<summary>Neural Deformable 3D Gaussians</summary>
- 
-(CVPR 2024) Deformable 3D Gaussians for High-Fidelity Monocular Dynamic Scene Reconstruction [Paper](https://arxiv.org/abs/2309.13101) [Code](https://github.com/ingra14m/Deformable-3D-Gaussians) [Page](https://ingra14m.github.io/Deformable-Gaussians/)
- 
-(CVPR 2024) 4D Gaussian Splatting for Real-Time Dynamic Scene Rendering [Paper](https://arxiv.org/abs/2310.08528) [Code](https://github.com/hustvl/4DGaussians) [Page](https://guanjunwu.github.io/4dgs/index.html)
 
-(CVPR 2024) SC-GS: Sparse-Controlled Gaussian Splatting for Editable Dynamic Scenes [Paper](https://arxiv.org/abs/2312.14937) [Code](https://github.com/yihua7/SC-GS) [Page](https://yihua7.github.io/SC-GS-web/)
+> ##### Neural Deformable 3D Gaussians
+* [CVPR 2024] **Deformable 3D Gaussians for High-Fidelity Monocular Dynamic Scene Reconstruction** [[Paper](https://arxiv.org/abs/2309.13101)] [[GitHub](https://github.com/ingra14m/Deformable-3D-Gaussians)] [[Project Page](https://ingra14m.github.io/Deformable-Gaussians/)]
+* [CVPR 2024] **4D Gaussian Splatting for Real-Time Dynamic Scene Rendering** [[Paper](https://arxiv.org/abs/2310.08528)] [[GitHub](https://github.com/hustvl/4DGaussians)] [[Project Page](https://guanjunwu.github.io/4dgs/index.html)]
+* [CVPR 2024] **SC-GS: Sparse-Controlled Gaussian Splatting for Editable Dynamic Scenes** [[Paper](https://arxiv.org/abs/2312.14937)] [[GitHub](https://github.com/yihua7/SC-GS)] [[Project Page](https://yihua7.github.io/SC-GS-web/)]
+* [CVPR 2024 Highlight] **3DGStream: On-the-Fly Training of 3D Gaussians for Efficient Streaming of Photo-Realistic Free-Viewpoint Videos** [[Paper](https://arxiv.org/abs/2403.01444)] [[GitHub](https://github.com/SJoJoK/3DGStream)] [[Project Page](https://sjojok.github.io/3dgstream/)]
 
-(CVPR 2024, Highlight) 3DGStream: On-the-Fly Training of 3D Gaussians for Efficient Streaming of Photo-Realistic Free-Viewpoint Videos [Paper](https://arxiv.org/abs/2403.01444) [Code](https://github.com/SJoJoK/3DGStream) [Page](https://sjojok.github.io/3dgstream/)
 
-</details>
+> ##### 4D Gaussians
+* [SIGGRAPH 2024] **4D-Rotor Gaussian Splatting: Towards Efficient Novel View Synthesis for Dynamic Scenes** [[Paper](https://arxiv.org/abs/2402.03307)] 
+* [ICLR 2024] **Real-time Photorealistic Dynamic Scene Representation and Rendering with 4D Gaussian Splatting** [[Paper](https://arxiv.org/abs/2310.10642)] [[GitHub](https://github.com/fudan-zvg/4d-gaussian-splatting)] [[Project Page](https://fudan-zvg.github.io/4d-gaussian-splatting/)]
 
-<details close>
-<summary>4D Gaussians</summary>
 
-(ArXiv 2024.02.07) 4D Gaussian Splatting: Towards Efficient Novel View Synthesis for Dynamic Scenes [Paper](https://arxiv.org/abs/2402.03307)
- 
-(ICLR 2024) Real-time Photorealistic Dynamic Scene Representation and Rendering with 4D Gaussian Splatting [Paper](https://arxiv.org/abs/2310.10642) [Code](https://github.com/fudan-zvg/4d-gaussian-splatting) [Page](https://fudan-zvg.github.io/4d-gaussian-splatting/)
+> ##### Dynamic 3D Gaussians
+* [CVPR 2024 Highlight] **Gaussian-Flow: 4D Reconstruction with Dynamic 3D Gaussian Particle** [[Paper](https://arxiv.org/abs/2312.03431)] [[GitHub](https://github.com/NJU-3DV/Gaussian-Flow)] [[Project Page](https://nju-3dv.github.io/projects/Gaussian-Flow/)]
+* [3DV 2024] **Dynamic 3D Gaussians: Tracking by Persistent Dynamic View Synthesis** [[Paper](https://arxiv.org/abs/2308.09713)] [[GitHub](https://github.com/JonathonLuiten/Dynamic3DGaussians)] [[Project Page](https://dynamic3dgaussians.github.io/)]
 
-</details>
-
-<details close>
-<summary>Dynamic 3D Gaussians</summary>
-
-(CVPR 2024) Gaussian-Flow: 4D Reconstruction with Dynamic 3D Gaussian Particle [Paper](https://arxiv.org/abs/2312.03431) [Page](https://nju-3dv.github.io/projects/Gaussian-Flow/)
- 
-(3DV 2024) Dynamic 3D Gaussians: Tracking by Persistent Dynamic View Synthesis [Paper](https://arxiv.org/abs/2308.09713) [Code](https://github.com/JonathonLuiten/Dynamic3DGaussians) [Page](https://dynamic3dgaussians.github.io/)
-
-</details>
 
 </details>
 
