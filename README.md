@@ -761,11 +761,30 @@ Stanislaw Szymanowicz, Jason Y. Zhang, Pratul Srinivasan, Ruiqi Gao, Arthur Brus
 We present a latent diffusion model for fast feed-forward 3D scene generation. Given one or more images, our model Bolt3D directly samples a 3D scene representation in less than seven seconds on a single GPU. We achieve this by leveraging powerful and scalable existing 2D diffusion network architectures to produce consistent high-fidelity 3D scene representations. To train this model, we create a large-scale multiview-consistent dataset of 3D geometry and appearance by applying state-of-the-art dense 3D reconstruction techniques to existing multiview image datasets. Compared to prior multiview generative models that require per-scene optimization for 3D reconstruction, Bolt3D reduces the inference cost by a factor of up to 300 times.
 </details>
 
+#### 3. WORLDMEM: Long-term Consistent World Simulation with Memory
+Zeqi Xiao, Yushi Lan, Yifan Zhou, Wenqi Ouyang, Shuai Yang, Yanhong Zeng, Xingang Pan
+
+(Nanyang Technological University, Peking University, Shanghai AI Laboratry)
+<details span>
+<summary><b>Abstract</b></summary>
+World simulation has gained increasing popularity due to its ability to model virtual environments and predict the consequences of actions. However, the limited temporal context window often leads to failures in maintaining long-term consistency, particularly in preserving 3D spatial consistency. In this work, we present WorldMem, a framework that enhances scene generation with a memory bank consisting of memory units that store memory frames and states (e.g., poses and timestamps). By employing a memory attention mechanism that effectively extracts relevant information from these memory frames based on their states, our method is capable of accurately reconstructing previously observed scenes, even under significant viewpoint or temporal gaps. Furthermore, by incorporating timestamps into the states, our framework not only models a static world but also captures its dynamic evolution over time, enabling both perception and interaction within the simulated world. Extensive experiments in both virtual and real scenarios validate the effectiveness of our approach.
+</details>
+
+#### 4. HiScene: Creating Hierarchical 3D Scenes with Isometric View Generation
+Wenqi Dong, Bangbang Yang, Zesong Yang, Yuan Li, Tao Hu, Hujun Bao, Yuewen Ma, Zhaopeng Cui
+
+(Zhejiang University, ByteDance)
+<details span>
+<summary><b>Abstract</b></summary>
+Scene-level 3D generation represents a critical frontier in multimedia and computer graphics, yet existing approaches either suffer from limited object categories or lack editing flexibility for interactive applications. In this paper, we present HiScene, a novel hierarchical framework that bridges the gap between 2D image generation and 3D object generation and delivers high-fidelity scenes with compositional identities and aesthetic scene content. Our key insight is treating scenes as hierarchical "objects" under isometric views, where a room functions as a complex object that can be further decomposed into manipulatable items. This hierarchical approach enables us to generate 3D content that aligns with 2D representations while maintaining compositional structure. To ensure completeness and spatial alignment of each decomposed instance, we develop a video-diffusion-based amodal completion technique that effectively handles occlusions and shadows between objects, and introduce shape prior injection to ensure spatial coherence within the scene. Experimental results demonstrate that our method produces more natural object arrangements and complete object instances suitable for interactive applications, while maintaining physical plausibility and alignment with user inputs.
+</details>
+
 | Year | Title                                                        | ArXiv Time  |                           Paper                            |                      Code                      | Project Page                      |
 | ---- | ------------------------------------------------------------ | :----: | :--------------------------------------------------------: | :--------------------------------------------: | :--------------------------------------------: |
 | 2025 | **LAYOUTDREAMER: Physics-guided Layout for Text-to-3D Compositional Scene Generation**  | 4 Feb 2025 |          [Link](https://arxiv.org/abs/2502.01949)          | --  | --  |
 | 2025 | **Bolt3D: Generating 3D Scenes in Seconds**  | 18 Mar 2025 |          [Link](https://arxiv.org/abs/2503.14445)          | --  | [Link](https://szymanowiczs.github.io/bolt3d)  |
-
+| 2025 | **WORLDMEM: Long-term Consistent World Simulation with Memory**  | 16 Apr 2025 |          [Link](https://arxiv.org/abs/2504.12369)          | [Link](https://github.com/xizaoqu/WorldMem)  | [Link](https://xizaoqu.github.io/worldmem/)  |
+| 2025 | **HiScene: Creating Hierarchical 3D Scenes with Isometric View Generation**  | 17 Apr 2025 |          [Link](https://arxiv.org/abs/2504.13072)          | --  | [Link](https://zju3dv.github.io/hiscene/)  |
 <details close>
 <summary>ArXiv Papers References</summary>
 
@@ -786,6 +805,23 @@ author={Szymanowicz, Stanislaw and Zhang, Jason Y. and Srinivasan, Pratul
      Martin-Brualla, Ricardo and Barron, Jonathan T. and Henzler, Philipp},
 journal={arXiv:2503.14445},
 year={2025}
+}
+
+@misc{xiao2025worldmemlongtermconsistentworld,
+      title={WORLDMEM: Long-term Consistent World Simulation with Memory}, 
+      author={Zeqi Xiao and Yushi Lan and Yifan Zhou and Wenqi Ouyang and Shuai Yang and Yanhong Zeng and Xingang Pan},
+      year={2025},
+      eprint={2504.12369},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2504.12369}, 
+}
+
+@article{dong2025hiscene,
+      title   = {HiScene: Creating Hierarchical 3D Scenes with Isometric View Generation},
+      author  = {Dong, Wenqi and Yang, Bangbang and Yang, Zesong and Li, Yuan and Hu, Tao and Bao, Hujun and Ma, Yuewen and Cui, Zhaopeng},
+      journal = {arXiv preprint arXiv:2504.13072},
+      year    = {2025},
 }
 
 ```
@@ -950,6 +986,7 @@ AMASS is a large database of human motion unifying different optical marker-base
 | Year | Title                                                        | Venue  |                           Paper                            |                      Code                      | Project Page                      |
 | ---- | ------------------------------------------------------------ | :----: | :--------------------------------------------------------: | :--------------------------------------------: | :--------------------------------------------: |
 | 2025 | **Zero-1-to-A: Zero-Shot One Image to Animatable Head Avatars Using Video Diffusion**  | CVPR 2025 |          [Link](https://arxiv.org/abs/2503.15851)          | [Link](https://github.com/ZhenglinZhou/Zero-1-to-A)  | [Link](https://zhenglinzhou.github.io/Zero-1-to-A/)  |
+| 2025 | **GaussianIP: Identity-Preserving Realistic 3D Human Generation via Human-Centric Diffusion Prior**  | CVPR 2025 |          [Link](https://arxiv.org/abs/2503.11143)          | [Link](https://github.com/silence-tang/GaussianIP)  | [Link](https://silence-tang.github.io/gaussian-ip/)  |
 
 <details close>
 <summary>Accepted Papers References</summary>
@@ -962,6 +999,13 @@ AMASS is a large database of human motion unifying different optical marker-base
   author = {Zhenglin Zhou and Fan Ma and Hehe Fan and Tat-Seng Chua},
   booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
   year={2025},
+}
+
+@article{tang2025gaussianip,
+  title={GaussianIP: Identity-Preserving Realistic 3D Human Generation via Human-Centric Diffusion Prior},
+  author={Tang, Zichen and Yao, Yuan and Cui, Miaomiao and Bo, Liefeng and Yang, Hongyu},
+  journal={arXiv preprint arXiv:2503.11143},
+  year={2025}
 }
 
 ```
