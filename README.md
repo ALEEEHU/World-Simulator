@@ -832,6 +832,13 @@ year={2025}
 ### Year 2023-2024
 For more details, please check the [2023-2024 3D Scene Papers](./docs/3d_scene/3d_scene_23-24.md), including 22 accepted papers and 9 arXiv papers.
 
+<details close>
+<summary>Awesome Repos</summary>
+  
+#### Awesome Repos
+- Resource1: [WorldGen: Generate Any 3D Scene in Seconds](https://github.com/ZiYang-xie/WorldGen)
+</details>
+
 --------------
 
 
