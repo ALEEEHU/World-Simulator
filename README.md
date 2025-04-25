@@ -847,13 +847,14 @@ year={2025}
 ### Previous Papers
 
 ### Year 2023-2024
-For more details, please check the [2023-2024 3D Scene Papers](./docs/3d_scene/3d_scene_23-24.md), including 22 accepted papers and 9 arXiv papers.
+For more details, please check the [2023-2024 3D Scene Papers](./docs/3d_scene/3d_scene_23-24.md), including 23 accepted papers and 8 arXiv papers.
 
 <details close>
 <summary>Awesome Repos</summary>
-  
-#### Awesome Repos
+
+> ##### Awesome Repos
 - Resource1: [WorldGen: Generate Any 3D Scene in Seconds](https://github.com/ZiYang-xie/WorldGen)
+
 </details>
 
 --------------
@@ -922,12 +923,22 @@ Marc Benedí San Millán, Angela Dai, Matthias Nießner
 Animation of humanoid characters is essential in various graphics applications, but requires significant time and cost to create realistic animations. We propose an approach to synthesize 4D animated sequences of input static 3D humanoid meshes, leveraging strong generalized motion priors from generative video models -- as such video models contain powerful motion information covering a wide variety of human motions. From an input static 3D humanoid mesh and a text prompt describing the desired animation, we synthesize a corresponding video conditioned on a rendered image of the 3D mesh. We then employ an underlying SMPL representation to animate the corresponding 3D mesh according to the video-generated motion, based on our motion optimization. This enables a cost-effective and accessible solution to enable the synthesis of diverse and realistic 4D animations.
 </details>
 
+#### 5. FlowMotion: Target-Predictive Conditional Flow Matching for Jitter-Reduced Text-Driven Human Motion Generation
+Manolo Canales Cuba, Vinícius do Carmo Melício, João Paulo Gois
+
+(Universidade Federal do ABC, Santo Andr ́e, Brazil)
+<details span>
+<summary><b>Abstract</b></summary>
+Achieving high-fidelity and temporally smooth 3D human motion generation remains a challenge, particularly within resource-constrained environments. We introduce FlowMotion, a novel method leveraging Conditional Flow Matching (CFM). FlowMotion incorporates a training objective within CFM that focuses on more accurately predicting target motion in 3D human motion generation, resulting in enhanced generation fidelity and temporal smoothness while maintaining the fast synthesis times characteristic of flow-matching-based methods. FlowMotion achieves state-of-the-art jitter performance, achieving the best jitter in the KIT dataset and the second-best jitter in the HumanML3D dataset, and a competitive FID value in both datasets. This combination provides robust and natural motion sequences, offering a promising equilibrium between generation quality and temporal naturalness.
+</details>
+
 | Year | Title                                                        | ArXiv Time  |                           Paper                            |                      Code                      | Project Page                      |
 | ---- | ------------------------------------------------------------ | :----: | :--------------------------------------------------------: | :--------------------------------------------: | :--------------------------------------------: |
 | 2025 | **MotionLab: Unified Human Motion Generation and Editing via the Motion-Condition-Motion Paradigm**  | 6 Feb 2025 |          [Link](https://arxiv.org/abs/2502.02358)          | [Link](https://github.com/Diouo/MotionLab)  | [Link](https://diouo.github.io/motionlab.github.io/)  |
 | 2025 | **Motion Anything: Any to Motion Generation**  | 12 Mar 2025 |          [Link](https://arxiv.org/abs/2503.06955)          | [Link](https://github.com/steve-zeyu-zhang/MotionAnything)  | [Link](https://steve-zeyu-zhang.github.io/MotionAnything/)  |
 | 2025 | **MotionStreamer: Streaming Motion Generation via Diffusion-based Autoregressive Model in Causal Latent Space**  | 19 Mar 2025 |          [Link](https://arxiv.org/abs/2503.15451)          | [Link](https://github.com/zju3dv/MotionStreamer)  | [Link](https://zju3dv.github.io/MotionStreamer/)  |
 | 2025 | **Animating the Uncaptured: Humanoid Mesh Animation with Video Diffusion Models**  | 20 Mar 2025 |          [Link](https://arxiv.org/abs/2503.15996)          | --  | [Link](https://marcb.pro/atu/)  |
+| 2025 | **FlowMotion: Target-Predictive Conditional Flow Matching for Jitter-Reduced Text-Driven Human Motion Generation**  | 20 Apr 2025 |          [Link](https://arxiv.org/abs/2504.01338)          | --  | --  |
 
 <details close>
 <summary>ArXiv Papers References</summary>
@@ -966,6 +977,13 @@ Animation of humanoid characters is essential in various graphics applications, 
         url={https://arxiv.org/abs/2503.15996}, 
 }
 
+@article{cuba2025flowmotion,
+  title={FlowMotion: Target-Predictive Flow Matching for Realistic Text-Driven Human Motion Generation},
+  author={Cuba, Manolo Canales and Gois, Jo{\~a}o Paulo},
+  journal={arXiv preprint arXiv:2504.01338},
+  year={2025}
+}
+
 ```
 </details>
 
@@ -996,9 +1014,15 @@ AMASS is a large database of human motion unifying different optical marker-base
   
 </details>
 
+<details close>
+<summary>Awesome Repos</summary>
 
-#### Survey
-- Survey: [Human Motion Generation: A Survey](https://arxiv.org/abs/2307.10894), ArXiv 2023 Nov
+> ##### Survey
+* [TPAMI 2023] **Human Motion Generation: A Survey** [[Paper](https://arxiv.org/abs/2307.10894)]
+* [arXiv 7 Apr 2025] **A Survey on Human Interaction Motion Generation** [[Paper](https://arxiv.org/abs/2503.12763)] [[GitHub](https://github.com/soraproducer/Awesome-Human-Interaction-Motion-Generation)]
+	
+
+</details>
 
 
 --------------
