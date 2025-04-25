@@ -1011,6 +1011,7 @@ AMASS is a large database of human motion unifying different optical marker-base
 | ---- | ------------------------------------------------------------ | :----: | :--------------------------------------------------------: | :--------------------------------------------: | :--------------------------------------------: |
 | 2025 | **Zero-1-to-A: Zero-Shot One Image to Animatable Head Avatars Using Video Diffusion**  | CVPR 2025 |          [Link](https://arxiv.org/abs/2503.15851)          | [Link](https://github.com/ZhenglinZhou/Zero-1-to-A)  | [Link](https://zhenglinzhou.github.io/Zero-1-to-A/)  |
 | 2025 | **GaussianIP: Identity-Preserving Realistic 3D Human Generation via Human-Centric Diffusion Prior**  | CVPR 2025 |          [Link](https://arxiv.org/abs/2503.11143)          | [Link](https://github.com/silence-tang/GaussianIP)  | [Link](https://silence-tang.github.io/gaussian-ip/)  |
+| 2025 | **Text-based Animatable 3D Avatars with Morphable Model Alignment**  | SIGGRAPH 2025 |          [Link](https://arxiv.org/abs/2504.15835)          | [Link](https://github.com/oneThousand1000/AnimPortrait3D)  | [Link](https://onethousandwu.com/animportrait3d.github.io/)  |
 
 <details close>
 <summary>Accepted Papers References</summary>
@@ -1030,6 +1031,21 @@ AMASS is a large database of human motion unifying different optical marker-base
   author={Tang, Zichen and Yao, Yuan and Cui, Miaomiao and Bo, Liefeng and Yang, Hongyu},
   journal={arXiv preprint arXiv:2503.11143},
   year={2025}
+}
+
+@article{AnimPortrait3D_sig25,
+      author = {Wu, Yiqian and Prinzler, Malte and Jin, Xiaogang and Tang, Siyu},
+      title = {Text-based Animatable 3D Avatars with Morphable Model Alignment},
+      year = {2025}, 
+      isbn = {9798400715402}, 
+      publisher = {Association for Computing Machinery},
+      address = {New York, NY, USA},
+      url = {https://doi.org/10.1145/3721238.3730680},
+      doi = {10.1145/3721238.3730680},
+      articleno = {},
+      numpages = {11},
+      location = {Vancouver, BC, Canada},
+      series = {SIGGRAPH '25}
 }
 
 ```
