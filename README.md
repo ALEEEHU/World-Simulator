@@ -656,11 +656,21 @@ Chenjie Cao, Jingkai Zhou, Shikai Li, Jingyun Liang, Chaohui Yu, Fan Wang, Xiang
 Camera and human motion controls have been extensively studied for video generation, but existing approaches typically address them separately, suffering from limited data with high-quality annotations for both aspects. To overcome this, we present Uni3C, a unified 3D-enhanced framework for precise control of both camera and human motion in video generation. Uni3C includes two key contributions. First, we propose a plug-and-play control module trained with a frozen video generative backbone, PCDController, which utilizes unprojected point clouds from monocular depth to achieve accurate camera control. By leveraging the strong 3D priors of point clouds and the powerful capacities of video foundational models, PCDController shows impressive generalization, performing well regardless of whether the inference backbone is frozen or fine-tuned. This flexibility enables different modules of Uni3C to be trained in specific domains, i.e., either camera control or human motion control, reducing the dependency on jointly annotated data. Second, we propose a jointly aligned 3D world guidance for the inference phase that seamlessly integrates both scenic point clouds and SMPL-X characters to unify the control signals for camera and human motion, respectively. Extensive experiments confirm that PCDController enjoys strong robustness in driving camera motion for fine-tuned backbones of video generation. Uni3C substantially outperforms competitors in both camera controllability and human motion quality. Additionally, we collect tailored validation sets featuring challenging camera movements and human actions to validate the effectiveness of our method.
 </details>
 
+#### 3. We'll Fix it in Post: Improving Text-to-Video Generation with Neuro-Symbolic Feedback
+Minkyu Choi, S P Sharan, Harsh Goel, Sahil Shah, Sandeep Chinchali
+
+(The University of Texas at Austin)
+<details span>
+<summary><b>Abstract</b></summary>
+Current text-to-video (T2V) generation models are increasingly popular due to their ability to produce coherent videos from textual prompts. However, these models often struggle to generate semantically and temporally consistent videos when dealing with longer, more complex prompts involving multiple objects or sequential events. Additionally, the high computational costs associated with training or fine-tuning make direct improvements impractical. To overcome these limitations, we introduce NeuS-E, a novel zero-training video refinement pipeline that leverages neuro-symbolic feedback to automatically enhance video generation, achieving superior alignment with the prompts. Our approach first derives the neuro-symbolic feedback by analyzing a formal video representation and pinpoints semantically inconsistent events, objects, and their corresponding frames. This feedback then guides targeted edits to the original video. Extensive empirical evaluations on both open-source and proprietary T2V models demonstrate that NeuS-E significantly enhances temporal and logical alignment across diverse prompts by almost 40%.
+</details>
+
 
 | Year | Title                                                        | ArXiv Time  |                           Paper                            |                      Code                      | Project Page                      |
 | ---- | ------------------------------------------------------------ | :----: | :--------------------------------------------------------: | :--------------------------------------------: | :--------------------------------------------: |
 | 2025 | **Multi-subject Open-set Personalization in Video Generation**  | 10 Jan 2025 |          [Link](https://arxiv.org/abs/2501.06187)          | -- | [Link](https://snap-research.github.io/open-set-video-personalization/)  |
 | 2025 | **Uni3C: Unifying Precisely 3D-Enhanced Camera and Human Motion Controls for Video Generation**  | 21 Apr 2025 |          [Link](https://arxiv.org/abs/2504.14899)          | [Link](https://github.com/ewrfcas/Uni3C) | [Link](https://ewrfcas.github.io/Uni3C/)  |
+| 2025 | **We'll Fix it in Post: Improving Text-to-Video Generation with Neuro-Symbolic Feedback**  | 25 Apr 2025 |          [Link](https://arxiv.org/abs/2504.17180)          | -- | --  |
 
 <details close>
 <summary>ArXiv Papers References</summary>
@@ -683,6 +693,13 @@ Camera and human motion controls have been extensively studied for video generat
         author={Cao, Chenjie and Zhou, Jingkai and Li, shikai and Liang, Jingyun and Yu, Chaohui and Wang, Fan and Xue, Xiangyang and Fu, Yanwei},
         journal={arXiv preprint arXiv:2504.14899},
         year={2025}
+}
+
+@article{choi2025we,
+  title={We'll Fix it in Post: Improving Text-to-Video Generation with Neuro-Symbolic Feedback},
+  author={Choi, Minkyu and Sharan, SP and Goel, Harsh and Shah, Sahil and Chinchali, Sandeep},
+  journal={arXiv preprint arXiv:2504.17180},
+  year={2025}
 }
 
 ```
@@ -851,6 +868,9 @@ For more details, please check the [2023-2024 3D Scene Papers](./docs/3d_scene/3
 
 <details close>
 <summary>Awesome Repos</summary>
+
+> ##### Survey
+* [arXiv 16 Apr 2025]**Recent Advance in 3D Object and Scene Generation: A Survey** [[Paper](https://arxiv.org/abs/2504.11734)]
 
 > ##### Awesome Repos
 - Resource1: [WorldGen: Generate Any 3D Scene in Seconds](https://github.com/ZiYang-xie/WorldGen)
