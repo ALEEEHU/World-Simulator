@@ -886,6 +886,7 @@ For more details, please check the [2023-2024 3D Scene Papers](./docs/3d_scene/3
 | Year | Title                                                        | Venue  |                           Paper                            |                      Code                      | Project Page                      |
 | ---- | ------------------------------------------------------------ | :----: | :--------------------------------------------------------: | :--------------------------------------------: | :--------------------------------------------: |
 | 2025 | **MixerMDM: Learnable Composition of Human Motion Diffusion Models**  | CVPR 2025 |          [Link](https://arxiv.org/abs/2504.01019)          | [Link](https://github.com/pabloruizponce/MixerMDM)  | [Link](https://www.pabloruizponce.com/papers/MixerMDM)  |
+| 2025 | **Dynamic Motion Blending for Versatile Motion Editing**  | CVPR 2025 |          [Link](https://arxiv.org/abs/2503.20724)          | [Link](https://github.com/emptybulebox1/motionRefit/)  | [Link](https://awfuact.github.io/motionrefit/)  |
 
 <details close>
 <summary>Accepted Papers References</summary>
@@ -897,6 +898,13 @@ For more details, please check the [2023-2024 3D Scene Papers](./docs/3d_scene/3
   title={MixerMDM: Learnable Composition of Human Motion Diffusion Models},
   author={Ruiz-Ponce, Pablo and Barquero, German and Palmero, Cristina and Escalera, Sergio and Garc{\'\i}a-Rodr{\'\i}guez, Jos{\'e}},
   journal={arXiv preprint arXiv:2504.01019},
+  year={2025}
+}
+
+@article{jiang2025dynamic,
+  title={Dynamic Motion Blending for Versatile Motion Editing},
+  author={Jiang, Nan and Li, Hongjie and Yuan, Ziye and He, Zimo and Chen, Yixin and Liu, Tengyu and Zhu, Yixin and Huang, Siyuan},
+  journal={arXiv preprint arXiv:2503.20724},
   year={2025}
 }
 
