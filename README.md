@@ -494,6 +494,15 @@ Sauradip Nag, Daniel Cohen-Or, Hao Zhang, Ali Mahdavi-Amiri
 We propose a new problem, In-2-4D, for generative 4D (i.e., 3D + motion) inbetweening from a minimalistic input setting: two single-view images capturing an object in two distinct motion states. Given two images representing the start and end states of an object in motion, our goal is to generate and reconstruct the motion in 4D. We utilize a video interpolation model to predict the motion, but large frame-to-frame motions can lead to ambiguous interpretations. To overcome this, we employ a hierarchical approach to identify keyframes that are visually close to the input states and show significant motion, then generate smooth fragments between them. For each fragment, we construct the 3D representation of the keyframe using Gaussian Splatting. The temporal frames within the fragment guide the motion, enabling their transformation into dynamic Gaussians through a deformation field. To improve temporal consistency and refine 3D motion, we expand the self-attention of multi-view diffusion across timesteps and apply rigid transformation regularization. Finally, we merge the independently generated 3D motion segments by interpolating boundary deformation fields and optimizing them to align with the guiding video, ensuring smooth and flicker-free transitions. Through extensive qualitative and quantitiave experiments as well as a user study, we show the effectiveness of our method and its components. 
 </details>
 
+#### 7. TesserAct: Learning 4D Embodied World Models
+Haoyu Zhen, Qiao Sun, Hongxin Zhang, Junyan Li, Siyuan Zhou, Yilun Du, Chuang Gan
+
+(UMass Amherst, HKUST, Harvard University)
+<details span>
+<summary><b>Abstract</b></summary>
+This paper presents an effective approach for learning novel 4D embodied world models, which predict the dynamic evolution of 3D scenes over time in response to an embodied agent's actions, providing both spatial and temporal consistency. We propose to learn a 4D world model by training on RGB-DN (RGB, Depth, and Normal) videos. This not only surpasses traditional 2D models by incorporating detailed shape, configuration, and temporal changes into their predictions, but also allows us to effectively learn accurate inverse dynamic models for an embodied agent. Specifically, we first extend existing robotic manipulation video datasets with depth and normal information leveraging off-the-shelf models. Next, we fine-tune a video generation model on this annotated dataset, which jointly predicts RGB-DN (RGB, Depth, and Normal) for each frame. We then present an algorithm to directly convert generated RGB, Depth, and Normal videos into a high-quality 4D scene of the world. Our method ensures temporal and spatial coherence in 4D scene predictions from embodied scenarios, enables novel view synthesis for embodied environments, and facilitates policy learning that significantly outperforms those derived from prior video-based world models.
+</details>
+
 -----
 
 </details>
@@ -506,6 +515,7 @@ We propose a new problem, In-2-4D, for generative 4D (i.e., 3D + motion) inbetwe
 | 2025 | **Free4D: Tuning-free 4D Scene Generation with Spatial-Temporal Consistency**  | 26 Mar 2025 |          [Link](https://arxiv.org/abs/2503.20785)          | [Link](https://github.com/TQTQliu/Free4D)  | [Link](https://free4d.github.io/)  |
 | 2025 | **Geo4D: Leveraging Video Generators for Geometric 4D Scene Reconstruction**  | 10 Apr 2025 |          [Link](https://arxiv.org/abs/2504.07961)          | [Link](https://github.com/jzr99/Geo4D)  | [Link](https://geo4d.github.io/)  |
 | 2025 | **In-2-4D: Inbetweening from Two Single-View Images to 4D Generation**  | 11 Apr 2025 |          [Link](https://arxiv.org/abs/2504.08366)          | [Link](https://github.com/sauradip/In-2-4D)  | [Link](https://in-2-4d.github.io/)  |
+| 2025 | **TesserAct: Learning 4D Embodied World Models**  | 29 Apr 2025 |          [Link](https://arxiv.org/abs/2504.20995)          | [Link](https://github.com/UMass-Embodied-AGI/TesserAct)  | [Link](https://tesseractworld.github.io/)  |
 
 
 <details close>
@@ -563,6 +573,16 @@ We propose a new problem, In-2-4D, for generative 4D (i.e., 3D + motion) inbetwe
       archivePrefix={arXiv},
       primaryClass={cs.GR},
       url={https://arxiv.org/abs/2504.08366}, 
+}
+
+@article{zhen2025tesseract,
+  title={TesserAct: Learning 4D Embodied World Models}, 
+  author={Haoyu Zhen and Qiao Sun and Hongxin Zhang and Junyan Li and Siyuan Zhou and Yilun Du and Chuang Gan},
+  year={2025},
+  eprint={2504.20995},
+  archivePrefix={arXiv},
+  primaryClass={cs.CV},
+  url={https://arxiv.org/abs/2504.20995}, 
 }
 
 ```
