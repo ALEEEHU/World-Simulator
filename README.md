@@ -43,6 +43,7 @@ This repository is divided into two main sections:
   - [Text to 3D Scene](#text-to-scene)
     * [Accepted Papers](#-3d-scene-accepted-papers)
     * [ArXiv Papers](#-3d-scene-arxiv-papers)
+    * [Additional Info](#scene-other-additional-info)
   - [Text to Human Motion](#text-to-human-motion)
     * [Accepted Papers](#-motion-accepted-papers)
     * [ArXiv Papers](#-motion-arxiv-papers)
@@ -372,6 +373,7 @@ An open collection of state-of-the-art (SOTA), novel **Text to X (X can be every
 <details span>
 <summary><b>2025 Update Logs:</b></summary>
 
+* `2025.05.08` - update new layout.
 * `2025.03.10` - [CVPR 2025 Accepted Papers](https://cvpr.thecvf.com/Conferences/2025/AcceptedPapers)🎉
 * `2025.02.28` - update several papers status "CVPR 2025" to accepted papers, congrats to all 🎉
 * `2025.01.23` - update several papers status "ICLR 2025" to accepted papers, congrats to all 🎉
@@ -609,10 +611,10 @@ The rapid advancement of diffusion models holds the promise of revolutionizing t
 
 ### Previous Papers
 
-### Year 2023
+#### Year 2023
 In 2023, tasks classified as text/Image to 4D and video to 4D generally involve producing four-dimensional data from text/Image or video input. For more details, please check the [2023 4D Papers](./docs/4d/4d_2023.md), including 6 accepted papers and 3 arXiv papers.
 
-### Year 2024
+#### Year 2024
 For more details, please check the [2024 4D Papers](./docs/4d/4d_2024.md), including 21 accepted papers and 13 arXiv papers.
 
 --------------
@@ -772,7 +774,7 @@ Human motion modeling traditionally separates motion generation and estimation i
 
 ### Previous Papers
 
-### Year 2024
+#### Year 2024
 For more details, please check the [2024 T2V Papers](./docs/video/t2v_2024.md), including 21 accepted papers and 6 arXiv papers.
 
 - OSS video generation models: [Mochi 1](https://github.com/genmoai/models) preview is an open state-of-the-art video generation model with high-fidelity motion and strong prompt adherence.
@@ -924,9 +926,11 @@ year={2025}
 ```
 </details>
 
+### Scene Other Additional Info
+
 ### Previous Papers
 
-### Year 2023-2024
+#### Year 2023-2024
 For more details, please check the [2023-2024 3D Scene Papers](./docs/3d_scene/3d_scene_23-24.md), including 23 accepted papers and 8 arXiv papers.
 
 <details close>
@@ -937,6 +941,7 @@ For more details, please check the [2023-2024 3D Scene Papers](./docs/3d_scene/3
 
 > ##### Awesome Repos
 - Resource1: [WorldGen: Generate Any 3D Scene in Seconds](https://github.com/ZiYang-xie/WorldGen)
+- Resource2: [Awesome-3D-Scene-Generation](https://github.com/hzxie/Awesome-3D-Scene-Generation)
 
 </details>
 
@@ -1085,7 +1090,7 @@ Achieving high-fidelity and temporally smooth 3D human motion generation remains
 
 ### Previous Papers
 
-### Year 2023-2024
+#### Year 2023-2024
 For more details, please check the [2023-2024 Text to Human Motion Papers](./docs/human_motion/motion_23-24.md), including 36 accepted papers and 8 arXiv papers.
 
 ### 📚 Dataset Works
@@ -1259,7 +1264,7 @@ Yuhang Yang, Fengqi Liu, Yixing Lu, Qin Zhao, Pingyu Wu, Wei Zhai, Ran Yi, Yang 
 ### Additional Info
 ### Previous Papers
 
-### Year 2023-2024
+#### Year 2023-2024
 For more details, please check the [2023-2024 3D Human Papers](./docs/3d_human/human_23-24.md), including 18 accepted papers and 5 arXiv papers.
 
 <details close>
