@@ -719,6 +719,13 @@ Jiefeng Li, Jinkun Cao, Haotian Zhang, Davis Rempe, Jan Kautz, Umar Iqbal, Ye Yu
 Human motion modeling traditionally separates motion generation and estimation into distinct tasks with specialized models. Motion generation models focus on creating diverse, realistic motions from inputs like text, audio, or keyframes, while motion estimation models aim to reconstruct accurate motion trajectories from observations like videos. Despite sharing underlying representations of temporal dynamics and kinematics, this separation limits knowledge transfer between tasks and requires maintaining separate models. We present GENMO, a unified Generalist Model for Human Motion that bridges motion estimation and generation in a single framework. Our key insight is to reformulate motion estimation as constrained motion generation, where the output motion must precisely satisfy observed conditioning signals. Leveraging the synergy between regression and diffusion, GENMO achieves accurate global motion estimation while enabling diverse motion generation. We also introduce an estimation-guided training objective that exploits in-the-wild videos with 2D annotations and text descriptions to enhance generative diversity. Furthermore, our novel architecture handles variable-length motions and mixed multimodal conditions (text, audio, video) at different time intervals, offering flexible control. This unified approach creates synergistic benefits: generative priors improve estimated motions under challenging conditions like occlusions, while diverse video data enhances generation capabilities. Extensive experiments demonstrate GENMO's effectiveness as a generalist framework that successfully handles multiple human motion tasks within a single model.
 </details>
 
+#### 5. HunyuanCustom: A Multimodal-Driven Architecture for Customized Video Generation
+Teng Hu, Zhentao Yu, Zhengguang Zhou, Sen Liang, Yuan Zhou, Qin Lin, Qinglin Lu (Tencent Hunyuan)
+<details span>
+<summary><b>Abstract</b></summary>
+Customized video generation aims to produce videos featuring specific subjects under flexible user-defined conditions, yet existing methods often struggle with identity consistency and limited input modalities. In this paper, we propose HunyuanCustom, a multi-modal customized video generation framework that emphasizes subject consistency while supporting image, audio, video, and text conditions. Built upon HunyuanVideo, our model first addresses the image-text conditioned generation task by introducing a text-image fusion module based on LLaVA for enhanced multi-modal understanding, along with an image ID enhancement module that leverages temporal concatenation to reinforce identity features across frames. To enable audio- and video-conditioned generation, we further propose modality-specific condition injection mechanisms: an AudioNet module that achieves hierarchical alignment via spatial cross-attention, and a video-driven injection module that integrates latent-compressed conditional video through a patchify-based feature-alignment network. Extensive experiments on single- and multi-subject scenarios demonstrate that HunyuanCustom significantly outperforms state-of-the-art open- and closed-source methods in terms of ID consistency, realism, and text-video alignment. Moreover, we validate its robustness across downstream tasks, including audio and video-driven customized video generation. Our results highlight the effectiveness of multi-modal conditioning and identity-preserving strategies in advancing controllable video generation.
+</details>
+
 
 | Year | Title                                                        | ArXiv Time  |                           Paper                            |                      Code                      | Project Page                      |
 | ---- | ------------------------------------------------------------ | :----: | :--------------------------------------------------------: | :--------------------------------------------: | :--------------------------------------------: |
@@ -726,6 +733,7 @@ Human motion modeling traditionally separates motion generation and estimation i
 | 2025 | **Uni3C: Unifying Precisely 3D-Enhanced Camera and Human Motion Controls for Video Generation**  | 21 Apr 2025 |          [Link](https://arxiv.org/abs/2504.14899)          | [Link](https://github.com/ewrfcas/Uni3C) | [Link](https://ewrfcas.github.io/Uni3C/)  |
 | 2025 | **We'll Fix it in Post: Improving Text-to-Video Generation with Neuro-Symbolic Feedback**  | 25 Apr 2025 |          [Link](https://arxiv.org/abs/2504.17180)          | -- | --  |
 | 2025 | **GENMO: A GENeralist Model for Human MOtion**  | 2 May 2025 |          [Link](https://arxiv.org/abs/2505.01425)          | -- | [Link](https://research.nvidia.com/labs/dair/genmo/)  |
+| 2025 | **HunyuanCustom: A Multimodal-Driven Architecture for Customized Video Generation**  | 7 May 2025 |          [Link](https://arxiv.org/abs/2505.04512)          | [Link](https://github.com/Tencent/HunyuanCustom) | [Link](https://hunyuancustom.github.io/)  |
 
 <details close>
 <summary>ArXiv Papers References</summary>
@@ -761,6 +769,13 @@ Human motion modeling traditionally separates motion generation and estimation i
   title={GENMO: Generative Models for Human Motion Synthesis},
   author={Li, Jiefeng and Cao, Jinkun and Zhang, Haotian and Rempe, Davis and Kautz, Jan and Iqbal, Umar and Yuan, Ye},
   journal={arXiv preprint arXiv:2505.01425},
+  year={2025}
+}
+
+@article{hu2025hunyuancustom,
+  title={HunyuanCustom: A Multimodal-Driven Architecture for Customized Video Generation},
+  author={Hu, Teng and Yu, Zhentao and Zhou, Zhengguang and Liang, Sen and Zhou, Yuan and Lin, Qin and Lu, Qinglin},
+  journal={arXiv preprint arXiv:2505.04512},
   year={2025}
 }
 
@@ -1317,6 +1332,7 @@ Here, other tasks refer to CAD, 3D modeling, music generation, and so on.
 > ##### Text to CAD
 * [arXiv 7 Nov 2024] **CAD-MLLM: Unifying Multimodality-Conditioned CAD Generation With MLLM** [[Paper](https://arxiv.org/abs/2411.04954)] [[GitHub](https://github.com/CAD-MLLM/CAD-MLLM)] [[Project Page](https://cad-mllm.github.io/)]
 * [NeurIPS 2024 Spotlight] **Text2CAD: Generating Sequential CAD Designs from Beginner-to-Expert Level Text Prompts** [[Paper](https://arxiv.org/abs/2409.17106)] [[GitHub](https://github.com/SadilKhan/Text2CAD)] [[Project Page](https://sadilkhan.github.io/text2cad-project/)] [[Dataset](https://huggingface.co/datasets/SadilKhan/Text2CAD)]
+* [CVPR 2025] **CAD-Llama: Leveraging Large Language Models for Computer-Aided Design Parametric 3D Model Generation** [[Paper](https://arxiv.org/abs/2505.04481)] 
 
 
 > ##### Text to Music
