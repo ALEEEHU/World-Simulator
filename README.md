@@ -953,10 +953,10 @@ For more details, please check the [2023-2024 3D Scene Papers](./docs/3d_scene/3
 
 > ##### Survey
 * [arXiv 16 Apr 2025]**Recent Advance in 3D Object and Scene Generation: A Survey** [[Paper](https://arxiv.org/abs/2504.11734)]
+* [arXiv 8 May 2025]**3D Scene Generation: A Survey** [[Paper](https://arxiv.org/abs/2505.05474)][[GitHub](https://github.com/hzxie/Awesome-3D-Scene-Generation)]
 
 > ##### Awesome Repos
 - Resource1: [WorldGen: Generate Any 3D Scene in Seconds](https://github.com/ZiYang-xie/WorldGen)
-- Resource2: [Awesome-3D-Scene-Generation](https://github.com/hzxie/Awesome-3D-Scene-Generation)
 
 </details>
 
@@ -1043,6 +1043,15 @@ Manolo Canales Cuba, Vinícius do Carmo Melício, João Paulo Gois
 Achieving high-fidelity and temporally smooth 3D human motion generation remains a challenge, particularly within resource-constrained environments. We introduce FlowMotion, a novel method leveraging Conditional Flow Matching (CFM). FlowMotion incorporates a training objective within CFM that focuses on more accurately predicting target motion in 3D human motion generation, resulting in enhanced generation fidelity and temporal smoothness while maintaining the fast synthesis times characteristic of flow-matching-based methods. FlowMotion achieves state-of-the-art jitter performance, achieving the best jitter in the KIT dataset and the second-best jitter in the HumanML3D dataset, and a competitive FID value in both datasets. This combination provides robust and natural motion sequences, offering a promising equilibrium between generation quality and temporal naturalness.
 </details>
 
+#### 6. ReAlign: Bilingual Text-to-Motion Generation via Step-Aware Reward-Guided Alignment
+Wanjiang Weng, Xiaofeng Tan, Hongsong Wang, Pan Zhou
+
+(Southeast University, Key Laboratory of New Generation Artificial Intelligence Technology and Its Interdisciplinary Applications, Singapore Management University)
+<details span>
+<summary><b>Abstract</b></summary>
+Bilingual text-to-motion generation, which synthesizes 3D human motions from bilingual text inputs, holds immense potential for cross-linguistic applications in gaming, film, and robotics. However, this task faces critical challenges: the absence of bilingual motion-language datasets and the misalignment between text and motion distributions in diffusion models, leading to semantically inconsistent or low-quality motions. To address these challenges, we propose BiHumanML3D, a novel bilingual human motion dataset, which establishes a crucial benchmark for bilingual text-to-motion generation models. Furthermore, we propose a Bilingual Motion Diffusion model (BiMD), which leverages cross-lingual aligned representations to capture semantics, thereby achieving a unified bilingual model. Building upon this, we propose Reward-guided sampling Alignment (ReAlign) method, comprising a step-aware reward model to assess alignment quality during sampling and a reward-guided strategy that directs the diffusion process toward an optimally aligned distribution. This reward model integrates step-aware tokens and combines a text-aligned module for semantic consistency and a motion-aligned module for realism, refining noisy motions at each timestep to balance probability density and alignment. Experiments demonstrate that our approach significantly improves text-motion alignment and motion quality compared to existing state-of-the-art methods.
+</details>
+
 | Year | Title                                                        | ArXiv Time  |                           Paper                            |                      Code                      | Project Page                      |
 | ---- | ------------------------------------------------------------ | :----: | :--------------------------------------------------------: | :--------------------------------------------: | :--------------------------------------------: |
 | 2025 | **MotionLab: Unified Human Motion Generation and Editing via the Motion-Condition-Motion Paradigm**  | 6 Feb 2025 |          [Link](https://arxiv.org/abs/2502.02358)          | [Link](https://github.com/Diouo/MotionLab)  | [Link](https://diouo.github.io/motionlab.github.io/)  |
@@ -1050,6 +1059,7 @@ Achieving high-fidelity and temporally smooth 3D human motion generation remains
 | 2025 | **MotionStreamer: Streaming Motion Generation via Diffusion-based Autoregressive Model in Causal Latent Space**  | 19 Mar 2025 |          [Link](https://arxiv.org/abs/2503.15451)          | [Link](https://github.com/zju3dv/MotionStreamer)  | [Link](https://zju3dv.github.io/MotionStreamer/)  |
 | 2025 | **Animating the Uncaptured: Humanoid Mesh Animation with Video Diffusion Models**  | 20 Mar 2025 |          [Link](https://arxiv.org/abs/2503.15996)          | --  | [Link](https://marcb.pro/atu/)  |
 | 2025 | **FlowMotion: Target-Predictive Conditional Flow Matching for Jitter-Reduced Text-Driven Human Motion Generation**  | 20 Apr 2025 |          [Link](https://arxiv.org/abs/2504.01338)          | --  | --  |
+| 2025 | **ReAlign: Bilingual Text-to-Motion Generation via Step-Aware Reward-Guided Alignment**  | 8 May 2025 |          [Link](https://www.arxiv.org/abs/2505.04974)          | --  | [Link](https://wengwanjiang.github.io/ReAlign-page/)  |
 
 <details close>
 <summary>ArXiv Papers References</summary>
@@ -1095,6 +1105,12 @@ Achieving high-fidelity and temporally smooth 3D human motion generation remains
   year={2025}
 }
 
+@article{weng2025realign,
+  title={ReAlign: Bilingual Text-to-Motion Generation via Step-Aware Reward-Guided Alignment},
+  author={Weng, Wanjiang and Tan, Xiaofeng and Wang, Hongsong and Zhou, Pan},
+  journal={arXiv preprint arXiv:2505.04974},
+  year={2025}
+}
 ```
 </details>
 
