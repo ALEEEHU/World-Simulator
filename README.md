@@ -875,6 +875,14 @@ Wenqi Dong, Bangbang Yang, Zesong Yang, Yuan Li, Tao Hu, Hujun Bao, Yuewen Ma, Z
 Scene-level 3D generation represents a critical frontier in multimedia and computer graphics, yet existing approaches either suffer from limited object categories or lack editing flexibility for interactive applications. In this paper, we present HiScene, a novel hierarchical framework that bridges the gap between 2D image generation and 3D object generation and delivers high-fidelity scenes with compositional identities and aesthetic scene content. Our key insight is treating scenes as hierarchical "objects" under isometric views, where a room functions as a complex object that can be further decomposed into manipulatable items. This hierarchical approach enables us to generate 3D content that aligns with 2D representations while maintaining compositional structure. To ensure completeness and spatial alignment of each decomposed instance, we develop a video-diffusion-based amodal completion technique that effectively handles occlusions and shadows between objects, and introduce shape prior injection to ensure spatial coherence within the scene. Experimental results demonstrate that our method produces more natural object arrangements and complete object instances suitable for interactive applications, while maintaining physical plausibility and alignment with user inputs.
 </details>
 
+#### 5. 3DTown: Constructing a 3D Town from a Single Image
+Kaizhi Zheng, Ruijian Zhang, Jing Gu, Jie Yang, Xin Eric Wang
+
+(University of California Santa Cruz, Columbia University, Cybever AI)
+<details span>
+<summary><b>Abstract</b></summary>
+Acquiring detailed 3D scenes typically demands costly equipment, multi-view data, or labor-intensive modeling. Therefore, a lightweight alternative, generating complex 3D scenes from a single top-down image, plays an essential role in real-world applications. While recent 3D generative models have achieved remarkable results at the object level, their extension to full-scene generation often leads to inconsistent geometry, layout hallucinations, and low-quality meshes. In this work, we introduce 3DTown, a training-free framework designed to synthesize realistic and coherent 3D scenes from a single top-down view. Our method is grounded in two principles: region-based generation to improve image-to-3D alignment and resolution, and spatial-aware 3D inpainting to ensure global scene coherence and high-quality geometry generation. Specifically, we decompose the input image into overlapping regions and generate each using a pretrained 3D object generator, followed by a masked rectified flow inpainting process that fills in missing geometry while maintaining structural continuity. This modular design allows us to overcome resolution bottlenecks and preserve spatial structure without requiring 3D supervision or fine-tuning. Extensive experiments across diverse scenes show that 3DTown outperforms state-of-the-art baselines, including Trellis, Hunyuan3D-2, and TripoSG, in terms of geometry quality, spatial coherence, and texture fidelity. Our results demonstrate that high-quality 3D town generation is achievable from a single image using a principled, training-free approach.
+</details>
 
 | Year | Title                                                        | ArXiv Time  |                           Paper                            |                      Code                      | Project Page                      |
 | ---- | ------------------------------------------------------------ | :----: | :--------------------------------------------------------: | :--------------------------------------------: | :--------------------------------------------: |
@@ -882,6 +890,7 @@ Scene-level 3D generation represents a critical frontier in multimedia and compu
 | 2025 | **Bolt3D: Generating 3D Scenes in Seconds**  | 18 Mar 2025 |          [Link](https://arxiv.org/abs/2503.14445)          | --  | [Link](https://szymanowiczs.github.io/bolt3d)  |
 | 2025 | **WORLDMEM: Long-term Consistent World Simulation with Memory**  | 16 Apr 2025 |          [Link](https://arxiv.org/abs/2504.12369)          | [Link](https://github.com/xizaoqu/WorldMem)  | [Link](https://xizaoqu.github.io/worldmem/)  |
 | 2025 | **HiScene: Creating Hierarchical 3D Scenes with Isometric View Generation**  | 17 Apr 2025 |          [Link](https://arxiv.org/abs/2504.13072)          | --  | [Link](https://zju3dv.github.io/hiscene/)  |
+| 2025 | **3DTown: Constructing a 3D Town from a Single Image**  | 21 May 2025 |          [Link](https://arxiv.org/abs/2505.15765)          | --  | [Link](https://eric-ai-lab.github.io/3dtown.github.io/)  |
 
 
 <details close>
@@ -921,6 +930,16 @@ year={2025}
       author  = {Dong, Wenqi and Yang, Bangbang and Yang, Zesong and Li, Yuan and Hu, Tao and Bao, Hujun and Ma, Yuewen and Cui, Zhaopeng},
       journal = {arXiv preprint arXiv:2504.13072},
       year    = {2025},
+}
+
+@misc{zheng2025constructing3dtownsingle,
+      title={Constructing a 3D Town from a Single Image}, 
+      author={Kaizhi Zheng and Ruijian Zhang and Jing Gu and Jie Yang and Xin Eric Wang},
+      year={2025},
+      eprint={2505.15765},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2505.15765}, 
 }
 
 ```
