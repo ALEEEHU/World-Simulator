@@ -719,6 +719,13 @@ Teng Hu, Zhentao Yu, Zhengguang Zhou, Sen Liang, Yuan Zhou, Qin Lin, Qinglin Lu 
 Customized video generation aims to produce videos featuring specific subjects under flexible user-defined conditions, yet existing methods often struggle with identity consistency and limited input modalities. In this paper, we propose HunyuanCustom, a multi-modal customized video generation framework that emphasizes subject consistency while supporting image, audio, video, and text conditions. Built upon HunyuanVideo, our model first addresses the image-text conditioned generation task by introducing a text-image fusion module based on LLaVA for enhanced multi-modal understanding, along with an image ID enhancement module that leverages temporal concatenation to reinforce identity features across frames. To enable audio- and video-conditioned generation, we further propose modality-specific condition injection mechanisms: an AudioNet module that achieves hierarchical alignment via spatial cross-attention, and a video-driven injection module that integrates latent-compressed conditional video through a patchify-based feature-alignment network. Extensive experiments on single- and multi-subject scenarios demonstrate that HunyuanCustom significantly outperforms state-of-the-art open- and closed-source methods in terms of ID consistency, realism, and text-video alignment. Moreover, we validate its robustness across downstream tasks, including audio and video-driven customized video generation. Our results highlight the effectiveness of multi-modal conditioning and identity-preserving strategies in advancing controllable video generation.
 </details>
 
+#### 5. WonderPlay: Dynamic 3D Scene Generation from a Single Image and Actions
+Zizhang Li, Hong-Xing Yu, Wei Liu, Yin Yang, Charles Herrmann, Gordon Wetzstein, Jiajun Wu (Stanford University, University of Utah)
+<details span>
+<summary><b>Abstract</b></summary>
+WonderPlay is a novel framework integrating physics simulation with video generation for generating action-conditioned dynamic 3D scenes from a single image. While prior works are restricted to rigid body or simple elastic dynamics, WonderPlay features a hybrid generative simulator to synthesize a wide range of 3D dynamics. The hybrid generative simulator first uses a physics solver to simulate coarse 3D dynamics, which subsequently conditions a video generator to produce a video with finer, more realistic motion. The generated video is then used to update the simulated dynamic 3D scene, closing the loop between the physics solver and the video generator. This approach enables intuitive user control to be combined with the accurate dynamics of physics-based simulators and the expressivity of diffusion-based video generators. Experimental results demonstrate that WonderPlay enables users to interact with various scenes of diverse content, including cloth, sand, snow, liquid, smoke, elastic, and rigid bodies -- all using a single image input. Code will be made public.
+</details>
+
 
 | Year | Title                                                        | ArXiv Time  |                           Paper                            |                      Code                      | Project Page                      |
 | ---- | ------------------------------------------------------------ | :----: | :--------------------------------------------------------: | :--------------------------------------------: | :--------------------------------------------: |
@@ -726,6 +733,7 @@ Customized video generation aims to produce videos featuring specific subjects u
 | 2025 | **Uni3C: Unifying Precisely 3D-Enhanced Camera and Human Motion Controls for Video Generation**  | 21 Apr 2025 |          [Link](https://arxiv.org/abs/2504.14899)          | [Link](https://github.com/ewrfcas/Uni3C) | [Link](https://ewrfcas.github.io/Uni3C/)  |
 | 2025 | **We'll Fix it in Post: Improving Text-to-Video Generation with Neuro-Symbolic Feedback**  | 25 Apr 2025 |          [Link](https://arxiv.org/abs/2504.17180)          | -- | --  |
 | 2025 | **HunyuanCustom: A Multimodal-Driven Architecture for Customized Video Generation**  | 7 May 2025 |          [Link](https://arxiv.org/abs/2505.04512)          | [Link](https://github.com/Tencent/HunyuanCustom) | [Link](https://hunyuancustom.github.io/)  |
+| 2025 | **WonderPlay: Dynamic 3D Scene Generation from a Single Image and Actions**  | 23 May 2025 |          [Link](https://arxiv.org/abs/2505.18151)          | -- | [Link](https://kyleleey.github.io/WonderPlay/)  |
 
 <details close>
 <summary>ArXiv Papers References</summary>
@@ -762,6 +770,16 @@ Customized video generation aims to produce videos featuring specific subjects u
   author={Hu, Teng and Yu, Zhentao and Zhou, Zhengguang and Liang, Sen and Zhou, Yuan and Lin, Qin and Lu, Qinglin},
   journal={arXiv preprint arXiv:2505.04512},
   year={2025}
+}
+
+@misc{li2025wonderplaydynamic3dscene,
+      title={WonderPlay: Dynamic 3D Scene Generation from a Single Image and Actions}, 
+      author={Zizhang Li and Hong-Xing Yu and Wei Liu and Yin Yang and Charles Herrmann and Gordon Wetzstein and Jiajun Wu},
+      year={2025},
+      eprint={2505.18151},
+      archivePrefix={arXiv},
+      primaryClass={cs.GR},
+      url={https://arxiv.org/abs/2505.18151}, 
 }
 
 ```
@@ -884,6 +902,14 @@ Kaizhi Zheng, Ruijian Zhang, Jing Gu, Jie Yang, Xin Eric Wang
 Acquiring detailed 3D scenes typically demands costly equipment, multi-view data, or labor-intensive modeling. Therefore, a lightweight alternative, generating complex 3D scenes from a single top-down image, plays an essential role in real-world applications. While recent 3D generative models have achieved remarkable results at the object level, their extension to full-scene generation often leads to inconsistent geometry, layout hallucinations, and low-quality meshes. In this work, we introduce 3DTown, a training-free framework designed to synthesize realistic and coherent 3D scenes from a single top-down view. Our method is grounded in two principles: region-based generation to improve image-to-3D alignment and resolution, and spatial-aware 3D inpainting to ensure global scene coherence and high-quality geometry generation. Specifically, we decompose the input image into overlapping regions and generate each using a pretrained 3D object generator, followed by a masked rectified flow inpainting process that fills in missing geometry while maintaining structural continuity. This modular design allows us to overcome resolution bottlenecks and preserve spatial structure without requiring 3D supervision or fine-tuning. Extensive experiments across diverse scenes show that 3DTown outperforms state-of-the-art baselines, including Trellis, Hunyuan3D-2, and TripoSG, in terms of geometry quality, spatial coherence, and texture fidelity. Our results demonstrate that high-quality 3D town generation is achievable from a single image using a principled, training-free approach.
 </details>
 
+#### 6. Agentic 3D Scene Generation with Spatially Contextualized VLMs
+Xinhang Liu, Yu-Wing Tai, Chi-Keung Tang (HKUST, Dartmouth College)
+
+<details span>
+<summary><b>Abstract</b></summary>
+Despite recent advances in multimodal content generation enabled by vision-language models (VLMs), their ability to reason about and generate structured 3D scenes remains largely underexplored. This limitation constrains their utility in spatially grounded tasks such as embodied AI, immersive simulations, and interactive 3D applications. We introduce a new paradigm that enables VLMs to generate, understand, and edit complex 3D environments by injecting a continually evolving spatial context. Constructed from multimodal input, this context consists of three components: a scene portrait that provides a high-level semantic blueprint, a semantically labeled point cloud capturing object-level geometry, and a scene hypergraph that encodes rich spatial relationships, including unary, binary, and higher-order constraints. Together, these components provide the VLM with a structured, geometry-aware working memory that integrates its inherent multimodal reasoning capabilities with structured 3D understanding for effective spatial reasoning. Building on this foundation, we develop an agentic 3D scene generation pipeline in which the VLM iteratively reads from and updates the spatial context. The pipeline features high-quality asset generation with geometric restoration, environment setup with automatic verification, and ergonomic adjustment guided by the scene hypergraph. Experiments show that our framework can handle diverse and challenging inputs, achieving a level of generalization not observed in prior work. Further results demonstrate that injecting spatial context enables VLMs to perform downstream tasks such as interactive scene editing and path planning, suggesting strong potential for spatially intelligent systems in computer graphics, 3D vision, and embodied applications.
+</details>
+
 | Year | Title                                                        | ArXiv Time  |                           Paper                            |                      Code                      | Project Page                      |
 | ---- | ------------------------------------------------------------ | :----: | :--------------------------------------------------------: | :--------------------------------------------: | :--------------------------------------------: |
 | 2025 | **LAYOUTDREAMER: Physics-guided Layout for Text-to-3D Compositional Scene Generation**  | 4 Feb 2025 |          [Link](https://arxiv.org/abs/2502.01949)          | --  | --  |
@@ -891,6 +917,7 @@ Acquiring detailed 3D scenes typically demands costly equipment, multi-view data
 | 2025 | **WORLDMEM: Long-term Consistent World Simulation with Memory**  | 16 Apr 2025 |          [Link](https://arxiv.org/abs/2504.12369)          | [Link](https://github.com/xizaoqu/WorldMem)  | [Link](https://xizaoqu.github.io/worldmem/)  |
 | 2025 | **HiScene: Creating Hierarchical 3D Scenes with Isometric View Generation**  | 17 Apr 2025 |          [Link](https://arxiv.org/abs/2504.13072)          | --  | [Link](https://zju3dv.github.io/hiscene/)  |
 | 2025 | **3DTown: Constructing a 3D Town from a Single Image**  | 21 May 2025 |          [Link](https://arxiv.org/abs/2505.15765)          | --  | [Link](https://eric-ai-lab.github.io/3dtown.github.io/)  |
+| 2025 | **Agentic 3D Scene Generation with Spatially Contextualized VLMs**  | 26 May 2025 |          [Link](https://arxiv.org/abs/2505.20129)          | --  | --  |
 
 
 <details close>
@@ -940,6 +967,16 @@ year={2025}
       archivePrefix={arXiv},
       primaryClass={cs.CV},
       url={https://arxiv.org/abs/2505.15765}, 
+}
+
+@misc{liu2025agentic3dscenegeneration,
+      title={Agentic 3D Scene Generation with Spatially Contextualized VLMs}, 
+      author={Xinhang Liu and Yu-Wing Tai and Chi-Keung Tang},
+      year={2025},
+      eprint={2505.20129},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2505.20129}, 
 }
 
 ```
