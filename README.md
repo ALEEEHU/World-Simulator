@@ -409,6 +409,7 @@ An open collection of state-of-the-art (SOTA), novel **Text to X (X can be every
 | 2025 | **Optimizing 4D Gaussians for Dynamic Scene Video from Single Landscape Images**  | ICLR 2025 |          [Link](https://arxiv.org/abs/2504.05458)          | [Link](https://github.com/cvsp-lab/ICLR2025_3D-MOM)  | [Link](https://paper.pnu-cvsp.com/ICLR2025_3D-MOM/)  |
 | 2025 | **GS-DiT: Advancing Video Generation with Pseudo 4D Gaussian Fields through Efficient Dense 3D Point Tracking**  | CVPR 2025 |          [Link](https://arxiv.org/abs/2501.02690)          | [Link](https://github.com/wkbian/GS-DiT)  | [Link](https://wkbian.github.io/Projects/GS-DiT/)  |
 | 2025 | **Stereo4D: Learning How Things Move in 3D from Internet Stereo Videos**  | CVPR 2025 Oral |          [Link](https://arxiv.org/abs/2412.09621)          | [Link](https://github.com/Stereo4d/stereo4d-code)  | [Link](https://stereo4d.github.io/)  |
+| 2025 | **Uni4D: Unifying Visual Foundation Models for 4D Modeling from a Single Video**  | CVPR 2025 Highlight |          [Link](https://arxiv.org/abs/2503.21761v1)          | [Link](https://github.com/Davidyao99/uni4d/tree/main)  | [Link](https://davidyao99.github.io/uni4d/)  |
 
 <details close>
 <summary>Accepted Papers References</summary>
@@ -435,6 +436,13 @@ An open collection of state-of-the-art (SOTA), novel **Text to X (X can be every
   author={Jin, Linyi and Tucker, Richard and Li, Zhengqi and Fouhey, David and Snavely, Noah and Holynski, Aleksander},
   journal={CVPR},
   year={2025},
+}
+
+@article{yao2025uni4d,
+  title={Uni4D: Unifying Visual Foundation Models for 4D Modeling from a Single Video},
+  author={Yao, David Yifan and Zhai, Albert J and Wang, Shenlong},
+  journal={arXiv preprint arXiv:2503.21761},
+  year={2025}
 }
 
 ```
