@@ -666,6 +666,7 @@ For more details, please check the [2024 4D Papers](./docs/4d/4d_2024.md), inclu
 | 2025 | **Identity-Preserving Text-to-Video Generation by Frequency Decomposition**  | CVPR 2025 |          [Link](https://arxiv.org/abs/2411.17440)          | [Link](https://github.com/PKU-YuanGroup/ConsisID) | [Link](https://pku-yuangroup.github.io/ConsisID/)  |
 | 2025 | **One-Minute Video Generation with Test-Time Training**  | CVPR 2025 |          [Link](https://arxiv.org/abs/2504.05298v1)          | [Link](https://github.com/test-time-training/ttt-video-dit) | [Link](https://test-time-training.github.io/video-dit/)  |
 | 2025 | **The Devil is in the Prompts: Retrieval-Augmented Prompt Optimization for Text-to-Video Generation**  | CVPR 2025 |          [Link](https://arxiv.org/abs/2504.11739)          | [Link](https://github.com/Vchitect/RAPO) | [Link](https://whynothaha.github.io/Prompt_optimizer/RAPO.html)  |
+| 2025 | **SnapGen-V: Generating a Five-Second Video within Five Seconds on a Mobile Device**  | CVPR 2025 |          [Link](https://arxiv.org/abs/2412.10494)          | -- | [Link](https://snap-research.github.io/snapgen-v/)  |
 
 <details close>
 <summary>Accepted Papers References</summary>
@@ -711,6 +712,14 @@ For more details, please check the [2024 4D Papers](./docs/4d/4d_2024.md), inclu
   title={The Devil is in the Prompts: Retrieval-Augmented Prompt Optimization for Text-to-Video Generation},
   author={Gao, Bingjie and Gao, Xinyu and Wu, Xiaoxue and Zhou, Yujie and Qiao, Yu and Niu, Li and Chen, Xinyuan and Wang, Yaohui},
   journal={arXiv preprint arXiv:2504.11739},
+  year={2025}
+}
+
+@inproceedings{wu2025snapgen,
+  title={Snapgen-v: Generating a five-second video within five seconds on a mobile device},
+  author={Wu, Yushu and Zhang, Zhixing and Li, Yanyu and Xu, Yanwu and Kag, Anil and Sui, Yang and Coskun, Huseyin and Ma, Ke and Lebedev, Aleksei and Hu, Ju and others},
+  booktitle={Proceedings of the Computer Vision and Pattern Recognition Conference},
+  pages={2479--2490},
   year={2025}
 }
 
@@ -762,6 +771,15 @@ Zizhang Li, Hong-Xing Yu, Wei Liu, Yin Yang, Charles Herrmann, Gordon Wetzstein,
 WonderPlay is a novel framework integrating physics simulation with video generation for generating action-conditioned dynamic 3D scenes from a single image. While prior works are restricted to rigid body or simple elastic dynamics, WonderPlay features a hybrid generative simulator to synthesize a wide range of 3D dynamics. The hybrid generative simulator first uses a physics solver to simulate coarse 3D dynamics, which subsequently conditions a video generator to produce a video with finer, more realistic motion. The generated video is then used to update the simulated dynamic 3D scene, closing the loop between the physics solver and the video generator. This approach enables intuitive user control to be combined with the accurate dynamics of physics-based simulators and the expressivity of diffusion-based video generators. Experimental results demonstrate that WonderPlay enables users to interact with various scenes of diverse content, including cloth, sand, snow, liquid, smoke, elastic, and rigid bodies -- all using a single image input. Code will be made public.
 </details>
 
+#### 6. M4V: Multi-Modal Mamba for Text-to-Video Generation
+Jiancheng Huang, Gengwei Zhang, Zequn Jie, Siyu Jiao, Yinlong Qian, Ling Chen, Yunchao Wei, Lin Ma
+
+(Meituan, University of Techcnology Sydney, Beijing Jiaotong University)
+<details span>
+<summary><b>Abstract</b></summary>
+Text-to-video generation has significantly enriched content creation and holds the potential to evolve into powerful world simulators. However, modeling the vast spatiotemporal space remains computationally demanding, particularly when employing Transformers, which incur quadratic complexity in sequence processing and thus limit practical applications. Recent advancements in linear-time sequence modeling, particularly the Mamba architecture, offer a more efficient alternative. Nevertheless, its plain design limits its direct applicability to multi-modal and spatiotemporal video generation tasks. To address these challenges, we introduce M4V, a Multi-Modal Mamba framework for text-to-video generation. Specifically, we propose a multi-modal diffusion Mamba (MM-DiM) block that enables seamless integration of multi-modal information and spatiotemporal modeling through a multi-modal token re-composition design. As a result, the Mamba blocks in M4V reduce FLOPs by 45% compared to the attention-based alternative when generating videos at 7681280 resolution. Additionally, to mitigate the visual quality degradation in long-context autoregressive generation processes, we introduce a reward learning strategy that further enhances per-frame visual realism. Extensive experiments on text-to-video benchmarks demonstrate M4V's ability to produce high-quality videos while significantly lowering computational costs. 
+</details>
+
 
 | Year | Title                                                        | ArXiv Time  |                           Paper                            |                      Code                      | Project Page                      |
 | ---- | ------------------------------------------------------------ | :----: | :--------------------------------------------------------: | :--------------------------------------------: | :--------------------------------------------: |
@@ -770,6 +788,7 @@ WonderPlay is a novel framework integrating physics simulation with video genera
 | 2025 | **We'll Fix it in Post: Improving Text-to-Video Generation with Neuro-Symbolic Feedback**  | 25 Apr 2025 |          [Link](https://arxiv.org/abs/2504.17180)          | -- | --  |
 | 2025 | **HunyuanCustom: A Multimodal-Driven Architecture for Customized Video Generation**  | 7 May 2025 |          [Link](https://arxiv.org/abs/2505.04512)          | [Link](https://github.com/Tencent/HunyuanCustom) | [Link](https://hunyuancustom.github.io/)  |
 | 2025 | **WonderPlay: Dynamic 3D Scene Generation from a Single Image and Actions**  | 23 May 2025 |          [Link](https://arxiv.org/abs/2505.18151)          | -- | [Link](https://kyleleey.github.io/WonderPlay/)  |
+| 2025 | **M4V: Multi-Modal Mamba for Text-to-Video Generation**  | 12 Jun 2025 |          [Link](https://arxiv.org/abs/2506.10915)          | [Link](https://github.com/huangjch526/M4V) | [Link](https://huangjch526.github.io/M4V_project/)  |
 
 <details close>
 <summary>ArXiv Papers References</summary>
@@ -816,6 +835,13 @@ WonderPlay is a novel framework integrating physics simulation with video genera
       archivePrefix={arXiv},
       primaryClass={cs.GR},
       url={https://arxiv.org/abs/2505.18151}, 
+}
+
+@article{huang2025m4v,
+  title={M4V: Multi-Modal Mamba for Text-to-Video Generation},
+  author={Huang, Jiancheng and Zhang, Gengwei and Jie, Zequn and Jiao, Siyu and Qian, Yinlong and Chen, Ling and Wei, Yunchao and Ma, Lin},
+  journal={arXiv preprint arXiv:2506.10915},
+  year={2025}
 }
 
 ```
