@@ -411,6 +411,7 @@ An open collection of state-of-the-art (SOTA), novel **Text to X (X can be every
 | 2025 | **Stereo4D: Learning How Things Move in 3D from Internet Stereo Videos**  | CVPR 2025 Oral |          [Link](https://arxiv.org/abs/2412.09621)          | [Link](https://github.com/Stereo4d/stereo4d-code)  | [Link](https://stereo4d.github.io/)  |
 | 2025 | **Uni4D: Unifying Visual Foundation Models for 4D Modeling from a Single Video**  | CVPR 2025 Highlight |          [Link](https://arxiv.org/abs/2503.21761v1)          | [Link](https://github.com/Davidyao99/uni4d/tree/main)  | [Link](https://davidyao99.github.io/uni4d/)  |
 | 2025 | **4D-Fly: Fast 4D Reconstruction from a Single Monocular Video**  | CVPR 2025 |          [Link](https://openaccess.thecvf.com/content/CVPR2025/papers/Wu_4D-Fly_Fast_4D_Reconstruction_from_a_Single_Monocular_Video_CVPR_2025_paper.pdf)          | Coming Soon!  | [Link](https://diankun-wu.github.io/4D-Fly/)  |
+| 2025 | **GenMOJO: Robust Multi-Object 4D Generation for In-the-wild Videos**  | CVPR 2025 |          [Link](https://www.arxiv.org/abs/2506.12716)          | [Link](https://github.com/genmojo/GenMOJO)  | [Link](https://genmojo.github.io/)  |
 
 <details close>
 <summary>Accepted Papers References</summary>
@@ -451,6 +452,14 @@ An open collection of state-of-the-art (SOTA), novel **Text to X (X can be every
   author={Wu, Diankun and Liu, Fangfu and Hung, Yi-Hsin and Qian, Yue and Zhan, Xiaohang and Duan, Yueqi},
   booktitle={Proceedings of the Computer Vision and Pattern Recognition Conference},
   pages={16663--16673},
+  year={2025}
+}
+
+@inproceedings{chu2025robust,
+  title={Robust Multi-Object 4D Generation for In-the-wild Videos},
+  author={Chu, Wen-Hsuan and Ke, Lei and Liu, Jianmeng and Huo, Mingxiao and Tokmakov, Pavel and Fragkiadaki, Katerina},
+  booktitle={Proceedings of the Computer Vision and Pattern Recognition Conference},
+  pages={22067--22077},
   year={2025}
 }
 
