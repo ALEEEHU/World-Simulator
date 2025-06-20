@@ -1545,7 +1545,8 @@ Here, other tasks refer to CAD, 3D modeling, music generation, and so on.
 
 
 > ##### Text to Music
-* [arXiv 1 Sep 2024] **FLUX that Plays Music** [[Paper](https://arxiv.org/abs/2409.00587)] [[GitHub](https://github.com/feizc/FluxMusic)] 
+* [arXiv 1 Sep 2024] **FLUX that Plays Music** [[Paper](https://arxiv.org/abs/2409.00587)] [[GitHub](https://github.com/feizc/FluxMusic)]
+* [International Society for Music Information Retrieval(ISMIR) 2025] **Video-Guided Text-to-Music Generation Using Public Domain Movie Collections** [[Paper](https://arxiv.org/abs/2506.12573)] [[Code](https://github.com/havenpersona/ossl-v1)] [[Project Page](https://havenpersona.github.io/ossl-v1/)] 
 
 
 > ##### Text to Model
