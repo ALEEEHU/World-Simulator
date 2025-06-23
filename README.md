@@ -549,6 +549,14 @@ Junyi Chen, Haoyi Zhu, Xianglong He, Yifan Wang, Jianjun Zhou, Wenzheng Chang, Y
 World models serve as essential building blocks toward Artificial General Intelligence (AGI), enabling intelligent agents to predict future states and plan actions by simulating complex physical interactions. However, existing interactive models primarily predict visual observations, thereby neglecting crucial hidden states like geometric structures and spatial coherence. This leads to rapid error accumulation and temporal inconsistency. To address these limitations, we introduce DeepVerse, a novel 4D interactive world model explicitly incorporating geometric predictions from previous timesteps into current predictions conditioned on actions. Experiments demonstrate that by incorporating explicit geometric constraints, DeepVerse captures richer spatio-temporal relationships and underlying physical dynamics. This capability significantly reduces drift and enhances temporal consistency, enabling the model to reliably generate extended future sequences and achieve substantial improvements in prediction accuracy, visual realism, and scene rationality. Furthermore, our method provides an effective solution for geometry-aware memory retrieval, effectively preserving long-term spatial consistency. We validate the effectiveness of DeepVerse across diverse scenarios, establishing its capacity for high-fidelity, long-horizon predictions grounded in geometry-aware dynamics.
 </details>
 
+#### 10. Sonic4D: Spatial Audio Generation for Immersive 4D Scene Exploration
+Siyi Xie, Hanxin Zhu, Tianyu He, Xin Li, Zhibo Chen (University of Science and Technology of China)
+
+<details span>
+<summary><b>Abstract</b></summary>
+Recent advancements in 4D generation have demonstrated its remarkable capability in synthesizing photorealistic renderings of dynamic 3D scenes. However, despite achieving impressive visual performance, almost all existing methods overlook the generation of spatial audio aligned with the corresponding 4D scenes, posing a significant limitation to truly immersive audiovisual experiences. To mitigate this issue, we propose Sonic4D, a novel framework that enables spatial audio generation for immersive exploration of 4D scenes. Specifically, our method is composed of three stages: 1) To capture both the dynamic visual content and raw auditory information from a monocular video, we first employ pre-trained expert models to generate the 4D scene and its corresponding monaural audio. 2) Subsequently, to transform the monaural audio into spatial audio, we localize and track the sound sources within the 4D scene, where their 3D spatial coordinates at different timestamps are estimated via a pixel-level visual grounding strategy. 3) Based on the estimated sound source locations, we further synthesize plausible spatial audio that varies across different viewpoints and timestamps using physics-based simulation. Extensive experiments have demonstrated that our proposed method generates realistic spatial audio consistent with the synthesized 4D scene in a training-free manner, significantly enhancing the immersive experience for users.
+</details>
+
 -----
 
 </details>
@@ -564,6 +572,7 @@ World models serve as essential building blocks toward Artificial General Intell
 | 2025 | **TesserAct: Learning 4D Embodied World Models**  | 29 Apr 2025 |          [Link](https://arxiv.org/abs/2504.20995)          | [Link](https://github.com/UMass-Embodied-AGI/TesserAct)  | [Link](https://tesseractworld.github.io/)  |
 | 2025 | **HoloTime: Taming Video Diffusion Models for Panoramic 4D Scene Generation**  | 30 Apr 2025 |          [Link](https://arxiv.org/abs/2504.21650)          | [Link](https://github.com/PKU-YuanGroup/HoloTime)  | [Link](https://zhouhyocean.github.io/holotime/)  |
 | 2025 | **DeepVerse: 4D Autoregressive Video Generation as a World Model**  | 1 Jun 2025 |          [Link](https://www.arxiv.org/abs/2506.01103)          | [Link](https://github.com/SOTAMak1r/DeepVerse)  | [Link](https://sotamak1r.github.io/deepverse/)  |
+| 2025 | **Sonic4D: Spatial Audio Generation for Immersive 4D Scene Exploration**  | 18 Jun 2025 |          [Link](https://arxiv.org/abs/2506.15759)          | Coming Soon!  | [Link](https://x-drunker.github.io/Sonic4D-project-page/)  |
 
 <details close>
 <summary>ArXiv Papers References</summary>
@@ -647,6 +656,16 @@ World models serve as essential building blocks toward Artificial General Intell
       archivePrefix={arXiv},
       primaryClass={cs.CV},
       url={https://arxiv.org/abs/2506.01103}, 
+}
+
+@misc{xie2025sonic4dspatialaudiogeneration,
+      title={Sonic4D: Spatial Audio Generation for Immersive 4D Scene Exploration}, 
+      author={Siyi Xie and Hanxin Zhu and Tianyu He and Xin Li and Zhibo Chen},
+      year={2025},
+      eprint={2506.15759},
+      archivePrefix={arXiv},
+      primaryClass={cs.SD},
+      url={https://arxiv.org/abs/2506.15759}, 
 }
 
 ```
