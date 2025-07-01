@@ -745,6 +745,7 @@ For more details, please check the [2024 4D Papers](./docs/4d/4d_2024.md), inclu
 | 2025 | **One-Minute Video Generation with Test-Time Training**  | CVPR 2025 |          [Link](https://arxiv.org/abs/2504.05298v1)          | [Link](https://github.com/test-time-training/ttt-video-dit) | [Link](https://test-time-training.github.io/video-dit/)  |
 | 2025 | **The Devil is in the Prompts: Retrieval-Augmented Prompt Optimization for Text-to-Video Generation**  | CVPR 2025 |          [Link](https://arxiv.org/abs/2504.11739)          | [Link](https://github.com/Vchitect/RAPO) | [Link](https://whynothaha.github.io/Prompt_optimizer/RAPO.html)  |
 | 2025 | **SnapGen-V: Generating a Five-Second Video within Five Seconds on a Mobile Device**  | CVPR 2025 |          [Link](https://arxiv.org/abs/2412.10494)          | -- | [Link](https://snap-research.github.io/snapgen-v/)  |
+| 2025 | **WonderPlay: Dynamic 3D Scene Generation from a Single Image and Actions**  | ICCV 2025 |          [Link](https://arxiv.org/abs/2505.18151)          | -- | [Link](https://kyleleey.github.io/WonderPlay/)  |
 
 <details close>
 <summary>Accepted Papers References</summary>
@@ -801,6 +802,13 @@ For more details, please check the [2024 4D Papers](./docs/4d/4d_2024.md), inclu
   year={2025}
 }
 
+@article{li2025wonderplay,
+  title={WonderPlay: Dynamic 3D Scene Generation from a Single Image and Actions},
+  author={Li, Zizhang and Yu, Hong-Xing and Liu, Wei and Yang, Yin and Herrmann, Charles and Wetzstein, Gordon and Wu, Jiajun},
+  journal={arXiv preprint arXiv:2505.18151},
+  year={2025}
+}
+
 ```
 </details>
 
@@ -842,14 +850,7 @@ Teng Hu, Zhentao Yu, Zhengguang Zhou, Sen Liang, Yuan Zhou, Qin Lin, Qinglin Lu 
 Customized video generation aims to produce videos featuring specific subjects under flexible user-defined conditions, yet existing methods often struggle with identity consistency and limited input modalities. In this paper, we propose HunyuanCustom, a multi-modal customized video generation framework that emphasizes subject consistency while supporting image, audio, video, and text conditions. Built upon HunyuanVideo, our model first addresses the image-text conditioned generation task by introducing a text-image fusion module based on LLaVA for enhanced multi-modal understanding, along with an image ID enhancement module that leverages temporal concatenation to reinforce identity features across frames. To enable audio- and video-conditioned generation, we further propose modality-specific condition injection mechanisms: an AudioNet module that achieves hierarchical alignment via spatial cross-attention, and a video-driven injection module that integrates latent-compressed conditional video through a patchify-based feature-alignment network. Extensive experiments on single- and multi-subject scenarios demonstrate that HunyuanCustom significantly outperforms state-of-the-art open- and closed-source methods in terms of ID consistency, realism, and text-video alignment. Moreover, we validate its robustness across downstream tasks, including audio and video-driven customized video generation. Our results highlight the effectiveness of multi-modal conditioning and identity-preserving strategies in advancing controllable video generation.
 </details>
 
-#### 5. WonderPlay: Dynamic 3D Scene Generation from a Single Image and Actions
-Zizhang Li, Hong-Xing Yu, Wei Liu, Yin Yang, Charles Herrmann, Gordon Wetzstein, Jiajun Wu (Stanford University, University of Utah)
-<details span>
-<summary><b>Abstract</b></summary>
-WonderPlay is a novel framework integrating physics simulation with video generation for generating action-conditioned dynamic 3D scenes from a single image. While prior works are restricted to rigid body or simple elastic dynamics, WonderPlay features a hybrid generative simulator to synthesize a wide range of 3D dynamics. The hybrid generative simulator first uses a physics solver to simulate coarse 3D dynamics, which subsequently conditions a video generator to produce a video with finer, more realistic motion. The generated video is then used to update the simulated dynamic 3D scene, closing the loop between the physics solver and the video generator. This approach enables intuitive user control to be combined with the accurate dynamics of physics-based simulators and the expressivity of diffusion-based video generators. Experimental results demonstrate that WonderPlay enables users to interact with various scenes of diverse content, including cloth, sand, snow, liquid, smoke, elastic, and rigid bodies -- all using a single image input. Code will be made public.
-</details>
-
-#### 6. M4V: Multi-Modal Mamba for Text-to-Video Generation
+#### 5. M4V: Multi-Modal Mamba for Text-to-Video Generation
 Jiancheng Huang, Gengwei Zhang, Zequn Jie, Siyu Jiao, Yinlong Qian, Ling Chen, Yunchao Wei, Lin Ma
 
 (Meituan, University of Techcnology Sydney, Beijing Jiaotong University)
@@ -865,7 +866,6 @@ Text-to-video generation has significantly enriched content creation and holds t
 | 2025 | **Uni3C: Unifying Precisely 3D-Enhanced Camera and Human Motion Controls for Video Generation**  | 21 Apr 2025 |          [Link](https://arxiv.org/abs/2504.14899)          | [Link](https://github.com/ewrfcas/Uni3C) | [Link](https://ewrfcas.github.io/Uni3C/)  |
 | 2025 | **We'll Fix it in Post: Improving Text-to-Video Generation with Neuro-Symbolic Feedback**  | 25 Apr 2025 |          [Link](https://arxiv.org/abs/2504.17180)          | -- | --  |
 | 2025 | **HunyuanCustom: A Multimodal-Driven Architecture for Customized Video Generation**  | 7 May 2025 |          [Link](https://arxiv.org/abs/2505.04512)          | [Link](https://github.com/Tencent/HunyuanCustom) | [Link](https://hunyuancustom.github.io/)  |
-| 2025 | **WonderPlay: Dynamic 3D Scene Generation from a Single Image and Actions**  | 23 May 2025 |          [Link](https://arxiv.org/abs/2505.18151)          | -- | [Link](https://kyleleey.github.io/WonderPlay/)  |
 | 2025 | **M4V: Multi-Modal Mamba for Text-to-Video Generation**  | 12 Jun 2025 |          [Link](https://arxiv.org/abs/2506.10915)          | [Link](https://github.com/huangjch526/M4V) | [Link](https://huangjch526.github.io/M4V_project/)  |
 
 <details close>
@@ -903,16 +903,6 @@ Text-to-video generation has significantly enriched content creation and holds t
   author={Hu, Teng and Yu, Zhentao and Zhou, Zhengguang and Liang, Sen and Zhou, Yuan and Lin, Qin and Lu, Qinglin},
   journal={arXiv preprint arXiv:2505.04512},
   year={2025}
-}
-
-@misc{li2025wonderplaydynamic3dscene,
-      title={WonderPlay: Dynamic 3D Scene Generation from a Single Image and Actions}, 
-      author={Zizhang Li and Hong-Xing Yu and Wei Liu and Yin Yang and Charles Herrmann and Gordon Wetzstein and Jiajun Wu},
-      year={2025},
-      eprint={2505.18151},
-      archivePrefix={arXiv},
-      primaryClass={cs.GR},
-      url={https://arxiv.org/abs/2505.18151}, 
 }
 
 @article{huang2025m4v,
