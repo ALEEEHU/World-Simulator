@@ -1433,6 +1433,9 @@ AMASS is a large database of human motion unifying different optical marker-base
 | 2025 | **Zero-1-to-A: Zero-Shot One Image to Animatable Head Avatars Using Video Diffusion**  | CVPR 2025 |          [Link](https://arxiv.org/abs/2503.15851)          | [Link](https://github.com/ZhenglinZhou/Zero-1-to-A)  | [Link](https://zhenglinzhou.github.io/Zero-1-to-A/)  |
 | 2025 | **GaussianIP: Identity-Preserving Realistic 3D Human Generation via Human-Centric Diffusion Prior**  | CVPR 2025 |          [Link](https://arxiv.org/abs/2503.11143)          | [Link](https://github.com/silence-tang/GaussianIP)  | [Link](https://silence-tang.github.io/gaussian-ip/)  |
 | 2025 | **Text-based Animatable 3D Avatars with Morphable Model Alignment**  | SIGGRAPH 2025 |          [Link](https://arxiv.org/abs/2504.15835)          | [Link](https://github.com/oneThousand1000/AnimPortrait3D)  | [Link](https://onethousandwu.com/animportrait3d.github.io/)  |
+| 2025 | **LAM: Large Avatar Model for One-shot Animatable Gaussian Head**  | SIGGRAPH 2025 |          [Link](https://arxiv.org/abs/2502.17796)          | [Link](https://github.com/aigc3d/LAM)  | [Link](https://aigc3d.github.io/projects/LAM/)  |
+| 2025 | **Avat3r: Large Animatable Gaussian Reconstruction Model for High-fidelity 3D Head Avatars**  | ICCV 2025 |          [Link](https://arxiv.org/abs/2502.20220)          | --  | [Link](https://tobias-kirschstein.github.io/avat3r/)  |
+| 2025 | **SIGMAN:Scaling 3D Human Gaussian Generation with Millions of Assets**  | ICCV 2025 |          [Link](https://arxiv.org/abs/2504.06982)          | [Link](hhttps://github.com/yyvhang/SIGMAN_release)  | [Link](https://yyvhang.github.io/SIGMAN_3D/)  |
 
 <details close>
 <summary>Accepted Papers References</summary>
@@ -1469,6 +1472,27 @@ AMASS is a large database of human motion unifying different optical marker-base
       series = {SIGGRAPH '25}
 }
 
+@article{he2025lam,
+  title={LAM: Large Avatar Model for One-shot Animatable Gaussian Head},
+  author={He, Yisheng and Gu, Xiaodong and Ye, Xiaodan and Xu, Chao and Zhao, Zhengyi and Dong, Yuan and Yuan, Weihao and Dong, Zilong and Bo, Liefeng},
+  journal={arXiv preprint arXiv:2502.17796},
+  year={2025}
+}
+
+@article{kirschstein2025avat3r,
+  title={Avat3r: Large Animatable Gaussian Reconstruction Model for High-fidelity 3D Head Avatars},
+  author={Kirschstein, Tobias and Romero, Javier and Sevastopolsky, Artem and Nie{\ss}ner, Matthias and Saito, Shunsuke},
+  journal={arXiv preprint arXiv:2502.20220},
+  year={2025}
+}
+
+@article{yang2025sigman,
+  title={SIGMAN: Scaling 3D Human Gaussian Generation with Millions of Assets},
+  author={Yang, Yuhang and Liu, Fengqi and Lu, Yixing and Zhao, Qin and Wu, Pingyu and Zhai, Wei and Yi, Ran and Cao, Yang and Ma, Lizhuang and Zha, Zheng-Jun and others},
+  journal={arXiv preprint arXiv:2504.06982},
+  year={2025}
+}
+
 ```
 </details>
 
@@ -1477,27 +1501,7 @@ AMASS is a large database of human motion unifying different optical marker-base
 
 ### 💡 Human ArXiv Papers
 
-#### 1. Avat3r: Large Animatable Gaussian Reconstruction Model for High-fidelity 3D Head Avatars
-Tobias Kirschstein, Javier Romero, Artem Sevastopolsky, Matthias Nießner, Shunsuke Saito
-
-(Technical University of Munich, Meta Reality Labs)
-<details span>
-<summary><b>Abstract</b></summary>
-Traditionally, creating photo-realistic 3D head avatars requires a studio-level multi-view capture setup and expensive optimization during test-time, limiting the use of digital human doubles to the VFX industry or offline renderings.
-To address this shortcoming, we present Avat3r, which regresses a high-quality and animatable 3D head avatar from just a few input images, vastly reducing compute requirements during inference. More specifically, we make Large Reconstruction Models animatable and learn a powerful prior over 3D human heads from a large multi-view video dataset. For better 3D head reconstructions, we employ position maps from DUSt3R and generalized feature maps from the human foundation model Sapiens. To animate the 3D head, our key discovery is that simple cross-attention to an expression code is already sufficient. Finally, we increase robustness by feeding input images with different expressions to our model during training, enabling the reconstruction of 3D head avatars from inconsistent inputs, e.g., an imperfect phone capture with accidental movement, or frames from a monocular video.
-We compare Avat3r with current state-of-the-art methods for few-input and single-input scenarios, and find that our method has a competitive advantage in both tasks. Finally, we demonstrate the wide applicability of our proposed model, creating 3D head avatars from images of different sources, smartphone captures, single images, and even out-of-domain inputs like antique busts.
-</details>
-
-#### 2. LAM: Large Avatar Model for One-shot Animatable Gaussian Head
-Yisheng He, Xiaodong Gu, Xiaodan Ye, Chao Xu, Zhengyi Zhao, Yuan Dong, Weihao Yuan, Zilong Dong, Liefeng Bo
-
-(Tongyi Lab, Alibaba Group)
-<details span>
-<summary><b>Abstract</b></summary>
-We present LAM, an innovative Large Avatar Model for animatable Gaussian head reconstruction from a single image. Unlike previous methods that require extensive training on captured video sequences or rely on auxiliary neural networks for animation and rendering during inference, our approach generates Gaussian heads that are immediately animatable and renderable. Specifically, LAM creates an animatable Gaussian head in a single forward pass, enabling reenactment and rendering without additional networks or post-processing steps. This capability allows for seamless integration into existing rendering pipelines, ensuring real-time animation and rendering across a wide range of platforms, including mobile phones. The centerpiece of our framework is the canonical Gaussian attributes generator, which utilizes FLAME canonical points as queries. These points interact with multi-scale image features through a Transformer to accurately predict Gaussian attributes in the canonical space. The reconstructed canonical Gaussian avatar can then be animated utilizing standard linear blend skinning (LBS) with corrective blendshapes as the FLAME model did and rendered in real-time on various platforms. Our experimental results demonstrate that LAM outperforms state-of-the-art methods on existing benchmarks. 
-</details>
-
-#### 3. HumanDreamer-X: Photorealistic Single-image Human Avatars Reconstruction via Gaussian Restoration
+#### 1. HumanDreamer-X: Photorealistic Single-image Human Avatars Reconstruction via Gaussian Restoration
 Boyuan Wang, Runqi Ouyang, Xiaofeng Wang, Zheng Zhu, Guosheng Zhao, Chaojun Ni, Guan Huang, Lihong Liu, Xingang Wang
 
 (GigaAI, Institute of Automation Chinese Academy of Sciences, Peking University)
@@ -1506,21 +1510,9 @@ Boyuan Wang, Runqi Ouyang, Xiaofeng Wang, Zheng Zhu, Guosheng Zhao, Chaojun Ni, 
 Single-image human reconstruction is vital for digital human modeling applications but remains an extremely challenging task. Current approaches rely on generative models to synthesize multi-view images for subsequent 3D reconstruction and animation. However, directly generating multiple views from a single human image suffers from geometric inconsistencies, resulting in issues like fragmented or blurred limbs in the reconstructed models. To tackle these limitations, we introduce \textbf{HumanDreamer-X}, a novel framework that integrates multi-view human generation and reconstruction into a unified pipeline, which significantly enhances the geometric consistency and visual fidelity of the reconstructed 3D models. In this framework, 3D Gaussian Splatting serves as an explicit 3D representation to provide initial geometry and appearance priority. Building upon this foundation, \textbf{HumanFixer} is trained to restore 3DGS renderings, which guarantee photorealistic results. Furthermore, we delve into the inherent challenges associated with attention mechanisms in multi-view human generation, and propose an attention modulation strategy that effectively enhances geometric details identity consistency across multi-view. Experimental results demonstrate that our approach markedly improves generation and reconstruction PSNR quality metrics by 16.45% and 12.65%, respectively, achieving a PSNR of up to 25.62 dB, while also showing generalization capabilities on in-the-wild data and applicability to various human reconstruction backbone models.
 </details>
 
-#### 4. SIGMAN:Scaling 3D Human Gaussian Generation with Millions of Assets
-Yuhang Yang, Fengqi Liu, Yixing Lu, Qin Zhao, Pingyu Wu, Wei Zhai, Ran Yi, Yang Cao, Lizhuang Ma, Zheng-Jun Zha, Junting Dong
-
-(USTC, Shanghai AI Lab, SJTU, CMU)
-<details span>
-<summary><b>Abstract</b></summary>
-3D human digitization has long been a highly pursued yet challenging task. Existing methods aim to generate high-quality 3D digital humans from single or multiple views, but remain primarily constrained by current paradigms and the scarcity of 3D human assets. Specifically, recent approaches fall into several paradigms: optimization-based and feed-forward (both single-view regression and multi-view generation with reconstruction). However, they are limited by slow speed, low quality, cascade reasoning, and ambiguity in mapping low-dimensional planes to high-dimensional space due to occlusion and invisibility, respectively. Furthermore, existing 3D human assets remain small-scale, insufficient for large-scale training. To address these challenges, we propose a latent space generation paradigm for 3D human digitization, which involves compressing multi-view images into Gaussians via a UV-structured VAE, along with DiT-based conditional generation, we transform the ill-posed low-to-high-dimensional mapping problem into a learnable distribution shift, which also supports end-to-end inference. In addition, we employ the multi-view optimization approach combined with synthetic data to construct the HGS-1M dataset, which contains 1 million 3D Gaussian assets to support the large-scale training. Experimental results demonstrate that our paradigm, powered by large-scale training, produces high-quality 3D human Gaussians with intricate textures, facial details, and loose clothing deformation.
-</details>
-
 | Year | Title                                                        | ArXiv Time  |                           Paper                            |                      Code                      | Project Page                      |
 | ---- | ------------------------------------------------------------ | :----: | :--------------------------------------------------------: | :--------------------------------------------: | :--------------------------------------------: |
-| 2025 | **Avat3r: Large Animatable Gaussian Reconstruction Model for High-fidelity 3D Head Avatars**  | 27 Feb 2025 |          [Link](https://arxiv.org/abs/2502.20220)          | --  | [Link](https://tobias-kirschstein.github.io/avat3r/)  |
-| 2025 | **LAM: Large Avatar Model for One-shot Animatable Gaussian Head**  | 4 Apr 2025 |          [Link](https://arxiv.org/abs/2502.17796)          | [Link](https://github.com/aigc3d/LAM)  | [Link](https://aigc3d.github.io/projects/LAM/)  |
 | 2025 | **HumanDreamer-X: Photorealistic Single-image Human Avatars Reconstruction via Gaussian Restoration**  | 4 Apr 2025 |          [Link](https://arxiv.org/abs/2504.03536)          | [Link](https://github.com/GigaAI-research/HumanDreamer-X)  | [Link](https://humandreamer-x.github.io/)  |
-| 2025 | **SIGMAN:Scaling 3D Human Gaussian Generation with Millions of Assets**  | 9 Apr 2025 |          [Link](https://arxiv.org/abs/2504.06982)          | [Link](hhttps://github.com/yyvhang/SIGMAN_release)  | [Link](https://yyvhang.github.io/SIGMAN_3D/)  |
 
 <details close>
 <summary>ArXiv Papers References</summary>
@@ -1528,34 +1520,10 @@ Yuhang Yang, Fengqi Liu, Yixing Lu, Qin Zhao, Pingyu Wu, Wei Zhai, Ran Yi, Yang 
 ```
 %axiv papers
 
-@misc{kirschstein2025avat3r,
-      title={Avat3r: Large Animatable Gaussian Reconstruction Model for High-fidelity 3D Head Avatars},
-      author={Tobias Kirschstein and Javier Romero and Artem Sevastopolsky and Matthias Nie\ss{}ner and Shunsuke Saito},
-      year={2025},
-      eprint={2502.20220},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV},
-      url={https://arxiv.org/abs/2502.20220},
-}
-
-@article{he2025lam,
-  title={LAM: Large Avatar Model for One-shot Animatable Gaussian Head},
-  author={He, Yisheng and Gu, Xiaodong and Ye, Xiaodan and Xu, Chao and Zhao, Zhengyi and Dong, Yuan and Yuan, Weihao and Dong, Zilong and Bo, Liefeng},
-  journal={arXiv preprint arXiv:2502.17796},
-  year={2025}
-}
-
 @article{wang2025humandreamerx,
   title={HumanDreamer-X: Photorealistic Single-image Human Avatars Reconstruction via Gaussian Restoration}, 
   author={Boyuan Wang and Runqi Ouyang and Xiaofeng Wang and Zheng Zhu and Guosheng Zhao and Chaojun Ni and Guan Huang and Lihong Liu and Xingang Wang},
   journal={arXiv preprint arXiv:2504.03536},
-  year={2025}
-}
-
-@article{yang2025sigman,
-  title={SIGMAN: Scaling 3D Human Gaussian Generation with Millions of Assets},
-  author={Yang, Yuhang and Liu, Fengqi and Lu, Yixing and Zhao, Qin and Wu, Pingyu and Zhai, Wei and Yi, Ran and Cao, Yang and Ma, Lizhuang and Zha, Zheng-Jun and others},
-  journal={arXiv preprint arXiv:2504.06982},
   year={2025}
 }
 
