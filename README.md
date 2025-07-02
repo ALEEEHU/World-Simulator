@@ -745,6 +745,7 @@ For more details, please check the [2024 4D Papers](./docs/4d/4d_2024.md), inclu
 | 2025 | **One-Minute Video Generation with Test-Time Training**  | CVPR 2025 |          [Link](https://arxiv.org/abs/2504.05298v1)          | [Link](https://github.com/test-time-training/ttt-video-dit) | [Link](https://test-time-training.github.io/video-dit/)  |
 | 2025 | **The Devil is in the Prompts: Retrieval-Augmented Prompt Optimization for Text-to-Video Generation**  | CVPR 2025 |          [Link](https://arxiv.org/abs/2504.11739)          | [Link](https://github.com/Vchitect/RAPO) | [Link](https://whynothaha.github.io/Prompt_optimizer/RAPO.html)  |
 | 2025 | **SnapGen-V: Generating a Five-Second Video within Five Seconds on a Mobile Device**  | CVPR 2025 |          [Link](https://arxiv.org/abs/2412.10494)          | -- | [Link](https://snap-research.github.io/snapgen-v/)  |
+| 2025 | **Multi-subject Open-set Personalization in Video Generation**  | CVPR 2025 |          [Link](https://arxiv.org/abs/2501.06187)          | -- | [Link](https://snap-research.github.io/open-set-video-personalization/)  |
 | 2025 | **WonderPlay: Dynamic 3D Scene Generation from a Single Image and Actions**  | ICCV 2025 |          [Link](https://arxiv.org/abs/2505.18151)          | -- | [Link](https://kyleleey.github.io/WonderPlay/)  |
 
 <details close>
@@ -802,6 +803,13 @@ For more details, please check the [2024 4D Papers](./docs/4d/4d_2024.md), inclu
   year={2025}
 }
 
+@article{chen2025multi,
+  title={Multi-subject Open-set Personalization in Video Generation},
+  author={Chen, Tsai-Shien and Siarohin, Aliaksandr and Menapace, Willi and Fang, Yuwei and Lee, Kwot Sin and Skorokhodov, Ivan and Aberman, Kfir and Zhu, Jun-Yan and Yang, Ming-Hsuan and Tulyakov, Sergey},
+  journal={arXiv preprint arXiv:2501.06187},
+  year={2025}
+}
+
 @article{li2025wonderplay,
   title={WonderPlay: Dynamic 3D Scene Generation from a Single Image and Actions},
   author={Li, Zizhang and Yu, Hong-Xing and Liu, Wei and Yang, Yin and Herrmann, Charles and Wetzstein, Gordon and Wu, Jiajun},
@@ -816,16 +824,7 @@ For more details, please check the [2024 4D Papers](./docs/4d/4d_2024.md), inclu
 
 ### 💡 T2V ArXiv Papers
 
-#### 1. Multi-subject Open-set Personalization in Video Generation
-Tsai-Shien Chen, Aliaksandr Siarohin, Willi Menapace, Yuwei Fang, Kwot Sin Lee, Ivan Skorokhodov, Kfir Aberman, Jun-Yan Zhu, Ming-Hsuan Yang, Sergey Tulyakov
-
-(Snap Inc., UC Merced, CMU)
-<details span>
-<summary><b>Abstract</b></summary>
-Video personalization methods allow us to synthesize videos with specific concepts such as people, pets, and places. However, existing methods often focus on limited domains, require time-consuming optimization per subject, or support only a single subject. We present Video Alchemist − a video model with built-in multi-subject, open-set personalization capabilities for both foreground objects and background, eliminating the need for time-consuming test-time optimization. Our model is built on a new Diffusion Transformer module that fuses each conditional reference image and its corresponding subject-level text prompt with cross-attention layers. Developing such a large model presents two main challenges: dataset and evaluation. First, as paired datasets of reference images and videos are extremely hard to collect, we sample selected video frames as reference images and synthesize a clip of the target video. However, while models can easily denoise training videos given reference frames, they fail to generalize to new contexts. To mitigate this issue, we design a new automatic data construction pipeline with extensive image augmentations. Second, evaluating open-set video personalization is a challenge in itself. To address this, we introduce a personalization benchmark that focuses on accurate subject fidelity and supports diverse personalization scenarios. Finally, our extensive experiments show that our method significantly outperforms existing personalization methods in both quantitative and qualitative evaluations.
-</details>
-
-#### 2. Uni3C: Unifying Precisely 3D-Enhanced Camera and Human Motion Controls for Video Generation
+#### 1. Uni3C: Unifying Precisely 3D-Enhanced Camera and Human Motion Controls for Video Generation
 Chenjie Cao, Jingkai Zhou, Shikai Li, Jingyun Liang, Chaohui Yu, Fan Wang, Xiangyang Xue, Yanwei Fu
 
 (Alibaba DAMO Academy, Fudan University, Hupan Lab)
@@ -834,7 +833,7 @@ Chenjie Cao, Jingkai Zhou, Shikai Li, Jingyun Liang, Chaohui Yu, Fan Wang, Xiang
 Camera and human motion controls have been extensively studied for video generation, but existing approaches typically address them separately, suffering from limited data with high-quality annotations for both aspects. To overcome this, we present Uni3C, a unified 3D-enhanced framework for precise control of both camera and human motion in video generation. Uni3C includes two key contributions. First, we propose a plug-and-play control module trained with a frozen video generative backbone, PCDController, which utilizes unprojected point clouds from monocular depth to achieve accurate camera control. By leveraging the strong 3D priors of point clouds and the powerful capacities of video foundational models, PCDController shows impressive generalization, performing well regardless of whether the inference backbone is frozen or fine-tuned. This flexibility enables different modules of Uni3C to be trained in specific domains, i.e., either camera control or human motion control, reducing the dependency on jointly annotated data. Second, we propose a jointly aligned 3D world guidance for the inference phase that seamlessly integrates both scenic point clouds and SMPL-X characters to unify the control signals for camera and human motion, respectively. Extensive experiments confirm that PCDController enjoys strong robustness in driving camera motion for fine-tuned backbones of video generation. Uni3C substantially outperforms competitors in both camera controllability and human motion quality. Additionally, we collect tailored validation sets featuring challenging camera movements and human actions to validate the effectiveness of our method.
 </details>
 
-#### 3. We'll Fix it in Post: Improving Text-to-Video Generation with Neuro-Symbolic Feedback
+#### 2. We'll Fix it in Post: Improving Text-to-Video Generation with Neuro-Symbolic Feedback
 Minkyu Choi, S P Sharan, Harsh Goel, Sahil Shah, Sandeep Chinchali
 
 (The University of Texas at Austin)
@@ -843,14 +842,14 @@ Minkyu Choi, S P Sharan, Harsh Goel, Sahil Shah, Sandeep Chinchali
 Current text-to-video (T2V) generation models are increasingly popular due to their ability to produce coherent videos from textual prompts. However, these models often struggle to generate semantically and temporally consistent videos when dealing with longer, more complex prompts involving multiple objects or sequential events. Additionally, the high computational costs associated with training or fine-tuning make direct improvements impractical. To overcome these limitations, we introduce NeuS-E, a novel zero-training video refinement pipeline that leverages neuro-symbolic feedback to automatically enhance video generation, achieving superior alignment with the prompts. Our approach first derives the neuro-symbolic feedback by analyzing a formal video representation and pinpoints semantically inconsistent events, objects, and their corresponding frames. This feedback then guides targeted edits to the original video. Extensive empirical evaluations on both open-source and proprietary T2V models demonstrate that NeuS-E significantly enhances temporal and logical alignment across diverse prompts by almost 40%.
 </details>
 
-#### 4. HunyuanCustom: A Multimodal-Driven Architecture for Customized Video Generation
+#### 3. HunyuanCustom: A Multimodal-Driven Architecture for Customized Video Generation
 Teng Hu, Zhentao Yu, Zhengguang Zhou, Sen Liang, Yuan Zhou, Qin Lin, Qinglin Lu (Tencent Hunyuan)
 <details span>
 <summary><b>Abstract</b></summary>
 Customized video generation aims to produce videos featuring specific subjects under flexible user-defined conditions, yet existing methods often struggle with identity consistency and limited input modalities. In this paper, we propose HunyuanCustom, a multi-modal customized video generation framework that emphasizes subject consistency while supporting image, audio, video, and text conditions. Built upon HunyuanVideo, our model first addresses the image-text conditioned generation task by introducing a text-image fusion module based on LLaVA for enhanced multi-modal understanding, along with an image ID enhancement module that leverages temporal concatenation to reinforce identity features across frames. To enable audio- and video-conditioned generation, we further propose modality-specific condition injection mechanisms: an AudioNet module that achieves hierarchical alignment via spatial cross-attention, and a video-driven injection module that integrates latent-compressed conditional video through a patchify-based feature-alignment network. Extensive experiments on single- and multi-subject scenarios demonstrate that HunyuanCustom significantly outperforms state-of-the-art open- and closed-source methods in terms of ID consistency, realism, and text-video alignment. Moreover, we validate its robustness across downstream tasks, including audio and video-driven customized video generation. Our results highlight the effectiveness of multi-modal conditioning and identity-preserving strategies in advancing controllable video generation.
 </details>
 
-#### 5. M4V: Multi-Modal Mamba for Text-to-Video Generation
+#### 4. M4V: Multi-Modal Mamba for Text-to-Video Generation
 Jiancheng Huang, Gengwei Zhang, Zequn Jie, Siyu Jiao, Yinlong Qian, Ling Chen, Yunchao Wei, Lin Ma
 
 (Meituan, University of Techcnology Sydney, Beijing Jiaotong University)
@@ -862,7 +861,6 @@ Text-to-video generation has significantly enriched content creation and holds t
 
 | Year | Title                                                        | ArXiv Time  |                           Paper                            |                      Code                      | Project Page                      |
 | ---- | ------------------------------------------------------------ | :----: | :--------------------------------------------------------: | :--------------------------------------------: | :--------------------------------------------: |
-| 2025 | **Multi-subject Open-set Personalization in Video Generation**  | 10 Jan 2025 |          [Link](https://arxiv.org/abs/2501.06187)          | -- | [Link](https://snap-research.github.io/open-set-video-personalization/)  |
 | 2025 | **Uni3C: Unifying Precisely 3D-Enhanced Camera and Human Motion Controls for Video Generation**  | 21 Apr 2025 |          [Link](https://arxiv.org/abs/2504.14899)          | [Link](https://github.com/ewrfcas/Uni3C) | [Link](https://ewrfcas.github.io/Uni3C/)  |
 | 2025 | **We'll Fix it in Post: Improving Text-to-Video Generation with Neuro-Symbolic Feedback**  | 25 Apr 2025 |          [Link](https://arxiv.org/abs/2504.17180)          | -- | --  |
 | 2025 | **HunyuanCustom: A Multimodal-Driven Architecture for Customized Video Generation**  | 7 May 2025 |          [Link](https://arxiv.org/abs/2505.04512)          | [Link](https://github.com/Tencent/HunyuanCustom) | [Link](https://hunyuancustom.github.io/)  |
@@ -873,16 +871,6 @@ Text-to-video generation has significantly enriched content creation and holds t
 
 ```
 %axiv papers
-
-@misc{chen2025multisubjectopensetpersonalizationvideo,
-      title={Multi-subject Open-set Personalization in Video Generation}, 
-      author={Tsai-Shien Chen and Aliaksandr Siarohin and Willi Menapace and Yuwei Fang and Kwot Sin Lee and Ivan Skorokhodov and Kfir Aberman and Jun-Yan Zhu and Ming-Hsuan Yang and Sergey Tulyakov},
-      year={2025},
-      eprint={2501.06187},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV},
-      url={https://arxiv.org/abs/2501.06187}, 
-}
 
 @article{cao2025uni3c,
         title={Uni3C: Unifying Precisely 3D-Enhanced Camera and Human Motion Controls for Video Generation},
