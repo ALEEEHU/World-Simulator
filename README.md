@@ -1199,6 +1199,7 @@ For more details, please check the [2023-2024 3D Scene Papers](./docs/3d_scene/3
 | 2025 | **MixerMDM: Learnable Composition of Human Motion Diffusion Models**  | CVPR 2025 |          [Link](https://arxiv.org/abs/2504.01019)          | [Link](https://github.com/pabloruizponce/MixerMDM)  | [Link](https://www.pabloruizponce.com/papers/MixerMDM)  |
 | 2025 | **Dynamic Motion Blending for Versatile Motion Editing**  | CVPR 2025 |          [Link](https://arxiv.org/abs/2503.20724)          | [Link](https://github.com/emptybulebox1/motionRefit/)  | [Link](https://awfuact.github.io/motionrefit/)  |
 | 2025 | **MotionStreamer: Streaming Motion Generation via Diffusion-based Autoregressive Model in Causal Latent Space**  | ICCV 2025 |          [Link](https://arxiv.org/abs/2503.15451)          | [Link](https://github.com/zju3dv/MotionStreamer)  | [Link](https://zju3dv.github.io/MotionStreamer/)  |
+| 2025 | **Go to Zero: Towards Zero-shot Motion Generation with Million-scale Data**  | ICCV 2025 |          [Link](https://arxiv.org/abs/2507.07095)          | [Link](https://github.com/VankouF/MotionMillion-Codes)  | [Link](https://vankouf.github.io/MotionMillion/)  |
 
 <details close>
 <summary>Accepted Papers References</summary>
@@ -1225,6 +1226,16 @@ For more details, please check the [2023-2024 3D Scene Papers](./docs/3d_scene/3
       author={Xiao, Lixing and Lu, Shunlin and Pi, Huaijin and Fan, Ke and Pan, Liang and Zhou, Yueer and Feng, Ziyong and Zhou, Xiaowei and Peng, Sida and Wang, Jingbo},
       journal={arXiv preprint arXiv:2503.15451},
       year={2025}
+}
+
+@misc{fan2025zerozeroshotmotiongeneration,
+      title={Go to Zero: Towards Zero-shot Motion Generation with Million-scale Data}, 
+      author={Ke Fan and Shunlin Lu and Minyue Dai and Runyi Yu and Lixing Xiao and Zhiyang Dou and Junting Dong and Lizhuang Ma and Jingbo Wang},
+      year={2025},
+      eprint={2507.07095},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2507.07095}, 
 }
 
 ```
