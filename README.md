@@ -1038,7 +1038,15 @@ Tianyu Huang, Wangguandong Zheng, Tengfei Wang, Yuhao Liu, Zhenwei Wang, Junta W
 Real-world applications like video gaming and virtual reality often demand the ability to model 3D scenes that users can explore along custom camera trajectories. While significant progress has been made in generating 3D objects from text or images, creating long-range, 3D-consistent, explorable 3D scenes remains a complex and challenging problem. In this work, we present Voyager, a novel video diffusion framework that generates world-consistent 3D point-cloud sequences from a single image with user-defined camera path. Unlike existing approaches, Voyager achieves end-to-end scene generation and reconstruction with inherent consistency across frames, eliminating the need for 3D reconstruction pipelines (e.g., structure-from-motion or multi-view stereo). Our method integrates three key components: 1) World-Consistent Video Diffusion: A unified architecture that jointly generates aligned RGB and depth video sequences, conditioned on existing world observation to ensure global coherence 2) Long-Range World Exploration: An efficient world cache with point culling and an auto-regressive inference with smooth video sampling for iterative scene extension with context-aware consistency, and 3) Scalable Data Engine: A video reconstruction pipeline that automates camera pose estimation and metric depth prediction for arbitrary videos, enabling large-scale, diverse training data curation without manual 3D annotations. Collectively, these designs result in a clear improvement over existing methods in visual quality and geometric accuracy, with versatile applications.
 </details>
 
-#### 8. ImmerseGen: Agent-Guided Immersive World Generation with Alpha-Textured Proxies
+#### 7. ReSpace: Text-Driven 3D Scene Synthesis and Editing with Preference Alignment
+Martin JJ. Bucher, Iro Armeni (Stanford University)
+
+<details span>
+<summary><b>Abstract</b></summary>
+Scene synthesis and editing has emerged as a promising direction in computer graphics. Current trained approaches for 3D indoor scenes either oversimplify object semantics through one-hot class encodings (e.g., 'chair' or 'table'), require masked diffusion for editing, ignore room boundaries, or rely on floor plan renderings that fail to capture complex layouts. In contrast, LLM-based methods enable richer semantics via natural language (e.g., 'modern studio with light wood furniture') but do not support editing, remain limited to rectangular layouts or rely on weak spatial reasoning from implicit world models. We introduce ReSpace, a generative framework for text-driven 3D indoor scene synthesis and editing using autoregressive language models. Our approach features a compact structured scene representation with explicit room boundaries that frames scene editing as a next-token prediction task. We leverage a dual-stage training approach combining supervised fine-tuning and preference alignment, enabling a specially trained language model for object addition that accounts for user instructions, spatial geometry, object semantics, and scene-level composition. For scene editing, we employ a zero-shot LLM to handle object removal and prompts for addition. We further introduce a novel voxelization-based evaluation that captures fine-grained geometry beyond 3D bounding boxes. Experimental results surpass state-of-the-art on object addition while maintaining competitive results on full scene synthesis.
+</details>
+
+#### 9. ImmerseGen: Agent-Guided Immersive World Generation with Alpha-Textured Proxies
 Jinyan Yuan, Bangbang Yang, Keke Wang, Panwang Pan, Lin Ma, Xuehai Zhang, Xiao Liu, Zhaopeng Cui, Yuewen Ma
 
 (PICO Bytedance, State Key Laboratory of CAD&CG Zhejiang University)
@@ -1048,7 +1056,7 @@ Jinyan Yuan, Bangbang Yang, Keke Wang, Panwang Pan, Lin Ma, Xuehai Zhang, Xiao L
 Automatic creation of 3D scenes for immersive VR presence has been a significant research focus for decades. However, existing methods often rely on either high-poly mesh modeling with post-hoc simplification or massive 3D Gaussians, resulting in a complex pipeline or limited visual realism. In this paper, we demonstrate that such exhaustive modeling is unnecessary for achieving compelling immersive experience. We introduce ImmerseGen, a novel agent-guided framework for compact and photorealistic world modeling. ImmerseGen represents scenes as hierarchical compositions of lightweight geometric proxies, i.e., simplified terrain and billboard meshes, and generates photorealistic appearance by synthesizing RGBA textures onto these proxies. Specifically, we propose terrain-conditioned texturing for user-centric base world synthesis, and RGBA asset texturing for midground and foreground scenery. This reformulation offers several advantages: (i) it simplifies modeling by enabling agents to guide generative models in producing coherent textures that integrate seamlessly with the scene; (ii) it bypasses complex geometry creation and decimation by directly synthesizing photorealistic textures on proxies, preserving visual quality without degradation; (iii) it enables compact representations suitable for real-time rendering on mobile VR headsets. To automate scene creation from text prompts, we introduce VLM-based modeling agents enhanced with semantic grid-based analysis for improved spatial reasoning and accurate asset placement. ImmerseGen further enriches scenes with dynamic effects and ambient audio to support multisensory immersion. Experiments on scene generation and live VR showcases demonstrate that ImmerseGen achieves superior photorealism, spatial coherence and rendering efficiency compared to prior methods.
 </details>
 
-#### 9. DreamAnywhere: Object-Centric Panoramic 3D Scene Generation
+#### 10. DreamAnywhere: Object-Centric Panoramic 3D Scene Generation
 Edoardo Alberto Dominici, Jozef Hladky, Floor Verhoeven, Lukas Radl, Thomas Deixelberger, Stefan Ainetter, Philipp Drescher, Stefan Hauswiesner, Arno Coomans, Giacomo Nazzaro, Konstantinos Vardis, Markus Steinberger
 
 (Huawei Technologies, Graz University of Technology)
@@ -1067,6 +1075,7 @@ Recent advances in text-to-3D scene generation have demonstrated significant pot
 | 2025 | **3DTown: Constructing a 3D Town from a Single Image**  | 21 May 2025 |          [Link](https://arxiv.org/abs/2505.15765)          | --  | [Link](https://eric-ai-lab.github.io/3dtown.github.io/)  |
 | 2025 | **Agentic 3D Scene Generation with Spatially Contextualized VLMs**  | 26 May 2025 |          [Link](https://arxiv.org/abs/2505.20129)          | --  | --  |
 | 2025 | **Voyager: Long-Range and World-Consistent Video Diffusion for Explorable 3D Scene Generation**  | 4 Jun 2025 |          [Link](https://arxiv.org/abs/2506.04225)          | [Link](https://github.com/Voyager-World/Voyager)  | [Link](https://voyager-world.github.io/)  |
+| 2025 | **ReSpace: Text-Driven 3D Scene Synthesis and Editing with Preference Alignment**  | 10 Jun 2025 |          [Link](https://arxiv.org/pdf/2506.02459)          | [Link](https://github.com/GradientSpaces/respace)  | [Link](https://respace.mnbucher.com/)  |
 | 2025 | **ImmerseGen: Agent-Guided Immersive World Generation with Alpha-Textured Proxies**  | 18 Jun 2025 |          [Link](https://www.arxiv.org/abs/2506.14315)          | Coming Soon! | [Link](https://immersegen.github.io/)  |
 | 2025 | **DreamAnywhere: Object-Centric Panoramic 3D Scene Generation**  | 25 Jun 2025 |          [Link](https://arxiv.org/abs/2506.20367)          | -- | --  |
 
@@ -1133,6 +1142,13 @@ year={2025}
   title={Voyager: Long-Range and World-Consistent Video Diffusion for Explorable 3D Scene Generation},
   author={Huang, Tianyu and Zheng, Wangguandong and Wang, Tengfei and Liu, Yuhao and Wang, Zhenwei and Wu, Junta and Jiang, Jie and Li, Hui and Lau, Rynson WH and Zuo, Wangmeng and others},
   journal={arXiv preprint arXiv:2506.04225},
+  year={2025}
+}
+
+@article{bucher2025respace,
+  title={ReSpace: Text-Driven 3D Scene Synthesis and Editing with Preference Alignment},
+  author={Bucher, Martin JJ and Armeni, Iro},
+  journal={arXiv preprint arXiv:2506.02459},
   year={2025}
 }
 
