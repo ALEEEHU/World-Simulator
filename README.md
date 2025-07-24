@@ -910,6 +910,16 @@ Enes Sanli, Baris Sarper Tezcan, Aykut Erdem, Erkut Erdem (Koç University, Hace
 Recent progress in text-to-video (T2V) generation has enabled the synthesis of visually compelling and temporally coherent videos from natural language. However, these models often fall short in basic physical commonsense, producing outputs that violate intuitive expectations around causality, object behavior, and tool use. Addressing this gap, we present PhysVidBench, a benchmark designed to evaluate the physical reasoning capabilities of T2V systems. The benchmark includes 383 carefully curated prompts, emphasizing tool use, material properties, and procedural interactions, and domains where physical plausibility is crucial. For each prompt, we generate videos using diverse state-of-the-art models and adopt a three-stage evaluation pipeline: (1) formulate grounded physics questions from the prompt, (2) caption the generated video with a vision-language model, and (3) task a language model to answer several physics-involved questions using only the caption. This indirect strategy circumvents common hallucination issues in direct video-based evaluation. By highlighting affordances and tool-mediated actions, areas overlooked in current T2V evaluations, PhysVidBench provides a structured, interpretable framework for assessing physical commonsense in generative video models.
 </details>
 
+#### 9. Lumos-1: On Autoregressive Video Generation from a Unified Model Perspective
+Hangjie Yuan, Weihua Chen, Jun Cen, Hu Yu, Jingyun Liang, Shuning Chang, Zhihui Lin, Tao Feng, Pengwei Liu, Jiazheng Xing, Hao Luo, Jiasheng Tang, Fan Wang, Yi Yang
+
+(DAMO Academy Alibaba Group, Hupan Lab, Zhejiang University, Tsinghua University)
+
+<details span>
+<summary><b>Abstract</b></summary>
+Autoregressive large language models (LLMs) have unified a vast range of language tasks, inspiring preliminary efforts in autoregressive video generation. Existing autoregressive video generators either diverge from standard LLM architectures, depend on bulky external text encoders, or incur prohibitive latency due to next-token decoding. In this paper, we introduce Lumos-1, an autoregressive video generator that retains the LLM architecture with minimal architectural modifications. To inject spatiotemporal correlations in LLMs, we identify the efficacy of incorporating 3D RoPE and diagnose its imbalanced frequency spectrum ranges. Therefore, we propose MM-RoPE, a RoPE scheme that preserves the original textual RoPE while providing comprehensive frequency spectra and scaled 3D positions for modeling multimodal spatiotemporal data. Moreover, Lumos-1 resorts to a token dependency strategy that obeys intra-frame bidirectionality and inter-frame temporal causality. Based on this dependency strategy, we identify the issue of frame-wise loss imbalance caused by spatial information redundancy and solve it by proposing Autoregressive Discrete Diffusion Forcing (AR-DF). AR-DF introduces temporal tube masking during training with a compatible inference-time masking policy to avoid quality degradation. By using memory-efficient training techniques, we pre-train Lumos-1 on only 48 GPUs, achieving performance comparable to EMU3 on GenEval, COSMOS-Video2World on VBench-I2V, and OpenSoraPlan on VBench-T2V.
+</details>
+
 
 | Year | Title                                                        | ArXiv Time  |                           Paper                            |                      Code                      | Project Page                      |
 | ---- | ------------------------------------------------------------ | :----: | :--------------------------------------------------------: | :--------------------------------------------: | :--------------------------------------------: |
@@ -920,6 +930,7 @@ Recent progress in text-to-video (T2V) generation has enabled the synthesis of v
 | 2025 | **Omni-Video: Democratizing Unified Video Understanding and Generation**  | 9 Jul 2025 |          [Link](https://arxiv.org/abs/2507.06119)          | [Link](https://github.com/SAIS-FUXI/Omni-Video) | [Link](https://howellyoung-s.github.io/OmniVideo_project/)  |
 | 2025 | **FIFA: Unified Faithfulness Evaluation Framework for Text-to-Video and Video-to-Text Generation**  | 9 Jul 2025 |          [Link](https://arxiv.org/abs/2507.06523)          | [Link](https://github.com/du-nlp-lab/FIFA) | -- |
 | 2025 | **Scaling RL to Long Videos**  | 10 Jul 2025 |      [Link](https://arxiv.org/abs/2507.07966)      | [Link](https://github.com/NVlabs/Long-RL) | -- |
+| 2025 | **Lumos-1: On Autoregressive Video Generation from a Unified Model Perspective**  | 11 Jul 2025 |      [Link](https://arxiv.org/abs/2507.08801)      | [Link](https://github.com/alibaba-damo-academy/Lumos) | -- |
 | 2025 | **Can Your Model Separate Yolks with a Water Bottle? Benchmarking Physical Commonsense Understanding in Video Generation Models**  | 21 Jul 2025 |      [Link](https://arxiv.org/abs/2507.15824)      | [Link](https://github.com/ensanli/PhysVidBenchCode) | [Link](https://cyberiada.github.io/PhysVidBench/) |
 
 <details close>
@@ -980,6 +991,13 @@ Recent progress in text-to-video (T2V) generation has enabled the synthesis of v
       eprint={2507.07966},
       archivePrefix={arXiv},
       primaryClass={cs.CV}
+}
+
+@article{Yuan2025Lumos-1,
+  title={Lumos-1: On Autoregressive Video Generation from a Unified Model Perspective},
+  author={Yuan, Hangjie and Chen, Weihua and Cen, Jun and Yu, Hu and Liang, Jingyun and Chang, Shuning and Lin, Zhihui and Feng, Tao and Liu, Pengwei and Xing, Jiazheng and Luo, Hao and Tang, Jiasheng and Wang, Fan and Yang, Yi},
+  journal={arXiv preprint arXiv:2507.08801},
+  year={2025}
 }
 
 @misc{sanli2025modelseparateyolkswater,
