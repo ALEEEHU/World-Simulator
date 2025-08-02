@@ -1669,6 +1669,7 @@ AMASS is a large database of human motion unifying different optical marker-base
 | 2025 | **LAM: Large Avatar Model for One-shot Animatable Gaussian Head**  | SIGGRAPH 2025 |          [Link](https://arxiv.org/abs/2502.17796)          | [Link](https://github.com/aigc3d/LAM)  | [Link](https://aigc3d.github.io/projects/LAM/)  |
 | 2025 | **Avat3r: Large Animatable Gaussian Reconstruction Model for High-fidelity 3D Head Avatars**  | ICCV 2025 |          [Link](https://arxiv.org/abs/2502.20220)          | --  | [Link](https://tobias-kirschstein.github.io/avat3r/)  |
 | 2025 | **SIGMAN:Scaling 3D Human Gaussian Generation with Millions of Assets**  | ICCV 2025 |          [Link](https://arxiv.org/abs/2504.06982)          | [Link](https://github.com/yyvhang/SIGMAN_release)  | [Link](https://yyvhang.github.io/SIGMAN_3D/)  |
+| 2025 | **AdaHuman: Animatable Detailed 3D Human Generation with Compositional Multiview Diffusion**  | ICCV 2025 |          [Link](https://arxiv.org/abs/2505.24877)          | [Link](https://github.com/NVlabs/AdaHuman)  | [Link](https://nvlabs.github.io/AdaHuman/)  |
 
 <details close>
 <summary>Accepted Papers References</summary>
@@ -1723,6 +1724,13 @@ AMASS is a large database of human motion unifying different optical marker-base
   title={SIGMAN: Scaling 3D Human Gaussian Generation with Millions of Assets},
   author={Yang, Yuhang and Liu, Fengqi and Lu, Yixing and Zhao, Qin and Wu, Pingyu and Zhai, Wei and Yi, Ran and Cao, Yang and Ma, Lizhuang and Zha, Zheng-Jun and others},
   journal={arXiv preprint arXiv:2504.06982},
+  year={2025}
+}
+
+@article{huang2025adahuman,
+  title={AdaHuman: Animatable Detailed 3D Human Generation with Compositional Multiview Diffusion},
+  author={Huang, Yangyi and Yuan, Ye and Li, Xueting and Kautz, Jan and Iqbal, Umar},
+  journal={arXiv preprint arXiv:2505.24877},
   year={2025}
 }
 
