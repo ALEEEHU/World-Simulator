@@ -413,6 +413,7 @@ An open collection of state-of-the-art (SOTA), novel **Text to X (X can be every
 | 2025 | **4D-Fly: Fast 4D Reconstruction from a Single Monocular Video**  | CVPR 2025 |          [Link](https://openaccess.thecvf.com/content/CVPR2025/papers/Wu_4D-Fly_Fast_4D_Reconstruction_from_a_Single_Monocular_Video_CVPR_2025_paper.pdf)          | Coming Soon!  | [Link](https://diankun-wu.github.io/4D-Fly/)  |
 | 2025 | **GenMOJO: Robust Multi-Object 4D Generation for In-the-wild Videos**  | CVPR 2025 |          [Link](https://www.arxiv.org/abs/2506.12716)          | [Link](https://github.com/genmojo/GenMOJO)  | [Link](https://genmojo.github.io/)  |
 | 2025 | **Free4D: Tuning-free 4D Scene Generation with Spatial-Temporal Consistency**  | ICCV 2025 |          [Link](https://arxiv.org/abs/2503.20785)          | [Link](https://github.com/TQTQliu/Free4D)  | [Link](https://free4d.github.io/)  |
+| 2025 | **St4RTrack: Simultaneous 4D Reconstruction and Tracking in the World**  | ICCV 2025 |          [Link](https://arxiv.org/abs/2504.13152)          | Coming Soon!  | [Link](https://st4rtrack.github.io/)  |
 
 <details close>
 <summary>Accepted Papers References</summary>
@@ -469,6 +470,13 @@ An open collection of state-of-the-art (SOTA), novel **Text to X (X can be every
      author={Liu, Tianqi and Huang, Zihao and Chen, Zhaoxi and Wang, Guangcong and Hu, Shoukang and Shen, liao and Sun, Huiqiang and Cao, Zhiguo and Li, Wei and Liu, Ziwei},
      journal={arXiv preprint arXiv:2503.20785},
      year={2025}
+}
+
+@inproceedings{st4rtrack2025,
+  title={St4RTrack: Simultaneous 4D Reconstruction and Tracking in the World},
+  author={Feng*, Haiwen and Zhang*, Junyi and Wang, Qianqian and Ye, Yufei and Yu, Pengcheng and Black, Michael J. and Darrell, Trevor and Kanazawa, Angjoo},
+  booktitle={Proceedings of the IEEE/CVF International Conference on Computer Vision},
+  year={2025}
 }
 
 ```
