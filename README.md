@@ -412,6 +412,7 @@ An open collection of state-of-the-art (SOTA), novel **Text to X (X can be every
 | 2025 | **Uni4D: Unifying Visual Foundation Models for 4D Modeling from a Single Video**  | CVPR 2025 Highlight |          [Link](https://arxiv.org/abs/2503.21761v1)          | [Link](https://github.com/Davidyao99/uni4d/tree/main)  | [Link](https://davidyao99.github.io/uni4d/)  |
 | 2025 | **4D-Fly: Fast 4D Reconstruction from a Single Monocular Video**  | CVPR 2025 |          [Link](https://openaccess.thecvf.com/content/CVPR2025/papers/Wu_4D-Fly_Fast_4D_Reconstruction_from_a_Single_Monocular_Video_CVPR_2025_paper.pdf)          | Coming Soon!  | [Link](https://diankun-wu.github.io/4D-Fly/)  |
 | 2025 | **GenMOJO: Robust Multi-Object 4D Generation for In-the-wild Videos**  | CVPR 2025 |          [Link](https://www.arxiv.org/abs/2506.12716)          | [Link](https://github.com/genmojo/GenMOJO)  | [Link](https://genmojo.github.io/)  |
+| 2025 | **Articulated Kinematics Distillation from Video Diffusion Models**  | CVPR 2025 |          [Link](https://arxiv.org/abs/2504.01204)          | --  | [Link](https://research.nvidia.com/labs/dir/akd/)  |
 | 2025 | **Free4D: Tuning-free 4D Scene Generation with Spatial-Temporal Consistency**  | ICCV 2025 |          [Link](https://arxiv.org/abs/2503.20785)          | [Link](https://github.com/TQTQliu/Free4D)  | [Link](https://free4d.github.io/)  |
 | 2025 | **St4RTrack: Simultaneous 4D Reconstruction and Tracking in the World**  | ICCV 2025 |          [Link](https://arxiv.org/abs/2504.13152)          | Coming Soon!  | [Link](https://st4rtrack.github.io/)  |
 
@@ -462,6 +463,14 @@ An open collection of state-of-the-art (SOTA), novel **Text to X (X can be every
   author={Chu, Wen-Hsuan and Ke, Lei and Liu, Jianmeng and Huo, Mingxiao and Tokmakov, Pavel and Fragkiadaki, Katerina},
   booktitle={Proceedings of the Computer Vision and Pattern Recognition Conference},
   pages={22067--22077},
+  year={2025}
+}
+
+@inproceedings{li2025articulated,
+  title={Articulated Kinematics Distillation from Video Diffusion Models},
+  author={Li, Xuan and Ma, Qianli and Lin, Tsung-Yi and Chen, Yongxin and Jiang, Chenfanfu and Liu, Ming-Yu and Xiang, Donglai},
+  booktitle={Proceedings of the Computer Vision and Pattern Recognition Conference},
+  pages={17571--17581},
   year={2025}
 }
 
