@@ -351,6 +351,8 @@ Transformer-based Architectures.
 	- [Cosmos-Transfer1](https://github.com/nvidia-cosmos/cosmos-transfer1)：a world-to-world transfer model designed to bridge the perceptual divide between simulated and real-world environments.
    	- [Cosmos-Predict1](https://github.com/nvidia-cosmos/cosmos-predict1): a collection of general-purpose world foundation models for Physical AI that can be fine-tuned into customized world models for downstream applications.
    	- [Cosmos-Reason1](https://github.com/nvidia-cosmos/cosmos-reason1)： a model that understands the physical common sense and generate appropriate embodied decisions in natural language through long chain-of-thought reasoning processes.
+ 
+- [Genie3](https://deepmind.google/discover/blog/genie-3-a-new-frontier-for-world-models/), Google Deepmind, August 5th, 2025.
 
 -------
 
