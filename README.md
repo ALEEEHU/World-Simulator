@@ -949,8 +949,15 @@ Enes Sanli, Baris Sarper Tezcan, Aykut Erdem, Erkut Erdem (Koç University, Hace
 Recent progress in text-to-video (T2V) generation has enabled the synthesis of visually compelling and temporally coherent videos from natural language. However, these models often fall short in basic physical commonsense, producing outputs that violate intuitive expectations around causality, object behavior, and tool use. Addressing this gap, we present PhysVidBench, a benchmark designed to evaluate the physical reasoning capabilities of T2V systems. The benchmark includes 383 carefully curated prompts, emphasizing tool use, material properties, and procedural interactions, and domains where physical plausibility is crucial. For each prompt, we generate videos using diverse state-of-the-art models and adopt a three-stage evaluation pipeline: (1) formulate grounded physics questions from the prompt, (2) caption the generated video with a vision-language model, and (3) task a language model to answer several physics-involved questions using only the caption. This indirect strategy circumvents common hallucination issues in direct video-based evaluation. By highlighting affordances and tool-mediated actions, areas overlooked in current T2V evaluations, PhysVidBench provides a structured, interpretable framework for assessing physical commonsense in generative video models.
 </details>
 
+#### 11. LongVie: Multimodal-Guided Controllable Ultra-Long Video Generation
+Jianxiong Gao, Zhaoxi Chen, Xian Liu, Jianfeng Feng, Chenyang Si, Yanwei Fu, Yu Qiao, Ziwei Liu
 
+(Nanjing University, Fudan University, Nanyang Technological University, Nvidia, Shanghai Artificial Intelligence Laboratory)
 
+<details span>
+<summary><b>Abstract</b></summary>
+Controllable ultra-long video generation is a fundamental yet challenging task. Although existing methods are effective for short clips, they struggle to scale due to issues such as temporal inconsistency and visual degradation. In this paper, we initially investigate and identify three key factors: separate noise initialization, independent control signal normalization, and the limitations of single-modality guidance. To address these issues, we propose LongVie, an end-to-end autoregressive framework for controllable long video generation. LongVie introduces two core designs to ensure temporal consistency: 1) a unified noise initialization strategy that maintains consistent generation across clips, and 2) global control signal normalization that enforces alignment in the control space throughout the entire video. To mitigate visual degradation, LongVie employs 3) a multi-modal control framework that integrates both dense (e.g., depth maps) and sparse (e.g., keypoints) control signals, complemented by 4) a degradation-aware training strategy that adaptively balances modality contributions over time to preserve visual quality. We also introduce LongVGenBench, a comprehensive benchmark consisting of 100 high-resolution videos spanning diverse real-world and synthetic environments, each lasting over one minute. Extensive experiments show that LongVie achieves state-of-the-art performance in long-range controllability, consistency, and quality.
+</details>
 
 | Year | Title                                                        | ArXiv Time  |                           Paper                            |                      Code                      | Project Page                      |
 | ---- | ------------------------------------------------------------ | :----: | :--------------------------------------------------------: | :--------------------------------------------: | :--------------------------------------------: |
@@ -964,6 +971,7 @@ Recent progress in text-to-video (T2V) generation has enabled the synthesis of v
 | 2025 | **Lumos-1: On Autoregressive Video Generation from a Unified Model Perspective**  | 11 Jul 2025 |      [Link](https://arxiv.org/abs/2507.08801)      | [Link](https://github.com/alibaba-damo-academy/Lumos) | -- |
 | 2025 | **"PhyWorldBench": A Comprehensive Evaluation of Physical Realism in Text-to-Video Models**  | 17 Jul 2025 |      [Link](https://www.arxiv.org/pdf/2507.13428)      | -- | -- |
 | 2025 | **Can Your Model Separate Yolks with a Water Bottle? Benchmarking Physical Commonsense Understanding in Video Generation Models**  | 21 Jul 2025 |      [Link](https://arxiv.org/abs/2507.15824)      | [Link](https://github.com/ensanli/PhysVidBenchCode) | [Link](https://cyberiada.github.io/PhysVidBench/) |
+| 2025 | **LongVie: Multimodal-Guided Controllable Ultra-Long Video Generation**  | 5 Aug 2025 |      [Link](https://arxiv.org/abs/2508.03694)      | [Link](https://github.com/Vchitect/LongVie) | [Link](https://vchitect.github.io/LongVie-project/) |
 
 <details close>
 <summary>ArXiv Papers References</summary>
@@ -1047,6 +1055,16 @@ Recent progress in text-to-video (T2V) generation has enabled the synthesis of v
       archivePrefix={arXiv},
       primaryClass={cs.CV},
       url={https://arxiv.org/abs/2507.15824}, 
+}
+
+@misc{gao2025longviemultimodalguidedcontrollableultralong,
+      title={LongVie: Multimodal-Guided Controllable Ultra-Long Video Generation}, 
+      author={Jianxiong Gao and Zhaoxi Chen and Xian Liu and Jianfeng Feng and Chenyang Si and Yanwei Fu and Yu Qiao and Ziwei Liu},
+      year={2025},
+      eprint={2508.03694},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2508.03694}, 
 }
 
 ```
