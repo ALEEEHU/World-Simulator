@@ -1429,6 +1429,7 @@ For more details, please check the [2023-2024 3D Scene Papers](./docs/3d_scene/3
 | ---- | ------------------------------------------------------------ | :----: | :--------------------------------------------------------: | :--------------------------------------------: | :--------------------------------------------: |
 | 2025 | **MixerMDM: Learnable Composition of Human Motion Diffusion Models**  | CVPR 2025 |          [Link](https://arxiv.org/abs/2504.01019)          | [Link](https://github.com/pabloruizponce/MixerMDM)  | [Link](https://www.pabloruizponce.com/papers/MixerMDM)  |
 | 2025 | **Dynamic Motion Blending for Versatile Motion Editing**  | CVPR 2025 |          [Link](https://arxiv.org/abs/2503.20724)          | [Link](https://github.com/emptybulebox1/motionRefit/)  | [Link](https://awfuact.github.io/motionrefit/)  |
+| 2025 | **MoLA: Motion Generation and Editing with Latent Diffusion Enhanced by Adversarial Training**  | CVPR 2025 HuMoGen Workshop |          [Link](https://arxiv.org/abs/2406.01867)          | -- |  --  |
 | 2025 | **MotionStreamer: Streaming Motion Generation via Diffusion-based Autoregressive Model in Causal Latent Space**  | ICCV 2025 |          [Link](https://arxiv.org/abs/2503.15451)          | [Link](https://github.com/zju3dv/MotionStreamer)  | [Link](https://zju3dv.github.io/MotionStreamer/)  |
 | 2025 | **Go to Zero: Towards Zero-shot Motion Generation with Million-scale Data**  | ICCV 2025 |          [Link](https://arxiv.org/abs/2507.07095)          | [Link](https://github.com/VankouF/MotionMillion-Codes)  | [Link](https://vankouf.github.io/MotionMillion/)  |
 
@@ -1449,6 +1450,14 @@ For more details, please check the [2023-2024 3D Scene Papers](./docs/3d_scene/3
   title={Dynamic Motion Blending for Versatile Motion Editing},
   author={Jiang, Nan and Li, Hongjie and Yuan, Ziye and He, Zimo and Chen, Yixin and Liu, Tengyu and Zhu, Yixin and Huang, Siyuan},
   journal={arXiv preprint arXiv:2503.20724},
+  year={2025}
+}
+
+@inproceedings{uchida2025mola,
+  title={Mola: Motion generation and editing with latent diffusion enhanced by adversarial training},
+  author={Uchida, Kengo and Shibuya, Takashi and Takida, Yuhta and Murata, Naoki and Tanke, Julian and Takahashi, Shusuke and Mitsufuji, Yuki},
+  booktitle={Proceedings of the Computer Vision and Pattern Recognition Conference},
+  pages={2910--2919},
   year={2025}
 }
 
