@@ -417,6 +417,7 @@ An open collection of state-of-the-art (SOTA), novel **Text to X (X can be every
 | 2025 | **Articulated Kinematics Distillation from Video Diffusion Models**  | CVPR 2025 |          [Link](https://arxiv.org/abs/2504.01204)          | --  | [Link](https://research.nvidia.com/labs/dir/akd/)  |
 | 2025 | **Free4D: Tuning-free 4D Scene Generation with Spatial-Temporal Consistency**  | ICCV 2025 |          [Link](https://arxiv.org/abs/2503.20785)          | [Link](https://github.com/TQTQliu/Free4D)  | [Link](https://free4d.github.io/)  |
 | 2025 | **St4RTrack: Simultaneous 4D Reconstruction and Tracking in the World**  | ICCV 2025 |          [Link](https://arxiv.org/abs/2504.13152)          | Coming Soon!  | [Link](https://st4rtrack.github.io/)  |
+| 2025 | **VLM4D: Towards Spatiotemporal Awareness in Vision Language Models**  | ICCV 2025 |          [Link](https://arxiv.org/pdf/2508.02095)          | Coming Soon!  | [Link](https://vlm4d.github.io/)  |
 
 <details close>
 <summary>Accepted Papers References</summary>
@@ -488,6 +489,13 @@ An open collection of state-of-the-art (SOTA), novel **Text to X (X can be every
   author={Feng*, Haiwen and Zhang*, Junyi and Wang, Qianqian and Ye, Yufei and Yu, Pengcheng and Black, Michael J. and Darrell, Trevor and Kanazawa, Angjoo},
   booktitle={Proceedings of the IEEE/CVF International Conference on Computer Vision},
   year={2025}
+}
+
+@inproceedings{zhou2025vlm4d,
+    title={VLM4D: Towards Spatiotemporal Awareness in Vision Language Models},
+    author={Zhou, Shijie and Vilesov, Alexander and He, Xuehai and Wan, Ziyu and Zhang, Shuwang and Nagachandra, Aditya and Chang, Di and Chen, Dongdong and Wang, Eric Xin and Kadambi, Achuta},
+    booktitle={Proceedings of the IEEE/CVF international conference on computer vision},
+    year={2025}
 }
 
 ```
