@@ -967,6 +967,14 @@ Jianxiong Gao, Zhaoxi Chen, Xian Liu, Jianfeng Feng, Chenyang Si, Yanwei Fu, Yu 
 Controllable ultra-long video generation is a fundamental yet challenging task. Although existing methods are effective for short clips, they struggle to scale due to issues such as temporal inconsistency and visual degradation. In this paper, we initially investigate and identify three key factors: separate noise initialization, independent control signal normalization, and the limitations of single-modality guidance. To address these issues, we propose LongVie, an end-to-end autoregressive framework for controllable long video generation. LongVie introduces two core designs to ensure temporal consistency: 1) a unified noise initialization strategy that maintains consistent generation across clips, and 2) global control signal normalization that enforces alignment in the control space throughout the entire video. To mitigate visual degradation, LongVie employs 3) a multi-modal control framework that integrates both dense (e.g., depth maps) and sparse (e.g., keypoints) control signals, complemented by 4) a degradation-aware training strategy that adaptively balances modality contributions over time to preserve visual quality. We also introduce LongVGenBench, a comprehensive benchmark consisting of 100 high-resolution videos spanning diverse real-world and synthetic environments, each lasting over one minute. Extensive experiments show that LongVie achieves state-of-the-art performance in long-range controllability, consistency, and quality.
 </details>
 
+#### 12. Yan: Foundational Interactive Video Generation
+Yan Team (Tencent)
+
+<details span>
+<summary><b>Abstract</b></summary>
+We present Yan, a foundational framework for interactive video generation, covering the entire pipeline from simulation and generation to editing. Specifically, Yan comprises three core modules. AAA-level Simulation: We design a highly-compressed, low-latency 3D-VAE coupled with a KV-cache-based shift-window denoising inference process, achieving real-time 1080P/60FPS interactive simulation. Multi-Modal Generation: We introduce a hierarchical autoregressive caption method that injects game-specific knowledge into open-domain multi-modal video diffusion models (VDMs), then transforming the VDM into a frame-wise, action-controllable, real-time infinite interactive video generator. Notably, when the textual and visual prompts are sourced from different domains, the model demonstrates strong generalization, allowing it to blend and compose the style and mechanics across domains flexibly according to user prompts. Multi-Granularity Editing: We propose a hybrid model that explicitly disentangles interactive mechanics simulation from visual rendering, enabling multi-granularity video content editing during interaction through text. Collectively, Yan offers an integration of these modules, pushing interactive video generation beyond isolated capabilities toward a comprehensive AI-driven interactive creation paradigm, paving the way for the next generation of creative tools, media, and entertainment. 
+</details>
+
 | Year | Title                                                        | ArXiv Time  |                           Paper                            |                      Code                      | Project Page                      |
 | ---- | ------------------------------------------------------------ | :----: | :--------------------------------------------------------: | :--------------------------------------------: | :--------------------------------------------: |
 | 2025 | **Uni3C: Unifying Precisely 3D-Enhanced Camera and Human Motion Controls for Video Generation**  | 21 Apr 2025 |          [Link](https://arxiv.org/abs/2504.14899)          | [Link](https://github.com/ewrfcas/Uni3C) | [Link](https://ewrfcas.github.io/Uni3C/)  |
@@ -980,6 +988,7 @@ Controllable ultra-long video generation is a fundamental yet challenging task. 
 | 2025 | **"PhyWorldBench": A Comprehensive Evaluation of Physical Realism in Text-to-Video Models**  | 17 Jul 2025 |      [Link](https://www.arxiv.org/pdf/2507.13428)      | -- | -- |
 | 2025 | **Can Your Model Separate Yolks with a Water Bottle? Benchmarking Physical Commonsense Understanding in Video Generation Models**  | 21 Jul 2025 |      [Link](https://arxiv.org/abs/2507.15824)      | [Link](https://github.com/ensanli/PhysVidBenchCode) | [Link](https://cyberiada.github.io/PhysVidBench/) |
 | 2025 | **LongVie: Multimodal-Guided Controllable Ultra-Long Video Generation**  | 5 Aug 2025 |      [Link](https://arxiv.org/abs/2508.03694)      | [Link](https://github.com/Vchitect/LongVie) | [Link](https://vchitect.github.io/LongVie-project/) |
+| 2025 | **Yan: Foundational Interactive Video Generation**  | 12 Aug 2025 |      [Link](https://www.arxiv.org/abs/2508.08601)      | -- | [Link](https://greatx3.github.io/Yan/) |
 
 <details close>
 <summary>ArXiv Papers References</summary>
@@ -1073,6 +1082,13 @@ Controllable ultra-long video generation is a fundamental yet challenging task. 
       archivePrefix={arXiv},
       primaryClass={cs.CV},
       url={https://arxiv.org/abs/2508.03694}, 
+}
+
+@article{yan,
+  title   = {Yan: Foundational Interactive Video Generation},
+  author  = {Yan Team},
+  url     = {https://greatx3.github.io/Yan/},
+  year    = {2025}
 }
 
 ```
