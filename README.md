@@ -16,6 +16,10 @@ This repository is divided into two main sections:
 
 <img src="./media/add_oil.png" width=15% align="right" />
 
+## 🔔 News
+- ✨ [13 Aug 2025] Updated our survey (Version 2, 25 pages) on arXiv.
+- ✨ [6 Mar 2025] Updated our survey (Version 1) on arXiv.
+
 ## Table of Contents
 - [Our Survey Paper Collection](#-our-survey-paper-collection)
   - [Abstract](#abstract)
