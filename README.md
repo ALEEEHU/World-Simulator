@@ -1790,6 +1790,7 @@ AMASS is a large database of human motion unifying different optical marker-base
 | ---- | ------------------------------------------------------------ | :----: | :--------------------------------------------------------: | :--------------------------------------------: | :--------------------------------------------: |
 | 2025 | **Zero-1-to-A: Zero-Shot One Image to Animatable Head Avatars Using Video Diffusion**  | CVPR 2025 |          [Link](https://arxiv.org/abs/2503.15851)          | [Link](https://github.com/ZhenglinZhou/Zero-1-to-A)  | [Link](https://zhenglinzhou.github.io/Zero-1-to-A/)  |
 | 2025 | **GaussianIP: Identity-Preserving Realistic 3D Human Generation via Human-Centric Diffusion Prior**  | CVPR 2025 |          [Link](https://arxiv.org/abs/2503.11143)          | [Link](https://github.com/silence-tang/GaussianIP)  | [Link](https://silence-tang.github.io/gaussian-ip/)  |
+| 2025 | **ArtiScene: Language-Driven Artistic 3D Scene Generation Through Image Intermediary**  | CVPR 2025 |          [Link](https://arxiv.org/abs/2506.00742)          | [Link](https://github.com/NVlabs/ArtiScene)  | [Link](https://artiscene-cvpr.github.io/)  |
 | 2025 | **Text-based Animatable 3D Avatars with Morphable Model Alignment**  | SIGGRAPH 2025 |          [Link](https://arxiv.org/abs/2504.15835)          | [Link](https://github.com/oneThousand1000/AnimPortrait3D)  | [Link](https://onethousandwu.com/animportrait3d.github.io/)  |
 | 2025 | **LAM: Large Avatar Model for One-shot Animatable Gaussian Head**  | SIGGRAPH 2025 |          [Link](https://arxiv.org/abs/2502.17796)          | [Link](https://github.com/aigc3d/LAM)  | [Link](https://aigc3d.github.io/projects/LAM/)  |
 | 2025 | **Avat3r: Large Animatable Gaussian Reconstruction Model for High-fidelity 3D Head Avatars**  | ICCV 2025 |          [Link](https://arxiv.org/abs/2502.20220)          | --  | [Link](https://tobias-kirschstein.github.io/avat3r/)  |
@@ -1813,6 +1814,14 @@ AMASS is a large database of human motion unifying different optical marker-base
   title={GaussianIP: Identity-Preserving Realistic 3D Human Generation via Human-Centric Diffusion Prior},
   author={Tang, Zichen and Yao, Yuan and Cui, Miaomiao and Bo, Liefeng and Yang, Hongyu},
   journal={arXiv preprint arXiv:2503.11143},
+  year={2025}
+}
+
+@inproceedings{gu2025artiscene,
+  title={ArtiScene: Language-Driven Artistic 3D Scene Generation Through Image Intermediary},
+  author={Gu, Zeqi and Cui, Yin and Li, Zhaoshuo and Wei, Fangyin and Ge, Yunhao and Gu, Jinwei and Liu, Ming-Yu and Davis, Abe and Ding, Yifan},
+  booktitle={Proceedings of the Computer Vision and Pattern Recognition Conference},
+  pages={2891--2901},
   year={2025}
 }
 
