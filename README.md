@@ -422,6 +422,7 @@ An open collection of state-of-the-art (SOTA), novel **Text to X (X can be every
 | 2025 | **Free4D: Tuning-free 4D Scene Generation with Spatial-Temporal Consistency**  | ICCV 2025 |          [Link](https://arxiv.org/abs/2503.20785)          | [Link](https://github.com/TQTQliu/Free4D)  | [Link](https://free4d.github.io/)  |
 | 2025 | **St4RTrack: Simultaneous 4D Reconstruction and Tracking in the World**  | ICCV 2025 |          [Link](https://arxiv.org/abs/2504.13152)          | Coming Soon!  | [Link](https://st4rtrack.github.io/)  |
 | 2025 | **VLM4D: Towards Spatiotemporal Awareness in Vision Language Models**  | ICCV 2025 |          [Link](https://arxiv.org/pdf/2508.02095)          | Coming Soon!  | [Link](https://vlm4d.github.io/)  |
+| 2025 | **Express4D: Expressive, Friendly, and Extensible 4D Facial Motion Generation Benchmark**  | ICCV DataCV Workshop 2025 |          [Link](https://arxiv.org/abs/2508.12438)          | [Link](https://github.com/jaron1990/Express4D/)  | [Link](https://jaron1990.github.io/Express4D/)  |
 
 <details close>
 <summary>Accepted Papers References</summary>
@@ -500,6 +501,16 @@ An open collection of state-of-the-art (SOTA), novel **Text to X (X can be every
     author={Zhou, Shijie and Vilesov, Alexander and He, Xuehai and Wan, Ziyu and Zhang, Shuwang and Nagachandra, Aditya and Chang, Di and Chen, Dongdong and Wang, Eric Xin and Kadambi, Achuta},
     booktitle={Proceedings of the IEEE/CVF international conference on computer vision},
     year={2025}
+}
+
+@misc{aloni2025express4dexpressivefriendlyextensible,
+title={Express4D: Expressive, Friendly, and Extensible 4D Facial Motion Generation Benchmark}, 
+author={Yaron Aloni and Rotem Shalev-Arkushin and Yonatan Shafir and Guy Tevet and Ohad Fried and Amit Haim Bermano},
+year={2025},
+eprint={2508.12438},
+archivePrefix={arXiv},
+primaryClass={cs.GR},
+url={https://arxiv.org/abs/2508.12438}
 }
 
 ```
@@ -624,7 +635,9 @@ We present MoVieS, a novel feed-forward model that synthesizes 4D dynamic novel 
 </details>
 
 #### 14. 4DNeX: Feed-Forward 4D Generative Modeling Made Easy
-Zhaoxi Chen, Tianqi Liu, Long Zhuo, Jiawei Ren, Zeng Tao, He Zhu, Fangzhou Hong, Liang Pan, Ziwei Liu (Nanyang Technological University, Shanghai AI Laboratory)
+Zhaoxi Chen, Tianqi Liu, Long Zhuo, Jiawei Ren, Zeng Tao, He Zhu, Fangzhou Hong, Liang Pan, Ziwei Liu 
+
+(Nanyang Technological University, Shanghai AI Laboratory)
 
 <details span>
 <summary><b>Abstract</b></summary>
