@@ -623,6 +623,14 @@ Chenguo Lin, Yuchen Lin, Panwang Pan, Yifan Yu, Honglei Yan, Katerina Fragkiadak
 We present MoVieS, a novel feed-forward model that synthesizes 4D dynamic novel views from monocular videos in one second. MoVieS represents dynamic 3D scenes using pixel-aligned grids of Gaussian primitives, explicitly supervising their time-varying motion. This allows, for the first time, the unified modeling of appearance, geometry and motion, and enables view synthesis, reconstruction and 3D point tracking within a single learning-based framework. By bridging novel view synthesis with dynamic geometry reconstruction, MoVieS enables large-scale training on diverse datasets with minimal dependence on task-specific supervision. As a result, it also naturally supports a wide range of zero-shot applications, such as scene flow estimation and moving object segmentation. Extensive experiments validate the effectiveness and efficiency of MoVieS across multiple tasks, achieving competitive performance while offering several orders of magnitude speedups.
 </details>
 
+#### 14. 4DNeX: Feed-Forward 4D Generative Modeling Made Easy
+Zhaoxi Chen, Tianqi Liu, Long Zhuo, Jiawei Ren, Zeng Tao, He Zhu, Fangzhou Hong, Liang Pan, Ziwei Liu (Nanyang Technological University, Shanghai AI Laboratory)
+
+<details span>
+<summary><b>Abstract</b></summary>
+We present 4DNeX, the first feed-forward framework for generating 4D (i.e., dynamic 3D) scene representations from a single image. In contrast to existing methods that rely on computationally intensive optimization or require multi-frame video inputs, 4DNeX enables efficient, end-to-end image-to-4D generation by fine-tuning a pretrained video diffusion model. Specifically, 1) to alleviate the scarcity of 4D data, we construct 4DNeX-10M, a large-scale dataset with high-quality 4D annotations generated using advanced reconstruction approaches. 2) we introduce a unified 6D video representation that jointly models RGB and XYZ sequences, facilitating structured learning of both appearance and geometry. 3) we propose a set of simple yet effective adaptation strategies to repurpose pretrained video diffusion models for 4D modeling. 4DNeX produces high-quality dynamic point clouds that enable novel-view video synthesis. Extensive experiments demonstrate that 4DNeX outperforms existing 4D generation methods in efficiency and generalizability, offering a scalable solution for image-to-4D modeling and laying the foundation for generative 4D world models that simulate dynamic scene evolution.
+</details>
+
 -----
 
 </details>
@@ -642,6 +650,7 @@ We present MoVieS, a novel feed-forward model that synthesizes 4D dynamic novel 
 | 2025 | **BulletGen: Improving 4D Reconstruction with Bullet-Time Generation**  | 23 Jun 2025 |      [Link](https://arxiv.org/abs/2506.18601)   | --  | --  |
 | 2025 | **4D-LRM: Large Space-Time Reconstruction Model From and To Any View at Any Time**  | 23 Jun 2025 |          [Link](https://arxiv.org/abs/2506.18890)          | [Link](https://github.com/Mars-tin/4D-LRM)  | [Link](https://4dlrm.github.io/)  |
 | 2025 | **MoVieS: Motion-Aware 4D Dynamic View Synthesis in One Second**  | 14 Jul 2025 |          [Link](https://arxiv.org/abs/2507.10065)          | [Link](https://github.com/chenguolin/MoVieS)  | [Link](https://chenguolin.github.io/projects/MoVieS/)  |
+| 2025 | **4DNeX: Feed-Forward 4D Generative Modeling Made Easy**  | 18 Aug 2025 |          [Link](https://arxiv.org/abs/2508.13154)          | [Link](https://github.com/3DTopia/4DNeX)  | [Link](https://4dnex.github.io/)  |
 
 
 <details close>
@@ -766,6 +775,13 @@ We present MoVieS, a novel feed-forward model that synthesizes 4D dynamic novel 
       archivePrefix={arXiv},
       primaryClass={cs.CV},
       url={https://arxiv.org/abs/2507.10065}, 
+}
+
+@article{chen20254dnex,
+    title={4DNeX: Feed-Forward 4D Generative Modeling Made Easy},
+    author={Chen, Zhaoxi and Liu, Tianqi and Zhuo, Long and Ren, Jiawei and Tao, Zeng and Zhu, He and Hong, Fangzhou and Pan, Liang and Liu, Ziwei},
+    journal={arXiv preprint arXiv:2508.13154},
+    year={2025}
 }
 
 ```
