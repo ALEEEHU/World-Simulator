@@ -1336,6 +1336,14 @@ Zhongqi Yang, Wenhang Ge, Yuqi Li, Jiaqi Chen, Haoyuan Li, Mengyin An, Fei Kang,
 Explorable 3D world generation from a single image or text prompt forms a cornerstone of spatial intelligence. Recent works utilize video model to achieve wide-scope and generalizable 3D world generation. However, existing approaches often suffer from limited reconstruction scope and suboptimal visual quality. In this work, we propose Matrix-3D, a framework that utilize panoramic representation for wide-coverage omnidirectional explorable 3D world generation that combines conditional video generation and panoramic 3D reconstruction. We first train a trajectory-guided panoramic video diffusion model that employs scene mesh renders as condition, to enable high-quality and geometrically consistent scene video generation. To enable 3D world generation, we introduce two methods that lift the 2D content to 3D world, ensuring efficiency and effectiveness. To lift the panorama scene video to 3D world, we propose two separate pipelines — a feed-forward large reconstruction model for rapid 3D scene reconstruction and an optimization-based pipeline for accurate and detailed 3D scene reconstruction. For efficiency, we introduce a feed-forward panoramic 3D reconstruction model that projects video latents and camera poses to predict omni-directional 3D Gaussian Splatting attributes. To facilitate convergence, we adopt a two-stage training strategy and supervise the model using rendered panoramic novel views. For effectiveness, we also propose a optimization-based reconstruction method. However, no existing panoramic video dataset provides associated camera poses. To facilitate effective training, we also introduce the Matrix-Pano dataset — the first large-scale synthetic collection comprising 116,759 high-quality static panoramic video sequences with various annotations. Extensive experiments demonstrate the effectiveness of our proposed framework, which achieves state-of-the-art performance in panoramic video generation and 3D world generation.
 </details>
 
+#### 15. SceneGen: Single-Image 3D Scene Generation in One Feedforward Pass
+Yanxu Meng, Haoning Wu, Ya Zhang, Weidi Xie (Shanghai Jiao Tong University)
+
+<details span>
+<summary><b>Abstract</b></summary>
+3D content generation has recently attracted significant research interest due to its applications in VR/AR and embodied AI. In this work, we address the challenging task of synthesizing multiple 3D assets within a single scene image. Concretely, our contributions are fourfold: (i) we present SceneGen, a novel framework that takes a scene image and corresponding object masks as input, simultaneously producing multiple 3D assets with geometry and texture. Notably, SceneGen operates with no need for optimization or asset retrieval; (ii) we introduce a novel feature aggregation module that integrates local and global scene information from visual and geometric encoders within the feature extraction module. Coupled with a position head, this enables the generation of 3D assets and their relative spatial positions in a single feedforward pass; (iii) we demonstrate SceneGen's direct extensibility to multi-image input scenarios. Despite being trained solely on single-image inputs, our architectural design enables improved generation performance with multi-image inputs; and (iv) extensive quantitative and qualitative evaluations confirm the efficiency and robust generation abilities of our approach. We believe this paradigm offers a novel solution for high-quality 3D content generation, potentially advancing its practical applications in downstream tasks.
+</details>
+
 | Year | Title                                                        | ArXiv Time  |                           Paper                            |                      Code                      | Project Page                      |
 | ---- | ------------------------------------------------------------ | :----: | :--------------------------------------------------------: | :--------------------------------------------: | :--------------------------------------------: |
 | 2025 | **LAYOUTDREAMER: Physics-guided Layout for Text-to-3D Compositional Scene Generation**  | 4 Feb 2025 |          [Link](https://arxiv.org/abs/2502.01949)          | --  | --  |
@@ -1352,6 +1360,7 @@ Explorable 3D world generation from a single image or text prompt forms a corner
 | 2025 | **Towards Geometric and Textural Consistency 3D Scene Generation via Single Image-guided Model Generation and Layout Optimization**  | 20 Jul 2025 |          [Link](https://arxiv.org/abs/2507.14841)          | [Link](https://github.com/xdlbw/sing3d) | [Link](https://xdlbw.github.io/sing3d/)  |
 | 2025 | **HunyuanWorld 1.0: Generating Immersive, Explorable, and Interactive 3D Worlds from Words or Pixels**  | 26 Jul 2025 |          [Technical Report](https://3d-models.hunyuan.tencent.com/world/HY_World_1_technical_report.pdf)          | [Link](https://github.com/Tencent-Hunyuan/HunyuanWorld-1.0) | [Link](https://3d-models.hunyuan.tencent.com/world/)  |
 | 2025 | **Matrix-3D: Omnidirectional Explorable 3D World Generation**  | 12 Aug 2025 |          [Technical Report](https://github.com/SkyworkAI/Matrix-3D/blob/main/asset/report.pdf)          | [Link](https://github.com/SkyworkAI/Matrix-3D) | [Link](https://matrix-3d.github.io/)  |
+| 2025 | **SceneGen: Single-Image 3D Scene Generation in One Feedforward Pass**  | 21 Aug 2025 |          [Link](https://arxiv.org/abs/2508.15769)          | [Link](https://github.com/Mengmouxu/SceneGen) | [Link](https://mengmouxu.github.io/SceneGen/)  |
 
 <details close>
 <summary>ArXiv Papers References</summary>
@@ -1469,6 +1478,13 @@ year={2025}
   title     = {Matrix-3D: Omnidirectional Explorable 3D World Generation},
   author    = {Zhongqi Yang and Wenhang Ge and Yuqi Li and Jiaqi Chen and Haoyuan Li and Mengyin An and Fei Kang and Hua Xue and Baixin Xu and Yuyang Yin and Eric Li and Yang Liu and Yikai Wang and Hao-Xiang Guo and Yahui Zhou},
   year      = {2025}
+}
+
+@article{meng2025scenegen,
+  author    = {Meng, Yanxu and Wu, Haoning and Zhang, Ya and Xie, Weidi},
+  title     = {SceneGen: Single-Image 3D Scene Generation in One Feedforward Pass},
+  journal   = {arXiv preprint arXiv:2508.15769},
+  year      = {2025},
 }
 
 ```
