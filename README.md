@@ -1658,6 +1658,16 @@ Xuan Wang, Kai Ruan, Liyang Qian, Zhizhi Guo, Chang Su, Gaoang Wang
 Text-driven motion generation has attracted increasing attention due to its broad applications in virtual reality, animation, and robotics. While existing methods typically model human and animal motion separately, a joint cross-species approach offers key advantages, such as a unified representation and improved generalization. However, morphological differences across species remain a key challenge, often compromising motion plausibility. To address this, we propose \textbf{X-MoGen}, the first unified framework for cross-species text-driven motion generation covering both humans and animals. X-MoGen adopts a two-stage architecture. First, a conditional graph variational autoencoder learns canonical T-pose priors, while an autoencoder encodes motion into a shared latent space regularized by morphological loss. In the second stage, we perform masked motion modeling to generate motion embeddings conditioned on textual descriptions. During training, a morphological consistency module is employed to promote skeletal plausibility across species. To support unified modeling, we construct \textbf{UniMo4D}, a large-scale dataset of 115 species and 119k motion sequences, which integrates human and animal motions under a shared skeletal topology for joint training. Extensive experiments on UniMo4D demonstrate that X-MoGen outperforms state-of-the-art methods on both seen and unseen species.
 </details>
 
+#### 11. EgoTwin: Dreaming Body and View in First Person
+Jingqiao Xiu, Fangzhou Hong, Yicong Li, Mengze Li, Wentao Wang, Sirui Han, Liang Pan, Ziwei Liu
+
+(National University of Singapore, Nanyang Technological University, Hong Kong University of Science and Technology, Shanghai AI Laboratory)
+
+<details span>
+<summary><b>Abstract</b></summary>
+While exocentric video synthesis has achieved great progress, egocentric video generation remains largely underexplored, which requires modeling first-person view content along with camera motion patterns induced by the wearer's body movements. To bridge this gap, we introduce a novel task of joint egocentric video and human motion generation, characterized by two key challenges: 1) Viewpoint Alignment: the camera trajectory in the generated video must accurately align with the head trajectory derived from human motion; 2) Causal Interplay: the synthesized human motion must causally align with the observed visual dynamics across adjacent video frames. To address these challenges, we propose EgoTwin, a joint video-motion generation framework built on the diffusion transformer architecture. Specifically, EgoTwin introduces a head-centric motion representation that anchors the human motion to the head joint and incorporates a cybernetics-inspired interaction mechanism that explicitly captures the causal interplay between video and motion within attention operations. For comprehensive evaluation, we curate a large-scale real-world dataset of synchronized text-video-motion triplets and design novel metrics to assess video-motion consistency. Extensive experiments demonstrate the effectiveness of the EgoTwin framework.
+</details>
+
 | Year | Title                                                        | ArXiv Time  |                           Paper                            |                      Code                      | Project Page                      |
 | ---- | ------------------------------------------------------------ | :----: | :--------------------------------------------------------: | :--------------------------------------------: | :--------------------------------------------: |
 | 2025 | **MotionLab: Unified Human Motion Generation and Editing via the Motion-Condition-Motion Paradigm**  | 6 Feb 2025 |          [Link](https://arxiv.org/abs/2502.02358)          | [Link](https://github.com/Diouo/MotionLab)  | [Link](https://diouo.github.io/motionlab.github.io/)  |
@@ -1670,6 +1680,7 @@ Text-driven motion generation has attracted increasing attention due to its broa
 | 2025 | **SnapMoGen: Human Motion Generation from Expressive Texts**  | 12 Jul 2025 |          [Link](https://www.arxiv.org/abs/2507.09122)          | --  | [Link](https://snap-research.github.io/SnapMoGen/) |
 | 2025 | **ReMoMask: Retrieval-Augmented Masked Motion Generation**  | 4 Aug 2025 |          [Link](https://arxiv.org/abs/2508.02605)          | [Link](https://github.com/AIGeeksGroup/ReMoMask)  | [Link](https://aigeeksgroup.github.io/ReMoMask/) |
 | 2025 | **X-MoGen: Unified Motion Generation across Humans and Animals**  | 7 Aug 2025 |          [Link](https://www.arxiv.org/abs/2508.05162)          | --  | -- |
+| 2025 | **EgoTwin: Dreaming Body and View in First Person**  | 18 Aug 2025 |          [Link](https://arxiv.org/abs/2508.13013)          | --  | [Link](https://egotwin.pages.dev/) |
 
 <details close>
 <summary>ArXiv Papers References</summary>
@@ -1751,6 +1762,16 @@ Text-driven motion generation has attracted increasing attention due to its broa
   author={Wang, Xuan and Ruan, Kai and Qian, Liyang and Guo, Zhizhi and Su, Chang and Wang, Gaoang},
   journal={arXiv preprint arXiv:2508.05162},
   year={2025}
+}
+
+@misc{xiu2025egotwindreamingbodyview,
+      title={EgoTwin: Dreaming Body and View in First Person}, 
+      author={Jingqiao Xiu and Fangzhou Hong and Yicong Li and Mengze Li and Wentao Wang and Sirui Han and Liang Pan and Ziwei Liu},
+      year={2025},
+      eprint={2508.13013},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2508.13013}, 
 }
 ```
 </details>
