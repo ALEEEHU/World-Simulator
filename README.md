@@ -421,7 +421,7 @@ An open collection of state-of-the-art (SOTA), novel **Text to X (X can be every
 | 2025 | **Articulated Kinematics Distillation from Video Diffusion Models**  | CVPR 2025 |          [Link](https://arxiv.org/abs/2504.01204)          | --  | [Link](https://research.nvidia.com/labs/dir/akd/)  |
 | 2025 | **Free4D: Tuning-free 4D Scene Generation with Spatial-Temporal Consistency**  | ICCV 2025 |          [Link](https://arxiv.org/abs/2503.20785)          | [Link](https://github.com/TQTQliu/Free4D)  | [Link](https://free4d.github.io/)  |
 | 2025 | **St4RTrack: Simultaneous 4D Reconstruction and Tracking in the World**  | ICCV 2025 |          [Link](https://arxiv.org/abs/2504.13152)          | Coming Soon!  | [Link](https://st4rtrack.github.io/)  |
-| 2025 | **VLM4D: Towards Spatiotemporal Awareness in Vision Language Models**  | ICCV 2025 |          [Link](https://arxiv.org/pdf/2508.02095)          | Coming Soon!  | [Link](https://vlm4d.github.io/)  |
+| 2025 | **VLM4D: Towards Spatiotemporal Awareness in Vision Language Models**  | ICCV 2025 |          [Link](https://arxiv.org/pdf/2508.02095)          | [Link](https://github.com/ShijieZhou-UCLA/VLM4D)  | [Link](https://vlm4d.github.io/)  |
 | 2025 | **Express4D: Expressive, Friendly, and Extensible 4D Facial Motion Generation Benchmark**  | ICCV DataCV Workshop 2025 |          [Link](https://arxiv.org/abs/2508.12438)          | [Link](https://github.com/jaron1990/Express4D/)  | [Link](https://jaron1990.github.io/Express4D/)  |
 
 <details close>
@@ -1677,7 +1677,7 @@ While exocentric video synthesis has achieved great progress, egocentric video g
 | 2025 | **GENMO: A GENeralist Model for Human MOtion**  | 2 May 2025 |          [Link](https://arxiv.org/abs/2505.01425)          | -- | [Link](https://research.nvidia.com/labs/dair/genmo/)  |
 | 2025 | **ReAlign: Bilingual Text-to-Motion Generation via Step-Aware Reward-Guided Alignment**  | 8 May 2025 |          [Link](https://www.arxiv.org/abs/2505.04974)          | --  | [Link](https://wengwanjiang.github.io/ReAlign-page/)  |
 | 2025 | **UniHM: Universal Human Motion Generation with Object Interactions in Indoor Scenes**  | 19 May 2025 |          [Link](https://arxiv.org/abs/2505.12774)          | --  | -- |
-| 2025 | **SnapMoGen: Human Motion Generation from Expressive Texts**  | 12 Jul 2025 |          [Link](https://www.arxiv.org/abs/2507.09122)          | --  | [Link](https://snap-research.github.io/SnapMoGen/) |
+| 2025 | **SnapMoGen: Human Motion Generation from Expressive Texts**  | 12 Jul 2025 |          [Link](https://www.arxiv.org/abs/2507.09122)          | [Link](https://github.com/snap-research/SnapMoGen)  | [Link](https://snap-research.github.io/SnapMoGen/) |
 | 2025 | **ReMoMask: Retrieval-Augmented Masked Motion Generation**  | 4 Aug 2025 |          [Link](https://arxiv.org/abs/2508.02605)          | [Link](https://github.com/AIGeeksGroup/ReMoMask)  | [Link](https://aigeeksgroup.github.io/ReMoMask/) |
 | 2025 | **X-MoGen: Unified Motion Generation across Humans and Animals**  | 7 Aug 2025 |          [Link](https://www.arxiv.org/abs/2508.05162)          | --  | -- |
 | 2025 | **EgoTwin: Dreaming Body and View in First Person**  | 18 Aug 2025 |          [Link](https://arxiv.org/abs/2508.13013)          | --  | [Link](https://egotwin.pages.dev/) |
