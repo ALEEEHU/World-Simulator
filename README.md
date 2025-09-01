@@ -808,7 +808,7 @@ We present 4DNeX, the first feed-forward framework for generating 4D (i.e., dyna
 In 2023, tasks classified as text/Image to 4D and video to 4D generally involve producing four-dimensional data from text/Image or video input. For more details, please check the [2023 4D Papers](./docs/4d/4d_2023.md), including 6 accepted papers and 3 arXiv papers.
 
 #### Year 2024
-For more details, please check the [2024 4D Papers](./docs/4d/4d_2024.md), including 21 accepted papers and 13 arXiv papers.
+For more details, please check the [2024 4D Papers](./docs/4d/4d_2024.md), including 24 accepted papers and 10 arXiv papers.
 
 --------------
 
