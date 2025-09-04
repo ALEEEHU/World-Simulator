@@ -423,6 +423,7 @@ An open collection of state-of-the-art (SOTA), novel **Text to X (X can be every
 | 2025 | **St4RTrack: Simultaneous 4D Reconstruction and Tracking in the World**  | ICCV 2025 |          [Link](https://arxiv.org/abs/2504.13152)          | Coming Soon!  | [Link](https://st4rtrack.github.io/)  |
 | 2025 | **VLM4D: Towards Spatiotemporal Awareness in Vision Language Models**  | ICCV 2025 |          [Link](https://arxiv.org/pdf/2508.02095)          | [Link](https://github.com/ShijieZhou-UCLA/VLM4D)  | [Link](https://vlm4d.github.io/)  |
 | 2025 | **Express4D: Expressive, Friendly, and Extensible 4D Facial Motion Generation Benchmark**  | ICCV DataCV Workshop 2025 |          [Link](https://arxiv.org/abs/2508.12438)          | [Link](https://github.com/jaron1990/Express4D/)  | [Link](https://jaron1990.github.io/Express4D/)  |
+| 2025 | **CityDreamer4D: Compositional Generative Model of Unbounded 4D Cities**  | TPAMI 2025 |          [Link](https://arxiv.org/abs/2501.08983)          | [Link](https://github.com/hzxie/CityDreamer4D?tab=readme-ov-file)  | [Link](https://www.infinitescript.com/project/city-dreamer-4d/)  |
 
 <details close>
 <summary>Accepted Papers References</summary>
@@ -511,6 +512,14 @@ eprint={2508.12438},
 archivePrefix={arXiv},
 primaryClass={cs.GR},
 url={https://arxiv.org/abs/2508.12438}
+}
+
+@article{xie2025citydreamer4d,
+  title={CityDreamer4D: Compositional generative model of unbounded 4D cities},
+  author={Xie, Haozhe and Chen, Zhaoxi and Hong, Fangzhou and Liu, Ziwei},
+  journal={arXiv e-prints},
+  pages={arXiv--2501},
+  year={2025}
 }
 
 ```
