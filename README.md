@@ -1847,7 +1847,7 @@ AMASS is a large database of human motion unifying different optical marker-base
 <summary>Awesome Repos</summary>
 
 > ##### Survey
-* [TPAMI 2025] **Human Motion Video Generation: A Survey** [[Paper](https://ieeexplore.ieee.org/document/11106267)] [[GitHub](https://github.com/Winn1y/Awesome-Human-Motion-Video-Generation)]
+* [TPAMI 2025] **Human Motion Video Generation: A Survey** [[arXiv](https://arxiv.org/abs/2509.03883)] [[Paper](https://ieeexplore.ieee.org/document/11106267)] [[GitHub](https://github.com/Winn1y/Awesome-Human-Motion-Video-Generation)]
 * [TPAMI 2023] **Human Motion Generation: A Survey** [[Paper](https://arxiv.org/abs/2307.10894)]
 * [arXiv 7 Apr 2025] **A Survey on Human Interaction Motion Generation** [[Paper](https://arxiv.org/abs/2503.12763)] [[GitHub](https://github.com/soraproducer/Awesome-Human-Interaction-Motion-Generation)]
 	
