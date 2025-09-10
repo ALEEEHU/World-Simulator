@@ -36,7 +36,7 @@
 | 2024 | **MoRAG -- Multi-Fusion Retrieval Augmented Generation for Human Motion**  | WACV 2025 |          [Link](https://arxiv.org/abs/2409.12140)          | [Link](https://github.com/Motion-RAG/MoRAG) | [Link](https://motion-rag.github.io/)  |
 | 2024 | **UniMuMo: Unified Text, Music, and Motion Generation**  | AAAI 2025 |          [Link](https://arxiv.org/abs/2410.04534)          | [Link](https://github.com/hanyangclarence/UniMuMo) | [Link](https://hanyangclarence.github.io/unimumo_demo/)  |
 | 2024 | **MotionCraft: Crafting Whole-Body Motion with Plug-and-Play Multimodal Controls**  | AAAI 2025  |          [Link](https://arxiv.org/abs/2407.21136)          | [Link](https://github.com/yxbian23/ControlMM) | [Link](https://yxbian23.github.io/ControlMM/)  |
-| 2024 | **DART: A Diffusion-Based Autoregressive Motion Model for Real-Time Text-Driven Motion Control**  | ICLR 2025 Spotlight |          [Link](https://arxiv.org/abs/2410.05260)          | -- | [Link](https://zkf1997.github.io/DART/)  |
+| 2024 | **DART: A Diffusion-Based Autoregressive Motion Model for Real-Time Text-Driven Motion Control**  | ICLR 2025 Spotlight |          [Link](https://arxiv.org/abs/2410.05260)          | [Link](https://github.com/zkf1997/DART) | [Link](https://zkf1997.github.io/DART/)  |
 | 2024 | **ScaMo: Exploring the Scaling Law in Autoregressive Motion Generation Model**  | CVPR 2025 |          [Link](https://arxiv.org/abs/2412.14559)          | [Link](https://github.com/shunlinlu/ScaMo_code) | [Link](https://shunlinlu.github.io/ScaMo/)  |
 
 
