@@ -1531,6 +1531,8 @@ For more details, please check the [2023-2024 3D Scene Papers](./docs/3d_scene/3
 | 2025 | **MoLA: Motion Generation and Editing with Latent Diffusion Enhanced by Adversarial Training**  | CVPR 2025 HuMoGen Workshop |          [Link](https://arxiv.org/abs/2406.01867)          | -- |  --  |
 | 2025 | **MotionStreamer: Streaming Motion Generation via Diffusion-based Autoregressive Model in Causal Latent Space**  | ICCV 2025 |          [Link](https://arxiv.org/abs/2503.15451)          | [Link](https://github.com/zju3dv/MotionStreamer)  | [Link](https://zju3dv.github.io/MotionStreamer/)  |
 | 2025 | **Go to Zero: Towards Zero-shot Motion Generation with Million-scale Data**  | ICCV 2025 |          [Link](https://arxiv.org/abs/2507.07095)          | [Link](https://github.com/VankouF/MotionMillion-Codes)  | [Link](https://vankouf.github.io/MotionMillion/)  |
+| 2025 | **KinMo: Kinematic-aware Human Motion Understanding and Generation**  | ICCV 2025 |          [Link](https://arxiv.org/abs/2411.15472)          | -- | [Link](https://andypinxinliu.github.io/KinMo/)  |
+| 2025 | **ControlMM: Controllable Masked Motion Generation**  |  ICCV 2025 (Oral)  |          [Link](https://arxiv.org/abs/2410.10780)          | [Link](https://github.com/exitudio/ControlMM/) | [Link](https://exitudio.github.io/ControlMM-page/)  |
 
 <details close>
 <summary>Accepted Papers References</summary>
@@ -1577,6 +1579,22 @@ For more details, please check the [2023-2024 3D Scene Papers](./docs/3d_scene/3
       url={https://arxiv.org/abs/2507.07095}, 
 }
 
+@inproceedings{kinmo2025kinematicawarehumanmotion,
+      title={{KinMo: Kinematic-aware Human Motion Understanding and Generation}},
+      author={Pengfei Zhang and Pinxin Liu and Pablo Garrido and Hyeongwoo Kim and Bindita Chaudhuri},
+      booktitle={IEEE/CVF International Conference on Computer Vision},
+      year={2025},
+}
+
+@misc{pinyoanuntapong2025maskcontrolspatiotemporalcontrolmasked,
+      title={MaskControl: Spatio-Temporal Control for Masked Motion Synthesis}, 
+      author={Ekkasit Pinyoanuntapong and Muhammad Usama Saleem and Korrawe Karunratanakul and Pu Wang and Hongfei Xue and Chen Chen and Chuan Guo and Junli Cao and Jian Ren and Sergey Tulyakov},
+      year={2025},
+      eprint={2410.10780},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2410.10780}, 
+}
 ```
 </details>
 
@@ -1793,7 +1811,7 @@ While exocentric video synthesis has achieved great progress, egocentric video g
 ### Previous Papers
 
 #### Year 2023-2024
-For more details, please check the [2023-2024 Text to Human Motion Papers](./docs/human_motion/motion_23-24.md), including 36 accepted papers and 8 arXiv papers.
+For more details, please check the [2023-2024 Text to Human Motion Papers](./docs/human_motion/motion_23-24.md), including 36 accepted papers and 6 arXiv papers.
 
 ### 📚 Dataset Works
 
