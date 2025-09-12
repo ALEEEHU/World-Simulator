@@ -819,6 +819,14 @@ In 2023, tasks classified as text/Image to 4D and video to 4D generally involve 
 #### Year 2024
 For more details, please check the [2024 4D Papers](./docs/4d/4d_2024.md), including 24 accepted papers and 10 arXiv papers.
 
+<details close>
+<summary>Awesome Repos</summary>
+
+> ##### Survey
+* [11 Sep 2025]**3D and 4D World Modeling: A Survey** [[Paper](https://arxiv.org/abs/2509.07996)][[GitHub](https://github.com/worldbench/survey)]
+
+</details>
+
 --------------
 
 
