@@ -424,6 +424,9 @@ An open collection of state-of-the-art (SOTA), novel **Text to X (X can be every
 | 2025 | **VLM4D: Towards Spatiotemporal Awareness in Vision Language Models**  | ICCV 2025 |          [Link](https://arxiv.org/pdf/2508.02095)          | [Link](https://github.com/ShijieZhou-UCLA/VLM4D)  | [Link](https://vlm4d.github.io/)  |
 | 2025 | **Express4D: Expressive, Friendly, and Extensible 4D Facial Motion Generation Benchmark**  | ICCV DataCV Workshop 2025 |          [Link](https://arxiv.org/abs/2508.12438)          | [Link](https://github.com/jaron1990/Express4D/)  | [Link](https://jaron1990.github.io/Express4D/)  |
 | 2025 | **CityDreamer4D: Compositional Generative Model of Unbounded 4D Cities**  | TPAMI 2025 |          [Link](https://arxiv.org/abs/2501.08983)          | [Link](https://github.com/hzxie/CityDreamer4D?tab=readme-ov-file)  | [Link](https://www.infinitescript.com/project/city-dreamer-4d/)  |
+| 2025 | **TesserAct: Learning 4D Embodied World Models**  | ICCV 2025 |   [Link](https://arxiv.org/abs/2504.20995)          | [Link](https://github.com/UMass-Embodied-AGI/TesserAct)  | [Link](https://tesseractworld.github.io/)  |
+| 2025 | **Geo4D: Leveraging Video Generators for Geometric 4D Scene Reconstruction**  | ICCV 2025 Highlight |          [Link](https://arxiv.org/abs/2504.07961)          | [Link](https://github.com/jzr99/Geo4D)  | [Link](https://geo4d.github.io/)  |
+| 2025 | **HoloTime: Taming Video Diffusion Models for Panoramic 4D Scene Generation**  | ACM MM 2025 |          [Link](https://arxiv.org/abs/2504.21650)          | [Link](https://github.com/PKU-YuanGroup/HoloTime)  | [Link](https://zhouhyocean.github.io/holotime/)  |
 
 <details close>
 <summary>Accepted Papers References</summary>
@@ -522,6 +525,27 @@ url={https://arxiv.org/abs/2508.12438}
   year={2025}
 }
 
+@article{zhen2025tesseract,
+  title={TesserAct: learning 4D embodied world models},
+  author={Zhen, Haoyu and Sun, Qiao and Zhang, Hongxin and Li, Junyan and Zhou, Siyuan and Du, Yilun and Gan, Chuang},
+  journal={arXiv preprint arXiv:2504.20995},
+  year={2025}
+}
+
+@article{jiang2025geo4d,
+  title={Geo4d: Leveraging video generators for geometric 4d scene reconstruction},
+  author={Jiang, Zeren and Zheng, Chuanxia and Laina, Iro and Larlus, Diane and Vedaldi, Andrea},
+  journal={arXiv preprint arXiv:2504.07961},
+  year={2025}
+}
+
+@article{zhou2025holotime,
+  title={HoloTime: Taming Video Diffusion Models for Panoramic 4D Scene Generation},
+  author={Zhou, Haiyang and Yu, Wangbo and Guan, Jiawen and Cheng, Xinhua and Tian, Yonghong and Yuan, Li},
+  journal={arXiv preprint arXiv:2504.21650},
+  year={2025}
+}
+
 ```
 </details>
 
@@ -554,16 +578,7 @@ Chun-Han Yao, Yiming Xie, Vikram Voleti, Huaizu Jiang, Varun Jampani
 We present Stable Video 4D 2.0 (SV4D 2.0), a multi-view video diffusion model for dynamic 3D asset generation. Compared to its predecessor SV4D, SV4D 2.0 is more robust to occlusions and large motion, generalizes better to real-world videos, and produces higher-quality outputs in terms of detail sharpness and spatio-temporal consistency. We achieve this by introducing key improvements in multiple aspects: 1) network architecture: eliminating the dependency of reference multi-views and designing blending mechanism for 3D and frame attention, 2) data: enhancing quality and quantity of training data, 3) training strategy: adopting progressive 3D-4D training for better generalization, and 4) 4D optimization: handling 3D inconsistency and large motion via 2-stage refinement and progressive frame sampling. Extensive experiments demonstrate significant performance gain by SV4D 2.0 both visually and quantitatively, achieving better detail (-14\% LPIPS) and 4D consistency (-44\% FV4D) in novel-view video synthesis and 4D optimization (-12\% LPIPS and -24\% FV4D) compared to SV4D. 
 </details>
 
-#### 4. Geo4D: Leveraging Video Generators for Geometric 4D Scene Reconstruction
-Zeren Jiang, Chuanxia Zheng, Iro Laina, Diane Larlus, Andrea Vedaldi
-
-(Visual Geometry Group University of Oxford, Naver Labs Europe)
-<details span>
-<summary><b>Abstract</b></summary>
-We introduce Geo4D, a method to repurpose video diffusion models for monocular 3D reconstruction of dynamic scenes. By leveraging the strong dynamic prior captured by such video models, Geo4D can be trained using only synthetic data while generalizing well to real data in a zero-shot manner. Geo4D predicts several complementary geometric modalities, namely point, depth, and ray maps. It uses a new multi-modal alignment algorithm to align and fuse these modalities, as well as multiple sliding windows, at inference time, thus obtaining robust and accurate 4D reconstruction of long videos. Extensive experiments across multiple benchmarks show that Geo4D significantly surpasses state-of-the-art video depth estimation methods, including recent methods such as MonST3R, which are also designed to handle dynamic scenes.
-</details>
-
-#### 5. In-2-4D: Inbetweening from Two Single-View Images to 4D Generation
+#### 4. In-2-4D: Inbetweening from Two Single-View Images to 4D Generation
 Sauradip Nag, Daniel Cohen-Or, Hao Zhang, Ali Mahdavi-Amiri
 
 (Simon Fraser University, Tel Aviv University)
@@ -572,25 +587,7 @@ Sauradip Nag, Daniel Cohen-Or, Hao Zhang, Ali Mahdavi-Amiri
 We propose a new problem, In-2-4D, for generative 4D (i.e., 3D + motion) inbetweening from a minimalistic input setting: two single-view images capturing an object in two distinct motion states. Given two images representing the start and end states of an object in motion, our goal is to generate and reconstruct the motion in 4D. We utilize a video interpolation model to predict the motion, but large frame-to-frame motions can lead to ambiguous interpretations. To overcome this, we employ a hierarchical approach to identify keyframes that are visually close to the input states and show significant motion, then generate smooth fragments between them. For each fragment, we construct the 3D representation of the keyframe using Gaussian Splatting. The temporal frames within the fragment guide the motion, enabling their transformation into dynamic Gaussians through a deformation field. To improve temporal consistency and refine 3D motion, we expand the self-attention of multi-view diffusion across timesteps and apply rigid transformation regularization. Finally, we merge the independently generated 3D motion segments by interpolating boundary deformation fields and optimizing them to align with the guiding video, ensuring smooth and flicker-free transitions. Through extensive qualitative and quantitiave experiments as well as a user study, we show the effectiveness of our method and its components. 
 </details>
 
-#### 6. TesserAct: Learning 4D Embodied World Models
-Haoyu Zhen, Qiao Sun, Hongxin Zhang, Junyan Li, Siyuan Zhou, Yilun Du, Chuang Gan
-
-(UMass Amherst, HKUST, Harvard University)
-<details span>
-<summary><b>Abstract</b></summary>
-This paper presents an effective approach for learning novel 4D embodied world models, which predict the dynamic evolution of 3D scenes over time in response to an embodied agent's actions, providing both spatial and temporal consistency. We propose to learn a 4D world model by training on RGB-DN (RGB, Depth, and Normal) videos. This not only surpasses traditional 2D models by incorporating detailed shape, configuration, and temporal changes into their predictions, but also allows us to effectively learn accurate inverse dynamic models for an embodied agent. Specifically, we first extend existing robotic manipulation video datasets with depth and normal information leveraging off-the-shelf models. Next, we fine-tune a video generation model on this annotated dataset, which jointly predicts RGB-DN (RGB, Depth, and Normal) for each frame. We then present an algorithm to directly convert generated RGB, Depth, and Normal videos into a high-quality 4D scene of the world. Our method ensures temporal and spatial coherence in 4D scene predictions from embodied scenarios, enables novel view synthesis for embodied environments, and facilitates policy learning that significantly outperforms those derived from prior video-based world models.
-</details>
-
-#### 7. HoloTime: Taming Video Diffusion Models for Panoramic 4D Scene Generation
-Haiyang Zhou, Wangbo Yu, Jiawen Guan, Xinhua Cheng, Yonghong Tian, Li Yuan
-
-(Peking University, Peng Cheng Laboratory, Harbin Institute of Technology)
-<details span>
-<summary><b>Abstract</b></summary>
-The rapid advancement of diffusion models holds the promise of revolutionizing the application of VR and AR technologies, which typically require scene-level 4D assets for user experience. Nonetheless, existing diffusion models predominantly concentrate on modeling static 3D scenes or object-level dynamics, constraining their capacity to provide truly immersive experiences. To address this issue, we propose HoloTime, a framework that integrates video diffusion models to generate panoramic videos from a single prompt or reference image, along with a 360-degree 4D scene reconstruction method that seamlessly transforms the generated panoramic video into 4D assets, enabling a fully immersive 4D experience for users. Specifically, to tame video diffusion models for generating high-fidelity panoramic videos, we introduce the 360World dataset, the first comprehensive collection of panoramic videos suitable for downstream 4D scene reconstruction tasks. With this curated dataset, we propose Panoramic Animator, a two-stage image-to-video diffusion model that can convert panoramic images into high-quality panoramic videos. Following this, we present Panoramic Space-Time Reconstruction, which leverages a space-time depth estimation method to transform the generated panoramic videos into 4D point clouds, enabling the optimization of a holistic 4D Gaussian Splatting representation to reconstruct spatially and temporally consistent 4D scenes. To validate the efficacy of our method, we conducted a comparative analysis with existing approaches, revealing its superiority in both panoramic video generation and 4D scene reconstruction. This demonstrates our method's capability to create more engaging and realistic immersive environments, thereby enhancing user experiences in VR and AR applications.
-</details>
-
-#### 8. DeepVerse: 4D Autoregressive Video Generation as a World Model
+#### 5. DeepVerse: 4D Autoregressive Video Generation as a World Model
 Junyi Chen, Haoyi Zhu, Xianglong He, Yifan Wang, Jianjun Zhou, Wenzheng Chang, Yang Zhou, Zizun Li, Zhoujie Fu, Jiangmiao Pang, Tong He
 
 (Shanghai Jiao Tong University, Shanghai AI Lab, University of Science and Technology of China, Tsinghua University, Zhejiang University, Fudan University, Nanyang Technology University)
@@ -599,7 +596,7 @@ Junyi Chen, Haoyi Zhu, Xianglong He, Yifan Wang, Jianjun Zhou, Wenzheng Chang, Y
 World models serve as essential building blocks toward Artificial General Intelligence (AGI), enabling intelligent agents to predict future states and plan actions by simulating complex physical interactions. However, existing interactive models primarily predict visual observations, thereby neglecting crucial hidden states like geometric structures and spatial coherence. This leads to rapid error accumulation and temporal inconsistency. To address these limitations, we introduce DeepVerse, a novel 4D interactive world model explicitly incorporating geometric predictions from previous timesteps into current predictions conditioned on actions. Experiments demonstrate that by incorporating explicit geometric constraints, DeepVerse captures richer spatio-temporal relationships and underlying physical dynamics. This capability significantly reduces drift and enhances temporal consistency, enabling the model to reliably generate extended future sequences and achieve substantial improvements in prediction accuracy, visual realism, and scene rationality. Furthermore, our method provides an effective solution for geometry-aware memory retrieval, effectively preserving long-term spatial consistency. We validate the effectiveness of DeepVerse across diverse scenarios, establishing its capacity for high-fidelity, long-horizon predictions grounded in geometry-aware dynamics.
 </details>
 
-#### 9. Sonic4D: Spatial Audio Generation for Immersive 4D Scene Exploration
+#### 6. Sonic4D: Spatial Audio Generation for Immersive 4D Scene Exploration
 Siyi Xie, Hanxin Zhu, Tianyu He, Xin Li, Zhibo Chen (University of Science and Technology of China)
 
 <details span>
@@ -607,7 +604,7 @@ Siyi Xie, Hanxin Zhu, Tianyu He, Xin Li, Zhibo Chen (University of Science and T
 Recent advancements in 4D generation have demonstrated its remarkable capability in synthesizing photorealistic renderings of dynamic 3D scenes. However, despite achieving impressive visual performance, almost all existing methods overlook the generation of spatial audio aligned with the corresponding 4D scenes, posing a significant limitation to truly immersive audiovisual experiences. To mitigate this issue, we propose Sonic4D, a novel framework that enables spatial audio generation for immersive exploration of 4D scenes. Specifically, our method is composed of three stages: 1) To capture both the dynamic visual content and raw auditory information from a monocular video, we first employ pre-trained expert models to generate the 4D scene and its corresponding monaural audio. 2) Subsequently, to transform the monaural audio into spatial audio, we localize and track the sound sources within the 4D scene, where their 3D spatial coordinates at different timestamps are estimated via a pixel-level visual grounding strategy. 3) Based on the estimated sound source locations, we further synthesize plausible spatial audio that varies across different viewpoints and timestamps using physics-based simulation. Extensive experiments have demonstrated that our proposed method generates realistic spatial audio consistent with the synthesized 4D scene in a training-free manner, significantly enhancing the immersive experience for users.
 </details>
 
-#### 10. 4Real-Video-V2: Fused View-Time Attention and Feedforward Reconstruction for 4D Scene Generation
+#### 7. 4Real-Video-V2: Fused View-Time Attention and Feedforward Reconstruction for 4D Scene Generation
 Chaoyang Wang, Ashkan Mirzaei, Vidit Goel, Willi Menapace, Aliaksandr Siarohin, Avalon Vinella, Michael Vasilkovsky, Ivan Skorokhodov, Vladislav Shakhrai, Sergey Korolev, Sergey Tulyakov, Peter Wonka
 
 (Snap Inc., KAUST)
@@ -617,7 +614,7 @@ Chaoyang Wang, Ashkan Mirzaei, Vidit Goel, Willi Menapace, Aliaksandr Siarohin, 
 We propose the first framework capable of computing a 4D spatio-temporal grid of video frames and 3D Gaussian particles for each time step using a feed-forward architecture. Our architecture has two main components, a 4D video model and a 4D reconstruction model. In the first part, we analyze current 4D video diffusion architectures that perform spatial and temporal attention either sequentially or in parallel within a two-stream design. We highlight the limitations of existing approaches and introduce a novel fused architecture that performs spatial and temporal attention within a single layer. The key to our method is a sparse attention pattern, where tokens attend to others in the same frame, at the same timestamp, or from the same viewpoint. In the second part, we extend existing 3D reconstruction algorithms by introducing a Gaussian head, a camera token replacement algorithm, and additional dynamic layers and training. Overall, we establish a new state of the art for 4D generation, improving both visual quality and reconstruction capability.
 </details>
 
-#### 11. BulletGen: Improving 4D Reconstruction with Bullet-Time Generation
+#### 8. BulletGen: Improving 4D Reconstruction with Bullet-Time Generation
 Denys Rozumnyi, Jonathon Luiten, Numair Khan, Johannes Schönberger, Peter Kontschieder (Meta Reality Labs)
 
 <details span>
@@ -625,7 +622,7 @@ Denys Rozumnyi, Jonathon Luiten, Numair Khan, Johannes Schönberger, Peter Konts
 Transforming casually captured, monocular videos into fully immersive dynamic experiences is a highly ill-posed task, and comes with significant challenges, e.g., reconstructing unseen regions, and dealing with the ambiguity in monocular depth estimation. In this work we introduce BulletGen, an approach that takes advantage of generative models to correct errors and complete missing information in a Gaussian-based dynamic scene representation. This is done by aligning the output of a diffusion-based video generation model with the 4D reconstruction at a single frozen "bullet-time" step. The generated frames are then used to supervise the optimization of the 4D Gaussian model. Our method seamlessly blends generative content with both static and dynamic scene components, achieving state-of-the-art results on both novel-view synthesis, and 2D/3D tracking tasks.
 </details>
 
-#### 12. 4D-LRM: Large Space-Time Reconstruction Model From and To Any View at Any Time
+#### 9. 4D-LRM: Large Space-Time Reconstruction Model From and To Any View at Any Time
 Ziqiao Ma, Xuweiyi Chen, Shoubin Yu, Sai Bi, Kai Zhang, Chen Ziwen, Sihan Xu, Jianing Yang, Zexiang Xu, Kalyan Sunkavalli, Mohit Bansal, Joyce Chai, Hao Tan
 
 (Adobe Research, University of Michigan, UNC Chapel Hill, University of Virginia, Oregon State University)
@@ -635,7 +632,7 @@ Ziqiao Ma, Xuweiyi Chen, Shoubin Yu, Sai Bi, Kai Zhang, Chen Ziwen, Sihan Xu, Ji
 Can we scale 4D pretraining to learn general space-time representations that reconstruct an object from a few views at some times to any view at any time? We provide an affirmative answer with 4D-LRM, the first large-scale 4D reconstruction model that takes input from unconstrained views and timestamps and renders arbitrary novel view-time combinations. Unlike prior 4D approaches, e.g., optimization-based, geometry-based, or generative, that struggle with efficiency, generalization, or faithfulness, 4D-LRM learns a unified space-time representation and directly predicts per-pixel 4D Gaussian primitives from posed image tokens across time, enabling fast, high-quality rendering at, in principle, infinite frame rate. Our results demonstrate that scaling spatiotemporal pretraining enables accurate and efficient 4D reconstruction. We show that 4D-LRM generalizes to novel objects, interpolates across time, and handles diverse camera setups. It reconstructs 24-frame sequences in one forward pass with less than 1.5 seconds on a single A100 GPU.
 </details>
 
-#### 13. MoVieS: Motion-Aware 4D Dynamic View Synthesis in One Second
+#### 10. MoVieS: Motion-Aware 4D Dynamic View Synthesis in One Second
 Chenguo Lin, Yuchen Lin, Panwang Pan, Yifan Yu, Honglei Yan, Katerina Fragkiadaki, Yadong Mu (Peking University, ByteDance, Carnegie Mellon University)
 
 <details span>
@@ -643,7 +640,7 @@ Chenguo Lin, Yuchen Lin, Panwang Pan, Yifan Yu, Honglei Yan, Katerina Fragkiadak
 We present MoVieS, a novel feed-forward model that synthesizes 4D dynamic novel views from monocular videos in one second. MoVieS represents dynamic 3D scenes using pixel-aligned grids of Gaussian primitives, explicitly supervising their time-varying motion. This allows, for the first time, the unified modeling of appearance, geometry and motion, and enables view synthesis, reconstruction and 3D point tracking within a single learning-based framework. By bridging novel view synthesis with dynamic geometry reconstruction, MoVieS enables large-scale training on diverse datasets with minimal dependence on task-specific supervision. As a result, it also naturally supports a wide range of zero-shot applications, such as scene flow estimation and moving object segmentation. Extensive experiments validate the effectiveness and efficiency of MoVieS across multiple tasks, achieving competitive performance while offering several orders of magnitude speedups.
 </details>
 
-#### 14. 4DNeX: Feed-Forward 4D Generative Modeling Made Easy
+#### 11. 4DNeX: Feed-Forward 4D Generative Modeling Made Easy
 Zhaoxi Chen, Tianqi Liu, Long Zhuo, Jiawei Ren, Zeng Tao, He Zhu, Fangzhou Hong, Liang Pan, Ziwei Liu 
 
 (Nanyang Technological University, Shanghai AI Laboratory)
@@ -662,10 +659,7 @@ We present 4DNeX, the first feed-forward framework for generating 4D (i.e., dyna
 | 2025 | **AR4D: Autoregressive 4D Generation from Monocular Videos**  | 3 Jan 2025 |          [Link](https://arxiv.org/abs/2501.01722)          | --  | [Link](https://hanxinzhu-lab.github.io/AR4D/)  |
 | 2025 | **WideRange4D: Enabling High-Quality 4D Reconstruction with Wide-Range Movements and Scenes**  | 17 Mar 2025 |          [Link](https://arxiv.org/abs/2503.13435)          | [Link](https://github.com/Gen-Verse/WideRange4D)  | [Dataset Page](https://huggingface.co/datasets/Gen-Verse/WideRange4D)  |
 | 2025 | **SV4D 2.0: Enhancing Spatio-Temporal Consistency in Multi-View Video Diffusion for High-Quality 4D Generation**  | 20 Mar 2025 |          [Link](https://arxiv.org/abs/2503.16396)          | --  | [Link](https://sv4d2.0.github.io/)  |
-| 2025 | **Geo4D: Leveraging Video Generators for Geometric 4D Scene Reconstruction**  | 10 Apr 2025 |          [Link](https://arxiv.org/abs/2504.07961)          | [Link](https://github.com/jzr99/Geo4D)  | [Link](https://geo4d.github.io/)  |
 | 2025 | **In-2-4D: Inbetweening from Two Single-View Images to 4D Generation**  | 11 Apr 2025 |          [Link](https://arxiv.org/abs/2504.08366)          | [Link](https://github.com/sauradip/In-2-4D)  | [Link](https://in-2-4d.github.io/)  |
-| 2025 | **TesserAct: Learning 4D Embodied World Models**  | 29 Apr 2025 |          [Link](https://arxiv.org/abs/2504.20995)          | [Link](https://github.com/UMass-Embodied-AGI/TesserAct)  | [Link](https://tesseractworld.github.io/)  |
-| 2025 | **HoloTime: Taming Video Diffusion Models for Panoramic 4D Scene Generation**  | 30 Apr 2025 |          [Link](https://arxiv.org/abs/2504.21650)          | [Link](https://github.com/PKU-YuanGroup/HoloTime)  | [Link](https://zhouhyocean.github.io/holotime/)  |
 | 2025 | **DeepVerse: 4D Autoregressive Video Generation as a World Model**  | 1 Jun 2025 |          [Link](https://www.arxiv.org/abs/2506.01103)          | [Link](https://github.com/SOTAMak1r/DeepVerse)  | [Link](https://sotamak1r.github.io/deepverse/)  |
 | 2025 | **Sonic4D: Spatial Audio Generation for Immersive 4D Scene Exploration**  | 18 Jun 2025 |          [Link](https://arxiv.org/abs/2506.15759)          | [Link](https://github.com/X-Drunker/Sonic4D-project-page)  | [Link](https://x-drunker.github.io/Sonic4D-project-page/)  |
 | 2025 | **4Real-Video-V2: Fused View-Time Attention and Feedforward Reconstruction for 4D Scene Generation**  | 18 Jun 2025 |      [Link](https://arxiv.org/abs/2506.18839)     | --  | [Link](https://snap-research.github.io/4Real-Video-V2/)  |
@@ -708,13 +702,6 @@ We present 4DNeX, the first feed-forward framework for generating 4D (i.e., dyna
       url={https://arxiv.org/abs/2503.16396}, 
 }
 
-@article{jiang2025geo4d,
-  title={Geo4D: Leveraging Video Generators for Geometric 4D Scene Reconstruction},
-  author={Jiang, Zeren and Zheng, Chuanxia and Laina, Iro and Larlus, Diane and Vedaldi, Andrea},
-  journal={arXiv preprint arXiv:2504.07961},
-  year={2025}
-}
-
 @misc{nag2025in24dinbetweeningsingleviewimages,
       title={In-2-4D: Inbetweening from Two Single-View Images to 4D Generation}, 
       author={Sauradip Nag and Daniel Cohen-Or and Hao Zhang and Ali Mahdavi-Amiri},
@@ -723,16 +710,6 @@ We present 4DNeX, the first feed-forward framework for generating 4D (i.e., dyna
       archivePrefix={arXiv},
       primaryClass={cs.GR},
       url={https://arxiv.org/abs/2504.08366}, 
-}
-
-@article{zhen2025tesseract,
-  title={TesserAct: Learning 4D Embodied World Models}, 
-  author={Haoyu Zhen and Qiao Sun and Hongxin Zhang and Junyan Li and Siyuan Zhou and Yilun Du and Chuang Gan},
-  year={2025},
-  eprint={2504.20995},
-  archivePrefix={arXiv},
-  primaryClass={cs.CV},
-  url={https://arxiv.org/abs/2504.20995}, 
 }
 
 @article{zhou2025holotime,
