@@ -650,6 +650,16 @@ Zhaoxi Chen, Tianqi Liu, Long Zhuo, Jiawei Ren, Zeng Tao, He Zhu, Fangzhou Hong,
 We present 4DNeX, the first feed-forward framework for generating 4D (i.e., dynamic 3D) scene representations from a single image. In contrast to existing methods that rely on computationally intensive optimization or require multi-frame video inputs, 4DNeX enables efficient, end-to-end image-to-4D generation by fine-tuning a pretrained video diffusion model. Specifically, 1) to alleviate the scarcity of 4D data, we construct 4DNeX-10M, a large-scale dataset with high-quality 4D annotations generated using advanced reconstruction approaches. 2) we introduce a unified 6D video representation that jointly models RGB and XYZ sequences, facilitating structured learning of both appearance and geometry. 3) we propose a set of simple yet effective adaptation strategies to repurpose pretrained video diffusion models for 4D modeling. 4DNeX produces high-quality dynamic point clouds that enable novel-view video synthesis. Extensive experiments demonstrate that 4DNeX outperforms existing 4D generation methods in efficiency and generalizability, offering a scalable solution for image-to-4D modeling and laying the foundation for generative 4D world models that simulate dynamic scene evolution.
 </details>
 
+#### 12. OmniWorld: A Multi-Domain and Multi-Modal Dataset for 4D World Modeling
+Yang Zhou, Yifan Wang, Jianjun Zhou, Wenzheng Chang, Haoyu Guo, Zizun Li, Kaijing Ma, Xinyue Li, Yating Wang, Haoyi Zhu, Mingyu Liu, Dingning Liu, Jiange Yang, Zhoujie Fu, Junyi Chen, Chunhua Shen, Jiangmiao Pang, Kaipeng Zhang, Tong He
+
+(Shanghai AI Laboratory, ZJU)
+
+<details span>
+<summary><b>Abstract</b></summary>
+The field of 4D world modeling - aiming to jointly capture spatial geometry and temporal dynamics - has witnessed remarkable progress in recent years, driven by advances in large-scale generative models and multimodal learning. However, the development of truly general 4D world models remains fundamentally constrained by the availability of high-quality data. Existing datasets and benchmarks often lack the dynamic complexity, multi-domain diversity, and spatial-temporal annotations required to support key tasks such as 4D geometric reconstruction, future prediction, and camera-control video generation. To address this gap, we introduce OmniWorld, a large-scale, multi-domain, multi-modal dataset specifically designed for 4D world modeling. OmniWorld consists of a newly collected OmniWorld-Game dataset and several curated public datasets spanning diverse domains. Compared with existing synthetic datasets, OmniWorld-Game provides richer modality coverage, larger scale, and more realistic dynamic interactions. Based on this dataset, we establish a challenging benchmark that exposes the limitations of current state-of-the-art (SOTA) approaches in modeling complex 4D environments. Moreover, fine-tuning existing SOTA methods on OmniWorld leads to significant performance gains across 4D reconstruction and video generation tasks, strongly validating OmniWorld as a powerful resource for training and evaluation. We envision OmniWorld as a catalyst for accelerating the development of general-purpose 4D world models, ultimately advancing machines' holistic understanding of the physical world.
+</details>
+
 -----
 
 </details>
@@ -667,6 +677,7 @@ We present 4DNeX, the first feed-forward framework for generating 4D (i.e., dyna
 | 2025 | **4D-LRM: Large Space-Time Reconstruction Model From and To Any View at Any Time**  | 23 Jun 2025 |          [Link](https://arxiv.org/abs/2506.18890)          | [Link](https://github.com/Mars-tin/4D-LRM)  | [Link](https://4dlrm.github.io/)  |
 | 2025 | **MoVieS: Motion-Aware 4D Dynamic View Synthesis in One Second**  | 14 Jul 2025 |          [Link](https://arxiv.org/abs/2507.10065)          | [Link](https://github.com/chenguolin/MoVieS)  | [Link](https://chenguolin.github.io/projects/MoVieS/)  |
 | 2025 | **4DNeX: Feed-Forward 4D Generative Modeling Made Easy**  | 18 Aug 2025 |          [Link](https://arxiv.org/abs/2508.13154)          | [Link](https://github.com/3DTopia/4DNeX)  | [Link](https://4dnex.github.io/)  |
+| 2025 | **OmniWorld: A Multi-Domain and Multi-Modal Dataset for 4D World Modeling**  | 15 Sep 2025 |          [Link](https://arxiv.org/abs/2509.12201)          | [Link](https://github.com/yangzhou24/OmniWorld)  | [Link](https://yangzhou24.github.io/OmniWorld/)  |
 
 
 <details close>
@@ -781,6 +792,16 @@ We present 4DNeX, the first feed-forward framework for generating 4D (i.e., dyna
     author={Chen, Zhaoxi and Liu, Tianqi and Zhuo, Long and Ren, Jiawei and Tao, Zeng and Zhu, He and Hong, Fangzhou and Pan, Liang and Liu, Ziwei},
     journal={arXiv preprint arXiv:2508.13154},
     year={2025}
+}
+
+@misc{zhou2025omniworld,
+      title={OmniWorld: A Multi-Domain and Multi-Modal Dataset for 4D World Modeling}, 
+      author={Yang Zhou and Yifan Wang and Jianjun Zhou and Wenzheng Chang and Haoyu Guo and Zizun Li and Kaijing Ma and Xinyue Li and Yating Wang and Haoyi Zhu and Mingyu Liu and Dingning Liu and Jiange Yang and Zhoujie Fu and Junyi Chen and Chunhua Shen and Jiangmiao Pang and Kaipeng Zhang and Tong He},
+      year={2025},
+      eprint={2509.12201},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2509.12201}, 
 }
 
 ```
