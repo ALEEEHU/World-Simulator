@@ -425,6 +425,7 @@ An open collection of state-of-the-art (SOTA), novel **Text to X (X can be every
 | 2025 | **Express4D: Expressive, Friendly, and Extensible 4D Facial Motion Generation Benchmark**  | ICCV DataCV Workshop 2025 |          [Link](https://arxiv.org/abs/2508.12438)          | [Link](https://github.com/jaron1990/Express4D/)  | [Link](https://jaron1990.github.io/Express4D/)  |
 | 2025 | **CityDreamer4D: Compositional Generative Model of Unbounded 4D Cities**  | TPAMI 2025 |          [Link](https://arxiv.org/abs/2501.08983)          | [Link](https://github.com/hzxie/CityDreamer4D?tab=readme-ov-file)  | [Link](https://www.infinitescript.com/project/city-dreamer-4d/)  |
 | 2025 | **TesserAct: Learning 4D Embodied World Models**  | ICCV 2025 |   [Link](https://arxiv.org/abs/2504.20995)          | [Link](https://github.com/UMass-Embodied-AGI/TesserAct)  | [Link](https://tesseractworld.github.io/)  |
+| 2025 | **T2Bs: Text-to-Character Blendshapes via Video Generation**  | ICCV 2025 |   [Link](https://arxiv.org/abs/2509.10678)          | --  | [Link](https://snap-research.github.io/T2Bs/)  |
 | 2025 | **Geo4D: Leveraging Video Generators for Geometric 4D Scene Reconstruction**  | ICCV 2025 Highlight |          [Link](https://arxiv.org/abs/2504.07961)          | [Link](https://github.com/jzr99/Geo4D)  | [Link](https://geo4d.github.io/)  |
 | 2025 | **HoloTime: Taming Video Diffusion Models for Panoramic 4D Scene Generation**  | ACM MM 2025 |          [Link](https://arxiv.org/abs/2504.21650)          | [Link](https://github.com/PKU-YuanGroup/HoloTime)  | [Link](https://zhouhyocean.github.io/holotime/)  |
 
@@ -530,6 +531,16 @@ url={https://arxiv.org/abs/2508.12438}
   author={Zhen, Haoyu and Sun, Qiao and Zhang, Hongxin and Li, Junyan and Zhou, Siyuan and Du, Yilun and Gan, Chuang},
   journal={arXiv preprint arXiv:2504.20995},
   year={2025}
+}
+
+@misc{luo2025t2bstexttocharacterblendshapesvideo,
+      title={T2Bs: Text-to-Character Blendshapes via Video Generation}, 
+      author={Jiahao Luo and Chaoyang Wang and Michael Vasilkovsky and Vladislav Shakhrai and Di Liu and Peiye Zhuang and Sergey Tulyakov and Peter Wonka and Hsin-Ying Lee and James Davis and Jian Wang},
+      year={2025},
+      eprint={2509.10678},
+      archivePrefix={arXiv},
+      primaryClass={cs.GR},
+      url={https://arxiv.org/abs/2509.10678}, 
 }
 
 @article{jiang2025geo4d,
