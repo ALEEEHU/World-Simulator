@@ -1538,6 +1538,8 @@ For more details, please check the [2023-2024 3D Scene Papers](./docs/3d_scene/3
 | 2025 | **MotionStreamer: Streaming Motion Generation via Diffusion-based Autoregressive Model in Causal Latent Space**  | ICCV 2025 |          [Link](https://arxiv.org/abs/2503.15451)          | [Link](https://github.com/zju3dv/MotionStreamer)  | [Link](https://zju3dv.github.io/MotionStreamer/)  |
 | 2025 | **Go to Zero: Towards Zero-shot Motion Generation with Million-scale Data**  | ICCV 2025 |          [Link](https://arxiv.org/abs/2507.07095)          | [Link](https://github.com/VankouF/MotionMillion-Codes)  | [Link](https://vankouf.github.io/MotionMillion/)  |
 | 2025 | **KinMo: Kinematic-aware Human Motion Understanding and Generation**  | ICCV 2025 |          [Link](https://arxiv.org/abs/2411.15472)          | -- | [Link](https://andypinxinliu.github.io/KinMo/)  |
+| 2025 | **MotionLab: Unified Human Motion Generation and Editing via the Motion-Condition-Motion Paradigm**  | ICCV 2025 |          [Link](https://arxiv.org/abs/2502.02358)          | [Link](https://github.com/Diouo/MotionLab)  | [Link](https://diouo.github.io/motionlab.github.io/)  |
+| 2025 | **GENMO: A GENeralist Model for Human MOtion**  | ICCV 2025 (Highlight) |          [Link](https://arxiv.org/abs/2505.01425)          | -- | [Link](https://research.nvidia.com/labs/dair/genmo/)  |
 | 2025 | **ControlMM: Controllable Masked Motion Generation**  |  ICCV 2025 (Oral)  |          [Link](https://arxiv.org/abs/2410.10780)          | [Link](https://github.com/exitudio/ControlMM/) | [Link](https://exitudio.github.io/ControlMM-page/)  |
 
 <details close>
@@ -1592,6 +1594,20 @@ For more details, please check the [2023-2024 3D Scene Papers](./docs/3d_scene/3
       year={2025},
 }
 
+@article{guo2025motionlab,
+  title={Motionlab: Unified human motion generation and editing via the motion-condition-motion paradigm},
+  author={Guo, Ziyan and Hu, Zeyu and Soh, De Wen and Zhao, Na},
+  journal={arXiv preprint arXiv:2502.02358},
+  year={2025}
+}
+
+@article{li2025genmo,
+  title={GENMO: A GENeralist Model for Human MOtion},
+  author={Li, Jiefeng and Cao, Jinkun and Zhang, Haotian and Rempe, Davis and Kautz, Jan and Iqbal, Umar and Yuan, Ye},
+  journal={arXiv preprint arXiv:2505.01425},
+  year={2025}
+}
+
 @misc{pinyoanuntapong2025maskcontrolspatiotemporalcontrolmasked,
       title={MaskControl: Spatio-Temporal Control for Masked Motion Synthesis}, 
       author={Ekkasit Pinyoanuntapong and Muhammad Usama Saleem and Korrawe Karunratanakul and Pu Wang and Hongfei Xue and Chen Chen and Chuan Guo and Junli Cao and Jian Ren and Sergey Tulyakov},
@@ -1608,16 +1624,7 @@ For more details, please check the [2023-2024 3D Scene Papers](./docs/3d_scene/3
 
 ### 💡 Motion ArXiv Papers
 
-#### 1. MotionLab: Unified Human Motion Generation and Editing via the Motion-Condition-Motion Paradigm
-Ziyan Guo, Zeyu Hu, Na Zhao, De Wen Soh 
-
-(Singapore University of Technology and Design, LightSpeed Studios)
-<details span>
-<summary><b>Abstract</b></summary>
-Human motion generation and editing are key components of computer graphics and vision. However, current approaches in this field tend to offer isolated solutions tailored to specific tasks, which can be inefficient and impractical for real-world applications. While some efforts have aimed to unify motion-related tasks, these methods simply use different modalities as conditions to guide motion generation. Consequently, they lack editing capabilities, fine-grained control, and fail to facilitate knowledge sharing across tasks. To address these limitations and provide a versatile, unified framework capable of handling both human motion generation and editing, we introduce a novel paradigm: Motion-Condition-Motion, which enables the unified formulation of diverse tasks with three concepts: source motion, condition, and target motion. Based on this paradigm, we propose a unified framework, MotionLab, which incorporates rectified flows to learn the mapping from source motion to target motion, guided by the specified conditions. In MotionLab, we introduce the 1) MotionFlow Transformer to enhance conditional generation and editing without task-specific modules; 2) Aligned Rotational Position Encoding} to guarantee the time synchronization between source motion and target motion; 3) Task Specified Instruction Modulation; and 4) Motion Curriculum Learning for effective multi-task learning and knowledge sharing across tasks. Notably, our MotionLab demonstrates promising generalization capabilities and inference efficiency across multiple benchmarks for human motion.
-</details>
-
-#### 2. Motion Anything: Any to Motion Generation
+#### 1. Motion Anything: Any to Motion Generation
 Zeyu Zhang, Yiran Wang, Wei Mao, Danning Li, Rui Zhao, Biao Wu, Zirui Song, Bohan Zhuang, Ian Reid, Richard Hartley
 
 (The Australian National University, The University of Sydney, Tecent Canberra XR Vision Labs, McGill University, JD.com, University of Technology Sydney, Mohamed bin Zayed University of Artificial Intelligence, Zhejiang University, Google Research)
@@ -1626,7 +1633,7 @@ Zeyu Zhang, Yiran Wang, Wei Mao, Danning Li, Rui Zhao, Biao Wu, Zirui Song, Boha
 Conditional motion generation has been extensively studied in computer vision, yet two critical challenges remain. First, while masked autoregressive methods have recently outperformed diffusion-based approaches, existing masking models lack a mechanism to prioritize dynamic frames and body parts based on given conditions. Second, existing methods for different conditioning modalities often fail to integrate multiple modalities effectively, limiting control and coherence in generated motion. To address these challenges, we propose Motion Anything, a multimodal motion generation framework that introduces an Attention-based Mask Modeling approach, enabling fine-grained spatial and temporal control over key frames and actions. Our model adaptively encodes multimodal conditions, including text and music, improving controllability. Additionally, we introduce Text-Music-Dance (TMD), a new motion dataset consisting of 2,153 pairs of text, music, and dance, making it twice the size of AIST++, thereby filling a critical gap in the community. Extensive experiments demonstrate that Motion Anything surpasses state-of-the-art methods across multiple benchmarks, achieving a 15% improvement in FID on HumanML3D and showing consistent performance gains on AIST++ and TMD. 
 </details>
 
-#### 3. Animating the Uncaptured: Humanoid Mesh Animation with Video Diffusion Models
+#### 2. Animating the Uncaptured: Humanoid Mesh Animation with Video Diffusion Models
 Marc Benedí San Millán, Angela Dai, Matthias Nießner
 
 (Technical University of Munich)
@@ -1635,7 +1642,7 @@ Marc Benedí San Millán, Angela Dai, Matthias Nießner
 Animation of humanoid characters is essential in various graphics applications, but requires significant time and cost to create realistic animations. We propose an approach to synthesize 4D animated sequences of input static 3D humanoid meshes, leveraging strong generalized motion priors from generative video models -- as such video models contain powerful motion information covering a wide variety of human motions. From an input static 3D humanoid mesh and a text prompt describing the desired animation, we synthesize a corresponding video conditioned on a rendered image of the 3D mesh. We then employ an underlying SMPL representation to animate the corresponding 3D mesh according to the video-generated motion, based on our motion optimization. This enables a cost-effective and accessible solution to enable the synthesis of diverse and realistic 4D animations.
 </details>
 
-#### 4. FlowMotion: Target-Predictive Conditional Flow Matching for Jitter-Reduced Text-Driven Human Motion Generation
+#### 3. FlowMotion: Target-Predictive Conditional Flow Matching for Jitter-Reduced Text-Driven Human Motion Generation
 Manolo Canales Cuba, Vinícius do Carmo Melício, João Paulo Gois
 
 (Universidade Federal do ABC, Santo Andr ́e, Brazil)
@@ -1644,14 +1651,7 @@ Manolo Canales Cuba, Vinícius do Carmo Melício, João Paulo Gois
 Achieving high-fidelity and temporally smooth 3D human motion generation remains a challenge, particularly within resource-constrained environments. We introduce FlowMotion, a novel method leveraging Conditional Flow Matching (CFM). FlowMotion incorporates a training objective within CFM that focuses on more accurately predicting target motion in 3D human motion generation, resulting in enhanced generation fidelity and temporal smoothness while maintaining the fast synthesis times characteristic of flow-matching-based methods. FlowMotion achieves state-of-the-art jitter performance, achieving the best jitter in the KIT dataset and the second-best jitter in the HumanML3D dataset, and a competitive FID value in both datasets. This combination provides robust and natural motion sequences, offering a promising equilibrium between generation quality and temporal naturalness.
 </details>
 
-#### 5. GENMO: A GENeralist Model for Human MOtion
-Jiefeng Li, Jinkun Cao, Haotian Zhang, Davis Rempe, Jan Kautz, Umar Iqbal, Ye Yuan (NVIDIA)
-<details span>
-<summary><b>Abstract</b></summary>
-Human motion modeling traditionally separates motion generation and estimation into distinct tasks with specialized models. Motion generation models focus on creating diverse, realistic motions from inputs like text, audio, or keyframes, while motion estimation models aim to reconstruct accurate motion trajectories from observations like videos. Despite sharing underlying representations of temporal dynamics and kinematics, this separation limits knowledge transfer between tasks and requires maintaining separate models. We present GENMO, a unified Generalist Model for Human Motion that bridges motion estimation and generation in a single framework. Our key insight is to reformulate motion estimation as constrained motion generation, where the output motion must precisely satisfy observed conditioning signals. Leveraging the synergy between regression and diffusion, GENMO achieves accurate global motion estimation while enabling diverse motion generation. We also introduce an estimation-guided training objective that exploits in-the-wild videos with 2D annotations and text descriptions to enhance generative diversity. Furthermore, our novel architecture handles variable-length motions and mixed multimodal conditions (text, audio, video) at different time intervals, offering flexible control. This unified approach creates synergistic benefits: generative priors improve estimated motions under challenging conditions like occlusions, while diverse video data enhances generation capabilities. Extensive experiments demonstrate GENMO's effectiveness as a generalist framework that successfully handles multiple human motion tasks within a single model.
-</details>
-
-#### 6. ReAlign: Bilingual Text-to-Motion Generation via Step-Aware Reward-Guided Alignment
+#### 4. ReAlign: Bilingual Text-to-Motion Generation via Step-Aware Reward-Guided Alignment
 Wanjiang Weng, Xiaofeng Tan, Hongsong Wang, Pan Zhou
 
 (Southeast University, Key Laboratory of New Generation Artificial Intelligence Technology and Its Interdisciplinary Applications, Singapore Management University)
@@ -1660,28 +1660,28 @@ Wanjiang Weng, Xiaofeng Tan, Hongsong Wang, Pan Zhou
 Bilingual text-to-motion generation, which synthesizes 3D human motions from bilingual text inputs, holds immense potential for cross-linguistic applications in gaming, film, and robotics. However, this task faces critical challenges: the absence of bilingual motion-language datasets and the misalignment between text and motion distributions in diffusion models, leading to semantically inconsistent or low-quality motions. To address these challenges, we propose BiHumanML3D, a novel bilingual human motion dataset, which establishes a crucial benchmark for bilingual text-to-motion generation models. Furthermore, we propose a Bilingual Motion Diffusion model (BiMD), which leverages cross-lingual aligned representations to capture semantics, thereby achieving a unified bilingual model. Building upon this, we propose Reward-guided sampling Alignment (ReAlign) method, comprising a step-aware reward model to assess alignment quality during sampling and a reward-guided strategy that directs the diffusion process toward an optimally aligned distribution. This reward model integrates step-aware tokens and combines a text-aligned module for semantic consistency and a motion-aligned module for realism, refining noisy motions at each timestep to balance probability density and alignment. Experiments demonstrate that our approach significantly improves text-motion alignment and motion quality compared to existing state-of-the-art methods.
 </details>
 
-#### 7. UniHM: Universal Human Motion Generation with Object Interactions in Indoor Scenes
+#### 5. UniHM: Universal Human Motion Generation with Object Interactions in Indoor Scenes
 Zichen Geng, Zeeshan Hayder, Wei Liu, Ajmal Mian (University of Western Australia, Data61 CSIRO Australia)
 <details span>
 <summary><b>Abstract</b></summary>
 Human motion synthesis in complex scenes presents a fundamental challenge, extending beyond conventional Text-to-Motion tasks by requiring the integration of diverse modalities such as static environments, movable objects, natural language prompts, and spatial waypoints. Existing language-conditioned motion models often struggle with scene-aware motion generation due to limitations in motion tokenization, which leads to information loss and fails to capture the continuous, context-dependent nature of 3D human movement. To address these issues, we propose UniHM, a unified motion language model that leverages diffusion-based generation for synthesizing scene-aware human motion. UniHM is the first framework to support both Text-to-Motion and Text-to-Human-Object Interaction (HOI) in complex 3D scenes. Our approach introduces three key contributions: (1) a mixed-motion representation that fuses continuous 6DoF motion with discrete local motion tokens to improve motion realism; (2) a novel Look-Up-Free Quantization VAE (LFQ-VAE) that surpasses traditional VQ-VAEs in both reconstruction accuracy and generative performance; and (3) an enriched version of the Lingo dataset augmented with HumanML3D annotations, providing stronger supervision for scene-specific motion learning. Experimental results demonstrate that UniHM achieves comparative performance on the OMOMO benchmark for text-to-HOI synthesis and yields competitive results on HumanML3D for general text-conditioned motion generation.
 </details>
 
-#### 8. SnapMoGen: Human Motion Generation from Expressive Texts
+#### 6. SnapMoGen: Human Motion Generation from Expressive Texts
 Chuan Guo, Inwoo Hwang, Jian Wang, Bing Zhou (Snap Inc., Seoul National University)
 <details span>
 <summary><b>Abstract</b></summary>
 Text-to-motion generation has experienced remarkable progress in recent years. However, current approaches remain limited to synthesizing motion from short or general text prompts, primarily due to dataset constraints. This limitation undermines fine-grained controllability and generalization to unseen prompts. In this paper, we introduce SnapMoGen, a new text-motion dataset featuring high-quality motion capture data paired with accurate, expressive textual annotations. The dataset comprises 20K motion clips totaling 44 hours, accompanied by 122K detailed textual descriptions averaging 48 words per description (vs. 12 words of HumanML3D). Importantly, these motion clips preserve original temporal continuity as they were in long sequences, facilitating research in long-term motion generation and blending. We also improve upon previous generative masked modeling approaches. Our model, MoMask++, transforms motion into multi-scale token sequences that better exploit the token capacity, and learns to generate all tokens using a single generative masked transformer. MoMask++ achieves state-of-the-art performance on both HumanML3D and SnapMoGen benchmarks. Additionally, we demonstrate the ability to process casual user prompts by employing an LLM to reformat inputs to align with the expressivity and narration style of SnapMoGen.
 </details>
 
-#### 9. ReMoMask: Retrieval-Augmented Masked Motion Generation
+#### 7. ReMoMask: Retrieval-Augmented Masked Motion Generation
 Zhengdao Li, Siheng Wang, Zeyu Zhang, Hao Tang (Peking University, Jiangsu University)
 <details span>
 <summary><b>Abstract</b></summary>
 Text-to-Motion (T2M) generation aims to synthesize realistic and semantically aligned human motion sequences from natural language descriptions. However, current approaches face dual challenges: Generative models (e.g., diffusion models) suffer from limited diversity, error accumulation, and physical implausibility, while Retrieval-Augmented Generation (RAG) methods exhibit diffusion inertia, partial-mode collapse, and asynchronous artifacts. To address these limitations, we propose ReMoMask, a unified framework integrating three key innovations: 1) A Bidirectional Momentum Text-Motion Model decouples negative sample scale from batch size via momentum queues, substantially improving cross-modal retrieval precision; 2) A Semantic Spatio-temporal Attention mechanism enforces biomechanical constraints during part-level fusion to eliminate asynchronous artifacts; 3) RAG-Classier-Free Guidance incorporates minor unconditional generation to enhance generalization. Built upon MoMask's RVQ-VAE, ReMoMask efficiently generates temporally coherent motions in minimal steps. Extensive experiments on standard benchmarks demonstrate the state-of-the-art performance of ReMoMask, achieving a 3.88% and 10.97% improvement in FID scores on HumanML3D and KIT-ML, respectively, compared to the previous SOTA method RAG-T2M. 
 </details>
 
-#### 10. X-MoGen: Unified Motion Generation across Humans and Animals
+#### 8. X-MoGen: Unified Motion Generation across Humans and Animals
 Xuan Wang, Kai Ruan, Liyang Qian, Zhizhi Guo, Chang Su, Gaoang Wang
 
 (Zhejiang University, Institute of Artificial Intelligence (TeleAI) China Telecom, Renmin University of China)
@@ -1691,7 +1691,7 @@ Xuan Wang, Kai Ruan, Liyang Qian, Zhizhi Guo, Chang Su, Gaoang Wang
 Text-driven motion generation has attracted increasing attention due to its broad applications in virtual reality, animation, and robotics. While existing methods typically model human and animal motion separately, a joint cross-species approach offers key advantages, such as a unified representation and improved generalization. However, morphological differences across species remain a key challenge, often compromising motion plausibility. To address this, we propose \textbf{X-MoGen}, the first unified framework for cross-species text-driven motion generation covering both humans and animals. X-MoGen adopts a two-stage architecture. First, a conditional graph variational autoencoder learns canonical T-pose priors, while an autoencoder encodes motion into a shared latent space regularized by morphological loss. In the second stage, we perform masked motion modeling to generate motion embeddings conditioned on textual descriptions. During training, a morphological consistency module is employed to promote skeletal plausibility across species. To support unified modeling, we construct \textbf{UniMo4D}, a large-scale dataset of 115 species and 119k motion sequences, which integrates human and animal motions under a shared skeletal topology for joint training. Extensive experiments on UniMo4D demonstrate that X-MoGen outperforms state-of-the-art methods on both seen and unseen species.
 </details>
 
-#### 11. EgoTwin: Dreaming Body and View in First Person
+#### 9. EgoTwin: Dreaming Body and View in First Person
 Jingqiao Xiu, Fangzhou Hong, Yicong Li, Mengze Li, Wentao Wang, Sirui Han, Liang Pan, Ziwei Liu
 
 (National University of Singapore, Nanyang Technological University, Hong Kong University of Science and Technology, Shanghai AI Laboratory)
@@ -1703,11 +1703,9 @@ While exocentric video synthesis has achieved great progress, egocentric video g
 
 | Year | Title                                                        | ArXiv Time  |                           Paper                            |                      Code                      | Project Page                      |
 | ---- | ------------------------------------------------------------ | :----: | :--------------------------------------------------------: | :--------------------------------------------: | :--------------------------------------------: |
-| 2025 | **MotionLab: Unified Human Motion Generation and Editing via the Motion-Condition-Motion Paradigm**  | 6 Feb 2025 |          [Link](https://arxiv.org/abs/2502.02358)          | [Link](https://github.com/Diouo/MotionLab)  | [Link](https://diouo.github.io/motionlab.github.io/)  |
 | 2025 | **Motion Anything: Any to Motion Generation**  | 12 Mar 2025 |          [Link](https://arxiv.org/abs/2503.06955)          | [Link](https://github.com/steve-zeyu-zhang/MotionAnything)  | [Link](https://steve-zeyu-zhang.github.io/MotionAnything/)  |
 | 2025 | **Animating the Uncaptured: Humanoid Mesh Animation with Video Diffusion Models**  | 20 Mar 2025 |          [Link](https://arxiv.org/abs/2503.15996)          | --  | [Link](https://marcb.pro/atu/)  |
 | 2025 | **FlowMotion: Target-Predictive Conditional Flow Matching for Jitter-Reduced Text-Driven Human Motion Generation**  | 20 Apr 2025 |          [Link](https://arxiv.org/abs/2504.01338)          | --  | --  |
-| 2025 | **GENMO: A GENeralist Model for Human MOtion**  | 2 May 2025 |          [Link](https://arxiv.org/abs/2505.01425)          | -- | [Link](https://research.nvidia.com/labs/dair/genmo/)  |
 | 2025 | **ReAlign: Bilingual Text-to-Motion Generation via Step-Aware Reward-Guided Alignment**  | 8 May 2025 |          [Link](https://www.arxiv.org/abs/2505.04974)          | --  | [Link](https://wengwanjiang.github.io/ReAlign-page/)  |
 | 2025 | **UniHM: Universal Human Motion Generation with Object Interactions in Indoor Scenes**  | 19 May 2025 |          [Link](https://arxiv.org/abs/2505.12774)          | --  | -- |
 | 2025 | **SnapMoGen: Human Motion Generation from Expressive Texts**  | 12 Jul 2025 |          [Link](https://www.arxiv.org/abs/2507.09122)          | [Link](https://github.com/snap-research/SnapMoGen)  | [Link](https://snap-research.github.io/SnapMoGen/) |
@@ -1720,13 +1718,6 @@ While exocentric video synthesis has achieved great progress, egocentric video g
 
 ```
 %axiv papers
-
-@article{guo2025motionlab,
-  title={MotionLab: Unified Human Motion Generation and Editing via the Motion-Condition-Motion Paradigm},
-  author={Guo, Ziyan and Hu, Zeyu and Zhao, Na and Soh, De Wen},
-  journal={arXiv preprint arXiv:2502.02358},
-  year={2025}
-}
 
 @article{zhang2025motion,
   title={Motion Anything: Any to Motion Generation},
@@ -1749,13 +1740,6 @@ While exocentric video synthesis has achieved great progress, egocentric video g
   title={FlowMotion: Target-Predictive Flow Matching for Realistic Text-Driven Human Motion Generation},
   author={Cuba, Manolo Canales and Gois, Jo{\~a}o Paulo},
   journal={arXiv preprint arXiv:2504.01338},
-  year={2025}
-}
-
-@article{genmo2025,
-  title={GENMO: Generative Models for Human Motion Synthesis},
-  author={Li, Jiefeng and Cao, Jinkun and Zhang, Haotian and Rempe, Davis and Kautz, Jan and Iqbal, Umar and Yuan, Ye},
-  journal={arXiv preprint arXiv:2505.01425},
   year={2025}
 }
 
