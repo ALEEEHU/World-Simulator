@@ -1207,6 +1207,7 @@ The quality of video-text pairs fundamentally determines the upper bound of text
 | ---- | ------------------------------------------------------------ | :----: | :--------------------------------------------------------: | :--------------------------------------------: | :--------------------------------------------: |
 | 2025 | **Scene Splatter: Momentum 3D Scene Generation from Single Image with Video Diffusion Model**  | CVPR 2025 |          [Link](https://arxiv.org/abs/2504.02764)          | [Link](https://github.com/shengjun-zhang/Scene-Splatter)  | [Link](https://shengjun-zhang.github.io/SceneSplatter/)  |
 | 2025 | **ScenePainter: Semantically Consistent Perpetual 3D Scene Generation with Concept Relation Alignment**  | ICCV 2025 |          [Link](https://arxiv.org/abs/2507.19058)          | [Link](https://github.com/xiac20/ScenePainter)  | [Link](https://xiac20.github.io/ScenePainter/)  |
+| 2025 | **WorldExplorer: Towards Generating Fully Navigable 3D Scenes**  | SIGGRAPH Asia 2025 |          [Link](https://arxiv.org/abs/2506.01799)          | [Link](https://github.com/mschneider456/worldexplorer)  | [Link](https://mschneider456.github.io/world-explorer/)  |
 
 <details close>
 <summary>Accepted Papers References</summary>
@@ -1225,6 +1226,13 @@ The quality of video-text pairs fundamentally determines the upper bound of text
   title={ScenePainter: Semantically Consistent Perpetual 3D Scene Generation with Concept Relation Alignment},
   author={Xia, Chong and Zhang, Shengjun and Liu, Fangfu and Liu, Chang and Hirunyaratsameewong, Khodchaphun and Duan, Yueqi},
   journal={arXiv preprint arXiv:2507.19058},
+  year={2025}
+}
+
+@article{schneider2025worldexplorer,
+  title={WorldExplorer: Towards Generating Fully Navigable 3D Scenes},
+  author={Schneider, Manuel-Andreas and H{\"o}llein, Lukas and Nie{\ss}ner, Matthias},
+  journal={arXiv preprint arXiv:2506.01799},
   year={2025}
 }
 
