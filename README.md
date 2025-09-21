@@ -35,6 +35,7 @@ This repository is divided into two main sections:
       * [Algorithms](#4d-algorithms)
       * [Applications](#4d-applications)
   - [Other Related Resources](#other-related-resources)
+    * [WorldModel Benchmark](#world-model-benchmark)
     * [World Foundation Model Platform](#world-foundation-model-platform)
 - [Text2X Resources](#-awesome-text2x-resources)
   - [Text to 4D](#text-to-4d)
@@ -349,7 +350,7 @@ Transformer-based Architectures.
 
 ## Other Related Resources
 
-### WorldModel Benchmark
+### World Model Benchmark
 * [arXiv 2025] **WorldModelBench: Judging Video Generation Models As World Models** [[Paper](https://arxiv.org/abs/2502.20694)] [[GitHub](https://github.com/WorldModelBench-Team/WorldModelBench)] [[Project Page](https://worldmodelbench-team.github.io/)]
 
 ### World Foundation Model Platform
