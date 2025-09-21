@@ -853,7 +853,7 @@ For more details, please check the [2024 4D Papers](./docs/4d/4d_2024.md), inclu
 | 2025 | **Multi-subject Open-set Personalization in Video Generation**  | CVPR 2025 |          [Link](https://arxiv.org/abs/2501.06187)          | [Link](https://github.com/snap-research/MSRVTT-Personalization) | [Link](https://snap-research.github.io/open-set-video-personalization/)  |
 | 2025 | **WonderPlay: Dynamic 3D Scene Generation from a Single Image and Actions**  | ICCV 2025 |          [Link](https://arxiv.org/abs/2505.18151)          | -- | [Link](https://kyleleey.github.io/WonderPlay/)  |
 | 2025 | **Uni3C: Unifying Precisely 3D-Enhanced Camera and Human Motion Controls for Video Generation**  | Siggraph Asia 2025 |          [Link](https://arxiv.org/abs/2504.14899)          | [Link](https://github.com/ewrfcas/Uni3C) | [Link](https://ewrfcas.github.io/Uni3C/)  |
-| 2025 | **Scaling RL to Long Videos**  | NeurIPS 2025 |      [Link](https://arxiv.org/abs/2507.07966)      | [Link](https://github.com/NVlabs/Long-RL) | -- |
+| 2025 | **Scaling RL to Long Videos**  | NeurIPS 2025 |      [Link](https://arxiv.org/abs/2507.07966)      | [Link](https://github.com/NVlabs/Long-RL) | [YouTube Video](https://www.youtube.com/watch?v=ykbblK2jiEg) |
 
 <details close>
 <summary>Accepted Papers References</summary>
