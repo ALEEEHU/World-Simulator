@@ -349,6 +349,9 @@ Transformer-based Architectures.
 
 ## Other Related Resources
 
+### WorldModel Benchmark
+* [arXiv 2025] **WorldModelBench: Judging Video Generation Models As World Models** [[Paper](https://arxiv.org/abs/2502.20694)] [[GitHub](https://github.com/WorldModelBench-Team/WorldModelBench)] [[Project Page](https://worldmodelbench-team.github.io/)]
+
 ### World Foundation Model Platform
 - [NVIDIA Cosmos](https://www.nvidia.com/en-us/ai/cosmos/) ([[GitHub](https://github.com/nvidia-cosmos)] [[Paper](https://arxiv.org/abs/2501.03575)]): NVIDIA Cosmos is a world foundation model platform for accelerating the development of physical AI systems.
   
