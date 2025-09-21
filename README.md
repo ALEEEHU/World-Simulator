@@ -852,6 +852,8 @@ For more details, please check the [2024 4D Papers](./docs/4d/4d_2024.md), inclu
 | 2025 | **SnapGen-V: Generating a Five-Second Video within Five Seconds on a Mobile Device**  | CVPR 2025 |          [Link](https://arxiv.org/abs/2412.10494)          | -- | [Link](https://snap-research.github.io/snapgen-v/)  |
 | 2025 | **Multi-subject Open-set Personalization in Video Generation**  | CVPR 2025 |          [Link](https://arxiv.org/abs/2501.06187)          | [Link](https://github.com/snap-research/MSRVTT-Personalization) | [Link](https://snap-research.github.io/open-set-video-personalization/)  |
 | 2025 | **WonderPlay: Dynamic 3D Scene Generation from a Single Image and Actions**  | ICCV 2025 |          [Link](https://arxiv.org/abs/2505.18151)          | -- | [Link](https://kyleleey.github.io/WonderPlay/)  |
+| 2025 | **Uni3C: Unifying Precisely 3D-Enhanced Camera and Human Motion Controls for Video Generation**  | Siggraph Asia 2025 |          [Link](https://arxiv.org/abs/2504.14899)          | [Link](https://github.com/ewrfcas/Uni3C) | [Link](https://ewrfcas.github.io/Uni3C/)  |
+| 2025 | **Scaling RL to Long Videos**  | NeurIPS 2025 |      [Link](https://arxiv.org/abs/2507.07966)      | [Link](https://github.com/NVlabs/Long-RL) | -- |
 
 <details close>
 <summary>Accepted Papers References</summary>
@@ -922,6 +924,20 @@ For more details, please check the [2024 4D Papers](./docs/4d/4d_2024.md), inclu
   year={2025}
 }
 
+@article{cao2025uni3c,
+  title={Uni3C: Unifying Precisely 3D-Enhanced Camera and Human Motion Controls for Video Generation},
+  author={Cao, Chenjie and Zhou, Jingkai and Li, Shikai and Liang, Jingyun and Yu, Chaohui and Wang, Fan and Xue, Xiangyang and Fu, Yanwei},
+  journal={arXiv preprint arXiv:2504.14899},
+  year={2025}
+}
+
+@article{chen2025scaling,
+  title={Scaling rl to long videos},
+  author={Chen, Yukang and Huang, Wei and Shi, Baifeng and Hu, Qinghao and Ye, Hanrong and Zhu, Ligeng and Liu, Zhijian and Molchanov, Pavlo and Kautz, Jan and Qi, Xiaojuan and others},
+  journal={arXiv preprint arXiv:2507.07966},
+  year={2025}
+}
+
 ```
 </details>
 
@@ -929,16 +945,7 @@ For more details, please check the [2024 4D Papers](./docs/4d/4d_2024.md), inclu
 
 ### 💡 T2V ArXiv Papers
 
-#### 1. Uni3C: Unifying Precisely 3D-Enhanced Camera and Human Motion Controls for Video Generation
-Chenjie Cao, Jingkai Zhou, Shikai Li, Jingyun Liang, Chaohui Yu, Fan Wang, Xiangyang Xue, Yanwei Fu
-
-(Alibaba DAMO Academy, Fudan University, Hupan Lab)
-<details span>
-<summary><b>Abstract</b></summary>
-Camera and human motion controls have been extensively studied for video generation, but existing approaches typically address them separately, suffering from limited data with high-quality annotations for both aspects. To overcome this, we present Uni3C, a unified 3D-enhanced framework for precise control of both camera and human motion in video generation. Uni3C includes two key contributions. First, we propose a plug-and-play control module trained with a frozen video generative backbone, PCDController, which utilizes unprojected point clouds from monocular depth to achieve accurate camera control. By leveraging the strong 3D priors of point clouds and the powerful capacities of video foundational models, PCDController shows impressive generalization, performing well regardless of whether the inference backbone is frozen or fine-tuned. This flexibility enables different modules of Uni3C to be trained in specific domains, i.e., either camera control or human motion control, reducing the dependency on jointly annotated data. Second, we propose a jointly aligned 3D world guidance for the inference phase that seamlessly integrates both scenic point clouds and SMPL-X characters to unify the control signals for camera and human motion, respectively. Extensive experiments confirm that PCDController enjoys strong robustness in driving camera motion for fine-tuned backbones of video generation. Uni3C substantially outperforms competitors in both camera controllability and human motion quality. Additionally, we collect tailored validation sets featuring challenging camera movements and human actions to validate the effectiveness of our method.
-</details>
-
-#### 2. We'll Fix it in Post: Improving Text-to-Video Generation with Neuro-Symbolic Feedback
+#### 1. We'll Fix it in Post: Improving Text-to-Video Generation with Neuro-Symbolic Feedback
 Minkyu Choi, S P Sharan, Harsh Goel, Sahil Shah, Sandeep Chinchali
 
 (The University of Texas at Austin)
@@ -947,14 +954,14 @@ Minkyu Choi, S P Sharan, Harsh Goel, Sahil Shah, Sandeep Chinchali
 Current text-to-video (T2V) generation models are increasingly popular due to their ability to produce coherent videos from textual prompts. However, these models often struggle to generate semantically and temporally consistent videos when dealing with longer, more complex prompts involving multiple objects or sequential events. Additionally, the high computational costs associated with training or fine-tuning make direct improvements impractical. To overcome these limitations, we introduce NeuS-E, a novel zero-training video refinement pipeline that leverages neuro-symbolic feedback to automatically enhance video generation, achieving superior alignment with the prompts. Our approach first derives the neuro-symbolic feedback by analyzing a formal video representation and pinpoints semantically inconsistent events, objects, and their corresponding frames. This feedback then guides targeted edits to the original video. Extensive empirical evaluations on both open-source and proprietary T2V models demonstrate that NeuS-E significantly enhances temporal and logical alignment across diverse prompts by almost 40%.
 </details>
 
-#### 3. HunyuanCustom: A Multimodal-Driven Architecture for Customized Video Generation
+#### 2. HunyuanCustom: A Multimodal-Driven Architecture for Customized Video Generation
 Teng Hu, Zhentao Yu, Zhengguang Zhou, Sen Liang, Yuan Zhou, Qin Lin, Qinglin Lu (Tencent Hunyuan)
 <details span>
 <summary><b>Abstract</b></summary>
 Customized video generation aims to produce videos featuring specific subjects under flexible user-defined conditions, yet existing methods often struggle with identity consistency and limited input modalities. In this paper, we propose HunyuanCustom, a multi-modal customized video generation framework that emphasizes subject consistency while supporting image, audio, video, and text conditions. Built upon HunyuanVideo, our model first addresses the image-text conditioned generation task by introducing a text-image fusion module based on LLaVA for enhanced multi-modal understanding, along with an image ID enhancement module that leverages temporal concatenation to reinforce identity features across frames. To enable audio- and video-conditioned generation, we further propose modality-specific condition injection mechanisms: an AudioNet module that achieves hierarchical alignment via spatial cross-attention, and a video-driven injection module that integrates latent-compressed conditional video through a patchify-based feature-alignment network. Extensive experiments on single- and multi-subject scenarios demonstrate that HunyuanCustom significantly outperforms state-of-the-art open- and closed-source methods in terms of ID consistency, realism, and text-video alignment. Moreover, we validate its robustness across downstream tasks, including audio and video-driven customized video generation. Our results highlight the effectiveness of multi-modal conditioning and identity-preserving strategies in advancing controllable video generation.
 </details>
 
-#### 4. M4V: Multi-Modal Mamba for Text-to-Video Generation
+#### 3. M4V: Multi-Modal Mamba for Text-to-Video Generation
 Jiancheng Huang, Gengwei Zhang, Zequn Jie, Siyu Jiao, Yinlong Qian, Ling Chen, Yunchao Wei, Lin Ma
 
 (Meituan, University of Techcnology Sydney, Beijing Jiaotong University)
@@ -963,7 +970,7 @@ Jiancheng Huang, Gengwei Zhang, Zequn Jie, Siyu Jiao, Yinlong Qian, Ling Chen, Y
 Text-to-video generation has significantly enriched content creation and holds the potential to evolve into powerful world simulators. However, modeling the vast spatiotemporal space remains computationally demanding, particularly when employing Transformers, which incur quadratic complexity in sequence processing and thus limit practical applications. Recent advancements in linear-time sequence modeling, particularly the Mamba architecture, offer a more efficient alternative. Nevertheless, its plain design limits its direct applicability to multi-modal and spatiotemporal video generation tasks. To address these challenges, we introduce M4V, a Multi-Modal Mamba framework for text-to-video generation. Specifically, we propose a multi-modal diffusion Mamba (MM-DiM) block that enables seamless integration of multi-modal information and spatiotemporal modeling through a multi-modal token re-composition design. As a result, the Mamba blocks in M4V reduce FLOPs by 45% compared to the attention-based alternative when generating videos at 7681280 resolution. Additionally, to mitigate the visual quality degradation in long-context autoregressive generation processes, we introduce a reward learning strategy that further enhances per-frame visual realism. Extensive experiments on text-to-video benchmarks demonstrate M4V's ability to produce high-quality videos while significantly lowering computational costs. 
 </details>
 
-#### 5. Omni-Video: Democratizing Unified Video Understanding and Generation
+#### 4. Omni-Video: Democratizing Unified Video Understanding and Generation
 Zhiyu Tan, Hao Yang, Luozheng Qin, Jia Gong, Mengping Yang, Hao Li (Fudan University, Shanghai Academy of Artificial Intelligence for Science)
 
 <details span>
@@ -971,7 +978,7 @@ Zhiyu Tan, Hao Yang, Luozheng Qin, Jia Gong, Mengping Yang, Hao Li (Fudan Univer
 Notable breakthroughs in unified understanding and generation modeling have led to remarkable advancements in image understanding, reasoning, production and editing, yet current foundational models predominantly focus on processing images, creating a gap in the development of unified models for video understanding and generation. This report presents Omni-Video, an efficient and effective unified framework for video understanding, generation, as well as instruction-based editing. Our key insight is to teach existing multimodal large language models (MLLMs) to produce continuous visual clues that are used as the input of diffusion decoders, which produce high-quality videos conditioned on these visual clues. To fully unlock the potential of our system for unified video modeling, we integrate several technical improvements: 1) a lightweight architectural design that respectively attaches a vision head on the top of MLLMs and a adapter before the input of diffusion decoders, the former produce visual tokens for the latter, which adapts these visual tokens to the conditional space of diffusion decoders; and 2) an efficient multi-stage training scheme that facilitates a fast connection between MLLMs and diffusion decoders with limited data and computational resources. We empirically demonstrate that our model exhibits satisfactory generalization abilities across video generation, editing and understanding tasks.
 </details>
 
-#### 6. FIFA: Unified Faithfulness Evaluation Framework for Text-to-Video and Video-to-Text Generation
+#### 5. FIFA: Unified Faithfulness Evaluation Framework for Text-to-Video and Video-to-Text Generation
 Liqiang Jing, Viet Lai, Seunghyun Yoon, Trung Bui, Xinya Du (University of Texas at Dallas, Adobe Research)
 
 <details span>
@@ -979,16 +986,7 @@ Liqiang Jing, Viet Lai, Seunghyun Yoon, Trung Bui, Xinya Du (University of Texas
 Video Multimodal Large Language Models (VideoMLLMs) have achieved remarkable progress in both Video-to-Text and Text-to-Video tasks. However, they often suffer fro hallucinations, generating content that contradicts the visual input. Existing evaluation methods are limited to one task (e.g., V2T) and also fail to assess hallucinations in open-ended, free-form responses. To address this gap, we propose FIFA, a unified FaIthFulness evAluation framework that extracts comprehensive descriptive facts, models their semantic dependencies via a Spatio-Temporal Semantic Dependency Graph, and verifies them using VideoQA models. We further introduce Post-Correction, a tool-based correction framework that revises hallucinated content. Extensive experiments demonstrate that FIFA aligns more closely with human judgment than existing evaluation methods, and that Post-Correction effectively improves factual consistency in both text and video generation.
 </details>
 
-#### 7. Scaling RL to Long Videos
-Yukang Chen, Wei Huang, Baifeng Shi, Qinghao Hu, Hanrong Ye, Ligeng Zhu, Zhijian Liu, Pavlo Molchanov, Jan Kautz, Xiaojuan Qi, Sifei Liu, Hongxu Yin, Yao Lu, Song Han
-
-(NVIDIA, MIT, HKU, UC Berkeley)
-<details span>
-<summary><b>Abstract</b></summary>
-We introduce a full-stack framework that scales up reasoning in vision-language models (VLMs) to long videos, leveraging reinforcement learning. We address the unique challenges of long video reasoning by integrating three critical components: (1) a large-scale dataset, LongVideo-Reason, comprising 52K long video QA pairs with high-quality reasoning annotations across diverse domains such as sports, games, and vlogs; (2) a two-stage training pipeline that extends VLMs with chain-of-thought supervised fine-tuning (CoT-SFT) and reinforcement learning (RL); and (3) a training infrastructure for long video RL, named Multi-modal Reinforcement Sequence Parallelism (MR-SP), which incorporates sequence parallelism and a vLLM-based engine tailored for long video, using cached video embeddings for efficient rollout and prefilling. In experiments, LongVILA-R1-7B achieves strong performance on long video QA benchmarks such as VideoMME. It also outperforms Video-R1-7B and even matches Gemini-1.5-Pro across temporal reasoning, goal and purpose reasoning, spatial reasoning, and plot reasoning on our LongVideo-Reason-eval benchmark. Notably, our MR-SP system achieves up to 2.1x speedup on long video RL training. LongVILA-R1 demonstrates consistent performance gains as the number of input video frames scales. LongVILA-R1 marks a firm step towards long video reasoning in VLMs. In addition, we release our training system for public availability that supports RL training on various modalities (video, text, and audio), various models (VILA and Qwen series), and even image and video generation models. On a single A100 node (8 GPUs), it supports RL training on hour-long videos (e.g., 3,600 frames / around 256k tokens).
-</details>
-
-#### 8. Lumos-1: On Autoregressive Video Generation from a Unified Model Perspective
+#### 6. Lumos-1: On Autoregressive Video Generation from a Unified Model Perspective
 Hangjie Yuan, Weihua Chen, Jun Cen, Hu Yu, Jingyun Liang, Shuning Chang, Zhihui Lin, Tao Feng, Pengwei Liu, Jiazheng Xing, Hao Luo, Jiasheng Tang, Fan Wang, Yi Yang
 
 (DAMO Academy Alibaba Group, Hupan Lab, Zhejiang University, Tsinghua University)
@@ -998,7 +996,7 @@ Hangjie Yuan, Weihua Chen, Jun Cen, Hu Yu, Jingyun Liang, Shuning Chang, Zhihui 
 Autoregressive large language models (LLMs) have unified a vast range of language tasks, inspiring preliminary efforts in autoregressive video generation. Existing autoregressive video generators either diverge from standard LLM architectures, depend on bulky external text encoders, or incur prohibitive latency due to next-token decoding. In this paper, we introduce Lumos-1, an autoregressive video generator that retains the LLM architecture with minimal architectural modifications. To inject spatiotemporal correlations in LLMs, we identify the efficacy of incorporating 3D RoPE and diagnose its imbalanced frequency spectrum ranges. Therefore, we propose MM-RoPE, a RoPE scheme that preserves the original textual RoPE while providing comprehensive frequency spectra and scaled 3D positions for modeling multimodal spatiotemporal data. Moreover, Lumos-1 resorts to a token dependency strategy that obeys intra-frame bidirectionality and inter-frame temporal causality. Based on this dependency strategy, we identify the issue of frame-wise loss imbalance caused by spatial information redundancy and solve it by proposing Autoregressive Discrete Diffusion Forcing (AR-DF). AR-DF introduces temporal tube masking during training with a compatible inference-time masking policy to avoid quality degradation. By using memory-efficient training techniques, we pre-train Lumos-1 on only 48 GPUs, achieving performance comparable to EMU3 on GenEval, COSMOS-Video2World on VBench-I2V, and OpenSoraPlan on VBench-T2V.
 </details>
 
-#### 9. "PhyWorldBench": A Comprehensive Evaluation of Physical Realism in Text-to-Video Models
+#### 7. "PhyWorldBench": A Comprehensive Evaluation of Physical Realism in Text-to-Video Models
 Jing Gu, Xian Liu, Yu Zeng, Ashwin Nagarajan, Fangrui Zhu, Daniel Hong, Yue Fan, Qianqi Yan, Kaiwen Zhou, Ming-Yu Liu, Xin Eric Wang
 
 (University of California Santa Cruz, NVIDIA Research, Northeastern University)
@@ -1008,7 +1006,7 @@ Jing Gu, Xian Liu, Yu Zeng, Ashwin Nagarajan, Fangrui Zhu, Daniel Hong, Yue Fan,
 Video generation models have achieved remarkable progress in creating high-quality, photorealistic content. However, their ability to accurately simulate physical phenomena remains a critical and unresolved challenge. This paper presents PhyWorldBench, a comprehensive benchmark designed to evaluate video generation models based on their adherence to the laws of physics. The benchmark covers multiple levels of physical phenomena, ranging from fundamental principles like object motion and energy conservation to more complex scenarios involving rigid body interactions and human or animal motion. Additionally, we introduce a novel ""Anti-Physics"" category, where prompts intentionally violate real-world physics, enabling the assessment of whether models can follow such instructions while maintaining logical consistency. Besides large-scale human evaluation, we also design a simple yet effective method that could utilize current MLLM to evaluate the physics realism in a zero-shot fashion. We evaluate 12 state-of-the-art text-to-video generation models, including five open-source and five proprietary models, with a detailed comparison and analysis. we identify pivotal challenges models face in adhering to real-world physics. Through systematic testing of their outputs across 1,050 curated prompts-spanning fundamental, composite, and anti-physics scenarios-we identify pivotal challenges these models face in adhering to real-world physics. We then rigorously examine their performance on diverse physical phenomena with varying prompt types, deriving targeted recommendations for crafting prompts that enhance fidelity to physical principles.
 </details>
 
-#### 10. Can Your Model Separate Yolks with a Water Bottle? Benchmarking Physical Commonsense Understanding in Video Generation Models
+#### 8. Can Your Model Separate Yolks with a Water Bottle? Benchmarking Physical Commonsense Understanding in Video Generation Models
 Enes Sanli, Baris Sarper Tezcan, Aykut Erdem, Erkut Erdem (Koç University, Hacettepe University)
 
 <details span>
@@ -1016,7 +1014,7 @@ Enes Sanli, Baris Sarper Tezcan, Aykut Erdem, Erkut Erdem (Koç University, Hace
 Recent progress in text-to-video (T2V) generation has enabled the synthesis of visually compelling and temporally coherent videos from natural language. However, these models often fall short in basic physical commonsense, producing outputs that violate intuitive expectations around causality, object behavior, and tool use. Addressing this gap, we present PhysVidBench, a benchmark designed to evaluate the physical reasoning capabilities of T2V systems. The benchmark includes 383 carefully curated prompts, emphasizing tool use, material properties, and procedural interactions, and domains where physical plausibility is crucial. For each prompt, we generate videos using diverse state-of-the-art models and adopt a three-stage evaluation pipeline: (1) formulate grounded physics questions from the prompt, (2) caption the generated video with a vision-language model, and (3) task a language model to answer several physics-involved questions using only the caption. This indirect strategy circumvents common hallucination issues in direct video-based evaluation. By highlighting affordances and tool-mediated actions, areas overlooked in current T2V evaluations, PhysVidBench provides a structured, interpretable framework for assessing physical commonsense in generative video models.
 </details>
 
-#### 11. LongVie: Multimodal-Guided Controllable Ultra-Long Video Generation
+#### 9. LongVie: Multimodal-Guided Controllable Ultra-Long Video Generation
 Jianxiong Gao, Zhaoxi Chen, Xian Liu, Jianfeng Feng, Chenyang Si, Yanwei Fu, Yu Qiao, Ziwei Liu
 
 (Nanjing University, Fudan University, Nanyang Technological University, Nvidia, Shanghai Artificial Intelligence Laboratory)
@@ -1026,7 +1024,7 @@ Jianxiong Gao, Zhaoxi Chen, Xian Liu, Jianfeng Feng, Chenyang Si, Yanwei Fu, Yu 
 Controllable ultra-long video generation is a fundamental yet challenging task. Although existing methods are effective for short clips, they struggle to scale due to issues such as temporal inconsistency and visual degradation. In this paper, we initially investigate and identify three key factors: separate noise initialization, independent control signal normalization, and the limitations of single-modality guidance. To address these issues, we propose LongVie, an end-to-end autoregressive framework for controllable long video generation. LongVie introduces two core designs to ensure temporal consistency: 1) a unified noise initialization strategy that maintains consistent generation across clips, and 2) global control signal normalization that enforces alignment in the control space throughout the entire video. To mitigate visual degradation, LongVie employs 3) a multi-modal control framework that integrates both dense (e.g., depth maps) and sparse (e.g., keypoints) control signals, complemented by 4) a degradation-aware training strategy that adaptively balances modality contributions over time to preserve visual quality. We also introduce LongVGenBench, a comprehensive benchmark consisting of 100 high-resolution videos spanning diverse real-world and synthetic environments, each lasting over one minute. Extensive experiments show that LongVie achieves state-of-the-art performance in long-range controllability, consistency, and quality.
 </details>
 
-#### 12. Yan: Foundational Interactive Video Generation
+#### 10. Yan: Foundational Interactive Video Generation
 Yan Team (Tencent)
 
 <details span>
@@ -1036,13 +1034,11 @@ We present Yan, a foundational framework for interactive video generation, cover
 
 | Year | Title                                                        | ArXiv Time  |                           Paper                            |                      Code                      | Project Page                      |
 | ---- | ------------------------------------------------------------ | :----: | :--------------------------------------------------------: | :--------------------------------------------: | :--------------------------------------------: |
-| 2025 | **Uni3C: Unifying Precisely 3D-Enhanced Camera and Human Motion Controls for Video Generation**  | 21 Apr 2025 |          [Link](https://arxiv.org/abs/2504.14899)          | [Link](https://github.com/ewrfcas/Uni3C) | [Link](https://ewrfcas.github.io/Uni3C/)  |
 | 2025 | **We'll Fix it in Post: Improving Text-to-Video Generation with Neuro-Symbolic Feedback**  | 25 Apr 2025 |          [Link](https://arxiv.org/abs/2504.17180)          | -- | --  |
 | 2025 | **HunyuanCustom: A Multimodal-Driven Architecture for Customized Video Generation**  | 7 May 2025 |          [Link](https://arxiv.org/abs/2505.04512)          | [Link](https://github.com/Tencent/HunyuanCustom) | [Link](https://hunyuancustom.github.io/)  |
 | 2025 | **M4V: Multi-Modal Mamba for Text-to-Video Generation**  | 12 Jun 2025 |          [Link](https://arxiv.org/abs/2506.10915)          | [Link](https://github.com/huangjch526/M4V) | [Link](https://huangjch526.github.io/M4V_project/)  |
 | 2025 | **Omni-Video: Democratizing Unified Video Understanding and Generation**  | 9 Jul 2025 |          [Link](https://arxiv.org/abs/2507.06119)          | [Link](https://github.com/SAIS-FUXI/Omni-Video) | [Link](https://howellyoung-s.github.io/OmniVideo_project/)  |
 | 2025 | **FIFA: Unified Faithfulness Evaluation Framework for Text-to-Video and Video-to-Text Generation**  | 9 Jul 2025 |          [Link](https://arxiv.org/abs/2507.06523)          | [Link](https://github.com/du-nlp-lab/FIFA) | -- |
-| 2025 | **Scaling RL to Long Videos**  | 10 Jul 2025 |      [Link](https://arxiv.org/abs/2507.07966)      | [Link](https://github.com/NVlabs/Long-RL) | -- |
 | 2025 | **Lumos-1: On Autoregressive Video Generation from a Unified Model Perspective**  | 11 Jul 2025 |      [Link](https://arxiv.org/abs/2507.08801)      | [Link](https://github.com/alibaba-damo-academy/Lumos) | -- |
 | 2025 | **"PhyWorldBench": A Comprehensive Evaluation of Physical Realism in Text-to-Video Models**  | 17 Jul 2025 |      [Link](https://www.arxiv.org/pdf/2507.13428)      | -- | -- |
 | 2025 | **Can Your Model Separate Yolks with a Water Bottle? Benchmarking Physical Commonsense Understanding in Video Generation Models**  | 21 Jul 2025 |      [Link](https://arxiv.org/abs/2507.15824)      | [Link](https://github.com/ensanli/PhysVidBenchCode) | [Link](https://cyberiada.github.io/PhysVidBench/) |
@@ -1054,13 +1050,6 @@ We present Yan, a foundational framework for interactive video generation, cover
 
 ```
 %axiv papers
-
-@article{cao2025uni3c,
-        title={Uni3C: Unifying Precisely 3D-Enhanced Camera and Human Motion Controls for Video Generation},
-        author={Cao, Chenjie and Zhou, Jingkai and Li, shikai and Liang, Jingyun and Yu, Chaohui and Wang, Fan and Xue, Xiangyang and Fu, Yanwei},
-        journal={arXiv preprint arXiv:2504.14899},
-        year={2025}
-}
 
 @article{choi2025we,
   title={We'll Fix it in Post: Improving Text-to-Video Generation with Neuro-Symbolic Feedback},
@@ -1098,15 +1087,6 @@ We present Yan, a foundational framework for interactive video generation, cover
       archivePrefix={arXiv},
       primaryClass={cs.CV},
       url={https://arxiv.org/abs/2507.06523}, 
-}
-
-@article{chen2025longvila-r1,
-      title={Scaling RL to Long Videos},
-      author={Yukang Chen and Wei Huang and Baifeng Shi and Qinghao Hu and Hanrong Ye and Ligeng Zhu and Zhijian Liu and Pavlo Molchanov and Jan Kautz and Xiaojuan Qi and Sifei Liu and Hongxu Yin and Yao Lu and Song Han},
-      year={2025},
-      eprint={2507.07966},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV}
 }
 
 @article{Yuan2025Lumos-1,
