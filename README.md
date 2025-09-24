@@ -432,6 +432,7 @@ An open collection of state-of-the-art (SOTA), novel **Text to X (X can be every
 | 2025 | **T2Bs: Text-to-Character Blendshapes via Video Generation**  | ICCV 2025 |   [Link](https://arxiv.org/abs/2509.10678)          | --  | [Link](https://snap-research.github.io/T2Bs/)  |
 | 2025 | **Geo4D: Leveraging Video Generators for Geometric 4D Scene Reconstruction**  | ICCV 2025 Highlight |          [Link](https://arxiv.org/abs/2504.07961)          | [Link](https://github.com/jzr99/Geo4D)  | [Link](https://geo4d.github.io/)  |
 | 2025 | **HoloTime: Taming Video Diffusion Models for Panoramic 4D Scene Generation**  | ACM MM 2025 |          [Link](https://arxiv.org/abs/2504.21650)          | [Link](https://github.com/PKU-YuanGroup/HoloTime)  | [Link](https://zhouhyocean.github.io/holotime/)  |
+| 2025 | **Stable Part Diffusion 4D: Multi-View RGB and Kinematic Parts Video Generation**  | NeurIPS 2025 |          [Link](https://arxiv.org/abs/2509.10687)          | Coming Soon! | [Link](https://stablepartdiffusion4d.github.io/)  |
 
 <details close>
 <summary>Accepted Papers References</summary>
@@ -558,6 +559,13 @@ url={https://arxiv.org/abs/2508.12438}
   title={HoloTime: Taming Video Diffusion Models for Panoramic 4D Scene Generation},
   author={Zhou, Haiyang and Yu, Wangbo and Guan, Jiawen and Cheng, Xinhua and Tian, Yonghong and Yuan, Li},
   journal={arXiv preprint arXiv:2504.21650},
+  year={2025}
+}
+
+@article{zhang2025stable,
+  title={Stable Part Diffusion 4D: Multi-View RGB and Kinematic Parts Video Generation},
+  author={Zhang, Hao and Yao, Chun-Han and Donn{\'e}, Simon and Ahuja, Narendra and Jampani, Varun},
+  journal={arXiv preprint arXiv:2509.10687},
   year={2025}
 }
 
