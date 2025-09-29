@@ -1588,6 +1588,7 @@ For more details, please check the [2023-2024 3D Scene Papers](./docs/3d_scene/3
 | 2025 | **MotionLab: Unified Human Motion Generation and Editing via the Motion-Condition-Motion Paradigm**  | ICCV 2025 |          [Link](https://arxiv.org/abs/2502.02358)          | [Link](https://github.com/Diouo/MotionLab)  | [Link](https://diouo.github.io/motionlab.github.io/)  |
 | 2025 | **GENMO: A GENeralist Model for Human MOtion**  | ICCV 2025 (Highlight) |          [Link](https://arxiv.org/abs/2505.01425)          | -- | [Link](https://research.nvidia.com/labs/dair/genmo/)  |
 | 2025 | **ControlMM: Controllable Masked Motion Generation**  |  ICCV 2025 (Oral)  |          [Link](https://arxiv.org/abs/2410.10780)          | [Link](https://github.com/exitudio/ControlMM/) | [Link](https://exitudio.github.io/ControlMM-page/)  |
+| 2025 | **SnapMoGen: Human Motion Generation from Expressive Texts**  | NeurIPS 2025 |          [Link](https://www.arxiv.org/abs/2507.09122)          | [Link](https://github.com/snap-research/SnapMoGen)  | [Link](https://snap-research.github.io/SnapMoGen/) |
 
 <details close>
 <summary>Accepted Papers References</summary>
@@ -1664,6 +1665,14 @@ For more details, please check the [2023-2024 3D Scene Papers](./docs/3d_scene/3
       primaryClass={cs.CV},
       url={https://arxiv.org/abs/2410.10780}, 
 }
+
+@article{guo2025snapmogen,
+  title={SnapMoGen: Human Motion Generation from Expressive Texts},
+  author={Guo, Chuan and Hwang, Inwoo and Wang, Jian and Zhou, Bing},
+  journal={arXiv preprint arXiv:2507.09122},
+  year={2025}
+}
+
 ```
 </details>
 
@@ -1714,21 +1723,14 @@ Zichen Geng, Zeeshan Hayder, Wei Liu, Ajmal Mian (University of Western Australi
 Human motion synthesis in complex scenes presents a fundamental challenge, extending beyond conventional Text-to-Motion tasks by requiring the integration of diverse modalities such as static environments, movable objects, natural language prompts, and spatial waypoints. Existing language-conditioned motion models often struggle with scene-aware motion generation due to limitations in motion tokenization, which leads to information loss and fails to capture the continuous, context-dependent nature of 3D human movement. To address these issues, we propose UniHM, a unified motion language model that leverages diffusion-based generation for synthesizing scene-aware human motion. UniHM is the first framework to support both Text-to-Motion and Text-to-Human-Object Interaction (HOI) in complex 3D scenes. Our approach introduces three key contributions: (1) a mixed-motion representation that fuses continuous 6DoF motion with discrete local motion tokens to improve motion realism; (2) a novel Look-Up-Free Quantization VAE (LFQ-VAE) that surpasses traditional VQ-VAEs in both reconstruction accuracy and generative performance; and (3) an enriched version of the Lingo dataset augmented with HumanML3D annotations, providing stronger supervision for scene-specific motion learning. Experimental results demonstrate that UniHM achieves comparative performance on the OMOMO benchmark for text-to-HOI synthesis and yields competitive results on HumanML3D for general text-conditioned motion generation.
 </details>
 
-#### 6. SnapMoGen: Human Motion Generation from Expressive Texts
-Chuan Guo, Inwoo Hwang, Jian Wang, Bing Zhou (Snap Inc., Seoul National University)
-<details span>
-<summary><b>Abstract</b></summary>
-Text-to-motion generation has experienced remarkable progress in recent years. However, current approaches remain limited to synthesizing motion from short or general text prompts, primarily due to dataset constraints. This limitation undermines fine-grained controllability and generalization to unseen prompts. In this paper, we introduce SnapMoGen, a new text-motion dataset featuring high-quality motion capture data paired with accurate, expressive textual annotations. The dataset comprises 20K motion clips totaling 44 hours, accompanied by 122K detailed textual descriptions averaging 48 words per description (vs. 12 words of HumanML3D). Importantly, these motion clips preserve original temporal continuity as they were in long sequences, facilitating research in long-term motion generation and blending. We also improve upon previous generative masked modeling approaches. Our model, MoMask++, transforms motion into multi-scale token sequences that better exploit the token capacity, and learns to generate all tokens using a single generative masked transformer. MoMask++ achieves state-of-the-art performance on both HumanML3D and SnapMoGen benchmarks. Additionally, we demonstrate the ability to process casual user prompts by employing an LLM to reformat inputs to align with the expressivity and narration style of SnapMoGen.
-</details>
-
-#### 7. ReMoMask: Retrieval-Augmented Masked Motion Generation
+#### 6. ReMoMask: Retrieval-Augmented Masked Motion Generation
 Zhengdao Li, Siheng Wang, Zeyu Zhang, Hao Tang (Peking University, Jiangsu University)
 <details span>
 <summary><b>Abstract</b></summary>
 Text-to-Motion (T2M) generation aims to synthesize realistic and semantically aligned human motion sequences from natural language descriptions. However, current approaches face dual challenges: Generative models (e.g., diffusion models) suffer from limited diversity, error accumulation, and physical implausibility, while Retrieval-Augmented Generation (RAG) methods exhibit diffusion inertia, partial-mode collapse, and asynchronous artifacts. To address these limitations, we propose ReMoMask, a unified framework integrating three key innovations: 1) A Bidirectional Momentum Text-Motion Model decouples negative sample scale from batch size via momentum queues, substantially improving cross-modal retrieval precision; 2) A Semantic Spatio-temporal Attention mechanism enforces biomechanical constraints during part-level fusion to eliminate asynchronous artifacts; 3) RAG-Classier-Free Guidance incorporates minor unconditional generation to enhance generalization. Built upon MoMask's RVQ-VAE, ReMoMask efficiently generates temporally coherent motions in minimal steps. Extensive experiments on standard benchmarks demonstrate the state-of-the-art performance of ReMoMask, achieving a 3.88% and 10.97% improvement in FID scores on HumanML3D and KIT-ML, respectively, compared to the previous SOTA method RAG-T2M. 
 </details>
 
-#### 8. X-MoGen: Unified Motion Generation across Humans and Animals
+#### 7. X-MoGen: Unified Motion Generation across Humans and Animals
 Xuan Wang, Kai Ruan, Liyang Qian, Zhizhi Guo, Chang Su, Gaoang Wang
 
 (Zhejiang University, Institute of Artificial Intelligence (TeleAI) China Telecom, Renmin University of China)
@@ -1738,7 +1740,7 @@ Xuan Wang, Kai Ruan, Liyang Qian, Zhizhi Guo, Chang Su, Gaoang Wang
 Text-driven motion generation has attracted increasing attention due to its broad applications in virtual reality, animation, and robotics. While existing methods typically model human and animal motion separately, a joint cross-species approach offers key advantages, such as a unified representation and improved generalization. However, morphological differences across species remain a key challenge, often compromising motion plausibility. To address this, we propose \textbf{X-MoGen}, the first unified framework for cross-species text-driven motion generation covering both humans and animals. X-MoGen adopts a two-stage architecture. First, a conditional graph variational autoencoder learns canonical T-pose priors, while an autoencoder encodes motion into a shared latent space regularized by morphological loss. In the second stage, we perform masked motion modeling to generate motion embeddings conditioned on textual descriptions. During training, a morphological consistency module is employed to promote skeletal plausibility across species. To support unified modeling, we construct \textbf{UniMo4D}, a large-scale dataset of 115 species and 119k motion sequences, which integrates human and animal motions under a shared skeletal topology for joint training. Extensive experiments on UniMo4D demonstrate that X-MoGen outperforms state-of-the-art methods on both seen and unseen species.
 </details>
 
-#### 9. EgoTwin: Dreaming Body and View in First Person
+#### 8. EgoTwin: Dreaming Body and View in First Person
 Jingqiao Xiu, Fangzhou Hong, Yicong Li, Mengze Li, Wentao Wang, Sirui Han, Liang Pan, Ziwei Liu
 
 (National University of Singapore, Nanyang Technological University, Hong Kong University of Science and Technology, Shanghai AI Laboratory)
@@ -1755,7 +1757,6 @@ While exocentric video synthesis has achieved great progress, egocentric video g
 | 2025 | **FlowMotion: Target-Predictive Conditional Flow Matching for Jitter-Reduced Text-Driven Human Motion Generation**  | 20 Apr 2025 |          [Link](https://arxiv.org/abs/2504.01338)          | --  | --  |
 | 2025 | **ReAlign: Bilingual Text-to-Motion Generation via Step-Aware Reward-Guided Alignment**  | 8 May 2025 |          [Link](https://www.arxiv.org/abs/2505.04974)          | --  | [Link](https://wengwanjiang.github.io/ReAlign-page/)  |
 | 2025 | **UniHM: Universal Human Motion Generation with Object Interactions in Indoor Scenes**  | 19 May 2025 |          [Link](https://arxiv.org/abs/2505.12774)          | --  | -- |
-| 2025 | **SnapMoGen: Human Motion Generation from Expressive Texts**  | 12 Jul 2025 |          [Link](https://www.arxiv.org/abs/2507.09122)          | [Link](https://github.com/snap-research/SnapMoGen)  | [Link](https://snap-research.github.io/SnapMoGen/) |
 | 2025 | **ReMoMask: Retrieval-Augmented Masked Motion Generation**  | 4 Aug 2025 |          [Link](https://arxiv.org/abs/2508.02605)          | [Link](https://github.com/AIGeeksGroup/ReMoMask)  | [Link](https://aigeeksgroup.github.io/ReMoMask/) |
 | 2025 | **X-MoGen: Unified Motion Generation across Humans and Animals**  | 7 Aug 2025 |          [Link](https://www.arxiv.org/abs/2508.05162)          | --  | -- |
 | 2025 | **EgoTwin: Dreaming Body and View in First Person**  | 18 Aug 2025 |          [Link](https://arxiv.org/abs/2508.13013)          | --  | [Link](https://egotwin.pages.dev/) |
@@ -1805,13 +1806,6 @@ While exocentric video synthesis has achieved great progress, egocentric video g
       archivePrefix={arXiv},
       primaryClass={cs.GR},
       url={https://arxiv.org/abs/2505.12774}, 
-}
-
-@article{guo2025snapmogen,
-  title={SnapMoGen: Human Motion Generation from Expressive Texts},
-  author={Guo, Chuan and Hwang, Inwoo and Wang, Jian and Zhou, Bing},
-  journal={arXiv preprint arXiv:2507.09122},
-  year={2025}
 }
 
 @article{li2025remomask,
