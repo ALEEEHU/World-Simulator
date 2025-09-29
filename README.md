@@ -1062,6 +1062,16 @@ Yan Team (Tencent)
 We present Yan, a foundational framework for interactive video generation, covering the entire pipeline from simulation and generation to editing. Specifically, Yan comprises three core modules. AAA-level Simulation: We design a highly-compressed, low-latency 3D-VAE coupled with a KV-cache-based shift-window denoising inference process, achieving real-time 1080P/60FPS interactive simulation. Multi-Modal Generation: We introduce a hierarchical autoregressive caption method that injects game-specific knowledge into open-domain multi-modal video diffusion models (VDMs), then transforming the VDM into a frame-wise, action-controllable, real-time infinite interactive video generator. Notably, when the textual and visual prompts are sourced from different domains, the model demonstrates strong generalization, allowing it to blend and compose the style and mechanics across domains flexibly according to user prompts. Multi-Granularity Editing: We propose a hybrid model that explicitly disentangles interactive mechanics simulation from visual rendering, enabling multi-granularity video content editing during interaction through text. Collectively, Yan offers an integration of these modules, pushing interactive video generation beyond isolated capabilities toward a comprehensive AI-driven interactive creation paradigm, paving the way for the next generation of creative tools, media, and entertainment. 
 </details>
 
+#### 11. LongLive: Real-time Interactive Long Video Generation
+Shuai Yang, Wei Huang, Ruihang Chu, Yicheng Xiao, Yuyang Zhao, Xianbang Wang, Muyang Li, Enze Xie, Yingcong Chen, Yao Lu, Song Han, Yukang Chen
+
+(Nvidia, MIT, HKUST(GZ), HKU, THU)
+
+<details span>
+<summary><b>Abstract</b></summary>
+We present LongLive, a frame-level autoregressive (AR) framework for real-time and interactive long video generation. Long video generation presents challenges in both efficiency and quality. Diffusion and Diffusion-Forcing models can produce high-quality videos but suffer from low efficiency due to bidirectional attention. Causal attention AR models support KV caching for faster inference, but often degrade in quality on long videos due to memory challenges during long-video training. In addition, beyond static prompt-based generation, interactive capabilities, such as streaming prompt inputs, are critical for dynamic content creation, enabling users to guide narratives in real time. This interactive requirement significantly increases complexity, especially in ensuring visual consistency and semantic coherence during prompt transitions. To address these challenges, LongLive adopts a causal, frame-level AR design that integrates a KV-recache mechanism that refreshes cached states with new prompts for smooth, adherent switches; streaming long tuning to enable long video training and to align training and inference (train-long-test-long); and short window attention paired with a frame-level attention sink, shorten as frame sink, preserving long-range consistency while enabling faster generation. With these key designs, LongLive fine-tunes a 1.3B-parameter short-clip model to minute-long generation in just 32 GPU-days. At inference, LongLive sustains 20.7 FPS on a single NVIDIA H100, achieves strong performance on VBench in both short and long videos. LongLive supports up to 240-second videos on a single H100 GPU. LongLive further supports INT8-quantized inference with only marginal quality loss.
+</details>
+
 | Year | Title                                                        | ArXiv Time  |                           Paper                            |                      Code                      | Project Page                      |
 | ---- | ------------------------------------------------------------ | :----: | :--------------------------------------------------------: | :--------------------------------------------: | :--------------------------------------------: |
 | 2025 | **We'll Fix it in Post: Improving Text-to-Video Generation with Neuro-Symbolic Feedback**  | 25 Apr 2025 |          [Link](https://arxiv.org/abs/2504.17180)          | -- | --  |
@@ -1074,6 +1084,7 @@ We present Yan, a foundational framework for interactive video generation, cover
 | 2025 | **Can Your Model Separate Yolks with a Water Bottle? Benchmarking Physical Commonsense Understanding in Video Generation Models**  | 21 Jul 2025 |      [Link](https://arxiv.org/abs/2507.15824)      | [Link](https://github.com/ensanli/PhysVidBenchCode) | [Link](https://cyberiada.github.io/PhysVidBench/) |
 | 2025 | **LongVie: Multimodal-Guided Controllable Ultra-Long Video Generation**  | 5 Aug 2025 |      [Link](https://arxiv.org/abs/2508.03694)      | [Link](https://github.com/Vchitect/LongVie) | [Link](https://vchitect.github.io/LongVie-project/) |
 | 2025 | **Yan: Foundational Interactive Video Generation**  | 12 Aug 2025 |      [Link](https://www.arxiv.org/abs/2508.08601)      | -- | [Link](https://greatx3.github.io/Yan/) |
+| 2025 | **LongLive: Real-time Interactive Long Video Generation**  | 26 Sep 2025 |      [Link](https://arxiv.org/abs/2509.22622)      | [Link](https://github.com/NVlabs/LongLive) | [Link](https://nvlabs.github.io/LongLive/) |
 
 <details close>
 <summary>ArXiv Papers References</summary>
@@ -1160,6 +1171,13 @@ We present Yan, a foundational framework for interactive video generation, cover
   year    = {2025}
 }
 
+@article{yang2025longlive,
+    title={LongLive: Real-time Interactive Long Video Generation},
+    author={Shuai Yang and Wei Huang and Ruihang Chu and Yicheng Xiao and Yuyang Zhao and Xianbang Wang and Muyang Li and Enze Xie and Yingcong Chen and Yao Lu and Song Hanand Yukang Chen},
+    year={2025},
+    archivePrefix={arXiv},
+    primaryClass={cs.CV}
+}
 ```
 </details>
 
