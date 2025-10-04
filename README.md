@@ -1236,6 +1236,7 @@ The quality of video-text pairs fundamentally determines the upper bound of text
 | 2025 | **Scene Splatter: Momentum 3D Scene Generation from Single Image with Video Diffusion Model**  | CVPR 2025 |          [Link](https://arxiv.org/abs/2504.02764)          | [Link](https://github.com/shengjun-zhang/Scene-Splatter)  | [Link](https://shengjun-zhang.github.io/SceneSplatter/)  |
 | 2025 | **ScenePainter: Semantically Consistent Perpetual 3D Scene Generation with Concept Relation Alignment**  | ICCV 2025 |          [Link](https://arxiv.org/abs/2507.19058)          | [Link](https://github.com/xiac20/ScenePainter)  | [Link](https://xiac20.github.io/ScenePainter/)  |
 | 2025 | **WorldExplorer: Towards Generating Fully Navigable 3D Scenes**  | SIGGRAPH Asia 2025 |          [Link](https://arxiv.org/abs/2506.01799)          | [Link](https://github.com/mschneider456/worldexplorer)  | [Link](https://mschneider456.github.io/world-explorer/)  |
+| 2025 | **VideoFrom3D: 3D Scene Video Generation via Complementary Image and Video Diffusion Models**  | SIGGRAPH Asia 2025 |          [Link](https://arxiv.org/abs/2509.17985)          | [Link](https://github.com/KIMGEONUNG/VideoFrom3D)  | [Link](https://kimgeonung.github.io/VideoFrom3D/)  |
 
 <details close>
 <summary>Accepted Papers References</summary>
@@ -1261,6 +1262,13 @@ The quality of video-text pairs fundamentally determines the upper bound of text
   title={WorldExplorer: Towards Generating Fully Navigable 3D Scenes},
   author={Schneider, Manuel-Andreas and H{\"o}llein, Lukas and Nie{\ss}ner, Matthias},
   journal={arXiv preprint arXiv:2506.01799},
+  year={2025}
+}
+
+@article{kim2025videofrom3d,
+  title={VideoFrom3D: 3D Scene Video Generation via Complementary Image and Video Diffusion Models},
+  author={Kim, Geonung and Han, Janghyeok and Cho, Sunghyun},
+  journal={arXiv preprint arXiv:2509.17985},
   year={2025}
 }
 
