@@ -884,6 +884,7 @@ For more details, please check the [2024 4D Papers](./docs/4d/4d_2024.md), inclu
 | 2025 | **WonderPlay: Dynamic 3D Scene Generation from a Single Image and Actions**  | ICCV 2025 |          [Link](https://arxiv.org/abs/2505.18151)          | -- | [Link](https://kyleleey.github.io/WonderPlay/)  |
 | 2025 | **Uni3C: Unifying Precisely 3D-Enhanced Camera and Human Motion Controls for Video Generation**  | Siggraph Asia 2025 |          [Link](https://arxiv.org/abs/2504.14899)          | [Link](https://github.com/ewrfcas/Uni3C) | [Link](https://ewrfcas.github.io/Uni3C/)  |
 | 2025 | **Scaling RL to Long Videos**  | NeurIPS 2025 |      [Link](https://arxiv.org/abs/2507.07966)      | [Link](https://github.com/NVlabs/Long-RL) | [YouTube Video](https://www.youtube.com/watch?v=ykbblK2jiEg) |
+| 2025 | **Video Killed the Energy Budget: Characterizing the Latency and Power Regimes of Open Text-to-Video Models**  |  NeurIPS 2025 NextVid Workshop |      [Link](https://arxiv.org/abs/2509.19222)      | -- | -- |
 
 <details close>
 <summary>Accepted Papers References</summary>
@@ -965,6 +966,13 @@ For more details, please check the [2024 4D Papers](./docs/4d/4d_2024.md), inclu
   title={Scaling rl to long videos},
   author={Chen, Yukang and Huang, Wei and Shi, Baifeng and Hu, Qinghao and Ye, Hanrong and Zhu, Ligeng and Liu, Zhijian and Molchanov, Pavlo and Kautz, Jan and Qi, Xiaojuan and others},
   journal={arXiv preprint arXiv:2507.07966},
+  year={2025}
+}
+
+@article{delavande2025video,
+  title={Video Killed the Energy Budget: Characterizing the Latency and Power Regimes of Open Text-to-Video Models},
+  author={Delavande, Julien and Pierrard, Regis and Luccioni, Sasha},
+  journal={arXiv preprint arXiv:2509.19222},
   year={2025}
 }
 
@@ -2041,7 +2049,7 @@ Single-image human reconstruction is vital for digital human modeling applicatio
 ### Previous Papers
 
 #### Year 2023-2024
-For more details, please check the [2023-2024 3D Human Papers](./docs/3d_human/human_23-24.md), including 18 accepted papers and 5 arXiv papers.
+For more details, please check the [2023-2024 3D Human Papers](./docs/3d_human/human_23-24.md), including 19 accepted papers and 4 arXiv papers.
 
 <details close>
 <summary>Survey and Awesome Repos</summary>
