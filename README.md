@@ -1080,6 +1080,15 @@ Shuai Yang, Wei Huang, Ruihang Chu, Yicheng Xiao, Yuyang Zhao, Xianbang Wang, Mu
 We present LongLive, a frame-level autoregressive (AR) framework for real-time and interactive long video generation. Long video generation presents challenges in both efficiency and quality. Diffusion and Diffusion-Forcing models can produce high-quality videos but suffer from low efficiency due to bidirectional attention. Causal attention AR models support KV caching for faster inference, but often degrade in quality on long videos due to memory challenges during long-video training. In addition, beyond static prompt-based generation, interactive capabilities, such as streaming prompt inputs, are critical for dynamic content creation, enabling users to guide narratives in real time. This interactive requirement significantly increases complexity, especially in ensuring visual consistency and semantic coherence during prompt transitions. To address these challenges, LongLive adopts a causal, frame-level AR design that integrates a KV-recache mechanism that refreshes cached states with new prompts for smooth, adherent switches; streaming long tuning to enable long video training and to align training and inference (train-long-test-long); and short window attention paired with a frame-level attention sink, shorten as frame sink, preserving long-range consistency while enabling faster generation. With these key designs, LongLive fine-tunes a 1.3B-parameter short-clip model to minute-long generation in just 32 GPU-days. At inference, LongLive sustains 20.7 FPS on a single NVIDIA H100, achieves strong performance on VBench in both short and long videos. LongLive supports up to 240-second videos on a single H100 GPU. LongLive further supports INT8-quantized inference with only marginal quality loss.
 </details>
 
+#### 12. Character Mixing for Video Generation
+Tingting Liao, Chongjian Ge, Guangyi Liu, Hao Li, Yi Zhou (Mohamed bin Zayed University of Artificial Intelligence)
+
+<details span>
+<summary><b>Abstract</b></summary>
+Imagine Mr. Bean stepping into Tom and Jerry—can we generate videos where characters interact naturally across different worlds? We study inter-character interaction in text-to-video generation, where the key challenge is to preserve each character’s identity and behaviors while enabling coherent cross-context interaction. This is difficult because characters may never have coexisted and
+because mixing styles often causes style delusion, where realistic characters appear cartoonish or vice versa. We introduce a framework that tackles these issues with Cross-Character Embedding (CCE), which learns identity and behavioral logic across multimodal sources, and Cross-Character Augmentation (CCA), which enriches training with synthetic co-existence and mixed-style data. Together, these techniques allow natural interactions between previously uncoexistent characters without losing stylistic fidelity. Experiments on a curated benchmark of cartoons and live-action series with 10 characters show clear improvements in identity preservation, interaction quality, and robustness to style delusion, enabling new forms of generative storytelling.
+</details>
+
 | Year | Title                                                        | ArXiv Time  |                           Paper                            |                      Code                      | Project Page                      |
 | ---- | ------------------------------------------------------------ | :----: | :--------------------------------------------------------: | :--------------------------------------------: | :--------------------------------------------: |
 | 2025 | **We'll Fix it in Post: Improving Text-to-Video Generation with Neuro-Symbolic Feedback**  | 25 Apr 2025 |          [Link](https://arxiv.org/abs/2504.17180)          | -- | --  |
@@ -1093,6 +1102,7 @@ We present LongLive, a frame-level autoregressive (AR) framework for real-time a
 | 2025 | **LongVie: Multimodal-Guided Controllable Ultra-Long Video Generation**  | 5 Aug 2025 |      [Link](https://arxiv.org/abs/2508.03694)      | [Link](https://github.com/Vchitect/LongVie) | [Link](https://vchitect.github.io/LongVie-project/) |
 | 2025 | **Yan: Foundational Interactive Video Generation**  | 12 Aug 2025 |      [Link](https://www.arxiv.org/abs/2508.08601)      | -- | [Link](https://greatx3.github.io/Yan/) |
 | 2025 | **LongLive: Real-time Interactive Long Video Generation**  | 26 Sep 2025 |      [Link](https://arxiv.org/abs/2509.22622)      | [Link](https://github.com/NVlabs/LongLive) | [Link](https://nvlabs.github.io/LongLive/) |
+| 2025 | **Character Mixing for Video Generation**  | 6 Oct 2025 |      [Link](https://arxiv.org/abs/2510.05093)      | [Link](https://github.com/TingtingLiao/mimix) | [Link](https://tingtingliao.github.io/mimix/) |
 
 <details close>
 <summary>ArXiv Papers References</summary>
@@ -1185,6 +1195,14 @@ We present LongLive, a frame-level autoregressive (AR) framework for real-time a
     year={2025},
     archivePrefix={arXiv},
     primaryClass={cs.CV}
+}
+
+@article{mimix2025,
+  title   = {Character Mixing for Video Generation},
+  author  = {Tingting Liao, Chongjian Ge, Guangyi Liu, Hao Li, Yi Zhou},
+  year    = {2025}
+  eprint  = {2510.05093}, 
+  note    = {arXiv preprint}
 }
 ```
 </details>
