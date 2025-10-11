@@ -1806,6 +1806,26 @@ Jingqiao Xiu, Fangzhou Hong, Yicong Li, Mengze Li, Wentao Wang, Sirui Han, Liang
 While exocentric video synthesis has achieved great progress, egocentric video generation remains largely underexplored, which requires modeling first-person view content along with camera motion patterns induced by the wearer's body movements. To bridge this gap, we introduce a novel task of joint egocentric video and human motion generation, characterized by two key challenges: 1) Viewpoint Alignment: the camera trajectory in the generated video must accurately align with the head trajectory derived from human motion; 2) Causal Interplay: the synthesized human motion must causally align with the observed visual dynamics across adjacent video frames. To address these challenges, we propose EgoTwin, a joint video-motion generation framework built on the diffusion transformer architecture. Specifically, EgoTwin introduces a head-centric motion representation that anchors the human motion to the head joint and incorporates a cybernetics-inspired interaction mechanism that explicitly captures the causal interplay between video and motion within attention operations. For comprehensive evaluation, we curate a large-scale real-world dataset of synchronized text-video-motion triplets and design novel metrics to assess video-motion consistency. Extensive experiments demonstrate the effectiveness of the EgoTwin framework.
 </details>
 
+#### 9. Pulp Motion: Framing-aware multimodal camera and human motion generation
+Robin Courant, Xi Wang, David Loiseaux, Marc Christie, Vicky Kalogeiton
+
+(LIX, Ecole Polytechnique, IP Paris; Inria Saclay; Inria, IRISA, CNRS, Univ. Rennes)
+
+<details span>
+<summary><b>Abstract</b></summary>
+Treating human motion and camera trajectory generation separately overlooks a core principle of cinematography: the tight interplay between actor performance and camera work in the screen space. In this paper, we are the first to cast this task as a text-conditioned joint generation, aiming to maintain consistent on-screen framing while producing two heterogeneous, yet intrinsically linked, modalities: human motion and camera trajectories. We propose a simple, model-agnostic framework that enforces multimodal coherence via an auxiliary modality: the on-screen framing induced by projecting human joints onto the camera. This on-screen framing provides a natural and effective bridge between modalities, promoting consistency and leading to more precise joint distribution. We first design a joint autoencoder that learns a shared latent space, together with a lightweight linear transform from the human and camera latents to a framing latent. We then introduce auxiliary sampling, which exploits this linear transform to steer generation toward a coherent framing modality. To support this task, we also introduce the PulpMotion dataset, a human-motion and camera-trajectory dataset with rich captions, and high-quality human motions. Extensive experiments across DiT- and MAR-based architectures show the generality and effectiveness of our method in generating on-frame coherent human-camera motions, while also achieving gains on textual alignment for both modalities. Our qualitative results yield more cinematographically meaningful framings setting the new state of the art for this task. 
+</details>
+
+#### 10. Text2Interact: High-Fidelity and Diverse Text-to-Two-Person Interaction Generation
+Qingxuan Wu, Zhiyang Dou, Chuan Guo, Yiming Huang, Qiao Feng, Bing Zhou, Jian Wang, Lingjie Liu
+
+(University of Pennsylvania, The University of Hong Kong, Snap Inc.)
+
+<details span>
+<summary><b>Abstract</b></summary>
+Modeling human-human interactions from text remains challenging because it requires not only realistic individual dynamics but also precise, text-consistent spatiotemporal coupling between agents. Currently, progress is hindered by 1) limited two-person training data, inadequate to capture the diverse intricacies of two-person interactions; and 2) insufficiently fine-grained text-to-interaction modeling, where language conditioning collapses rich, structured prompts into a single sentence embedding. To address these limitations, we propose our Text2Interact framework, designed to generate realistic, text-aligned human-human interactions through a scalable high-fidelity interaction data synthesizer and an effective spatiotemporal coordination pipeline. First, we present InterCompose, a scalable synthesis-by-composition pipeline that aligns LLM-generated interaction descriptions with strong single-person motion priors. Given a prompt and a motion for an agent, InterCompose retrieves candidate single-person motions, trains a conditional reaction generator for another agent, and uses a neural motion evaluator to filter weak or misaligned samples-expanding interaction coverage without extra capture. Second, we propose InterActor, a text-to-interaction model with word-level conditioning that preserves token-level cues (initiation, response, contact ordering) and an adaptive interaction loss that emphasizes contextually relevant inter-person joint pairs, improving coupling and physical plausibility for fine-grained interaction modeling. Extensive experiments show consistent gains in motion diversity, fidelity, and generalization, including out-of-distribution scenarios and user studies. We will release code and models to facilitate reproducibility.
+</details>
+
 | Year | Title                                                        | ArXiv Time  |                           Paper                            |                      Code                      | Project Page                      |
 | ---- | ------------------------------------------------------------ | :----: | :--------------------------------------------------------: | :--------------------------------------------: | :--------------------------------------------: |
 | 2025 | **Motion Anything: Any to Motion Generation**  | 12 Mar 2025 |          [Link](https://arxiv.org/abs/2503.06955)          | [Link](https://github.com/steve-zeyu-zhang/MotionAnything)  | [Link](https://steve-zeyu-zhang.github.io/MotionAnything/)  |
@@ -1816,6 +1836,8 @@ While exocentric video synthesis has achieved great progress, egocentric video g
 | 2025 | **ReMoMask: Retrieval-Augmented Masked Motion Generation**  | 4 Aug 2025 |          [Link](https://arxiv.org/abs/2508.02605)          | [Link](https://github.com/AIGeeksGroup/ReMoMask)  | [Link](https://aigeeksgroup.github.io/ReMoMask/) |
 | 2025 | **X-MoGen: Unified Motion Generation across Humans and Animals**  | 7 Aug 2025 |          [Link](https://www.arxiv.org/abs/2508.05162)          | --  | -- |
 | 2025 | **EgoTwin: Dreaming Body and View in First Person**  | 18 Aug 2025 |          [Link](https://arxiv.org/abs/2508.13013)          | --  | [Link](https://egotwin.pages.dev/) |
+| 2025 | **Pulp Motion: Framing-aware multimodal camera and human motion generation**  | 6 Oct 2025 |          [Link](https://arxiv.org/abs/2510.05097)          | [Link](https://github.com/robincourant/pulp-motion)  | [Link](https://www.lix.polytechnique.fr/vista/projects/2025_pulpmotion_courant/) |
+| 2025 | **Text2Interact: High-Fidelity and Diverse Text-to-Two-Person Interaction Generation**  | 7 Oct 2025 |          [Link](https://arxiv.org/abs/2510.06504)          | --  | -- |
 
 <details close>
 <summary>ArXiv Papers References</summary>
@@ -1886,6 +1908,26 @@ While exocentric video synthesis has achieved great progress, egocentric video g
       archivePrefix={arXiv},
       primaryClass={cs.CV},
       url={https://arxiv.org/abs/2508.13013}, 
+}
+
+@misc{courant2025pulpmotionframingawaremultimodal,
+      title={Pulp Motion: Framing-aware multimodal camera and human motion generation}, 
+      author={Robin Courant and Xi Wang and David Loiseaux and Marc Christie and Vicky Kalogeiton},
+      year={2025},
+      eprint={2510.05097},
+      archivePrefix={arXiv},
+      primaryClass={cs.GR},
+      url={https://arxiv.org/abs/2510.05097}, 
+}
+
+@misc{wu2025text2interacthighfidelitydiversetexttotwoperson,
+      title={Text2Interact: High-Fidelity and Diverse Text-to-Two-Person Interaction Generation}, 
+      author={Qingxuan Wu and Zhiyang Dou and Chuan Guo and Yiming Huang and Qiao Feng and Bing Zhou and Jian Wang and Lingjie Liu},
+      year={2025},
+      eprint={2510.06504},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2510.06504}, 
 }
 ```
 </details>
