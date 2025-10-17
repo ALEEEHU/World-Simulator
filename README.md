@@ -2051,11 +2051,13 @@ AMASS is a large database of human motion unifying different optical marker-base
 | 2025 | **Zero-1-to-A: Zero-Shot One Image to Animatable Head Avatars Using Video Diffusion**  | CVPR 2025 |          [Link](https://arxiv.org/abs/2503.15851)          | [Link](https://github.com/ZhenglinZhou/Zero-1-to-A)  | [Link](https://zhenglinzhou.github.io/Zero-1-to-A/)  |
 | 2025 | **GaussianIP: Identity-Preserving Realistic 3D Human Generation via Human-Centric Diffusion Prior**  | CVPR 2025 |          [Link](https://arxiv.org/abs/2503.11143)          | [Link](https://github.com/silence-tang/GaussianIP)  | [Link](https://silence-tang.github.io/gaussian-ip/)  |
 | 2025 | **ArtiScene: Language-Driven Artistic 3D Scene Generation Through Image Intermediary**  | CVPR 2025 |          [Link](https://arxiv.org/abs/2506.00742)          | [Link](https://github.com/NVlabs/ArtiScene)  | [Link](https://artiscene-cvpr.github.io/)  |
+| 2025 | **CAP4D: Creating Animatable 4D Portrait Avatars with Morphable Multi-View Diffusion Models**  | CVPR 2025 Oral |          [Link](https://arxiv.org/abs/2412.12093)          | [Link](https://github.com/felixtaubner/cap4d/)  | [Link](https://felixtaubner.github.io/cap4d/)  |
 | 2025 | **Text-based Animatable 3D Avatars with Morphable Model Alignment**  | SIGGRAPH 2025 |          [Link](https://arxiv.org/abs/2504.15835)          | [Link](https://github.com/oneThousand1000/AnimPortrait3D)  | [Link](https://onethousandwu.com/animportrait3d.github.io/)  |
 | 2025 | **LAM: Large Avatar Model for One-shot Animatable Gaussian Head**  | SIGGRAPH 2025 |          [Link](https://arxiv.org/abs/2502.17796)          | [Link](https://github.com/aigc3d/LAM)  | [Link](https://aigc3d.github.io/projects/LAM/)  |
 | 2025 | **Avat3r: Large Animatable Gaussian Reconstruction Model for High-fidelity 3D Head Avatars**  | ICCV 2025 |          [Link](https://arxiv.org/abs/2502.20220)          | --  | [Link](https://tobias-kirschstein.github.io/avat3r/)  |
 | 2025 | **SIGMAN:Scaling 3D Human Gaussian Generation with Millions of Assets**  | ICCV 2025 |          [Link](https://arxiv.org/abs/2504.06982)          | [Link](https://github.com/yyvhang/SIGMAN_release)  | [Link](https://yyvhang.github.io/SIGMAN_3D/)  |
 | 2025 | **AdaHuman: Animatable Detailed 3D Human Generation with Compositional Multiview Diffusion**  | ICCV 2025 |          [Link](https://arxiv.org/abs/2505.24877)          | [Link](https://github.com/NVlabs/AdaHuman)  | [Link](https://nvlabs.github.io/AdaHuman/)  |
+| 2025 | **MVP4D: Multi-View Portrait Video Diffusion for Animatable 4D Avatars**  | SIGGRAPH Asia 2025 |          [Link](https://arxiv.org/abs/2510.12785)          | Code releases Nov 15th  | [Link](https://felixtaubner.github.io/mvp4d/)  |
 
 <details close>
 <summary>Accepted Papers References</summary>
@@ -2083,6 +2085,15 @@ AMASS is a large database of human motion unifying different optical marker-base
   booktitle={Proceedings of the Computer Vision and Pattern Recognition Conference},
   pages={2891--2901},
   year={2025}
+}
+
+@inproceedings{taubner2025cap4d,
+  title={Cap4d: Creating animatable 4d portrait avatars with morphable multi-view diffusion models},
+  author={Taubner, Felix and Zhang, Ruihang and Tuli, Mathieu and Lindell, David B},
+  booktitle={2025 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+  pages={5318--5330},
+  year={2025},
+  organization={IEEE Computer Society}
 }
 
 @article{AnimPortrait3D_sig25,
@@ -2125,6 +2136,13 @@ AMASS is a large database of human motion unifying different optical marker-base
   title={AdaHuman: Animatable Detailed 3D Human Generation with Compositional Multiview Diffusion},
   author={Huang, Yangyi and Yuan, Ye and Li, Xueting and Kautz, Jan and Iqbal, Umar},
   journal={arXiv preprint arXiv:2505.24877},
+  year={2025}
+}
+
+@article{taubner2025mvp4d,
+  title={MVP4D: Multi-View Portrait Video Diffusion for Animatable 4D Avatars},
+  author={Taubner, Felix and Zhang, Ruihang and Tuli, Mathieu and Bahmani, Sherwin and Lindell, David B},
+  journal={arXiv preprint arXiv:2510.12785},
   year={2025}
 }
 
