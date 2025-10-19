@@ -1119,6 +1119,16 @@ Hongyu Li, Lingfeng Sun, Yafei Hu, Duy Ta, Jennifer Barry, George Konidaris, Jia
 Enabling robots to execute novel manipulation tasks zero-shot is a central goal in robotics. Most existing methods assume in-distribution tasks or rely on fine-tuning with embodiment-matched data, limiting transfer across platforms. We present NovaFlow, an autonomous manipulation framework that converts a task description into an actionable plan for a target robot without any demonstrations. Given a task description, NovaFlow synthesizes a video using a video generation model and distills it into 3D actionable object flow using off-the-shelf perception modules. From the object flow, it computes relative poses for rigid objects and realizes them as robot actions via grasp proposals and trajectory optimization. For deformable objects, this flow serves as a tracking objective for model-based planning with a particle-based dynamics model. By decoupling task understanding from low-level control, NovaFlow naturally transfers across embodiments. We validate on rigid, articulated, and deformable object manipulation tasks using a table-top Franka arm and a Spot quadrupedal mobile robot, and achieve effective zero-shot execution without demonstrations or embodiment-specific training.
 </details>
 
+#### 14. SeqBench: Benchmarking Sequential Narrative Generation in Text-to-Video Models
+Zhengxu Tang, Zizheng Wang, Luning Wang, Zitao Shuai, Chenhao Zhang, Siyu Qian, Yirui Wu, Bohao Wang, Haosong Rao, Zhenyu Yang, Chenwei Wu 
+
+(University of Michigan, Northeastern University, University of Washington, Harvard University, Beijing Jiaotong University, Zhejiang University, University of Rochester)
+
+<details span>
+<summary><b>Abstract</b></summary>
+Text-to-video (T2V) generation models have made significant progress in creating visually appealing videos. However, they struggle with generating coherent sequential narratives that require logical progression through multiple events. Existing T2V benchmarks primarily focus on visual quality metrics but fail to evaluate narrative coherence over extended sequences. To bridge this gap, we present SeqBench, a comprehensive benchmark for evaluating sequential narrative coherence in T2V generation. SeqBench includes a carefully designed dataset of 320 prompts spanning various narrative complexities, with 2,560 human-annotated videos generated from 8 state-of-the-art T2V models. Additionally, we design a Dynamic Temporal Graphs (DTG)-based automatic evaluation metric, which can efficiently capture long-range dependencies and temporal ordering while maintaining computational efficiency. Our DTG-based metric demonstrates a strong correlation with human annotations. Through systematic evaluation using SeqBench, we reveal critical limitations in current T2V models: failure to maintain consistent object states across multi-action sequences, physically implausible results in multi-object scenarios, and difficulties in preserving realistic timing and ordering relationships between sequential actions. SeqBench provides the first systematic framework for evaluating narrative coherence in T2V generation and offers concrete insights for improving sequential reasoning capabilities in future models.
+</details>
+
 | Year | Title                                                        | ArXiv Time  |                           Paper                            |                      Code                      | Project Page                      |
 | ---- | ------------------------------------------------------------ | :----: | :--------------------------------------------------------: | :--------------------------------------------: | :--------------------------------------------: |
 | 2025 | **We'll Fix it in Post: Improving Text-to-Video Generation with Neuro-Symbolic Feedback**  | 25 Apr 2025 |          [Link](https://arxiv.org/abs/2504.17180)          | -- | --  |
@@ -1134,6 +1144,8 @@ Enabling robots to execute novel manipulation tasks zero-shot is a central goal 
 | 2025 | **LongLive: Real-time Interactive Long Video Generation**  | 26 Sep 2025 |      [Link](https://arxiv.org/abs/2509.22622)      | [Link](https://github.com/NVlabs/LongLive) | [Link](https://nvlabs.github.io/LongLive/) |
 | 2025 | **Character Mixing for Video Generation**  | 6 Oct 2025 |      [Link](https://arxiv.org/abs/2510.05093)      | [Link](https://github.com/TingtingLiao/mimix) | [Link](https://tingtingliao.github.io/mimix/) |
 | 2025 | **NovaFlow: Zero-Shot Manipulation via Actionable Flow from Generated Videos**  | 9 Oct 2025  |      [Link](https://arxiv.org/abs/2510.08568)      | Coming Soon! | [Link](https://novaflow.lhy.xyz/) |
+| 2025 | **SeqBench: Benchmarking Sequential Narrative Generation in Text-to-Video Models**  | 14 Oct 2025  |      [Link](https://arxiv.org/abs/2510.13042)      | -- | [Link](https://videobench.github.io/SeqBench.github.io/) |
+
 
 <details close>
 <summary>ArXiv Papers References</summary>
@@ -1240,6 +1252,13 @@ Enabling robots to execute novel manipulation tasks zero-shot is a central goal 
   title={NovaFlow: Zero-Shot Manipulation via Actionable Flow from Generated Videos},
   author={Li, Hongyu and Sun, Lingfeng and Hu, Yafei and Ta, Duy and Barry, Jennifer and Konidaris, George and Fu, Jiahui},
   journal={arXiv preprint arXiv:2510.08568},
+  year={2025}
+}
+
+@article{tang2025seqbench,
+  title={SeqBench: Benchmarking Sequential Narrative Generation in Text-to-Video Models},
+  author={Tang, Zhengxu and Wang, Zizheng and Wang, Luning and Shuai, Zitao and Zhang, Chenhao and Qian, Siyu and Wu, Yirui and Wang, Bohao and Rao, Haosong and Yang, Zhenyu and others},
+  journal={arXiv preprint arXiv:2510.13042},
   year={2025}
 }
 ```
