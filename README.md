@@ -2077,6 +2077,7 @@ AMASS is a large database of human motion unifying different optical marker-base
 | 2025 | **SIGMAN:Scaling 3D Human Gaussian Generation with Millions of Assets**  | ICCV 2025 |          [Link](https://arxiv.org/abs/2504.06982)          | [Link](https://github.com/yyvhang/SIGMAN_release)  | [Link](https://yyvhang.github.io/SIGMAN_3D/)  |
 | 2025 | **AdaHuman: Animatable Detailed 3D Human Generation with Compositional Multiview Diffusion**  | ICCV 2025 |          [Link](https://arxiv.org/abs/2505.24877)          | [Link](https://github.com/NVlabs/AdaHuman)  | [Link](https://nvlabs.github.io/AdaHuman/)  |
 | 2025 | **MVP4D: Multi-View Portrait Video Diffusion for Animatable 4D Avatars**  | SIGGRAPH Asia 2025 |          [Link](https://arxiv.org/abs/2510.12785)          | Code releases Nov 15th  | [Link](https://felixtaubner.github.io/mvp4d/)  |
+| 2025 | **InfiniHuman: Infinite 3D Human Creation with Precise Control**  | SIGGRAPH Asia 2025 |          [Link](https://arxiv.org/abs/2510.11650)          | [Link](https://github.com/YuxuanSnow/InfiniHuman/)  | [Link](https://yuxuan-xue.com/infini-human/)  |
 
 <details close>
 <summary>Accepted Papers References</summary>
@@ -2163,6 +2164,13 @@ AMASS is a large database of human motion unifying different optical marker-base
   author={Taubner, Felix and Zhang, Ruihang and Tuli, Mathieu and Bahmani, Sherwin and Lindell, David B},
   journal={arXiv preprint arXiv:2510.12785},
   year={2025}
+}
+
+@article{xue2025infinihuman,
+  author    = {Xue, Yuxuan and Xie, Xianghui and Kostyrko, Margaret and Pons-Moll, Gerard},
+  title     = {InfiniHuman: Infinite 3D Human Creation with Precise Control},
+  booktitle = {SIGGRAPH Asia 2025 Conference Papers},
+  year      = {2025},
 }
 
 ```
