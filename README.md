@@ -1307,6 +1307,7 @@ The quality of video-text pairs fundamentally determines the upper bound of text
 | 2025 | **Scene Splatter: Momentum 3D Scene Generation from Single Image with Video Diffusion Model**  | CVPR 2025 |          [Link](https://arxiv.org/abs/2504.02764)          | [Link](https://github.com/shengjun-zhang/Scene-Splatter)  | [Link](https://shengjun-zhang.github.io/SceneSplatter/)  |
 | 2025 | **ScenePainter: Semantically Consistent Perpetual 3D Scene Generation with Concept Relation Alignment**  | ICCV 2025 |          [Link](https://arxiv.org/abs/2507.19058)          | [Link](https://github.com/xiac20/ScenePainter)  | [Link](https://xiac20.github.io/ScenePainter/)  |
 | 2025 | **Bolt3D: Generating 3D Scenes in Seconds**  | ICCV 2025 |          [Link](https://arxiv.org/abs/2503.14445)          | --  | [Link](https://szymanowiczs.github.io/bolt3d)  |
+| 2025 | **Generating Physically Stable and Buildable Brick Structures from Text**  | ICCV 2025 Best Paper |          [Link](https://arxiv.org/abs/2505.05469)          | [Link](https://github.com/AvaLovelace1/BrickGPT/)  | [Link](https://avalovelace1.github.io/BrickGPT/)  |
 | 2025 | **WorldExplorer: Towards Generating Fully Navigable 3D Scenes**  | SIGGRAPH Asia 2025 |          [Link](https://arxiv.org/abs/2506.01799)          | [Link](https://github.com/mschneider456/worldexplorer)  | [Link](https://mschneider456.github.io/world-explorer/)  |
 | 2025 | **VideoFrom3D: 3D Scene Video Generation via Complementary Image and Video Diffusion Models**  | SIGGRAPH Asia 2025 |          [Link](https://arxiv.org/abs/2509.17985)          | [Link](https://github.com/KIMGEONUNG/VideoFrom3D)  | [Link](https://kimgeonung.github.io/VideoFrom3D/)  |
 
@@ -1337,6 +1338,13 @@ author={Szymanowicz, Stanislaw and Zhang, Jason Y. and Srinivasan, Pratul
      Martin-Brualla, Ricardo and Barron, Jonathan T. and Henzler, Philipp},
 journal={International Conference on Computer Vision},
 year={2025}
+}
+
+@inproceedings{pun2025brickgpt,
+    title     = {Generating Physically Stable and Buildable Brick Structures from Text},
+    author    = {Pun, Ava and Deng, Kangle and Liu, Ruixuan and Ramanan, Deva and Liu, Changliu and Zhu, Jun-Yan},
+    booktitle = {ICCV},
+    year      = {2025}
 }
 
 @article{schneider2025worldexplorer,
