@@ -1298,6 +1298,7 @@ The quality of video-text pairs fundamentally determines the upper bound of text
 | 2025 | **Generating Physically Stable and Buildable Brick Structures from Text**  | ICCV 2025 Best Paper |          [Link](https://arxiv.org/abs/2505.05469)          | [Link](https://github.com/AvaLovelace1/BrickGPT/)  | [Link](https://avalovelace1.github.io/BrickGPT/)  |
 | 2025 | **WorldExplorer: Towards Generating Fully Navigable 3D Scenes**  | SIGGRAPH Asia 2025 |          [Link](https://arxiv.org/abs/2506.01799)          | [Link](https://github.com/mschneider456/worldexplorer)  | [Link](https://mschneider456.github.io/world-explorer/)  |
 | 2025 | **VideoFrom3D: 3D Scene Video Generation via Complementary Image and Video Diffusion Models**  | SIGGRAPH Asia 2025 |          [Link](https://arxiv.org/abs/2509.17985)          | [Link](https://github.com/KIMGEONUNG/VideoFrom3D)  | [Link](https://kimgeonung.github.io/VideoFrom3D/)  |
+| 2025 | **SceneWeaver: All-in-One 3D Scene Synthesis with an Extensible and Self-Reflective Agent**  | NeurIPS 2025 |          [Link](https://arxiv.org/abs/2509.20414)          | [Link](https://github.com/Scene-Weaver/SceneWeaver)  | [Link](https://scene-weaver.github.io/)  |
 
 <details close>
 <summary>Accepted Papers References</summary>
@@ -1346,6 +1347,13 @@ year={2025}
   title={VideoFrom3D: 3D Scene Video Generation via Complementary Image and Video Diffusion Models},
   author={Kim, Geonung and Han, Janghyeok and Cho, Sunghyun},
   journal={arXiv preprint arXiv:2509.17985},
+  year={2025}
+}
+
+@article{yang2025sceneweaver,
+  title={SceneWeaver: All-in-One 3D Scene Synthesis with an Extensible and Self-Reflective Agent},
+  author={Yang, Yandan and Jia, Baoxiong and Zhang, Shujie and Huang, Siyuan},
+  journal={arXiv preprint arXiv:2509.20414},
   year={2025}
 }
 
@@ -1492,6 +1500,16 @@ Xinyang Li, Tengfei Wang, Zixiao Gu, Shengchuan Zhang, Chunchao Guo, Liujuan Cao
 We propose FlashWorld, a generative model that produces 3D scenes from a single image or text prompt in seconds, 10~100 faster than previous works while possessing superior rendering quality. Our approach shifts from the conventional multi-view-oriented (MV-oriented) paradigm, which generates multi-view images for subsequent 3D reconstruction, to a 3D-oriented approach where the model directly produces 3D Gaussian representations during multi-view generation. While ensuring 3D consistency, 3D-oriented method typically suffers poor visual quality. FlashWorld includes a dual-mode pre-training phase followed by a cross-mode post-training phase, effectively integrating the strengths of both paradigms. Specifically, leveraging the prior from a video diffusion model, we first pre-train a dual-mode multi-view diffusion model, which jointly supports MV-oriented and 3D-oriented generation modes. To bridge the quality gap in 3D-oriented generation, we further propose a cross-mode post-training distillation by matching distribution from consistent 3D-oriented mode to high-quality MV-oriented mode. This not only enhances visual quality while maintaining 3D consistency, but also reduces the required denoising steps for inference. Also, we propose a strategy to leverage massive single-view images and text prompts during this process to enhance the model's generalization to out-of-distribution inputs. Extensive experiments demonstrate the superiority and efficiency of our method.
 </details>
 
+#### 16. WorldGrow: Generating Infinite 3D World
+Sikuang Li, Chen Yang, Jiemin Fang, Taoran Yi, Jia Lu, Jiazhong Cen, Lingxi Xie, Wei Shen, Qi Tian
+
+(SJTU, Huawei Inc., Huazhong University of Science and Technology)
+
+<details span>
+<summary><b>Abstract</b></summary>
+We tackle the challenge of generating the infinitely extendable 3D world -- large, continuous environments with coherent geometry and realistic appearance. Existing methods face key challenges: 2D-lifting approaches suffer from geometric and appearance inconsistencies across views, 3D implicit representations are hard to scale up, and current 3D foundation models are mostly object-centric, limiting their applicability to scene-level generation. Our key insight is leveraging strong generation priors from pre-trained 3D models for structured scene block generation. To this end, we propose WorldGrow, a hierarchical framework for unbounded 3D scene synthesis. Our method features three core components: (1) a data curation pipeline that extracts high-quality scene blocks for training, making the 3D structured latent representations suitable for scene generation; (2) a 3D block inpainting mechanism that enables context-aware scene extension; and (3) a coarse-to-fine generation strategy that ensures both global layout plausibility and local geometric/textural fidelity. Evaluated on the large-scale 3D-FRONT dataset, WorldGrow achieves SOTA performance in geometry reconstruction, while uniquely supporting infinite scene generation with photorealistic and structurally consistent outputs. These results highlight its capability for constructing large-scale virtual environments and potential for building future world models.
+</details>
+
 | Year | Title                                                        | ArXiv Time  |                           Paper                            |                      Code                      | Project Page                      |
 | ---- | ------------------------------------------------------------ | :----: | :--------------------------------------------------------: | :--------------------------------------------: | :--------------------------------------------: |
 | 2025 | **LAYOUTDREAMER: Physics-guided Layout for Text-to-3D Compositional Scene Generation**  | 4 Feb 2025 |          [Link](https://arxiv.org/abs/2502.01949)          | --  | --  |
@@ -1508,7 +1526,9 @@ We propose FlashWorld, a generative model that produces 3D scenes from a single 
 | 2025 | **HunyuanWorld 1.0: Generating Immersive, Explorable, and Interactive 3D Worlds from Words or Pixels**  | 26 Jul 2025 |          [Technical Report](https://3d-models.hunyuan.tencent.com/world/HY_World_1_technical_report.pdf)          | [Link](https://github.com/Tencent-Hunyuan/HunyuanWorld-1.0) | [Link](https://3d-models.hunyuan.tencent.com/world/)  |
 | 2025 | **Matrix-3D: Omnidirectional Explorable 3D World Generation**  | 12 Aug 2025 |          [Technical Report](https://github.com/SkyworkAI/Matrix-3D/blob/main/asset/report.pdf)          | [Link](https://github.com/SkyworkAI/Matrix-3D) | [Link](https://matrix-3d.github.io/)  |
 | 2025 | **SceneGen: Single-Image 3D Scene Generation in One Feedforward Pass**  | 21 Aug 2025 |          [Link](https://arxiv.org/abs/2508.15769)          | [Link](https://github.com/Mengmouxu/SceneGen) | [Link](https://mengmouxu.github.io/SceneGen/)  |
-| 2025 | **FlashWorld: High-quality 3D Scene Generation within Seconds**  | 15 Oct  2025 |          [Link](https://arxiv.org/abs/2510.13678)          | [Link](https://github.com/imlixinyang/FlashWorld) | [Link](https://imlixinyang.github.io/FlashWorld-Project-Page/)  |
+| 2025 | **FlashWorld: High-quality 3D Scene Generation within Seconds**  | 15 Oct 2025 |          [Link](https://arxiv.org/abs/2510.13678)          | [Link](https://github.com/imlixinyang/FlashWorld) | [Link](https://imlixinyang.github.io/FlashWorld-Project-Page/)  |
+| 2025 | **WorldGrow: Generating Infinite 3D World**  | 24 Oct 2025 |          [Link](https://arxiv.org/abs/2510.21682)          | [Link](https://github.com/world-grow/WorldGrow) | [Link](https://world-grow.github.io/)  |
+
 
 <details close>
 <summary>ArXiv Papers References</summary>
@@ -1634,6 +1654,13 @@ We propose FlashWorld, a generative model that produces 3D scenes from a single 
       archivePrefix={arXiv},
       primaryClass={cs.CV},
       url={https://arxiv.org/abs/2510.13678}, 
+}
+
+@article{worldgrow2025,
+  title   = {WorldGrow: Generating Infinite 3D World},
+  author  = {Li, Sikuang and Yang, Chen and Fang, Jiemin and Yi, Taoran and Lu, Jia and Cen, Jiazhong and Xie, Lingxi and Shen, Wei and Tian, Qi},
+  journal = {arXiv preprint arXiv:2510.21682},
+  year    = {2025}
 }
 
 ```
