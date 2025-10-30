@@ -41,6 +41,7 @@ This repository is divided into two main sections:
   - [Text to 4D](#text-to-4d)
     * [Accepted Papers](#-4d-accepted-papers)
     * [ArXiv Papers](#-4d-arxiv-papers)
+    * [Additional Info](#previous-papers-and-other-awesome-repos)
   - [Text to Video](#text-to-video)
     * [Accepted Papers](#-t2v-accepted-papers)
     * [ArXiv Papers](#-t2v-arxiv-papers)
@@ -435,6 +436,7 @@ An open collection of state-of-the-art (SOTA), novel **Text to X (X can be every
 | 2025 | **HoloTime: Taming Video Diffusion Models for Panoramic 4D Scene Generation**  | ACM MM 2025 |          [Link](https://arxiv.org/abs/2504.21650)          | [Link](https://github.com/PKU-YuanGroup/HoloTime)  | [Link](https://zhouhyocean.github.io/holotime/)  |
 | 2025 | **Stable Part Diffusion 4D: Multi-View RGB and Kinematic Parts Video Generation**  | NeurIPS 2025 |          [Link](https://arxiv.org/abs/2509.10687)          | Coming Soon! | [Link](https://stablepartdiffusion4d.github.io/)  |
 | 2025 | **In-2-4D: Inbetweening from Two Single-View Images to 4D Generation**  | SIGGRAPH ASIA 2025 |          [Link](https://arxiv.org/abs/2504.08366)          | [Link](https://github.com/sauradip/In-2-4D)  | [Link](https://in-2-4d.github.io/)  |
+| 2025 | **Track, Inpaint, Resplat: Subject-driven 3D and 4D Generation with Progressive Texture Infilling**  | NeurIPS 2025 |          [Link](https://arxiv.org/abs/2510.23605)          | -- | [Link](https://zsh2000.github.io/track-inpaint-resplat.github.io/)  |
 
 <details close>
 <summary>Accepted Papers References</summary>
@@ -582,6 +584,13 @@ url={https://arxiv.org/abs/2508.12438}
   title={In-2-4d: Inbetweening from two single-view images to 4d generation},
   author={Nag, Sauradip and Cohen-Or, Daniel and Zhang, Hao and Mahdavi-Amiri, Ali},
   journal={arXiv preprint arXiv:2504.08366},
+  year={2025}
+}
+
+@inproceedings{zheng2025trackinpaintresplat,
+  title={Track, Inpaint, Resplat: Subject-driven 3D and 4D Generation with Progressive Texture Infilling},
+  author={Zheng, Shuhong and Mirzaei, Ashkan and Gilitschenski, Igor},
+  booktitle={NeurIPS},
   year={2025}
 }
 
@@ -848,7 +857,7 @@ Video-conditioned 4D shape generation aims to recover time-varying 3D geometry a
 
 ---
 
-### Previous Papers
+### Previous Papers and Other Awesome Repos
 
 #### Year 2023
 In 2023, tasks classified as text/Image to 4D and video to 4D generally involve producing four-dimensional data from text/Image or video input. For more details, please check the [2023 4D Papers](./docs/4d/4d_2023.md), including 6 accepted papers and 3 arXiv papers.
@@ -861,6 +870,7 @@ For more details, please check the [2024 4D Papers](./docs/4d/4d_2024.md), inclu
 
 > ##### Survey
 * [11 Sep 2025]**3D and 4D World Modeling: A Survey** [[Paper](https://arxiv.org/abs/2509.07996)][[GitHub](https://github.com/worldbench/survey)]
+* [22 Oct 2025]**Advances in 4D Representation: Geometry, Motion, and Interaction** [[Paper](https://arxiv.org/abs/2510.19255)][[Project Page](https://mingrui-zhao.github.io/4DRep-GMI/)]
 
 </details>
 
