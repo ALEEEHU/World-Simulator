@@ -23,6 +23,8 @@ This repository is divided into two main sections:
 ## Table of Contents
 - [Our Survey Paper Collection](#-our-survey-paper-collection)
   - [Abstract](#abstract)
+    * [🔥 Cite Us!](#-citation)
+    * [💡 New to this field? Check this!](#-getting-started-with-key-concepts)
   - [Paradigms](#paradigms)
     * [2D Generation](#2d-generation)
     * [Video Generation](#video-generation)
@@ -75,8 +77,6 @@ This repository is divided into two main sections:
 > ### Abstract
 Understanding and replicating the real world is a critical challenge in Artificial General Intelligence (AGI) research. To achieve this, many existing approaches, such as world models, aim to capture the fundamental principles governing the physical world, enabling more accurate simulations and meaningful interactions. However, current methods often treat different modalities, including 2D (images), videos, 3D, and 4D representations, as independent domains, overlooking their interdependencies. Additionally, these methods typically focus on isolated dimensions of reality without systematically integrating their connections. In this survey, we present a unified survey for multimodal generative models that investigate the progression of data dimensionality in real-world simulation. Specifically, this survey starts from 2D generation (appearance), then moves to video (appearance+dynamics) and 3D generation (appearance+geometry), and finally culminates in 4D generation that integrate all dimensions. To the best of our knowledge, this is the first attempt to systematically unify the study of 2D, video, 3D and 4D generation within a single framework. To guide future research, we provide a comprehensive review of datasets, evaluation metrics and future directions, and fostering insights for newcomers. This survey serves as a bridge to advance the study of multimodal generative models and real-world simulation within a unified framework. 
 
-**🤝 New to this field?** For comprehensive definitions of technical terms and concepts (e.g., NeRF, 3DGS, SDS, Diffusion Models), please refer to our [Glossary](./docs/glossary/glossary.md). 
-
 > ### ⭐ Citation
 
 If you find this paper and repo helpful for your research, please cite it below:
@@ -91,6 +91,11 @@ If you find this paper and repo helpful for your research, please cite it below:
 }
 
 ```
+
+> ### 🧭 Getting Started with Key Concepts
+
+> [!Note]
+> If you are new to this field, you can find clear and concise definitions of essential technical terms and concepts, such as NeRF, 3DGS, SDS, and Diffusion Models in our [Glossary](./docs/glossary/glossary.md).
 
 ## Paradigms
 
