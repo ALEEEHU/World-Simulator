@@ -391,6 +391,7 @@ An open collection of state-of-the-art (SOTA), novel **Text to X (X can be every
 <details span>
 <summary><b>2025 Update Logs:</b></summary>
 
+* `2025.12.03` - update several papers accepted by NeurIPS 2025, congrats to all 🎉
 * `2025.05.08` - update new layout.
 * `2025.03.10` - [CVPR 2025 Accepted Papers](https://cvpr.thecvf.com/Conferences/2025/AcceptedPapers)🎉
 * `2025.02.28` - update several papers status "CVPR 2025" to accepted papers, congrats to all 🎉
@@ -1377,6 +1378,7 @@ The quality of video-text pairs fundamentally determines the upper bound of text
 | 2025 | **Generating Physically Stable and Buildable Brick Structures from Text**  | ICCV 2025 Best Paper |          [Link](https://arxiv.org/abs/2505.05469)          | [Link](https://github.com/AvaLovelace1/BrickGPT/)  | [Link](https://avalovelace1.github.io/BrickGPT/)  |
 | 2025 | **WorldExplorer: Towards Generating Fully Navigable 3D Scenes**  | SIGGRAPH Asia 2025 |          [Link](https://arxiv.org/abs/2506.01799)          | [Link](https://github.com/mschneider456/worldexplorer)  | [Link](https://mschneider456.github.io/world-explorer/)  |
 | 2025 | **VideoFrom3D: 3D Scene Video Generation via Complementary Image and Video Diffusion Models**  | SIGGRAPH Asia 2025 |          [Link](https://arxiv.org/abs/2509.17985)          | [Link](https://github.com/KIMGEONUNG/VideoFrom3D)  | [Link](https://kimgeonung.github.io/VideoFrom3D/)  |
+| 2025 | **HiScene: Creating Hierarchical 3D Scenes with Isometric View Generation**  | ACM MM 2025 |          [Link](https://arxiv.org/abs/2504.13072)          | --  | [Link](https://zju3dv.github.io/hiscene/)  |
 | 2025 | **SceneWeaver: All-in-One 3D Scene Synthesis with an Extensible and Self-Reflective Agent**  | NeurIPS 2025 |          [Link](https://arxiv.org/abs/2509.20414)          | [Link](https://github.com/Scene-Weaver/SceneWeaver)  | [Link](https://scene-weaver.github.io/)  |
 | 2025 | **WORLDMEM: Long-term Consistent World Simulation with Memory**  | NeurIPS 2025 |          [Link](https://arxiv.org/abs/2504.12369)          | [Link](https://github.com/xizaoqu/WorldMem)  | [Link](https://xizaoqu.github.io/worldmem/)  |
 | 2025 | **SceneGen: Single-Image 3D Scene Generation in One Feedforward Pass**  | 3DV 2026 |          [Link](https://arxiv.org/abs/2508.15769)          | [Link](https://github.com/Mengmouxu/SceneGen) | [Link](https://mengmouxu.github.io/SceneGen/)  |
@@ -1432,6 +1434,14 @@ year={2025}
   year={2025}
 }
 
+@inproceedings{dong2025hiscene,
+  title={HiScene: creating hierarchical 3D scenes with isometric view generation},
+  author={Dong, Wenqi and Yang, Bangbang and Yang, Zesong and Li, Yuan and Hu, Tao and Bao, Hujun and Ma, Yuewen and Cui, Zhaopeng},
+  booktitle={Proceedings of the 33rd ACM International Conference on Multimedia},
+  pages={9783--9792},
+  year={2025}
+}
+
 @article{yang2025sceneweaver,
   title={SceneWeaver: All-in-One 3D Scene Synthesis with an Extensible and Self-Reflective Agent},
   author={Yang, Yandan and Jia, Baoxiong and Zhang, Shujie and Huang, Siyuan},
@@ -1474,16 +1484,7 @@ Yang Zhou, Zongjin He, Qixuan Li, Chao Wang (ShangHai University)
 Recently, the field of text-guided 3D scene generation has garnered significant attention. High-quality generation that aligns with physical realism and high controllability is crucial for practical 3D scene applications. However, existing methods face fundamental limitations: (i) difficulty capturing complex relationships between multiple objects described in the text, (ii) inability to generate physically plausible scene layouts, and (iii) lack of controllability and extensibility in compositional scenes. In this paper, we introduce LayoutDreamer, a framework that leverages 3D Gaussian Splatting (3DGS) to facilitate high-quality, physically consistent compositional scene generation guided by text. Specifically, given a text prompt, we convert it into a directed scene graph and adaptively adjust the density and layout of the initial compositional 3D Gaussians. Subsequently, dynamic camera adjustments are made based on the training focal point to ensure entity-level generation quality. Finally, by extracting directed dependencies from the scene graph, we tailor physical and layout energy to ensure both realism and flexibility. Comprehensive experiments demonstrate that LayoutDreamer outperforms other compositional scene generation quality and semantic alignment methods. Specifically, it achieves state-of-the-art (SOTA) performance in the multiple objects generation metric of T3Bench.
 </details>
 
-#### 2. HiScene: Creating Hierarchical 3D Scenes with Isometric View Generation
-Wenqi Dong, Bangbang Yang, Zesong Yang, Yuan Li, Tao Hu, Hujun Bao, Yuewen Ma, Zhaopeng Cui
-
-(Zhejiang University, ByteDance)
-<details span>
-<summary><b>Abstract</b></summary>
-Scene-level 3D generation represents a critical frontier in multimedia and computer graphics, yet existing approaches either suffer from limited object categories or lack editing flexibility for interactive applications. In this paper, we present HiScene, a novel hierarchical framework that bridges the gap between 2D image generation and 3D object generation and delivers high-fidelity scenes with compositional identities and aesthetic scene content. Our key insight is treating scenes as hierarchical "objects" under isometric views, where a room functions as a complex object that can be further decomposed into manipulatable items. This hierarchical approach enables us to generate 3D content that aligns with 2D representations while maintaining compositional structure. To ensure completeness and spatial alignment of each decomposed instance, we develop a video-diffusion-based amodal completion technique that effectively handles occlusions and shadows between objects, and introduce shape prior injection to ensure spatial coherence within the scene. Experimental results demonstrate that our method produces more natural object arrangements and complete object instances suitable for interactive applications, while maintaining physical plausibility and alignment with user inputs.
-</details>
-
-#### 3. 3DTown: Constructing a 3D Town from a Single Image
+#### 2. 3DTown: Constructing a 3D Town from a Single Image
 Kaizhi Zheng, Ruijian Zhang, Jing Gu, Jie Yang, Xin Eric Wang
 
 (University of California Santa Cruz, Columbia University, Cybever AI)
@@ -1492,7 +1493,7 @@ Kaizhi Zheng, Ruijian Zhang, Jing Gu, Jie Yang, Xin Eric Wang
 Acquiring detailed 3D scenes typically demands costly equipment, multi-view data, or labor-intensive modeling. Therefore, a lightweight alternative, generating complex 3D scenes from a single top-down image, plays an essential role in real-world applications. While recent 3D generative models have achieved remarkable results at the object level, their extension to full-scene generation often leads to inconsistent geometry, layout hallucinations, and low-quality meshes. In this work, we introduce 3DTown, a training-free framework designed to synthesize realistic and coherent 3D scenes from a single top-down view. Our method is grounded in two principles: region-based generation to improve image-to-3D alignment and resolution, and spatial-aware 3D inpainting to ensure global scene coherence and high-quality geometry generation. Specifically, we decompose the input image into overlapping regions and generate each using a pretrained 3D object generator, followed by a masked rectified flow inpainting process that fills in missing geometry while maintaining structural continuity. This modular design allows us to overcome resolution bottlenecks and preserve spatial structure without requiring 3D supervision or fine-tuning. Extensive experiments across diverse scenes show that 3DTown outperforms state-of-the-art baselines, including Trellis, Hunyuan3D-2, and TripoSG, in terms of geometry quality, spatial coherence, and texture fidelity. Our results demonstrate that high-quality 3D town generation is achievable from a single image using a principled, training-free approach.
 </details>
 
-#### 4. Agentic 3D Scene Generation with Spatially Contextualized VLMs
+#### 3. Agentic 3D Scene Generation with Spatially Contextualized VLMs
 Xinhang Liu, Yu-Wing Tai, Chi-Keung Tang (HKUST, Dartmouth College)
 
 <details span>
@@ -1500,7 +1501,7 @@ Xinhang Liu, Yu-Wing Tai, Chi-Keung Tang (HKUST, Dartmouth College)
 Despite recent advances in multimodal content generation enabled by vision-language models (VLMs), their ability to reason about and generate structured 3D scenes remains largely underexplored. This limitation constrains their utility in spatially grounded tasks such as embodied AI, immersive simulations, and interactive 3D applications. We introduce a new paradigm that enables VLMs to generate, understand, and edit complex 3D environments by injecting a continually evolving spatial context. Constructed from multimodal input, this context consists of three components: a scene portrait that provides a high-level semantic blueprint, a semantically labeled point cloud capturing object-level geometry, and a scene hypergraph that encodes rich spatial relationships, including unary, binary, and higher-order constraints. Together, these components provide the VLM with a structured, geometry-aware working memory that integrates its inherent multimodal reasoning capabilities with structured 3D understanding for effective spatial reasoning. Building on this foundation, we develop an agentic 3D scene generation pipeline in which the VLM iteratively reads from and updates the spatial context. The pipeline features high-quality asset generation with geometric restoration, environment setup with automatic verification, and ergonomic adjustment guided by the scene hypergraph. Experiments show that our framework can handle diverse and challenging inputs, achieving a level of generalization not observed in prior work. Further results demonstrate that injecting spatial context enables VLMs to perform downstream tasks such as interactive scene editing and path planning, suggesting strong potential for spatially intelligent systems in computer graphics, 3D vision, and embodied applications.
 </details>
 
-#### 5. Voyager: Long-Range and World-Consistent Video Diffusion for Explorable 3D Scene Generation
+#### 4. Voyager: Long-Range and World-Consistent Video Diffusion for Explorable 3D Scene Generation
 Tianyu Huang, Wangguandong Zheng, Tengfei Wang, Yuhao Liu, Zhenwei Wang, Junta Wu, Jie Jiang, Hui Li, Rynson W.H. Lau, Wangmeng Zuo, Chunchao Guo
 
 (Harbin Institute of Technology, Southeast University, Tencent Hunyuan, City University of Hong Kong)
@@ -1510,7 +1511,7 @@ Tianyu Huang, Wangguandong Zheng, Tengfei Wang, Yuhao Liu, Zhenwei Wang, Junta W
 Real-world applications like video gaming and virtual reality often demand the ability to model 3D scenes that users can explore along custom camera trajectories. While significant progress has been made in generating 3D objects from text or images, creating long-range, 3D-consistent, explorable 3D scenes remains a complex and challenging problem. In this work, we present Voyager, a novel video diffusion framework that generates world-consistent 3D point-cloud sequences from a single image with user-defined camera path. Unlike existing approaches, Voyager achieves end-to-end scene generation and reconstruction with inherent consistency across frames, eliminating the need for 3D reconstruction pipelines (e.g., structure-from-motion or multi-view stereo). Our method integrates three key components: 1) World-Consistent Video Diffusion: A unified architecture that jointly generates aligned RGB and depth video sequences, conditioned on existing world observation to ensure global coherence 2) Long-Range World Exploration: An efficient world cache with point culling and an auto-regressive inference with smooth video sampling for iterative scene extension with context-aware consistency, and 3) Scalable Data Engine: A video reconstruction pipeline that automates camera pose estimation and metric depth prediction for arbitrary videos, enabling large-scale, diverse training data curation without manual 3D annotations. Collectively, these designs result in a clear improvement over existing methods in visual quality and geometric accuracy, with versatile applications.
 </details>
 
-#### 6. ReSpace: Text-Driven 3D Scene Synthesis and Editing with Preference Alignment
+#### 5. ReSpace: Text-Driven 3D Scene Synthesis and Editing with Preference Alignment
 Martin JJ. Bucher, Iro Armeni (Stanford University)
 
 <details span>
@@ -1518,7 +1519,7 @@ Martin JJ. Bucher, Iro Armeni (Stanford University)
 Scene synthesis and editing has emerged as a promising direction in computer graphics. Current trained approaches for 3D indoor scenes either oversimplify object semantics through one-hot class encodings (e.g., 'chair' or 'table'), require masked diffusion for editing, ignore room boundaries, or rely on floor plan renderings that fail to capture complex layouts. In contrast, LLM-based methods enable richer semantics via natural language (e.g., 'modern studio with light wood furniture') but do not support editing, remain limited to rectangular layouts or rely on weak spatial reasoning from implicit world models. We introduce ReSpace, a generative framework for text-driven 3D indoor scene synthesis and editing using autoregressive language models. Our approach features a compact structured scene representation with explicit room boundaries that frames scene editing as a next-token prediction task. We leverage a dual-stage training approach combining supervised fine-tuning and preference alignment, enabling a specially trained language model for object addition that accounts for user instructions, spatial geometry, object semantics, and scene-level composition. For scene editing, we employ a zero-shot LLM to handle object removal and prompts for addition. We further introduce a novel voxelization-based evaluation that captures fine-grained geometry beyond 3D bounding boxes. Experimental results surpass state-of-the-art on object addition while maintaining competitive results on full scene synthesis.
 </details>
 
-#### 7. EmbodiedGen: Towards a Generative 3D World Engine for Embodied Intelligence
+#### 6. EmbodiedGen: Towards a Generative 3D World Engine for Embodied Intelligence
 Xinjie Wang, Liu Liu, Yu Cao, Ruiqi Wu, Wenkang Qin, Dehui Wang, Wei Sui, Zhizhong Su
 
 (Horizon Robotics, GigaAI, D-Robotics, Shanghai Jiao Tong University, Nankai University)
@@ -1528,7 +1529,7 @@ Xinjie Wang, Liu Liu, Yu Cao, Ruiqi Wu, Wenkang Qin, Dehui Wang, Wei Sui, Zhizho
 Constructing a physically realistic and accurately scaled simulated 3D world is crucial for the training and evaluation of embodied intelligence tasks. The diversity, realism, low cost accessibility and affordability of 3D data assets are critical for achieving generalization and scalability in embodied AI. However, most current embodied intelligence tasks still rely heavily on traditional 3D computer graphics assets manually created and annotated, which suffer from high production costs and limited realism. These limitations significantly hinder the scalability of data driven approaches. We present EmbodiedGen, a foundational platform for interactive 3D world generation. It enables the scalable generation of high-quality, controllable and photorealistic 3D assets with accurate physical properties and real-world scale in the Unified Robotics Description Format (URDF) at low cost. These assets can be directly imported into various physics simulation engines for fine-grained physical control, supporting downstream tasks in training and evaluation. EmbodiedGen is an easy-to-use, full-featured toolkit composed of six key modules: Image-to-3D, Text-to-3D, Texture Generation, Articulated Object Generation, Scene Generation and Layout Generation. EmbodiedGen generates diverse and interactive 3D worlds composed of generative 3D assets, leveraging generative AI to address the challenges of generalization and evaluation to the needs of embodied intelligence related research. 
 </details>
 
-#### 8. ImmerseGen: Agent-Guided Immersive World Generation with Alpha-Textured Proxies
+#### 7. ImmerseGen: Agent-Guided Immersive World Generation with Alpha-Textured Proxies
 Jinyan Yuan, Bangbang Yang, Keke Wang, Panwang Pan, Lin Ma, Xuehai Zhang, Xiao Liu, Zhaopeng Cui, Yuewen Ma
 
 (PICO Bytedance, State Key Laboratory of CAD&CG Zhejiang University)
@@ -1538,7 +1539,7 @@ Jinyan Yuan, Bangbang Yang, Keke Wang, Panwang Pan, Lin Ma, Xuehai Zhang, Xiao L
 Automatic creation of 3D scenes for immersive VR presence has been a significant research focus for decades. However, existing methods often rely on either high-poly mesh modeling with post-hoc simplification or massive 3D Gaussians, resulting in a complex pipeline or limited visual realism. In this paper, we demonstrate that such exhaustive modeling is unnecessary for achieving compelling immersive experience. We introduce ImmerseGen, a novel agent-guided framework for compact and photorealistic world modeling. ImmerseGen represents scenes as hierarchical compositions of lightweight geometric proxies, i.e., simplified terrain and billboard meshes, and generates photorealistic appearance by synthesizing RGBA textures onto these proxies. Specifically, we propose terrain-conditioned texturing for user-centric base world synthesis, and RGBA asset texturing for midground and foreground scenery. This reformulation offers several advantages: (i) it simplifies modeling by enabling agents to guide generative models in producing coherent textures that integrate seamlessly with the scene; (ii) it bypasses complex geometry creation and decimation by directly synthesizing photorealistic textures on proxies, preserving visual quality without degradation; (iii) it enables compact representations suitable for real-time rendering on mobile VR headsets. To automate scene creation from text prompts, we introduce VLM-based modeling agents enhanced with semantic grid-based analysis for improved spatial reasoning and accurate asset placement. ImmerseGen further enriches scenes with dynamic effects and ambient audio to support multisensory immersion. Experiments on scene generation and live VR showcases demonstrate that ImmerseGen achieves superior photorealism, spatial coherence and rendering efficiency compared to prior methods.
 </details>
 
-#### 9. DreamAnywhere: Object-Centric Panoramic 3D Scene Generation
+#### 8. DreamAnywhere: Object-Centric Panoramic 3D Scene Generation
 Edoardo Alberto Dominici, Jozef Hladky, Floor Verhoeven, Lukas Radl, Thomas Deixelberger, Stefan Ainetter, Philipp Drescher, Stefan Hauswiesner, Arno Coomans, Giacomo Nazzaro, Konstantinos Vardis, Markus Steinberger
 
 (Huawei Technologies, Graz University of Technology)
@@ -1548,7 +1549,7 @@ Edoardo Alberto Dominici, Jozef Hladky, Floor Verhoeven, Lukas Radl, Thomas Deix
 Recent advances in text-to-3D scene generation have demonstrated significant potential to transform content creation across multiple industries. Although the research community has made impressive progress in addressing the challenges of this complex task, existing methods often generate environments that are only front-facing, lack visual fidelity, exhibit limited scene understanding, and are typically fine-tuned for either indoor or outdoor settings. In this work, we address these issues and propose DreamAnywhere, a modular system for the fast generation and prototyping of 3D scenes. Our system synthesizes a 360° panoramic image from text, decomposes it into background and objects, constructs a complete 3D representation through hybrid inpainting, and lifts object masks to detailed 3D objects that are placed in the virtual environment. DreamAnywhere supports immersive navigation and intuitive object-level editing, making it ideal for scene exploration, visual mock-ups, and rapid prototyping -- all with minimal manual modeling. These features make our system particularly suitable for low-budget movie production, enabling quick iteration on scene layout and visual tone without the overhead of traditional 3D workflows. Our modular pipeline is highly customizable as it allows components to be replaced independently. Compared to current state-of-the-art text and image-based 3D scene generation approaches, DreamAnywhere shows significant improvements in coherence in novel view synthesis and achieves competitive image quality, demonstrating its effectiveness across diverse and challenging scenarios. A comprehensive user study demonstrates a clear preference for our method over existing approaches, validating both its technical robustness and practical usefulness.
 </details>
 
-#### 10. Towards Geometric and Textural Consistency 3D Scene Generation via Single Image-guided Model Generation and Layout Optimization
+#### 9. Towards Geometric and Textural Consistency 3D Scene Generation via Single Image-guided Model Generation and Layout Optimization
 Xiang Tang, Ruotong Li, Xiaopeng Fan
 
 (Harbin Institute of Technology Shenzhen, Peng Cheng Laboratory, Harbin Institute of Technology, Harbin Institute of Technology Suzhou Research Institute)
@@ -1558,7 +1559,7 @@ Xiang Tang, Ruotong Li, Xiaopeng Fan
 In recent years, 3D generation has made great strides in both academia and industry. However, generating 3D scenes from a single RGB image remains a significant challenge, as current approaches often struggle to ensure both object generation quality and scene coherence in multi-object scenarios. To overcome these limitations, we propose a novel three-stage framework for 3D scene generation with explicit geometric representations and high-quality textural details via single image-guided model generation and spatial layout optimization. Our method begins with an image instance segmentation and inpainting phase, which recovers missing details of occluded objects in the input images, thereby achieving complete generation of foreground 3D assets. Subsequently, our approach captures the spatial geometry of reference image by constructing pseudo-stereo viewpoint for camera parameter estimation and scene depth inference, while employing a model selection strategy to ensure optimal alignment between the 3D assets generated in the previous step and the input. Finally, through model parameterization and minimization of the Chamfer distance between point clouds in 3D and 2D space, our approach optimizes layout parameters to produce an explicit 3D scene representation that maintains precise alignment with input guidance image. Extensive experiments on multi-object scene image sets have demonstrated that our approach not only outperforms state-of-the-art methods in terms of geometric accuracy and texture fidelity of individual generated 3D models, but also has significant advantages in scene layout synthesis.
 </details>
 
-#### 11. HunyuanWorld 1.0: Generating Immersive, Explorable, and Interactive 3D Worlds from Words or Pixels
+#### 10. HunyuanWorld 1.0: Generating Immersive, Explorable, and Interactive 3D Worlds from Words or Pixels
 Tencent Hunyuan
 
 <details span>
@@ -1566,7 +1567,7 @@ Tencent Hunyuan
 Creating immersive and playable 3D worlds from texts or images remains a fundamental challenge in computer vision and graphics. Existing world generation approaches typically fall into two categories: video-based methods that offer rich diversity but lack 3D consistency and rendering efficiency, and 3D-based methods that provide geometric consistency but struggle with limited training data and memory-inefficient representations. To address these limitations, we present HunyuanWorld 1.0, a novel framework that combines the best of both worlds for generating immersive, explorable, and interactive 3D scenes from text and image conditions. Our approach features three key advantages: 1) 360° immersive experiences via panoramic world proxies; 2) mesh export capabilities for seamless compatibility with existing computer graphics pipelines; 3) disentangled object representations for augmented interactivity. The core of our framework is a semantically layered 3D mesh representation that leverages panoramic images as 360° world proxies for semantic-aware world decomposition and reconstruction, enabling the generation of diverse 3D worlds. Extensive experiments demonstrate that our method achieves state-of-the-art performance in generating coherent, explorable, and interactive 3D worlds while enabling versatile applications in virtual reality, physical simulation, game development, and interactive content creation.
 </details>
 
-#### 12. Matrix-3D: Omnidirectional Explorable 3D World Generation
+#### 11. Matrix-3D: Omnidirectional Explorable 3D World Generation
 Zhongqi Yang, Wenhang Ge, Yuqi Li, Jiaqi Chen, Haoyuan Li, Mengyin An, Fei Kang, Hua Xue, Baixin Xu, Yuyang Yin, Eric Li, Yang Liu, Yikai Wang, Hao-Xiang Guo, Yahui Zhou
 
 (Skywork AI, Hong Kong University of Science and Technology (Guangzhou), Institute of Computing Technology Chinese Academy of Sciences, School of Artificial Intelligence Beijing Normal University)
@@ -1576,7 +1577,7 @@ Zhongqi Yang, Wenhang Ge, Yuqi Li, Jiaqi Chen, Haoyuan Li, Mengyin An, Fei Kang,
 Explorable 3D world generation from a single image or text prompt forms a cornerstone of spatial intelligence. Recent works utilize video model to achieve wide-scope and generalizable 3D world generation. However, existing approaches often suffer from limited reconstruction scope and suboptimal visual quality. In this work, we propose Matrix-3D, a framework that utilize panoramic representation for wide-coverage omnidirectional explorable 3D world generation that combines conditional video generation and panoramic 3D reconstruction. We first train a trajectory-guided panoramic video diffusion model that employs scene mesh renders as condition, to enable high-quality and geometrically consistent scene video generation. To enable 3D world generation, we introduce two methods that lift the 2D content to 3D world, ensuring efficiency and effectiveness. To lift the panorama scene video to 3D world, we propose two separate pipelines — a feed-forward large reconstruction model for rapid 3D scene reconstruction and an optimization-based pipeline for accurate and detailed 3D scene reconstruction. For efficiency, we introduce a feed-forward panoramic 3D reconstruction model that projects video latents and camera poses to predict omni-directional 3D Gaussian Splatting attributes. To facilitate convergence, we adopt a two-stage training strategy and supervise the model using rendered panoramic novel views. For effectiveness, we also propose a optimization-based reconstruction method. However, no existing panoramic video dataset provides associated camera poses. To facilitate effective training, we also introduce the Matrix-Pano dataset — the first large-scale synthetic collection comprising 116,759 high-quality static panoramic video sequences with various annotations. Extensive experiments demonstrate the effectiveness of our proposed framework, which achieves state-of-the-art performance in panoramic video generation and 3D world generation.
 </details>
 
-#### 13. FlashWorld: High-quality 3D Scene Generation within Seconds
+#### 12. FlashWorld: High-quality 3D Scene Generation within Seconds
 Xinyang Li, Tengfei Wang, Zixiao Gu, Shengchuan Zhang, Chunchao Guo, Liujuan Cao 
 
 (MAC Lab Xiamen University, Tencent, Yes Lab Fudan University)
@@ -1589,7 +1590,6 @@ We propose FlashWorld, a generative model that produces 3D scenes from a single 
 | Year | Title                                                        | ArXiv Time  |                           Paper                            |                      Code                      | Project Page                      |
 | ---- | ------------------------------------------------------------ | :----: | :--------------------------------------------------------: | :--------------------------------------------: | :--------------------------------------------: |
 | 2025 | **LAYOUTDREAMER: Physics-guided Layout for Text-to-3D Compositional Scene Generation**  | 4 Feb 2025 |          [Link](https://arxiv.org/abs/2502.01949)          | --  | --  |
-| 2025 | **HiScene: Creating Hierarchical 3D Scenes with Isometric View Generation**  | 17 Apr 2025 |          [Link](https://arxiv.org/abs/2504.13072)          | --  | [Link](https://zju3dv.github.io/hiscene/)  |
 | 2025 | **3DTown: Constructing a 3D Town from a Single Image**  | 21 May 2025 |          [Link](https://arxiv.org/abs/2505.15765)          | --  | [Link](https://eric-ai-lab.github.io/3dtown.github.io/)  |
 | 2025 | **Agentic 3D Scene Generation with Spatially Contextualized VLMs**  | 26 May 2025 |          [Link](https://arxiv.org/abs/2505.20129)          | --  | [Link](https://spatctxvlm.github.io/project_page/)  |
 | 2025 | **Voyager: Long-Range and World-Consistent Video Diffusion for Explorable 3D Scene Generation**  | 4 Jun 2025 |          [Link](https://arxiv.org/abs/2506.04225)          | [Link](https://github.com/Voyager-World/Voyager)  | [Link](https://voyager-world.github.io/)  |
@@ -1614,13 +1614,6 @@ We propose FlashWorld, a generative model that produces 3D scenes from a single 
   author={Zhou, Yang and He, Zongjin and Li, Qixuan and Wang, Chao},
   journal={arXiv preprint arXiv:2502.01949},
   year={2025}
-}
-
-@article{dong2025hiscene,
-      title   = {HiScene: Creating Hierarchical 3D Scenes with Isometric View Generation},
-      author  = {Dong, Wenqi and Yang, Bangbang and Yang, Zesong and Li, Yuan and Hu, Tao and Bao, Hujun and Ma, Yuewen and Cui, Zhaopeng},
-      journal = {arXiv preprint arXiv:2504.13072},
-      year    = {2025},
 }
 
 @misc{zheng2025constructing3dtownsingle,
@@ -1752,9 +1745,11 @@ For more details, please check the [2023-2024 3D Scene Papers](./docs/3d_scene/3
 | 2025 | **MotionLab: Unified Human Motion Generation and Editing via the Motion-Condition-Motion Paradigm**  | ICCV 2025 |          [Link](https://arxiv.org/abs/2502.02358)          | [Link](https://github.com/Diouo/MotionLab)  | [Link](https://diouo.github.io/motionlab.github.io/)  |
 | 2025 | **GENMO: A GENeralist Model for Human MOtion**  | ICCV 2025 (Highlight) |          [Link](https://arxiv.org/abs/2505.01425)          | [Link](https://github.com/NVlabs/GENMO) | [Link](https://research.nvidia.com/labs/dair/genmo/)  |
 | 2025 | **ControlMM: Controllable Masked Motion Generation**  |  ICCV 2025 (Oral)  |          [Link](https://arxiv.org/abs/2410.10780)          | [Link](https://github.com/exitudio/ControlMM/) | [Link](https://exitudio.github.io/ControlMM-page/)  |
-| 2025 | **SnapMoGen: Human Motion Generation from Expressive Texts**  | NeurIPS 2025 |          [Link](https://www.arxiv.org/abs/2507.09122)          | [Link](https://github.com/snap-research/SnapMoGen)  | [Link](https://snap-research.github.io/SnapMoGen/) |
 | 2025 | **ReAlign: Bilingual Text-to-Motion Generation via Step-Aware Reward-Guided Alignment**  | AAAI 2026 |          [Link](https://www.arxiv.org/abs/2505.04974)          | [Link](https://github.com/wengwanjiang/ReAlign)  | [Link](https://wengwanjiang.github.io/ReAlign-page/)  |
+| 2025 | **SnapMoGen: Human Motion Generation from Expressive Texts**  | NeurIPS 2025 |          [Link](https://www.arxiv.org/abs/2507.09122)          | [Link](https://github.com/snap-research/SnapMoGen)  | [Link](https://snap-research.github.io/SnapMoGen/) |
 | 2025 | **Motion Anything: Any to Motion Generation**  | NeurIPS 2025 |          [Link](https://arxiv.org/abs/2503.06955)          | [Link](https://github.com/steve-zeyu-zhang/MotionAnything)  | [Link](https://steve-zeyu-zhang.github.io/MotionAnything/)  |
+| 2025 | **MotionBind: Multi-Modal Human Motion Alignment for Retrieval, Recognition, and Generation**  | NeurIPS 2025 |          [Link](https://openreview.net/forum?id=sUjwDdyspc)          | [Link](https://github.com/vidal-lab/MotionBind)  | [Link](https://vidal-lab.github.io/MotionBind/)  |
+| 2025 | **MOSPA: Human Motion Generation Driven by Spatial Audio**  | NeurIPS 2025 |          [Link](https://arxiv.org/abs/2507.11949)          | [Link](https://github.com/xsy27/Mospa-Acoustic-driven-Motion-Generation)  | [Link](https://frank-zy-dou.github.io/projects/MOSPA/index.html)  |
 
 <details close>
 <summary>Accepted Papers References</summary>
@@ -1832,13 +1827,6 @@ For more details, please check the [2023-2024 3D Scene Papers](./docs/3d_scene/3
       url={https://arxiv.org/abs/2410.10780}, 
 }
 
-@article{guo2025snapmogen,
-  title={SnapMoGen: Human Motion Generation from Expressive Texts},
-  author={Guo, Chuan and Hwang, Inwoo and Wang, Jian and Zhou, Bing},
-  journal={arXiv preprint arXiv:2507.09122},
-  year={2025}
-}
-
 @article{weng2025realign,
   title={ReAlign: Bilingual Text-to-Motion Generation via Step-Aware Reward-Guided Alignment},
   author={Weng, Wanjiang and Tan, Xiaofeng and Wang, Hongsong and Zhou, Pan},
@@ -1846,10 +1834,31 @@ For more details, please check the [2023-2024 3D Scene Papers](./docs/3d_scene/3
   year={2025}
 }
 
+@article{guo2025snapmogen,
+  title={SnapMoGen: Human Motion Generation from Expressive Texts},
+  author={Guo, Chuan and Hwang, Inwoo and Wang, Jian and Zhou, Bing},
+  journal={arXiv preprint arXiv:2507.09122},
+  year={2025}
+}
+
+
 @article{zhang2025motion,
   title={Motion anything: Any to motion generation},
   author={Zhang, Zeyu and Wang, Yiran and Mao, Wei and Li, Danning and Zhao, Rui and Wu, Biao and Song, Zirui and Zhuang, Bohan and Reid, Ian and Hartley, Richard},
   journal={arXiv preprint arXiv:2503.06955},
+  year={2025}
+}
+
+@inproceedings{kinfumotionbind,
+  title={MotionBind: Multi-Modal Human Motion Alignment for Retrieval, Recognition, and Generation},
+  author={Kinfu, Kaleab A and Vidal, Rene},
+  booktitle={The Thirty-ninth Annual Conference on Neural Information Processing Systems}
+}
+
+@article{xu2025mospa,
+  title={Mospa: Human motion generation driven by spatial audio},
+  author={Xu, Shuyang and Dou, Zhiyang and Shi, Mingyi and Pan, Liang and Ho, Leo and Wang, Jingbo and Liu, Yuan and Lin, Cheng and Ma, Yuexin and Wang, Wenping and others},
+  journal={arXiv preprint arXiv:2507.11949},
   year={2025}
 }
 
