@@ -761,6 +761,16 @@ Zhenxing Mi, Yuxin Wang, Dan Xu (The Hong Kong University of Science and Technol
 We present One4D, a unified framework for 4D generation and reconstruction that produces dynamic 4D content as synchronized RGB frames and pointmaps. By consistently handling varying sparsities of conditioning frames through a Unified Masked Conditioning (UMC) mechanism, One4D can seamlessly transition between 4D generation from a single image, 4D reconstruction from a full video, and mixed generation and reconstruction from sparse frames. Our framework adapts a powerful video generation model for joint RGB and pointmap generation, with carefully designed network architectures. The commonly used diffusion finetuning strategies for depthmap or pointmap reconstruction often fail on joint RGB and pointmap generation, quickly degrading the base video model. To address this challenge, we introduce Decoupled LoRA Control (DLC), which employs two modality-specific LoRA adapters to form decoupled computation branches for RGB frames and pointmaps, connected by lightweight, zero-initialized control links that gradually learn mutual pixel-level consistency. Trained on a mixture of synthetic and real 4D datasets under modest computational budgets, One4D produces high-quality RGB frames and accurate pointmaps across both generation and reconstruction tasks. This work represents a step toward general, high-quality geometry-based 4D world modeling using video diffusion models.
 </details>
 
+#### 16. SeeU: Seeing the Unseen World via 4D Dynamics-aware Generation
+Yu Yuan, Tharindu Wickremasinghe, Zeeshan Nadir, Xijun Wang, Yiheng Chi, Stanley H. Chan
+
+(Purdue University, Samsung Research America)
+
+<details span>
+<summary><b>Abstract</b></summary>
+Images and videos are discrete 2D projections of the 4D world (3D space + time). Most visual understanding, prediction, and generation operate directly on 2D observations, leading to suboptimal performance. We propose SeeU, a novel approach that learns the continuous 4D dynamics and generate the unseen visual contents. The principle behind SeeU is a new 2D\to4D\to2D learning framework. SeeU first reconstructs the 4D world from sparse and monocular 2D frames (2D\to4D). It then learns the continuous 4D dynamics on a low-rank representation and physical constraints (discrete 4D\tocontinuous 4D). Finally, SeeU rolls the world forward in time, re-projects it back to 2D at sampled times and viewpoints, and generates unseen regions based on spatial-temporal context awareness (4D\to2D). By modeling dynamics in 4D, SeeU achieves continuous and physically-consistent novel visual generation, demonstrating strong potentials in multiple tasks including unseen temporal generation, unseen spatial generation, and video editing.
+</details>
+
 -----
 
 </details>
@@ -782,6 +792,7 @@ We present One4D, a unified framework for 4D generation and reconstruction that 
 | 2025 | **Object-Aware 4D Human Motion Generation**  | 31 Oct 2025 |          [Link](https://arxiv.org/abs/2511.00248)          | -- | -- |
 | 2025 | **Diff4Splat: Controllable 4D Scene Generation with Latent Dynamic Reconstruction Models**  | 1 Nov 2025 |          [Link](https://arxiv.org/abs/2511.00503)          | -- | [Link](https://paulpanwang.github.io/Diff4Splat/) |
 | 2025 | **One4D: Unified 4D Generation and Reconstruction via Decoupled LoRA Control**  | 24 Nov 2025 |          [Link](https://arxiv.org/abs/2511.18922)          | [Link](https://github.com/MiZhenxing/One4D) | [Link](https://mizhenxing.github.io/One4D/) |
+| 2025 | **SeeU: Seeing the Unseen World via 4D Dynamics-aware Generation**  | 3 Dec 2025 |          [Link](https://arxiv.org/abs/2512.03350)          | [Link](https://github.com/pandayuanyu/SeeU) | [Link](https://yuyuanspace.com/SeeU/) |
 
 <details close>
 <summary>ArXiv Papers References</summary>
@@ -919,6 +930,13 @@ We present One4D, a unified framework for 4D generation and reconstruction that 
   title={One4D: Unified 4D Generation and Reconstruction via Decoupled LoRA Control},
   author={Mi, Zhenxing and Wang, Yuxin and Xu, Dan},
   journal={arXiv preprint arXiv:2511.18922},
+  year={2025}
+}
+
+@article{yuan2025seeu,
+  title={SeeU: Seeing the Unseen World via 4D Dynamics-aware Generation},
+  author={Yuan, Yu and Wickremasinghe, Tharindu and Nadir, Zeeshan and Wang, Xijun and Chi, Yiheng and Chan, Stanley H},
+  journal={arXiv preprint arXiv:2512.03350},
   year={2025}
 }
 
