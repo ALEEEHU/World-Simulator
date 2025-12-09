@@ -771,6 +771,16 @@ Yu Yuan, Tharindu Wickremasinghe, Zeeshan Nadir, Xijun Wang, Yiheng Chi, Stanley
 Images and videos are discrete 2D projections of the 4D world (3D space + time). Most visual understanding, prediction, and generation operate directly on 2D observations, leading to suboptimal performance. We propose SeeU, a novel approach that learns the continuous 4D dynamics and generate the unseen visual contents. The principle behind SeeU is a new 2D\to4D\to2D learning framework. SeeU first reconstructs the 4D world from sparse and monocular 2D frames (2D\to4D). It then learns the continuous 4D dynamics on a low-rank representation and physical constraints (discrete 4D\tocontinuous 4D). Finally, SeeU rolls the world forward in time, re-projects it back to 2D at sampled times and viewpoints, and generates unseen regions based on spatial-temporal context awareness (4D\to2D). By modeling dynamics in 4D, SeeU achieves continuous and physically-consistent novel visual generation, demonstrating strong potentials in multiple tasks including unseen temporal generation, unseen spatial generation, and video editing.
 </details>
 
+#### 17. Joint 3D Geometry Reconstruction and Motion Generation for 4D Synthesis from a Single Image
+Yanran Zhang, Ziyi Wang, Wenzhao Zheng, Zheng Zhu, Jie Zhou, Jiwen Lu
+
+(Tsinghua University, GigaAI)
+
+<details span>
+<summary><b>Abstract</b></summary>
+Generating interactive and dynamic 4D scenes from a single static image remains a core challenge. Most existing generate-then-reconstruct and reconstruct-then-generate methods decouple geometry from motion, causing spatiotemporal inconsistencies and poor generalization. To address these, we extend the reconstruct-then-generate framework to jointly perform Motion generation and geometric Reconstruction for 4D Synthesis (MoRe4D). We first introduce TrajScene-60K, a large-scale dataset of 60,000 video samples with dense point trajectories, addressing the scarcity of high-quality 4D scene data. Based on this, we propose a diffusion-based 4D Scene Trajectory Generator (4D-STraG) to jointly generate geometrically consistent and motion-plausible 4D point trajectories. To leverage single-view priors, we design a depth-guided motion normalization strategy and a motion-aware module for effective geometry and dynamics integration. We then propose a 4D View Synthesis Module (4D-ViSM) to render videos with arbitrary camera trajectories from 4D point track representations. Experiments show that MoRe4D generates high-quality 4D scenes with multi-view consistency and rich dynamic details from a single image.
+</details>
+
 -----
 
 </details>
@@ -793,6 +803,7 @@ Images and videos are discrete 2D projections of the 4D world (3D space + time).
 | 2025 | **Diff4Splat: Controllable 4D Scene Generation with Latent Dynamic Reconstruction Models**  | 1 Nov 2025 |          [Link](https://arxiv.org/abs/2511.00503)          | -- | [Link](https://paulpanwang.github.io/Diff4Splat/) |
 | 2025 | **One4D: Unified 4D Generation and Reconstruction via Decoupled LoRA Control**  | 24 Nov 2025 |          [Link](https://arxiv.org/abs/2511.18922)          | [Link](https://github.com/MiZhenxing/One4D) | [Link](https://mizhenxing.github.io/One4D/) |
 | 2025 | **SeeU: Seeing the Unseen World via 4D Dynamics-aware Generation**  | 3 Dec 2025 |          [Link](https://arxiv.org/abs/2512.03350)          | [Link](https://github.com/pandayuanyu/SeeU) | [Link](https://yuyuanspace.com/SeeU/) |
+| 2025 | **Joint 3D Geometry Reconstruction and Motion Generation for 4D Synthesis from a Single Image**  | 4 Dec 2025 |          [Link](https://arxiv.org/abs/2512.05044)          | [Link](https://github.com/Zhangyr2022/MoRe4D) | [Link](https://ivg-yanranzhang.github.io/MoRe4D/) |
 
 <details close>
 <summary>ArXiv Papers References</summary>
@@ -938,6 +949,14 @@ Images and videos are discrete 2D projections of the 4D world (3D space + time).
   author={Yuan, Yu and Wickremasinghe, Tharindu and Nadir, Zeeshan and Wang, Xijun and Chi, Yiheng and Chan, Stanley H},
   journal={arXiv preprint arXiv:2512.03350},
   year={2025}
+}
+
+@article{zhang2025more4d,
+  title={Joint 3D Geometry Reconstruction and Motion Generation for 4D Synthesis from a Single Image},
+  author={Zhang, Yanran and Wang, Ziyi and Zheng, Wenzhao and Zhu, Zheng and Zhou, Jie and Lu, Jiwen},
+  archivePrefix={arXiv},
+  primaryClass={cs.CV},
+  url={https://arxiv.org/abs/2512.05044}, 
 }
 
 ```
