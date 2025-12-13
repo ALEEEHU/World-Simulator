@@ -781,6 +781,16 @@ Yanran Zhang, Ziyi Wang, Wenzhao Zheng, Zheng Zhu, Jie Zhou, Jiwen Lu
 Generating interactive and dynamic 4D scenes from a single static image remains a core challenge. Most existing generate-then-reconstruct and reconstruct-then-generate methods decouple geometry from motion, causing spatiotemporal inconsistencies and poor generalization. To address these, we extend the reconstruct-then-generate framework to jointly perform Motion generation and geometric Reconstruction for 4D Synthesis (MoRe4D). We first introduce TrajScene-60K, a large-scale dataset of 60,000 video samples with dense point trajectories, addressing the scarcity of high-quality 4D scene data. Based on this, we propose a diffusion-based 4D Scene Trajectory Generator (4D-STraG) to jointly generate geometrically consistent and motion-plausible 4D point trajectories. To leverage single-view priors, we design a depth-guided motion normalization strategy and a motion-aware module for effective geometry and dynamics integration. We then propose a 4D View Synthesis Module (4D-ViSM) to render videos with arbitrary camera trajectories from 4D point track representations. Experiments show that MoRe4D generates high-quality 4D scenes with multi-view consistency and rich dynamic details from a single image.
 </details>
 
+#### 18. SWiT-4D: Sliding-Window Transformer for Lossless and Parameter-Free Temporal 4D Generation
+Kehong Gong, Zhengyu Wen, Mingxi Xu, Weixia He, Qi Wang, Ning Zhang, Zhengyu Li, Chenbin Li, Dongze Lian, Wei Zhao, Xiaoyu He, Mingyuan Zhang
+
+(Huawei Technologies Co., Ltd., Huawei Central Media Technology Institute)
+
+<details span>
+<summary><b>Abstract</b></summary>
+Despite significant progress in 4D content generation, the conversion of monocular videos into high-quality animated 3D assets with explicit 4D meshes remains considerably challenging. The scarcity of large-scale, naturally captured 4D mesh datasets further limits the ability to train generalizable video-to-4D models from scratch in a purely data-driven manner. Meanwhile, advances in image-to-3D generation, supported by extensive datasets, offer powerful prior models that can be leveraged. To better utilize these priors while minimizing reliance on 4D supervision, we introduce SWiT-4D, a Sliding-Window Transformer for lossless, parameter-free temporal 4D mesh generation. SWiT-4D integrates seamlessly with any Diffusion Transformer (DiT)-based image-to-3D generator, adding spatial-temporal modeling across video frames while preserving the original single-image forward process, enabling 4D mesh reconstruction from videos of arbitrary length. To recover global translation, we further introduce an optimization-based trajectory module tailored for static-camera monocular videos. SWiT-4D demonstrates strong data efficiency: with only a single short (<10s) video for fine-tuning, it achieves high-fidelity geometry and stable temporal consistency, indicating practical deployability under extremely limited 4D supervision. Comprehensive experiments on both in-domain zoo-test sets and challenging out-of-domain benchmarks (C4D, Objaverse, and in-the-wild videos) show that SWiT-4D consistently outperforms existing baselines in temporal smoothness.
+</details>
+
 -----
 
 </details>
@@ -804,6 +814,7 @@ Generating interactive and dynamic 4D scenes from a single static image remains 
 | 2025 | **One4D: Unified 4D Generation and Reconstruction via Decoupled LoRA Control**  | 24 Nov 2025 |          [Link](https://arxiv.org/abs/2511.18922)          | [Link](https://github.com/MiZhenxing/One4D) | [Link](https://mizhenxing.github.io/One4D/) |
 | 2025 | **SeeU: Seeing the Unseen World via 4D Dynamics-aware Generation**  | 3 Dec 2025 |          [Link](https://arxiv.org/abs/2512.03350)          | [Link](https://github.com/pandayuanyu/SeeU) | [Link](https://yuyuanspace.com/SeeU/) |
 | 2025 | **Joint 3D Geometry Reconstruction and Motion Generation for 4D Synthesis from a Single Image**  | 4 Dec 2025 |          [Link](https://arxiv.org/abs/2512.05044)          | [Link](https://github.com/Zhangyr2022/MoRe4D) | [Link](https://ivg-yanranzhang.github.io/MoRe4D/) |
+| 2025 | **SWiT-4D: Sliding-Window Transformer for Lossless and Parameter-Free Temporal 4D Generation**  | 11 Dec 2025 |          [Link](https://arxiv.org/abs/2512.10860)          | -- | [Link](https://animotionlab.github.io/SWIT4D/) |
 
 <details close>
 <summary>ArXiv Papers References</summary>
@@ -957,6 +968,15 @@ Generating interactive and dynamic 4D scenes from a single static image remains 
   archivePrefix={arXiv},
   primaryClass={cs.CV},
   url={https://arxiv.org/abs/2512.05044}, 
+}
+
+@article{gong2025swit4d,
+  title     = {SWiT-4D: Sliding-Window Transformer for Lossless and Parameter-Free Temporal 4D Generation},
+  author    = {Gong, Kehong and Wen, Zhengyu and Xu, Mingxi and He, Weixia and Wang, Qi and 
+               Zhang, Ning and Li, Zhengyu and Li, Chenbin and Lian, Dongze and
+               Zhao, Wei and He, Xiaoyu and Zhang, Mingyuan},
+  journal   = {arXiv preprint arXiv:2512.10860},
+  year      = {2025}
 }
 
 ```
