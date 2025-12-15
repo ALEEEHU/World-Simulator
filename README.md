@@ -1242,6 +1242,16 @@ Zhengxu Tang, Zizheng Wang, Luning Wang, Zitao Shuai, Chenhao Zhang, Siyu Qian, 
 Text-to-video (T2V) generation models have made significant progress in creating visually appealing videos. However, they struggle with generating coherent sequential narratives that require logical progression through multiple events. Existing T2V benchmarks primarily focus on visual quality metrics but fail to evaluate narrative coherence over extended sequences. To bridge this gap, we present SeqBench, a comprehensive benchmark for evaluating sequential narrative coherence in T2V generation. SeqBench includes a carefully designed dataset of 320 prompts spanning various narrative complexities, with 2,560 human-annotated videos generated from 8 state-of-the-art T2V models. Additionally, we design a Dynamic Temporal Graphs (DTG)-based automatic evaluation metric, which can efficiently capture long-range dependencies and temporal ordering while maintaining computational efficiency. Our DTG-based metric demonstrates a strong correlation with human annotations. Through systematic evaluation using SeqBench, we reveal critical limitations in current T2V models: failure to maintain consistent object states across multi-action sequences, physically implausible results in multi-object scenarios, and difficulties in preserving realistic timing and ordering relationships between sequential actions. SeqBench provides the first systematic framework for evaluating narrative coherence in T2V generation and offers concrete insights for improving sequential reasoning capabilities in future models.
 </details>
 
+#### 15. Simulating the Visual World with Artificial Intelligence: A Roadmap
+Jingtong Yue, Ziqi Huang, Zhaoxi Chen, Xintao Wang, Pengfei Wan, Ziwei Liu
+
+(Carnegie Mellon University, Nanyang Technological University, Kling Team Kuaishou Technology)
+
+<details span>
+<summary><b>Abstract</b></summary>
+The landscape of video generation is shifting, from a focus on generating visually appealing clips to building virtual environments that support interaction and maintain physical plausibility. These developments point toward the emergence of video foundation models that function not only as visual generators but also as implicit world models, models that simulate the physical dynamics, agent-environment interactions, and task planning that govern real or imagined worlds. This survey provides a systematic overview of this evolution, conceptualizing modern video foundation models as the combination of two core components: an implicit world model and a video renderer. The world model encodes structured knowledge about the world, including physical laws, interaction dynamics, and agent behavior. It serves as a latent simulation engine that enables coherent visual reasoning, long-term temporal consistency, and goal-driven planning. The video renderer transforms this latent simulation into realistic visual observations, effectively producing videos as a "window" into the simulated world. We trace the progression of video generation through four generations, in which the core capabilities advance step by step, ultimately culminating in a world model, built upon a video generation model, that embodies intrinsic physical plausibility, real-time multimodal interaction, and planning capabilities spanning multiple spatiotemporal scales. For each generation, we define its core characteristics, highlight representative works, and examine their application domains such as robotics, autonomous driving, and interactive gaming. Finally, we discuss open challenges and design principles for next-generation world models, including the role of agent intelligence in shaping and evaluating these systems. An up-to-date list of related works is maintained at this link.
+</details>
+
 | Year | Title                                                        | ArXiv Time  |                           Paper                            |                      Code                      | Project Page                      |
 | ---- | ------------------------------------------------------------ | :----: | :--------------------------------------------------------: | :--------------------------------------------: | :--------------------------------------------: |
 | 2025 | **We'll Fix it in Post: Improving Text-to-Video Generation with Neuro-Symbolic Feedback**  | 25 Apr 2025 |          [Link](https://arxiv.org/abs/2504.17180)          | -- | --  |
@@ -1258,7 +1268,7 @@ Text-to-video (T2V) generation models have made significant progress in creating
 | 2025 | **Character Mixing for Video Generation**  | 6 Oct 2025 |      [Link](https://arxiv.org/abs/2510.05093)      | [Link](https://github.com/TingtingLiao/mimix) | [Link](https://tingtingliao.github.io/mimix/) |
 | 2025 | **NovaFlow: Zero-Shot Manipulation via Actionable Flow from Generated Videos**  | 9 Oct 2025  |      [Link](https://arxiv.org/abs/2510.08568)      | Coming Soon! | [Link](https://novaflow.lhy.xyz/) |
 | 2025 | **SeqBench: Benchmarking Sequential Narrative Generation in Text-to-Video Models**  | 14 Oct 2025  |      [Link](https://arxiv.org/abs/2510.13042)      | [Link](https://github.com/TangZhengxu/SeqBench-Benchmarking-Sequential-Narrative-Generation-in-Text-to-Video-Models) | [Link](https://videobench.github.io/SeqBench.github.io/) |
-
+| 2025 | **Simulating the Visual World with Artificial Intelligence: A Roadmap**  | 11 Nov 2025  |      [Link](https://arxiv.org/abs/2511.08585)      | [Link](https://github.com/ziqihuangg/Awesome-From-Video-Generation-to-World-Model) | [Link](https://world-model-roadmap.github.io/) |
 
 <details close>
 <summary>ArXiv Papers References</summary>
@@ -1372,6 +1382,13 @@ Text-to-video (T2V) generation models have made significant progress in creating
   title={SeqBench: Benchmarking Sequential Narrative Generation in Text-to-Video Models},
   author={Tang, Zhengxu and Wang, Zizheng and Wang, Luning and Shuai, Zitao and Zhang, Chenhao and Qian, Siyu and Wu, Yirui and Wang, Bohao and Rao, Haosong and Yang, Zhenyu and others},
   journal={arXiv preprint arXiv:2510.13042},
+  year={2025}
+}
+
+@article{yue2025video,
+  title={Simulating the World Model with Artificial Intelligence: A Roadmap},
+  author={Jingtong Yue, Ziqi Huang, Zhaoxi Chen, Xintao Wang, Pengfei Wan, Ziwei Liu},
+  journal={arXiv preprint arXiv:2511.08585},
   year={2025}
 }
 ```
@@ -2307,9 +2324,19 @@ Boyuan Wang, Runqi Ouyang, Xiaofeng Wang, Zheng Zhu, Guosheng Zhao, Chaojun Ni, 
 Single-image human reconstruction is vital for digital human modeling applications but remains an extremely challenging task. Current approaches rely on generative models to synthesize multi-view images for subsequent 3D reconstruction and animation. However, directly generating multiple views from a single human image suffers from geometric inconsistencies, resulting in issues like fragmented or blurred limbs in the reconstructed models. To tackle these limitations, we introduce \textbf{HumanDreamer-X}, a novel framework that integrates multi-view human generation and reconstruction into a unified pipeline, which significantly enhances the geometric consistency and visual fidelity of the reconstructed 3D models. In this framework, 3D Gaussian Splatting serves as an explicit 3D representation to provide initial geometry and appearance priority. Building upon this foundation, \textbf{HumanFixer} is trained to restore 3DGS renderings, which guarantee photorealistic results. Furthermore, we delve into the inherent challenges associated with attention mechanisms in multi-view human generation, and propose an attention modulation strategy that effectively enhances geometric details identity consistency across multi-view. Experimental results demonstrate that our approach markedly improves generation and reconstruction PSNR quality metrics by 16.45% and 12.65%, respectively, achieving a PSNR of up to 25.62 dB, while also showing generalization capabilities on in-the-wild data and applicability to various human reconstruction backbone models.
 </details>
 
+#### 2. Live Avatar: Streaming Real-time Audio-Driven Avatar Generation with Infinite Length
+Yubo Huang, Hailong Guo, Fangtai Wu, Shifeng Zhang, Shijie Huang, Qijun Gan, Lin Liu, Sirui Zhao, Enhong Chen, Jiaming Liu, Steven Hoi
+
+(Alibaba Group, University of Science and Technology of China, Beijing University of Posts and Telecommunications, Zhejiang University)
+<details span>
+<summary><b>Abstract</b></summary>
+Existing diffusion-based video generation methods are fundamentally constrained by sequential computation and long-horizon inconsistency, limiting their practical adoption in real-time, streaming audio-driven avatar synthesis. We present Live Avatar, an algorithm-system co-designed framework that enables efficient, high-fidelity, and infinite-length avatar generation using a 14-billion-parameter diffusion model. Our approach introduces Timestep-forcing Pipeline Parallelism (TPP), a distributed inference paradigm that pipelines denoising steps across multiple GPUs, effectively breaking the autoregressive bottleneck and ensuring stable, low-latency real-time streaming. To further enhance temporal consistency and mitigate identity drift and color artifacts, we propose the Rolling Sink Frame Mechanism (RSFM), which maintains sequence fidelity by dynamically recalibrating appearance using a cached reference image. Additionally, we leverage Self-Forcing Distribution Matching Distillation to facilitate causal, streamable adaptation of large-scale models without sacrificing visual quality. Live Avatar demonstrates state-of-the-art performance, reaching 20 FPS end-to-end generation on 5 H800 GPUs, and, to the best of our knowledge, is the first to achieve practical, real-time, high-fidelity avatar generation at this scale. Our work establishes a new paradigm for deploying advanced diffusion models in industrial long-form video synthesis applications.
+</details>
+
 | Year | Title                                                        | ArXiv Time  |                           Paper                            |                      Code                      | Project Page                      |
 | ---- | ------------------------------------------------------------ | :----: | :--------------------------------------------------------: | :--------------------------------------------: | :--------------------------------------------: |
 | 2025 | **HumanDreamer-X: Photorealistic Single-image Human Avatars Reconstruction via Gaussian Restoration**  | 4 Apr 2025 |          [Link](https://arxiv.org/abs/2504.03536)          | [Link](https://github.com/GigaAI-research/HumanDreamer-X)  | [Link](https://humandreamer-x.github.io/)  |
+| 2025 | **Live Avatar: Streaming Real-time Audio-Driven Avatar Generation with Infinite Length**  |  5 Dec 2025 |          [Link](https://arxiv.org/abs/2512.04677)          | [Link](https://github.com/Alibaba-Quark/LiveAvatar)  | [Link](https://liveavatar.github.io/)  |
 
 <details close>
 <summary>ArXiv Papers References</summary>
@@ -2321,6 +2348,13 @@ Single-image human reconstruction is vital for digital human modeling applicatio
   title={HumanDreamer-X: Photorealistic Single-image Human Avatars Reconstruction via Gaussian Restoration}, 
   author={Boyuan Wang and Runqi Ouyang and Xiaofeng Wang and Zheng Zhu and Guosheng Zhao and Chaojun Ni and Guan Huang and Lihong Liu and Xingang Wang},
   journal={arXiv preprint arXiv:2504.03536},
+  year={2025}
+}
+
+@article{huang2025live,
+  title={Live Avatar: Streaming Real-time Audio-Driven Avatar Generation with Infinite Length},
+  author={Huang, Yubo and Guo, Hailong and Wu, Fangtai and Zhang, Shifeng and Huang, Shijie and Gan, Qijun and Liu, Lin and Zhao, Sirui and Chen, Enhong and Liu, Jiaming and others},
+  journal={arXiv preprint arXiv:2512.04677},
   year={2025}
 }
 
