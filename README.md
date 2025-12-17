@@ -444,6 +444,7 @@ An open collection of state-of-the-art (SOTA), novel **Text to X (X can be every
 | 2025 | **HoloTime: Taming Video Diffusion Models for Panoramic 4D Scene Generation**  | ACM MM 2025 |          [Link](https://arxiv.org/abs/2504.21650)          | [Link](https://github.com/PKU-YuanGroup/HoloTime)  | [Link](https://zhouhyocean.github.io/holotime/)  |
 | 2025 | **Stable Part Diffusion 4D: Multi-View RGB and Kinematic Parts Video Generation**  | NeurIPS 2025 |          [Link](https://arxiv.org/abs/2509.10687)          | [Link](https://github.com/Stability-AI/generative-models/tree/sp4d) | [Link](https://stablepartdiffusion4d.github.io/)  |
 | 2025 | **In-2-4D: Inbetweening from Two Single-View Images to 4D Generation**  | SIGGRAPH ASIA 2025 |          [Link](https://arxiv.org/abs/2504.08366)          | [Link](https://github.com/sauradip/In-2-4D)  | [Link](https://in-2-4d.github.io/)  |
+| 2025 | **Animus3D: Text-driven 3D Animation via Motion Score Distillation**  | SIGGRAPH ASIA 2025 |          [Link](https://arxiv.org/abs/2512.12534)          | [Link](https://github.com/qiisun/Animus3d)  | [Link](https://qiisun.github.io/animus3d_page/)  |
 | 2025 | **Track, Inpaint, Resplat: Subject-driven 3D and 4D Generation with Progressive Texture Infilling**  | NeurIPS 2025 |          [Link](https://arxiv.org/abs/2510.23605)          | -- | [Link](https://zsh2000.github.io/track-inpaint-resplat.github.io/)  |
 | 2025 | **4Real-Video-V2: Fused View-Time Attention and Feedforward Reconstruction for 4D Scene Generation**  | NeurIPS 2025 |      [Link](https://arxiv.org/abs/2506.18839)     | --  | [Link](https://snap-research.github.io/4Real-Video-V2/)  |
 | 2025 | **4D-LRM: Large Space-Time Reconstruction Model From and To Any View at Any Time**  | NeurIPS 2025 |          [Link](https://arxiv.org/abs/2506.18890)          | [Link](https://github.com/Mars-tin/4D-LRM)  | [Link](https://4dlrm.github.io/)  |
@@ -594,6 +595,14 @@ url={https://arxiv.org/abs/2508.12438}
   title={In-2-4d: Inbetweening from two single-view images to 4d generation},
   author={Nag, Sauradip and Cohen-Or, Daniel and Zhang, Hao and Mahdavi-Amiri, Ali},
   journal={arXiv preprint arXiv:2504.08366},
+  year={2025}
+}
+
+@inproceedings{sun2025animus3d,
+  title={Animus3D: Text-driven 3D Animation via Motion Score Distillation},
+  author={Sun, Qi and Wang, Can and Shang, Jiaxiang and Feng, Wensen and Liao, Jing},
+  booktitle={Proceedings of the SIGGRAPH Asia 2025 Conference Papers},
+  pages={1--11},
   year={2025}
 }
 
