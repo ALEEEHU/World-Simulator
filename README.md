@@ -1261,6 +1261,14 @@ Jingtong Yue, Ziqi Huang, Zhaoxi Chen, Xintao Wang, Pengfei Wan, Ziwei Liu
 The landscape of video generation is shifting, from a focus on generating visually appealing clips to building virtual environments that support interaction and maintain physical plausibility. These developments point toward the emergence of video foundation models that function not only as visual generators but also as implicit world models, models that simulate the physical dynamics, agent-environment interactions, and task planning that govern real or imagined worlds. This survey provides a systematic overview of this evolution, conceptualizing modern video foundation models as the combination of two core components: an implicit world model and a video renderer. The world model encodes structured knowledge about the world, including physical laws, interaction dynamics, and agent behavior. It serves as a latent simulation engine that enables coherent visual reasoning, long-term temporal consistency, and goal-driven planning. The video renderer transforms this latent simulation into realistic visual observations, effectively producing videos as a "window" into the simulated world. We trace the progression of video generation through four generations, in which the core capabilities advance step by step, ultimately culminating in a world model, built upon a video generation model, that embodies intrinsic physical plausibility, real-time multimodal interaction, and planning capabilities spanning multiple spatiotemporal scales. For each generation, we define its core characteristics, highlight representative works, and examine their application domains such as robotics, autonomous driving, and interactive gaming. Finally, we discuss open challenges and design principles for next-generation world models, including the role of agent intelligence in shaping and evaluating these systems. An up-to-date list of related works is maintained at this link.
 </details>
 
+#### 16. Factorized Video Generation: Decoupling Scene Construction and Temporal Synthesis in Text-to-Video Diffusion Models
+Mariam Hassan, Bastien Van Delft, Wuyang Li, Alexandre Alahi (EPFL)
+
+<details span>
+<summary><b>Abstract</b></summary>
+State-of-the-art Text-to-Video (T2V) diffusion models can generate visually impressive results, yet they still frequently fail to compose complex scenes or follow logical temporal instructions. In this paper, we argue that many errors, including apparent motion failures, originate from the model's inability to construct a semantically correct or logically consistent initial frame. We introduce Factorized Video Generation (FVG), a pipeline that decouples these tasks by decomposing the Text-to-Video generation into three specialized stages: (1) Reasoning, where a Large Language Model (LLM) rewrites the video prompt to describe only the initial scene, resolving temporal ambiguities; (2) Composition, where a Text-to-Image (T2I) model synthesizes a high-quality, compositionally-correct anchor frame from this new prompt; and (3) Temporal Synthesis, where a video model, finetuned to understand this anchor, focuses its entire capacity on animating the scene and following the prompt. Our decomposed approach sets a new state-of-the-art on the T2V CompBench benchmark and significantly improves all tested models on VBench2. Furthermore, we show that visual anchoring allows us to cut the number of sampling steps by 70% without any loss in performance, leading to a substantial speed-up in sampling. Factorized Video Generation offers a simple yet practical path toward more efficient, robust, and controllable video synthesis.
+</details>
+
 | Year | Title                                                        | ArXiv Time  |                           Paper                            |                      Code                      | Project Page                      |
 | ---- | ------------------------------------------------------------ | :----: | :--------------------------------------------------------: | :--------------------------------------------: | :--------------------------------------------: |
 | 2025 | **We'll Fix it in Post: Improving Text-to-Video Generation with Neuro-Symbolic Feedback**  | 25 Apr 2025 |          [Link](https://arxiv.org/abs/2504.17180)          | -- | --  |
@@ -1278,6 +1286,7 @@ The landscape of video generation is shifting, from a focus on generating visual
 | 2025 | **NovaFlow: Zero-Shot Manipulation via Actionable Flow from Generated Videos**  | 9 Oct 2025  |      [Link](https://arxiv.org/abs/2510.08568)      | Coming Soon! | [Link](https://novaflow.lhy.xyz/) |
 | 2025 | **SeqBench: Benchmarking Sequential Narrative Generation in Text-to-Video Models**  | 14 Oct 2025  |      [Link](https://arxiv.org/abs/2510.13042)      | [Link](https://github.com/TangZhengxu/SeqBench-Benchmarking-Sequential-Narrative-Generation-in-Text-to-Video-Models) | [Link](https://videobench.github.io/SeqBench.github.io/) |
 | 2025 | **Simulating the Visual World with Artificial Intelligence: A Roadmap**  | 11 Nov 2025  |      [Link](https://arxiv.org/abs/2511.08585)      | [Link](https://github.com/ziqihuangg/Awesome-From-Video-Generation-to-World-Model) | [Link](https://world-model-roadmap.github.io/) |
+| 2025 | **Factorized Video Generation: Decoupling Scene Construction and Temporal Synthesis in Text-to-Video Diffusion Models**  | 18 Dec 2025  |      [Link](https://arxiv.org/abs/2512.16371)      | [Link](https://github.com/vita-epfl/FVG/tree/main) | [Link](https://vita-epfl.github.io/FVG/) |
 
 <details close>
 <summary>ArXiv Papers References</summary>
@@ -1398,6 +1407,13 @@ The landscape of video generation is shifting, from a focus on generating visual
   title={Simulating the World Model with Artificial Intelligence: A Roadmap},
   author={Jingtong Yue, Ziqi Huang, Zhaoxi Chen, Xintao Wang, Pengfei Wan, Ziwei Liu},
   journal={arXiv preprint arXiv:2511.08585},
+  year={2025}
+}
+
+@article{hassan2025factorized,
+  title={Factorized Video Generation: Decoupling Scene Construction and Temporal Synthesis in Text-to-Video Diffusion Models},
+  author={Hassan, Mariam and Van Delft, Bastien and Li, Wuyang and Alahi, Alexandre},
+  journal={arXiv preprint arXiv:2512.16371},
   year={2025}
 }
 ```
@@ -1680,6 +1696,16 @@ Kaizhi Zheng, Yue Fan, Jing Gu, Zishuo Xu, Xuehai He, Xin Eric Wang
 Generating high-quality, textured 3D scenes from a single image remains a fundamental challenge in vision and graphics. Recent image-to-3D generators recover reasonable geometry from single views, but their object-centric training limits generalization to complex, large-scale scenes with faithful structure and texture. We present EvoScene, a self-evolving, training-free framework that progressively reconstructs complete 3D scenes from single images. The key idea is combining the complementary strengths of existing models: geometric reasoning from 3D generation models and visual knowledge from video generation models. Through three iterative stages--Spatial Prior Initialization, Visual-guided 3D Scene Mesh Generation, and Spatial-guided Novel View Generation--EvoScene alternates between 2D and 3D domains, gradually improving both structure and appearance. Experiments on diverse scenes demonstrate that EvoScene achieves superior geometric stability, view-consistent textures, and unseen-region completion compared to strong baselines, producing ready-to-use 3D meshes for practical applications.
 </details>
 
+#### 14. I-Scene: 3D Instance Models are Implicit Generalizable Spatial Learners
+Lu Ling, Yunhao Ge, Yichen Sheng, Aniket Bera
+
+(Purdue University, NVIDIA Research)
+
+<details span>
+<summary><b>Abstract</b></summary>
+Generalization remains the central challenge for interactive 3D scene generation. Existing learning-based approaches ground spatial understanding in limited scene dataset, restricting generalization to new layouts. We instead reprogram a pre-trained 3D instance generator to act as a scene level learner, replacing dataset-bounded supervision with model-centric spatial supervision. This reprogramming unlocks the generator transferable spatial knowledge, enabling generalization to unseen layouts and novel object compositions. Remarkably, spatial reasoning still emerges even when the training scenes are randomly composed objects. This demonstrates that the generator's transferable scene prior provides a rich learning signal for inferring proximity, support, and symmetry from purely geometric cues. Replacing widely used canonical space, we instantiate this insight with a view-centric formulation of the scene space, yielding a fully feed-forward, generalizable scene generator that learns spatial relations directly from the instance model. Quantitative and qualitative results show that a 3D instance generator is an implicit spatial learner and reasoner, pointing toward foundation models for interactive 3D scene understanding and generation. 
+</details>
+
 | Year | Title                                                        | ArXiv Time  |                           Paper                            |                      Code                      | Project Page                      |
 | ---- | ------------------------------------------------------------ | :----: | :--------------------------------------------------------: | :--------------------------------------------: | :--------------------------------------------: |
 | 2025 | **LAYOUTDREAMER: Physics-guided Layout for Text-to-3D Compositional Scene Generation**  | 4 Feb 2025 |          [Link](https://arxiv.org/abs/2502.01949)          | --  | --  |
@@ -1695,6 +1721,7 @@ Generating high-quality, textured 3D scenes from a single image remains a fundam
 | 2025 | **Matrix-3D: Omnidirectional Explorable 3D World Generation**  | 12 Aug 2025 |          [Technical Report](https://github.com/SkyworkAI/Matrix-3D/blob/main/asset/report.pdf)          | [Link](https://github.com/SkyworkAI/Matrix-3D) | [Link](https://matrix-3d.github.io/)  |
 | 2025 | **FlashWorld: High-quality 3D Scene Generation within Seconds**  | 15 Oct 2025 |          [Link](https://arxiv.org/abs/2510.13678)          | [Link](https://github.com/imlixinyang/FlashWorld) | [Link](https://imlixinyang.github.io/FlashWorld-Project-Page/)  |
 | 2025 | **Self-Evolving 3D Scene Generation from a Single Image**  | 9 Dec 2025 |          [Link](https://arxiv.org/abs/2512.08905)          | [Link](https://github.com/eric-ai-lab/EvoScene) | [Link](https://eric-ai-lab.github.io/evoscene.github.io/)  |
+| 2025 | **I-Scene: 3D Instance Models are Implicit Generalizable Spatial Learners**  | 15 Dec 2025 |          [Link](https://arxiv.org/abs/2512.13683)          | [Link](https://github.com/LuLing06/I-Scene-project) | [Link](https://luling06.github.io/I-Scene-project/)  |
 
 
 <details close>
@@ -1803,6 +1830,13 @@ Generating high-quality, textured 3D scenes from a single image remains a fundam
   title={Self-Evolving 3D Scene Generation from a Single Image},
   author={Zheng, Kaizhi and Fan, Yue and Gu, Jing and Xu, Zishuo and He, Xuehai and Wang, Xin Eric},
   journal={arXiv preprint arXiv:2512.08905},
+  year={2025}
+}
+
+@article{ling2025iscene,
+  title={I-Scene: 3D Instance Models are Implicit Generalizable Spatial Learners},
+  author={Ling, Lu and Ge, Yunhao and Sheng, Yichen and Bera, Aniket},
+  journal={arXiv preprint arXiv:2512.13683},
   year={2025}
 }
 
