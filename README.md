@@ -23,65 +23,39 @@ This repository is divided into two main sections:
 
 
 ## Table of Contents
-- [Simulating the Real World: Survey \& Resources](#simulating-the-real-world-survey--resources)
-  - [🔔 News](#-news)
-  - [Table of Contents](#table-of-contents)
-  - [📜 Our Survey Paper Collection](#-our-survey-paper-collection)
+- [Our Survey Paper Collection](#-our-survey-paper-collection)
+  - [Abstract](#abstract)
+    * [🔥 Cite Us!](#-citation)
+    * [💡 New to this field? Check this!](#-getting-started-with-key-concepts)
   - [Paradigms](#paradigms)
-    - [2D Generation](#2d-generation)
-        - [Text-to-Image Generation.](#text-to-image-generation)
-    - [Video Generation](#video-generation)
-      - [Video Algorithms](#video-algorithms)
-      - [Video Applications](#video-applications)
-    - [3D Generation](#3d-generation)
-      - [3D Algorithms](#3d-algorithms)
-        - [Text-to-3D Generation.](#text-to-3d-generation)
-        - [Image-to-3D Generation.](#image-to-3d-generation)
-        - [Video-to-3D Generation.](#video-to-3d-generation)
-      - [3D Applications](#3d-applications)
-    - [4D Generation](#4d-generation)
-      - [4D Algorithms](#4d-algorithms)
-      - [4D Applications](#4d-applications)
+    * [2D Generation](#2d-generation)
+    * [Video Generation](#video-generation)
+      * [Algorithms](#video-algorithms)
+      * [Applications](#video-applications)
+    * [3D Generation](#3d-generation)
+      * [Algorithms](#3d-algorithms)
+      * [Applications](#3d-applications)
+    * [4D Generation](#4d-generation)
+      * [Algorithms](#4d-algorithms)
+      * [Applications](#4d-applications)
   - [Other Related Resources](#other-related-resources)
-    - [World Model Benchmark](#world-model-benchmark)
-    - [World Foundation Model Platform](#world-foundation-model-platform)
-  - [🔥 Awesome Text2X Resources](#-awesome-text2x-resources)
-  - [Update Logs](#update-logs)
+    * [WorldModel Benchmark](#world-model-benchmark)
+    * [World Foundation Model Platform](#world-foundation-model-platform)
+- [Text2X Resources](#-awesome-text2x-resources)
   - [4D Subsection](#4d-subsection)
-    - [💡 4D ArXiv Papers](#-4d-arxiv-papers)
-      - [1. Pixel-to-4D: Camera-Controlled Image-to-Video Generation with Dynamic 3D Gaussians](#1-pixel-to-4d-camera-controlled-image-to-video-generation-with-dynamic-3d-gaussians)
-    - [Previous Papers and Other Awesome Repos](#previous-papers-and-other-awesome-repos)
-      - [Year 2025](#year-2025)
-      - [Year 2024](#year-2024)
-      - [Year 2023](#year-2023)
+    * [ArXiv Papers](#-4d-arxiv-papers)
+    * [Additional Info](#previous-papers-and-other-awesome-repos)
   - [T2V Subsection](#t2v-subsection)
-    - [Video Other Additional Info](#video-other-additional-info)
-    - [Previous Papers](#previous-papers)
-      - [Year 2025](#year-2025-1)
-      - [Year 2024](#year-2024-1)
+    * [Additional Info](#video-other-additional-info)
   - [3D Scene Subsection](#3d-scene-subsection)
-    - [Scene Other Additional Info](#scene-other-additional-info)
-    - [Previous Papers](#previous-papers-1)
-      - [Year 2025](#year-2025-2)
-      - [Year 2023-2024](#year-2023-2024)
+    * [Additional Info](#scene-other-additional-info)
   - [Human Motion Subsection](#human-motion-subsection)
-    - [Motion Other Additional Info](#motion-other-additional-info)
-    - [Previous Papers](#previous-papers-2)
-      - [Year 2025](#year-2025-3)
-      - [Year 2023-2024](#year-2023-2024-1)
-      - [Datasets](#datasets)
-      - [Additional Info](#additional-info)
+    * [Additional Info](#motion-other-additional-info)
   - [3D Human Subsection](#3d-human-subsection)
-    - [3D Human Additional Info](#3d-human-additional-info)
-    - [Previous Papers](#previous-papers-3)
-      - [Year 2025](#year-2025-4)
-      - [Year 2023-2024](#year-2023-2024-2)
-      - [Survey](#survey)
-      - [Awesome Repos](#awesome-repos)
+    * [Additional Info](#3d-human-additional-info)
   - [Related Resources](#related-resources)
-    - [Text to 'other tasks'](#text-to-other-tasks)
-    - [Survey and Awesome Repos](#survey-and-awesome-repos)
-  - [License](#license)
+    * [Text to Other Tasks](#text-to-other-tasks)
+    * [Survey and Awesome Repos](#survey-and-awesome-repos)
 
 ## 📜 Our Survey Paper Collection 
 <p align=center> 𝐒𝐢𝐦𝐮𝐥𝐚𝐭𝐢𝐧𝐠 𝐭𝐡𝐞 𝐑𝐞𝐚𝐥 𝐖𝐨𝐫𝐥𝐝: 𝐀 𝐔𝐧𝐢𝐟𝐢𝐞𝐝 𝐒𝐮𝐫𝐯𝐞𝐲 𝐨𝐟 𝐌𝐮𝐥𝐭𝐢𝐦𝐨𝐝𝐚𝐥 𝐆𝐞𝐧𝐞𝐫𝐚𝐭𝐢𝐯𝐞 𝐌𝐨𝐝𝐞𝐥𝐬 </p>
@@ -422,7 +396,7 @@ An open collection of state-of-the-art (SOTA), novel **Text to X (X can be every
 </details>
 
 <details close>
-<summary><b>Previous 2024 Update Logs:</b></summary>
+<summary><b>2024 Update Logs:</b></summary>
 
 * `2024.12.21` adjusted the layouts of several sections and _Happy Winter Solstice_ ⚪🥣.
 * `2024.09.26` - update several papers status "NeurIPS 2024" to accepted papers, congrats to all 🎉
@@ -490,10 +464,8 @@ For more details, please check the [2024 4D Papers](./docs/4d/4d_2024.md), inclu
 In 2023, tasks classified as text/Image to 4D and video to 4D generally involve producing four-dimensional data from text/Image or video input. For more details, please check the [2023 4D Papers](./docs/4d/4d_2023.md), including 6 accepted papers and 3 arXiv papers.
 
 
-<details close>
-
-<!-- <summary>Awesome Repos</summary>
-</details> -->
+<!--<details close>
+<summary>Awesome Repos</summary> </details> -->
 
 --------------
 
