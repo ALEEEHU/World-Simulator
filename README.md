@@ -425,6 +425,13 @@ Melonie de Almeida, Daniela Ivanova, Tong Shi, John H. Williamson, Paul Henderso
 Humans excel at forecasting the future dynamics of a scene given just a single image. Video generation models that can mimic this ability are an essential component for intelligent systems. Recent approaches have improved temporal coherence and 3D consistency in single-image-conditioned video generation. However, these methods often lack robust user controllability, such as modifying the camera path, limiting their applicability in real-world applications. Most existing camera-controlled image-to-video models struggle with accurately modeling camera motion, maintaining temporal consistency, and preserving geometric integrity. Leveraging explicit intermediate 3D representations offers a promising solution by enabling coherent video generation aligned with a given camera trajectory. Although these methods often use 3D point clouds to render scenes and introduce object motion in a later stage, this two-step process still falls short in achieving full temporal consistency, despite allowing precise control over camera movement. We propose a novel framework that constructs a 3D Gaussian scene representation and samples plausible object motion, given a single image in a single forward pass. This enables fast, camera-guided video generation without the need for iterative denoising to inject object motion into render frames. Extensive experiments on the KITTI, Waymo, RealEstate10K and DL3DV-10K datasets demonstrate that our method achieves state-of-the-art video quality and inference efficiency. 
 </details>
 
+#### 2. Choreographing a World of Dynamic Objects
+Yanzhe Lyu, Chen Geng, Karthik Dharmarajan, Yunzhi Zhang, Hadi Alzayer, Shangzhe Wu, Jiajun Wu (Stanford University, University of Cambridge, University of Maryland)
+<details span>
+<summary><b>Abstract</b></summary>
+Dynamic objects in our physical 4D (3D + time) world are constantly evolving, deforming, and interacting with other objects, leading to diverse 4D scene dynamics. In this paper, we present a universal generative pipeline, CHORD, for CHOReographing Dynamic objects and scenes and synthesizing this type of phenomena. Traditional rule-based graphics pipelines to create these dynamics are based on category-specific heuristics, yet are labor-intensive and not scalable. Recent learning-based methods typically demand large-scale datasets, which may not cover all object categories in interest. Our approach instead inherits the universality from the video generative models by proposing a distillation-based pipeline to extract the rich Lagrangian motion information hidden in the Eulerian representations of 2D videos. Our method is universal, versatile, and category-agnostic. We demonstrate its effectiveness by conducting experiments to generate a diverse range of multi-body 4D dynamics, show its advantage compared to existing methods, and demonstrate its applicability in generating robotics manipulation policies.
+</details>
+
 -----
 
 </details>
@@ -432,6 +439,7 @@ Humans excel at forecasting the future dynamics of a scene given just a single i
 | Year | Title                                                        | ArXiv Time  |                           Paper                            |                      Code                      | Project Page                      |
 | ---- | ------------------------------------------------------------ | :----: | :--------------------------------------------------------: | :--------------------------------------------: | :--------------------------------------------: |
 | 2026 | **Pixel-to-4D: Camera-Controlled Image-to-Video Generation with Dynamic 3D Gaussians**  | 2 Jan 2026 |          [Link](https://arxiv.org/abs/2601.00678)          | --  | [Link](https://melonienimasha.github.io/Pixel-to-4D-Website/)  |
+| 2026 | **Choreographing a World of Dynamic Objects**  | 7 Jan 2026 |          [Link](https://arxiv.org/pdf/2601.04194)          | --  | [Link](https://yanzhelyu.github.io/chord/)  |
 
 
 <details close>
@@ -445,6 +453,16 @@ Humans excel at forecasting the future dynamics of a scene given just a single i
   author={de Almeida, Melonie and Ivanova, Daniela and Shi, Tong and Williamson, John H and Henderson, Paul},
   journal={arXiv preprint arXiv:2601.00678},
   year={2026}
+}
+
+@misc{lyu2026choreographingworlddynamicobjects,
+      title={Choreographing a World of Dynamic Objects}, 
+      author={Yanzhe Lyu and Chen Geng and Karthik Dharmarajan and Yunzhi Zhang and Hadi Alzayer and Shangzhe Wu and Jiajun Wu},
+      year={2026},
+      eprint={2601.04194},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2601.04194}, 
 }
 
 ```
