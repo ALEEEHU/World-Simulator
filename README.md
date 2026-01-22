@@ -426,10 +426,23 @@ Humans excel at forecasting the future dynamics of a scene given just a single i
 </details>
 
 #### 2. Choreographing a World of Dynamic Objects
-Yanzhe Lyu, Chen Geng, Karthik Dharmarajan, Yunzhi Zhang, Hadi Alzayer, Shangzhe Wu, Jiajun Wu (Stanford University, University of Cambridge, University of Maryland)
+Yanzhe Lyu, Chen Geng, Karthik Dharmarajan, Yunzhi Zhang, Hadi Alzayer, Shangzhe Wu, Jiajun Wu 
+
+(Stanford University, University of Cambridge, University of Maryland)
+
 <details span>
 <summary><b>Abstract</b></summary>
 Dynamic objects in our physical 4D (3D + time) world are constantly evolving, deforming, and interacting with other objects, leading to diverse 4D scene dynamics. In this paper, we present a universal generative pipeline, CHORD, for CHOReographing Dynamic objects and scenes and synthesizing this type of phenomena. Traditional rule-based graphics pipelines to create these dynamics are based on category-specific heuristics, yet are labor-intensive and not scalable. Recent learning-based methods typically demand large-scale datasets, which may not cover all object categories in interest. Our approach instead inherits the universality from the video generative models by proposing a distillation-based pipeline to extract the rich Lagrangian motion information hidden in the Eulerian representations of 2D videos. Our method is universal, versatile, and category-agnostic. We demonstrate its effectiveness by conducting experiments to generate a diverse range of multi-body 4D dynamics, show its advantage compared to existing methods, and demonstrate its applicability in generating robotics manipulation policies.
+</details>
+
+#### 3. Motion 3-to-4: 3D Motion Reconstruction for 4D Synthesis
+Hongyuan Chen, Xingyu Chen, Youjia Zhang, Zexiang Xu, Anpei Chen 
+
+(Westlake University, HUST, Hillbot)
+
+<details span>
+<summary><b>Abstract</b></summary>
+We present Motion 3-to-4, a feed-forward framework for synthesising high-quality 4D dynamic objects from a single monocular video and an optional 3D reference mesh. While recent advances have significantly improved 2D, video, and 3D content generation, 4D synthesis remains difficult due to limited training data and the inherent ambiguity of recovering geometry and motion from a monocular viewpoint. Motion 3-to-4 addresses these challenges by decomposing 4D synthesis into static 3D shape generation and motion reconstruction. Using a canonical reference mesh, our model learns a compact motion latent representation and predicts per-frame vertex trajectories to recover complete, temporally coherent geometry. A scalable frame-wise transformer further enables robustness to varying sequence lengths. Evaluations on both standard benchmarks and a new dataset with accurate ground-truth geometry show that Motion 3-to-4 delivers superior fidelity and spatial consistency compared to prior work. 
 </details>
 
 -----
@@ -440,6 +453,7 @@ Dynamic objects in our physical 4D (3D + time) world are constantly evolving, de
 | ---- | ------------------------------------------------------------ | :----: | :--------------------------------------------------------: | :--------------------------------------------: | :--------------------------------------------: |
 | 2026 | **Pixel-to-4D: Camera-Controlled Image-to-Video Generation with Dynamic 3D Gaussians**  | 2 Jan 2026 |          [Link](https://arxiv.org/abs/2601.00678)          | --  | [Link](https://melonienimasha.github.io/Pixel-to-4D-Website/)  |
 | 2026 | **Choreographing a World of Dynamic Objects**  | 7 Jan 2026 |          [Link](https://arxiv.org/pdf/2601.04194)          | --  | [Link](https://yanzhelyu.github.io/chord/)  |
+| 2026 | **Motion 3-to-4: 3D Motion Reconstruction for 4D Synthesis**  | 20 Jan 2026 |          [Link](https://arxiv.org/abs/2601.14253)          | [Link](https://github.com/Inception3D/Motion324)  | [Link](https://motion3-to-4.github.io/)  |
 
 
 <details close>
@@ -463,6 +477,13 @@ Dynamic objects in our physical 4D (3D + time) world are constantly evolving, de
       archivePrefix={arXiv},
       primaryClass={cs.CV},
       url={https://arxiv.org/abs/2601.04194}, 
+}
+
+@article{chen2026motion3to4,
+    title={Motion 3-to-4: 3D Motion Reconstruction for 4D Synthesis},
+    author={Hongyuan, Chen and Xingyu, Chen and Youjia Zhang, and Zexiang, Xu and Anpei, Chen},
+    journal={arXiv preprint arXiv:2601.14253},
+    year={2026}
 }
 
 ```
