@@ -48,6 +48,7 @@ This repository is divided into two main sections:
   - [T2V Subsection](#t2v-subsection)
     * [Additional Info](#video-other-additional-info)
   - [3D Scene Subsection](#3d-scene-subsection)
+    * [Accepted Papers](#-3d-scene-accepted-papers)
     * [Additional Info](#scene-other-additional-info)
   - [Human Motion Subsection](#human-motion-subsection)
     * [Additional Info](#motion-other-additional-info)
@@ -527,6 +528,28 @@ For more details, please check the [2024 T2V Papers](./docs/video/t2v_2024.md), 
 --------------
 
 ## 3D Scene Subsection
+
+### 🎉 3D Scene Accepted Papers
+| Year | Title                                                        | Venue  |                           Paper                            |                      Code                      | Project Page                      |
+| ---- | ------------------------------------------------------------ | :----: | :--------------------------------------------------------: | :--------------------------------------------: | :--------------------------------------------: |
+| 2025 | **PanoDreamer: Optimization-Based Single Image to 360 3D Scene With Diffusion**  | SIGGRAPH Asia 2025 |          [Link](https://arxiv.org/abs/2412.04827)          | [Link](https://github.com/avinashpaliwal/PanoDreamer)  | [Link](https://people.engr.tamu.edu/nimak/Papers/PanoDreamer/index.html)  |
+
+<details close>
+<summary>Accepted Papers References</summary>
+
+```
+%accepted papers
+
+@inproceedings{paliwal2025panodreamer,
+  title={PanoDreamer: Optimization-Based Single Image to 360 3D Scene With Diffusion},
+  author={Paliwal, Avinash and Zhou, Xilong and Tsarov, Andrii and Kalantari, Nima},
+  booktitle={Proceedings of the SIGGRAPH Asia 2025 Conference Papers},
+  pages={1--10},
+  year={2025}
+}
+
+```
+</details>
 
 ### Scene Other Additional Info
 
