@@ -455,6 +455,14 @@ Jiahao Zhan, Zizhang Li, Hong-Xing Yu, Jiajun Wu (Stanford University)
 We introduce PerpetualWonder, a hybrid generative simulator that enables long-horizon, action-conditioned 4D scene generation from a single image. Current works fail at this task because their physical state is decoupled from their visual representation, which prevents generative refinements to update the underlying physics for subsequent interactions. PerpetualWonder solves this by introducing the first true closed-loop system. It features a novel unified representation that creates a bidirectional link between the physical state and visual primitives, allowing generative refinements to correct both the dynamics and appearance. It also introduces a robust update mechanism that gathers supervision from multiple viewpoints to resolve optimization ambiguity. Experiments demonstrate that from a single image, PerpetualWonder can successfully simulate complex, multi-step interactions from long-horizon actions, maintaining physical plausibility and visual consistency.
 </details>
 
+#### 5. Code2Worlds: Empowering Coding LLMs for 4D World Generation
+Yi Zhang, Yunshuang Wang, Zeyu Zhang, Hao Tang (Peking University)
+
+<details span>
+<summary><b>Abstract</b></summary>
+Achieving spatial intelligence requires moving beyond visual plausibility to build world simulators grounded in physical laws. While coding LLMs have advanced static 3D scene generation, extending this paradigm to 4D dynamics remains a critical frontier. This task presents two fundamental challenges: multi-scale context entanglement, where monolithic generation fails to balance local object structures with global environmental layouts; and a semantic-physical execution gap, where open-loop code generation leads to physical hallucinations lacking dynamic fidelity. We introduce Code2Worlds, a framework that formulates 4D generation as language-to-simulation code generation. First, we propose a dual-stream architecture that disentangles retrieval-augmented object generation from hierarchical environmental orchestration. Second, to ensure dynamic fidelity, we establish a physics-aware closed-loop mechanism in which a PostProcess Agent scripts dynamics, coupled with a VLM-Motion Critic that performs self-reflection to iteratively refine simulation code. Evaluations on the Code4D benchmark show Code2Worlds outperforms baselines with a 41% SGS gain and 49% higher Richness, while uniquely generating physics-aware dynamics absent in prior static methods.
+</details>
+
 -----
 
 </details>
@@ -465,6 +473,7 @@ We introduce PerpetualWonder, a hybrid generative simulator that enables long-ho
 | 2026 | **Choreographing a World of Dynamic Objects**  | 7 Jan 2026 |          [Link](https://arxiv.org/pdf/2601.04194)          | --  | [Link](https://yanzhelyu.github.io/chord/)  |
 | 2026 | **Motion 3-to-4: 3D Motion Reconstruction for 4D Synthesis**  | 20 Jan 2026 |          [Link](https://arxiv.org/abs/2601.14253)          | [Link](https://github.com/Inception3D/Motion324)  | [Link](https://motion3-to-4.github.io/)  |
 | 2026 | **PerpetualWonder: Long-Horizon Action-Conditioned 4D Scene Generation**  | 4 Feb 2026 |          [Link](https://arxiv.org/abs/2602.04876)          | [Link](https://github.com/JohnZhan2023/PerpetualWonder)  | [Link](https://johnzhan2023.github.io/PerpetualWonder/)  |
+| 2026 | **Code2Worlds: Empowering Coding LLMs for 4D World Generation**  | 12 Feb 2026 |          [Link](https://arxiv.org/abs/2602.11757)          | [Link](https://github.com/AIGeeksGroup/Code2Worlds)  | [Link](https://aigeeksgroup.github.io/Code2Worlds/)  |
 
 
 <details close>
@@ -501,6 +510,13 @@ We introduce PerpetualWonder, a hybrid generative simulator that enables long-ho
   title={PerpetualWonder: Long-Horizon Action-Conditioned 4D Scene Generation},
   author={Zhan, Jiahao and Li, Zizhang and Yu, Hong-Xing and Wu, Jiajun},
   journal={arXiv preprint arXiv:2602.04876},
+  year={2026}
+}
+
+@article{zhang2026code2worlds,
+  title={Code2Worlds: Empowering Coding LLMs for 4D World Generation},
+  author={Zhang, Yi and Wang, Yunshuang and Zhang, Zeyu and Tang, Hao},
+  journal={arXiv preprint arXiv:2602.11757},
   year={2026}
 }
 
