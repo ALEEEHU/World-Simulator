@@ -44,6 +44,7 @@ This repository is divided into two main sections:
     * [World Foundation Model Platform](#world-foundation-model-platform)
 - [Text2X Resources](#-awesome-text2x-resources)
   - [4D Subsection](#4d-subsection)
+    * [Accepted Papers](#-4d-accepted-papers)
     * [ArXiv Papers](#-4d-arxiv-papers)
     * [Additional Info](#previous-papers-and-other-awesome-repos)
   - [T2V Subsection](#t2v-subsection)
@@ -418,6 +419,27 @@ An open collection of state-of-the-art (SOTA), novel **Text to X (X can be every
 
 ## 4D Subsection
 
+### 🎉 4D Accepted Papers
+| Year | Title                                                        | Venue  |                           Paper                            |                      Code                      | Project Page                      |
+| ---- | ------------------------------------------------------------ | :----: | :--------------------------------------------------------: | :--------------------------------------------: | :--------------------------------------------: |
+| 2026 | **PerpetualWonder: Long-Horizon Action-Conditioned 4D Scene Generation**  |  CVPR 2026|          [Link](https://arxiv.org/abs/2602.04876)          | [Link](https://github.com/JohnZhan2023/PerpetualWonder)  | [Link](https://johnzhan2023.github.io/PerpetualWonder/)  |
+
+<details close>
+<summary>Accepted Papers References</summary>
+
+```
+%accepted papers
+
+@article{zhan2026perpetualwonder,
+  title={PerpetualWonder: Long-Horizon Action-Conditioned 4D Scene Generation},
+  author={Zhan, Jiahao and Li, Zizhang and Yu, Hong-Xing and Wu, Jiajun},
+  journal={arXiv preprint arXiv:2602.04876},
+  year={2026}
+}
+
+```
+</details>
+
 ### 💡 4D ArXiv Papers
 
 #### 1. Pixel-to-4D: Camera-Controlled Image-to-Video Generation with Dynamic 3D Gaussians
@@ -447,15 +469,7 @@ Hongyuan Chen, Xingyu Chen, Youjia Zhang, Zexiang Xu, Anpei Chen
 We present Motion 3-to-4, a feed-forward framework for synthesising high-quality 4D dynamic objects from a single monocular video and an optional 3D reference mesh. While recent advances have significantly improved 2D, video, and 3D content generation, 4D synthesis remains difficult due to limited training data and the inherent ambiguity of recovering geometry and motion from a monocular viewpoint. Motion 3-to-4 addresses these challenges by decomposing 4D synthesis into static 3D shape generation and motion reconstruction. Using a canonical reference mesh, our model learns a compact motion latent representation and predicts per-frame vertex trajectories to recover complete, temporally coherent geometry. A scalable frame-wise transformer further enables robustness to varying sequence lengths. Evaluations on both standard benchmarks and a new dataset with accurate ground-truth geometry show that Motion 3-to-4 delivers superior fidelity and spatial consistency compared to prior work. 
 </details>
 
-#### 4. PerpetualWonder: Long-Horizon Action-Conditioned 4D Scene Generation
-Jiahao Zhan, Zizhang Li, Hong-Xing Yu, Jiajun Wu (Stanford University)
-
-<details span>
-<summary><b>Abstract</b></summary>
-We introduce PerpetualWonder, a hybrid generative simulator that enables long-horizon, action-conditioned 4D scene generation from a single image. Current works fail at this task because their physical state is decoupled from their visual representation, which prevents generative refinements to update the underlying physics for subsequent interactions. PerpetualWonder solves this by introducing the first true closed-loop system. It features a novel unified representation that creates a bidirectional link between the physical state and visual primitives, allowing generative refinements to correct both the dynamics and appearance. It also introduces a robust update mechanism that gathers supervision from multiple viewpoints to resolve optimization ambiguity. Experiments demonstrate that from a single image, PerpetualWonder can successfully simulate complex, multi-step interactions from long-horizon actions, maintaining physical plausibility and visual consistency.
-</details>
-
-#### 5. Code2Worlds: Empowering Coding LLMs for 4D World Generation
+#### 4. Code2Worlds: Empowering Coding LLMs for 4D World Generation
 Yi Zhang, Yunshuang Wang, Zeyu Zhang, Hao Tang (Peking University)
 
 <details span>
@@ -472,7 +486,6 @@ Achieving spatial intelligence requires moving beyond visual plausibility to bui
 | 2026 | **Pixel-to-4D: Camera-Controlled Image-to-Video Generation with Dynamic 3D Gaussians**  | 2 Jan 2026 |          [Link](https://arxiv.org/abs/2601.00678)          | --  | [Link](https://melonienimasha.github.io/Pixel-to-4D-Website/)  |
 | 2026 | **Choreographing a World of Dynamic Objects**  | 7 Jan 2026 |          [Link](https://arxiv.org/pdf/2601.04194)          | --  | [Link](https://yanzhelyu.github.io/chord/)  |
 | 2026 | **Motion 3-to-4: 3D Motion Reconstruction for 4D Synthesis**  | 20 Jan 2026 |          [Link](https://arxiv.org/abs/2601.14253)          | [Link](https://github.com/Inception3D/Motion324)  | [Link](https://motion3-to-4.github.io/)  |
-| 2026 | **PerpetualWonder: Long-Horizon Action-Conditioned 4D Scene Generation**  | 4 Feb 2026 |          [Link](https://arxiv.org/abs/2602.04876)          | [Link](https://github.com/JohnZhan2023/PerpetualWonder)  | [Link](https://johnzhan2023.github.io/PerpetualWonder/)  |
 | 2026 | **Code2Worlds: Empowering Coding LLMs for 4D World Generation**  | 12 Feb 2026 |          [Link](https://arxiv.org/abs/2602.11757)          | [Link](https://github.com/AIGeeksGroup/Code2Worlds)  | [Link](https://aigeeksgroup.github.io/Code2Worlds/)  |
 
 
@@ -504,13 +517,6 @@ Achieving spatial intelligence requires moving beyond visual plausibility to bui
     author={Hongyuan, Chen and Xingyu, Chen and Youjia Zhang, and Zexiang, Xu and Anpei, Chen},
     journal={arXiv preprint arXiv:2601.14253},
     year={2026}
-}
-
-@article{zhan2026perpetualwonder,
-  title={PerpetualWonder: Long-Horizon Action-Conditioned 4D Scene Generation},
-  author={Zhan, Jiahao and Li, Zizhang and Yu, Hong-Xing and Wu, Jiajun},
-  journal={arXiv preprint arXiv:2602.04876},
-  year={2026}
 }
 
 @article{zhang2026code2worlds,
