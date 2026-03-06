@@ -21,6 +21,9 @@
 | 2024 | **AniGS: Animatable Gaussian Avatar from a Single Image with Inconsistent Gaussian Reconstruction**  | CVPR 2025  |         [Link](https://arxiv.org/abs/2412.02684)        | [Link](https://github.com/aigc3d/AniGS)| [Link](https://lingtengqiu.github.io/2024/AniGS/) |
 | 2024 | **StdGEN: Semantic-Decomposed 3D Character Generation from Single Images**  | CVPR 2025  |         [Link](https://arxiv.org/abs/2411.05738)        | [Link](https://github.com/hyz317/StdGEN)| [Link](https://stdgen.github.io/) |
 | 2024 | **DreamHOI: Subject-Driven Generation of 3D Human-Object Interactions with Diffusion Priors**  | ICCV HiGen Workshop 2025 Oral  |          [Link](https://arxiv.org/abs/2409.08278)          | [Link](https://github.com/hanwenzhu/dreamhoi)| [Link](https://dreamhoi.github.io/) |
+| 2024 | **InstructHumans: Editing Animated 3D Human Textures with Instructions**  | IEEE Transactions on Multimedia (TMM)  |          [Link](https://arxiv.org/abs/2404.04037)          | [Link](https://github.com/viridityzhu/InstructHumans)  | [Link](https://jyzhu.top/instruct-humans/)  |
+| 2024 | **MixedGaussianAvatar: Realistically and Geometrically Accurate Head Avatar via Mixed 2D-3D Gaussian Splatting**  | ACM MM 2025  |    [Link](https://arxiv.org/abs/2412.04955)       | [Link](https://github.com/ChenVoid/MGA/)| [Link](https://chenvoid.github.io/MGA/) |
+| 2024 | **SimAvatar: Simulation-Ready Avatars with Layered Hair and Clothing**  | ICCV 2025  |    [Link](https://arxiv.org/abs/2412.09545)       | -- | [Link](https://nvlabs.github.io/SimAvatar/) |
 
 <details close>
 <summary>Accepted Papers References</summary>
@@ -177,6 +180,30 @@ year={2024}
   journal={arXiv preprint arXiv:2409.08278},
   year={2024}
 }
+
+@article{zhu2026instructhumans,
+  title={Instructhumans: Editing animated 3d human textures with instructions},
+  author={Zhu, Jiayin and Yang, Linlin and Yao, Angela},
+  journal={IEEE Transactions on Multimedia},
+  year={2026},
+  publisher={IEEE}
+}
+
+@inproceedings{chen2025mixedgaussianavatar,
+  title={Mixedgaussianavatar: Realistically and geometrically accurate head avatar via mixed 2d-3d gaussians},
+  author={Chen, Peng and Wei, Xiaobao and Wuwu, Qingpo and Wang, Xinyi and Xiao, Xingyu and Lu, Ming},
+  booktitle={Proceedings of the 33rd ACM International Conference on Multimedia},
+  pages={945--954},
+  year={2025}
+}
+
+@inproceedings{li2025simavatar,
+  title={Simavatar: Simulation-ready avatars with layered hair and clothing},
+  author={Li, Xueting and Yuan, Ye and De Mello, Shalini and Daviet, Gilles and Leaf, Jonathan and Macklin, Miles and Kautz, Jan and Iqbal, Umar},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  pages={26320--26330},
+  year={2025}
+}
 ```
 </details>
 
@@ -193,39 +220,11 @@ Jianqiang Ren, Chao He, Lin Liu, Jiahao Chen, Yutong Wang, Yafei Song, Jianfang 
 There is a growing demand for customized and expressive 3D characters with the emergence of AI agents and Metaverse, but creating 3D characters using traditional computer graphics tools is a complex and time-consuming task. To address these challenges, we propose a user-friendly framework named Make-A-Character (Mach) to create lifelike 3D avatars from text descriptions. The framework leverages the power of large language and vision models for textual intention understanding and intermediate image generation, followed by a series of human-oriented visual perception and 3D generation modules. Our system offers an intuitive approach for users to craft controllable, realistic, fully-realized 3D characters that meet their expectations within 2 minutes, while also enabling easy integration with existing CG pipeline for dynamic expressiveness. 
 </details>
 
-#### 2. InstructHumans: Editing Animated 3D Human Textures with Instructions (text to 3d human texture editing)
-Jiayin Zhu, Linlin Yang, Angela Yao
-
-(National University of Singapore, Communication University of China)
-<details span>
-<summary><b>Abstract</b></summary>
-We present InstructHumans, a novel framework for instruction-driven 3D human texture editing. Existing text-based editing methods use Score Distillation Sampling (SDS) to distill guidance from generative models. This work shows that naively using such scores is harmful to editing as they destroy consistency with the source avatar. Instead, we propose an alternate SDS for Editing (SDS-E) that selectively incorporates subterms of SDS across diffusion timesteps. We further enhance SDS-E with spatial smoothness regularization and gradient-based viewpoint sampling to achieve high-quality edits with sharp and high-fidelity detailing. InstructHumans significantly outperforms existing 3D editing methods, consistent with the initial avatar while faithful to the textual instructions.
-</details>
-
-#### 3. MixedGaussianAvatar: Realistically and Geometrically Accurate Head Avatar via Mixed 2D-3D Gaussian Splatting
-Peng Chen, Xiaobao Wei, Qingpo Wuwu, Xinyi Wang, Xingyu Xiao, Ming Lu
-
-(Institute of Software Chinese Academy of Sciences, University of Chinese Academy of Sciences, Intel Labs China, Tsinghua University, Nankai University, Peking University)
-<details span>
-<summary><b>Abstract</b></summary>
-Reconstructing high-fidelity 3D head avatars is crucial in various applications such as virtual reality. The pioneering methods reconstruct realistic head avatars with Neural Radiance Fields (NeRF), which have been limited by training and rendering speed. Recent methods based on 3D Gaussian Splatting (3DGS) significantly improve the efficiency of training and rendering. However, the surface inconsistency of 3DGS results in subpar geometric accuracy; later, 2DGS uses 2D surfels to enhance geometric accuracy at the expense of rendering fidelity. To leverage the benefits of both 2DGS and 3DGS, we propose a novel method named MixedGaussianAvatar for realistically and geometrically accurate head avatar reconstruction. Our main idea is to utilize 2D Gaussians to reconstruct the surface of the 3D head, ensuring geometric accuracy. We attach the 2D Gaussians to the triangular mesh of the FLAME model and connect additional 3D Gaussians to those 2D Gaussians where the rendering quality of 2DGS is inadequate, creating a mixed 2D-3D Gaussian representation. These 2D-3D Gaussians can then be animated using FLAME parameters. We further introduce a progressive training strategy that first trains the 2D Gaussians and then fine-tunes the mixed 2D-3D Gaussians. We demonstrate the superiority of MixedGaussianAvatar through comprehensive experiments.
-</details>
-
-#### 4. SimAvatar: Simulation-Ready Avatars with Layered Hair and Clothing
-Xueting Li, Ye Yuan, Shalini De Mello, Gilles Daviet, Jonathan Leaf, Miles Macklin, Jan Kautz, Umar Iqbal (NVIDIA)
-<details span>
-<summary><b>Abstract</b></summary>
-We introduce SimAvatar, a framework designed to generate simulation-ready clothed 3D human avatars from a text prompt. Current text-driven human avatar generation methods either model hair, clothing, and the human body using a unified geometry or produce hair and garments that are not easily adaptable for simulation within existing simulation pipelines. The primary challenge lies in representing the hair and garment geometry in a way that allows leveraging established prior knowledge from foundational image diffusion models (e.g., Stable Diffusion) while being simulation-ready using either physics or neural simulators. To address this task, we propose a two-stage framework that combines the flexibility of 3D Gaussians with simulation-ready hair strands and garment meshes. Specifically, we first employ three text-conditioned 3D generative models to generate garment mesh, body shape and hair strands from the given text prompt. To leverage prior knowledge from foundational diffusion models, we attach 3D Gaussians to the body mesh, garment mesh, as well as hair strands and learn the avatar appearance through optimization. To drive the avatar given a pose sequence, we first apply physics simulators onto the garment meshes and hair strands. We then transfer the motion onto 3D Gaussians through carefully designed mechanisms for each body part. As a result, our synthesized avatars have vivid texture and realistic dynamic motion. To the best of our knowledge, our method is the first to produce highly realistic, fully simulation-ready 3D avatars, surpassing the capabilities of current approaches.
-</details>
-
 ---
 
 | Year | Title                                                        | ArXiv Time  |                           Paper                            |                      Code                      | Project Page                      |
 | ---- | ------------------------------------------------------------ | :----: | :--------------------------------------------------------: | :--------------------------------------------: | :--------------------------------------------: |
 | 2023 | **Make-A-Character: High Quality Text-to-3D Character Generation within Minutes**  | 24 Dec 2023  |          [Link](https://arxiv.org/abs/2312.15430)          |  [Link](https://github.com/Human3DAIGC/Make-A-Character)  | [Link](https://human3daigc.github.io/MACH/)  |
-| 2024 | **InstructHumans: Editing Animated 3D Human Textures with Instructions**  | 5 Apr 2024  |          [Link](https://arxiv.org/abs/2404.04037)          | [Link](https://github.com/viridityzhu/InstructHumans)  | [Link](https://jyzhu.top/instruct-humans/)  |
-| 2024 | **MixedGaussianAvatar: Realistically and Geometrically Accurate Head Avatar via Mixed 2D-3D Gaussian Splatting**  | 6 Dec 2024  |    [Link](https://arxiv.org/abs/2412.04955)       | [Link](https://github.com/ChenVoid/MGA/)| [Link](https://chenvoid.github.io/MGA/) |
-| 2024 | **SimAvatar: Simulation-Ready Avatars with Layered Hair and Clothing**  | 19 Dec 2024  |    [Link](https://arxiv.org/abs/2412.09545)       | -- | [Link](https://nvlabs.github.io/SimAvatar/) |
 
 <details close>
 <summary>ArXiv Papers References</summary>
@@ -240,28 +239,5 @@ We introduce SimAvatar, a framework designed to generate simulation-ready clothe
       journal = {arXiv preprint arXiv:2312.15430}
 }
 
-@article{zhu2024InstructHumans,
-         author={Zhu, Jiayin and Yang, Linlin and Yao, Angela},
-         title={InstructHumans: Editing Animated 3D Human Textures with Instructions},
-         journal={arXiv preprint arXiv:2404.04037},
-         year={2024}
-}
-
-@misc{chen2024mixedgaussianavatarrealisticallygeometricallyaccurate,
-      title={MixedGaussianAvatar: Realistically and Geometrically Accurate Head Avatar via Mixed 2D-3D Gaussian Splatting}, 
-      author={Peng Chen and Xiaobao Wei and Qingpo Wuwu and Xinyi Wang and Xingyu Xiao and Ming Lu},
-      year={2024},
-      eprint={2412.04955},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV},
-      url={https://arxiv.org/abs/2412.04955}, 
-}
-
-@article{li2024simavatar,
-  title={SimAvatar: Simulation-Ready Avatars with Layered Hair and Clothing},
-  author={Li, Xueting and Yuan, Ye and De Mello, Shalini and Daviet, Gilles and Leaf, Jonathan and Macklin, Miles and Kautz, Jan and Iqbal, Umar},
-  journal={arXiv preprint arXiv:2412.09545},
-  year={2024}
-}
 ```
 </details>
