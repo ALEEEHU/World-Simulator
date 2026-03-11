@@ -6,6 +6,7 @@
 | 2023 | **SceneWiz3D: Towards Text-guided 3D Scene Composition**  | CVPR 2024 |          [Link](https://arxiv.org/abs/2312.08885)          | [Link](https://github.com/zqh0253/SceneWiz3D)   | [Link](https://zqh0253.github.io/SceneWiz3D/)  |
 | 2023 | **GraphDreamer: Compositional 3D Scene Synthesis from Scene Graphs**  | CVPR 2024 |          [Link](https://arxiv.org/abs/2312.00093)          | [Link](https://github.com/GGGHSL/GraphDreamer)  | [Link](https://graphdreamer.github.io/)  |
 | 2023 | **ControlRoom3D: Room Generation using Semantic Proxy Rooms**  | CVPR 2024 |          [Link](https://arxiv.org/abs/2312.05208)          | --  | [Link](https://jonasschult.github.io/ControlRoom3D/)  |
+| 2023 | **Ctrl-Room: Controllable Text-to-3D Room Meshes Generation with Layout Constraints**  | 3DV 2025 |          [Link](https://arxiv.org/abs/2310.03602)          | [Link](https://github.com/fangchuan/Ctrl-Room)    | [Link](https://fangchuan.github.io/ctrl-room.github.io/)  |
 | 2024 | **3D-SceneDreamer: Text-Driven 3D-Consistent Scene Generation**  | CVPR 2024 |          [Link](https://arxiv.org/abs/2403.09439)          | --  | -- |
 | 2024 | **ART3D: 3D Gaussian Splatting for Text-Guided Artistic Scenes Generation**  | CVPR 2024 Workshop on AI3DG |          [Link](https://arxiv.org/abs/2405.10508)          | -- |--|
 | 2024 | **GALA3D: Towards Text-to-3D Complex Scene Generation via Layout-guidedGenerative Gaussian Splatting**  | ICML 2024 |          [Link](https://arxiv.org/abs/2402.07207)          | [Link](https://github.com/VDIGPKU/GALA3D)  |[Link](https://gala3d.github.io/) |
@@ -24,6 +25,7 @@
 | 2024 | **WonderWorld: Interactive 3D Scene Generation from a Single Image**  | CVPR 2025 |          [Link](https://arxiv.org/abs/2406.09394)          | [Link](https://github.com/KovenYu/WonderWorld)  | [Link](https://kovenyu.com/wonderworld/) |
 | 2024 | **MIDI: Multi-Instance Diffusion for Single Image to 3D Scene Generation**  | CVPR 2025 |          [Link](https://arxiv.org/abs/2412.03558)          | [Link](https://github.com/VAST-AI-Research/MIDI-3D)  | [Link](https://huanngzh.github.io/MIDI-Page/) |
 | 2024 | **LayerPano3D: Layered 3D Panorama for Hyper-Immersive Scene Generation**  | SIGGRAPH 2025 |          [Link](https://arxiv.org/abs/2408.13252)          | [Link](https://github.com/YS-IMTech/LayerPano3D)  |[Link](https://ys-imtech.github.io/projects/LayerPano3D/) |
+| 2024 | **Scene123: One Prompt to 3D Scene Generation via Video-Assisted and Consistency-Enhanced MAE**  | ACM MM 2025 |          [Link](https://www.arxiv.org/abs/2408.05477)          | [Link](https://github.com/YiyingYang12/Scene123)  |[Link](https://yiyingyang12.github.io/Scene123.github.io/) |
 
 <details close>
 <summary>Accepted Papers References</summary>
@@ -66,6 +68,15 @@
   title     = {ControlRoom3D: Room Generation using Semantic Proxy Rooms},
   booktitle = {IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
   year      = {2024},
+}
+
+@inproceedings{fang2025ctrl,
+  title={Ctrl-room: Controllable text-to-3d room meshes generation with layout constraints},
+  author={Fang, Chuan and Dong, Yuan and Luo, Kunming and Hu, Xiaotao and Shrestha, Rakesh and Tan, Ping},
+  booktitle={2025 International Conference on 3D Vision (3DV)},
+  pages={692--701},
+  year={2025},
+  organization={IEEE}
 }
 
 @inproceedings{zhang20243d,
@@ -219,6 +230,14 @@
   year={2024}
 }
 
+@inproceedings{yang2025scene123,
+  title={Scene123: One prompt to 3D scene generation via video-assisted and consistency-enhanced MAE},
+  author={Yang, Yiying and Yin, Fukun and Fan, Jiayuan and Li, Wanzhang and Chen, Xin and Yu, Gang},
+  booktitle={Proceedings of the 33rd ACM International Conference on Multimedia},
+  pages={3615--3624},
+  year={2025}
+}
+
 ```
 </details>
 
@@ -226,23 +245,14 @@
 
 ### 💡 Scene ArXiv Papers
 
-#### 1. Ctrl-Room: Controllable Text-to-3D Room Meshes Generation with Layout Constraints 
-Chuan Fang, Xiaotao Hu, Kunming Luo, Ping Tan 
-
-(Hong Kong University of Science and Technology, Light Illusions, Nankai University)
-<details span>
-<summary><b>Abstract</b></summary>
-Text-driven 3D indoor scene generation could be useful for gaming, film industry, and AR/VR applications. However, existing methods cannot faithfully capture the room layout, nor do they allow flexible editing of individual objects in the room. To address these problems, we present Ctrl-Room, which is able to generate convincing 3D rooms with designer-style layouts and high-fidelity textures from just a text prompt. Moreover, Ctrl-Room enables versatile interactive editing operations such as resizing or moving individual furniture items. Our key insight is to separate the modeling of layouts and appearance. %how to model the room that takes into account both scene texture and geometry at the same time. To this end, Our proposed method consists of two stages, a `Layout Generation Stage' and an `Appearance Generation Stage'. The `Layout Generation Stage' trains a text-conditional diffusion model to learn the layout distribution with our holistic scene code parameterization. Next, the `Appearance Generation Stage' employs a fine-tuned ControlNet to produce a vivid panoramic image of the room guided by the 3D scene layout and text prompt. In this way, we achieve a high-quality 3D room with convincing layouts and lively textures. Benefiting from the scene code parameterization, we can easily edit the generated room model through our mask-guided editing module, without expensive editing-specific training. Extensive experiments on the Structured3D dataset demonstrate that our method outperforms existing methods in producing more reasonable, view-consistent, and editable 3D rooms from natural language prompts.
-</details>
-
-#### 2. Text2Immersion: Generative Immersive Scene with 3D Gaussians
+#### 1. Text2Immersion: Generative Immersive Scene with 3D Gaussians
 Hao Ouyang, Kathryn Heal, Stephen Lombardi, Tiancheng Sun (HKUST, Google)
 <details span>
 <summary><b>Abstract</b></summary>
 We introduce Text2Immersion, an elegant method for producing high-quality 3D immersive scenes from text prompts. Our proposed pipeline initiates by progressively generating a Gaussian cloud using pre-trained 2D diffusion and depth estimation models. This is followed by a refining stage on the Gaussian cloud, interpolating and refining it to enhance the details of the generated scene. Distinct from prevalent methods that focus on single object or indoor scenes, or employ zoom-out trajectories, our approach generates diverse scenes with various objects, even extending to the creation of imaginary scenes. Consequently, Text2Immersion can have wide-ranging implications for various applications such as virtual reality, game development, and automated content creation. Extensive evaluations demonstrate that our system surpasses other methods in rendering quality and diversity, further progressing towards text-driven 3D scene generation. 
 </details>
 
-#### 3. ShowRoom3D: Text to High-Quality 3D Room Generation Using 3D Priors
+#### 2. ShowRoom3D: Text to High-Quality 3D Room Generation Using 3D Priors
 Weijia Mao, Yan-Pei Cao, Jia-Wei Liu, Zhongcong Xu, Mike Zheng Shou
 
 (Show Lab National University of Singapore, ARC Lab Tencent PCG)
@@ -251,7 +261,7 @@ Weijia Mao, Yan-Pei Cao, Jia-Wei Liu, Zhongcong Xu, Mike Zheng Shou
 We introduce ShowRoom3D, a three-stage approach for generating high-quality 3D room-scale scenes from texts. Previous methods using 2D diffusion priors to optimize neural radiance fields for generating room-scale scenes have shown unsatisfactory quality. This is primarily attributed to the limitations of 2D priors lacking 3D awareness and constraints in the training methodology. In this paper, we utilize a 3D diffusion prior, MVDiffusion, to optimize the 3D room-scale scene. Our contributions are in two aspects. Firstly, we propose a progressive view selection process to optimize NeRF. This involves dividing the training process into three stages, gradually expanding the camera sampling scope. Secondly, we propose the pose transformation method in the second stage. It will ensure MVDiffusion provide the accurate view guidance. As a result, ShowRoom3D enables the generation of rooms with improved structural integrity, enhanced clarity from any view, reduced content repetition, and higher consistency across different perspectives. Extensive experiments demonstrate that our method, significantly outperforms state-of-the-art approaches by a large margin in terms of user study.
 </details>
 
-#### 4. Detailed Human-Centric Text Description-Driven Large Scene Synthesis
+#### 3. Detailed Human-Centric Text Description-Driven Large Scene Synthesis
 Gwanghyun Kim, Dong Un Kang, Hoigi Seo, Hayeon Kim, Se Young Chun
 
 (Dept. of Electrical and Computer Engineering, INMC & IPAI, Seoul National University Republic of Korea)
@@ -260,7 +270,7 @@ Gwanghyun Kim, Dong Un Kang, Hoigi Seo, Hayeon Kim, Se Young Chun
 Text-driven large scene image synthesis has made significant progress with diffusion models, but controlling it is challenging. While using additional spatial controls with corresponding texts has improved the controllability of large scene synthesis, it is still challenging to faithfully reflect detailed text descriptions without user-provided controls. Here, we propose DetText2Scene, a novel text-driven large-scale image synthesis with high faithfulness, controllability, and naturalness in a global context for the detailed human-centric text description. Our DetText2Scene consists of 1) hierarchical keypoint-box layout generation from the detailed description by leveraging large language model (LLM), 2) view-wise conditioned joint diffusion process to synthesize a large scene from the given detailed text with LLM-generated grounded keypoint-box layout and 3) pixel perturbation-based pyramidal interpolation to progressively refine the large scene for global coherence. Our DetText2Scene significantly outperforms prior arts in text-to-large scene synthesis qualitatively and quantitatively, demonstrating strong faithfulness with detailed descriptions, superior controllability, and excellent naturalness in a global context.
 </details>
 
-#### 5. HoloDreamer: Holistic 3D Panoramic World Generation from Text Descriptions
+#### 4. HoloDreamer: Holistic 3D Panoramic World Generation from Text Descriptions
 Haiyang Zhou, Xinhua Cheng, Wangbo Yu, Yonghong Tian, Li Yuan
 
 (Peking University, Peng Cheng Laboratory)
@@ -269,17 +279,7 @@ Haiyang Zhou, Xinhua Cheng, Wangbo Yu, Yonghong Tian, Li Yuan
 3D scene generation is in high demand across various domains, including virtual reality, gaming, and the film industry. Owing to the powerful generative capabilities of text-to-image diffusion models that provide reliable priors, the creation of 3D scenes using only text prompts has become viable, thereby significantly advancing researches in text-driven 3D scene generation. In order to obtain multiple-view supervision from 2D diffusion models, prevailing methods typically employ the diffusion model to generate an initial local image, followed by iteratively outpainting the local image using diffusion models to gradually generate scenes. Nevertheless, these outpainting-based approaches prone to produce global inconsistent scene generation results without high degree of completeness, restricting their broader applications. To tackle these problems, we introduce HoloDreamer, a framework that first generates high-definition panorama as a holistic initialization of the full 3D scene, then leverage 3D Gaussian Splatting (3D-GS) to quickly reconstruct the 3D scene, thereby facilitating the creation of view-consistent and fully enclosed 3D scenes. Specifically, we propose Stylized Equirectangular Panorama Generation, a pipeline that combines multiple diffusion models to enable stylized and detailed equirectangular panorama generation from complex text prompts. Subsequently, Enhanced Two-Stage Panorama Reconstruction is introduced, conducting a two-stage optimization of 3D-GS to inpaint the missing region and enhance the integrity of the scene. Comprehensive experiments demonstrated that our method outperforms prior works in terms of overall visual consistency and harmony as well as reconstruction quality and rendering robustness when generating fully enclosed scenes.
 </details>
 
-#### 6. Scene123: One Prompt to 3D Scene Generation via Video-Assisted and Consistency-Enhanced MAE
-Yiying Yang, Fukun Yin, Jiayuan Fan, Xin Chen, Wanzhang Li, Gang Yu
-
-(Fudan University, Tencent PCG)
-<details span>
-<summary><b>Abstract</b></summary>
-As Artificial Intelligence Generated Content (AIGC) advances, a variety of methods have been developed to generate text, images, videos, and 3D objects from single or multimodal inputs, contributing efforts to emulate human-like cognitive content creation. However, generating realistic large-scale scenes from a single input presents a challenge due to the complexities involved in ensuring consistency across extrapolated views generated by models. Benefiting from recent video generation models and implicit neural representations, we propose Scene123, a 3D scene generation model, that not only ensures realism and diversity through the video generation framework but also uses implicit neural fields combined with Masked Autoencoders (MAE) to effectively ensures the consistency of unseen areas across views. Specifically, we initially warp the input image (or an image generated from text) to simulate adjacent views, filling the invisible areas with the MAE model. However, these filled images usually fail to maintain view consistency, thus we utilize the produced views to optimize a neural radiance field, enhancing geometric consistency.
-Moreover, to further enhance the details and texture fidelity of generated views, we employ a GAN-based Loss against images derived from the input image through the video generation model. Extensive experiments demonstrate that our method can generate realistic and consistent scenes from a single prompt. Both qualitative and quantitative results indicate that our approach surpasses existing state-of-the-art methods.
-</details>
-
-#### 7. SceneDreamer360: Text-Driven 3D-Consistent Scene Generation with Panoramic Gaussian Splatting
+#### 5. SceneDreamer360: Text-Driven 3D-Consistent Scene Generation with Panoramic Gaussian Splatting
 Wenrui Li, Yapeng Mi, Fucheng Cai, Zhe Yang, Wangmeng Zuo, Xingtao Wang, Xiaopeng Fan
 
 (Harbin Institute of Technology, University of Electronic Science and Technology of China)
@@ -288,7 +288,7 @@ Wenrui Li, Yapeng Mi, Fucheng Cai, Zhe Yang, Wangmeng Zuo, Xingtao Wang, Xiaopen
 Text-driven 3D scene generation has seen significant advancements recently. However, most existing methods generate single-view images using generative models and then stitch them together in 3D space. This independent generation for each view often results in spatial inconsistency and implausibility in the 3D scenes. To address this challenge, we proposed a novel text-driven 3D-consistent scene generation model: SceneDreamer360. Our proposed method leverages a text-driven panoramic image generation model as a prior for 3D scene generation and employs 3D Gaussian Splatting (3DGS) to ensure consistency across multi-view panoramic images. Specifically, SceneDreamer360 enhances the fine-tuned Panfusion generator with a three-stage panoramic enhancement, enabling the generation of high-resolution, detail-rich panoramic images. During the 3D scene construction, a novel point cloud fusion initialization method is used, producing higher quality and spatially consistent point clouds. Our extensive experiments demonstrate that compared to other methods, SceneDreamer360 with its panoramic image generation and 3DGS can produce higher quality, spatially consistent, and visually appealing 3D scenes from any text prompt. 
 </details>
 
-#### 8. Semantic Score Distillation Sampling for Compositional Text-to-3D Generation
+#### 6. Semantic Score Distillation Sampling for Compositional Text-to-3D Generation
 Ling Yang, Zixiang Zhang, Junlin Han, Bohan Zeng, Runjia Li, Philip Torr, Wentao Zhang
 
 (Peking University, University of Oxford)
@@ -301,12 +301,11 @@ Generating high-quality 3D assets from textual descriptions remains a pivotal ch
 
 | Year | Title                                                        | ArXiv Time  |                           Paper                            |                      Code                      | Project Page                      |
 | ---- | ------------------------------------------------------------ | :----: | :--------------------------------------------------------: | :--------------------------------------------: | :--------------------------------------------: |
-| 2023 | **Ctrl-Room: Controllable Text-to-3D Room Meshes Generation with Layout Constraints**  | 5 Oct 2023 |          [Link](https://arxiv.org/abs/2310.03602)          | [Link](https://github.com/fangchuan/Ctrl-Room)    | [Link](https://fangchuan.github.io/ctrl-room.github.io/)  |
+
 | 2023 | **Text2Immersion: Generative Immersive Scene with 3D Gaussians**  | 14 Dec 2023 |          [Link](https://arxiv.org/abs/2312.09242)          | --   | [Link](https://ken-ouyang.github.io/text2immersion/index.html)  |
 | 2023 | **ShowRoom3D: Text to High-Quality 3D Room Generation Using 3D Priors**  | 20 Dec 2023 |          [Link](https://arxiv.org/abs/2312.13324)          | [Link](https://github.com/showlab/ShowRoom3D)  | [Link](https://showroom3d.github.io/)  |
 | 2023 | **Detailed Human-Centric Text Description-Driven Large Scene Synthesis**  | 30 Nov 2023 |          [Link](https://arxiv.org/abs/2311.18654)          | --  |-- |
 | 2024 | **HoloDreamer: Holistic 3D Panoramic World Generation from Text Descriptions**  | 21 Jul 2024 |          [Link](https://arxiv.org/abs/2407.15187)          | [Link](https://github.com/zhouhyOcean/HoloDreamer)  |[Link](https://zhouhyocean.github.io/holodreamer/) |
-| 2024 | **Scene123: One Prompt to 3D Scene Generation via Video-Assisted and Consistency-Enhanced MAE**  | 10 Aug 2024 |          [Link](https://www.arxiv.org/abs/2408.05477)          | [Link](https://github.com/YiyingYang12/Scene123)  |[Link](https://yiyingyang12.github.io/Scene123.github.io/) |
 | 2024 | **SceneDreamer360: Text-Driven 3D-Consistent Scene Generation with Panoramic Gaussian Splatting**  | 25 Aug 2024 |          [Link](https://arxiv.org/abs/5811784)          | [Link](https://github.com/liwrui/SceneDreamer360)  | [Link](https://scenedreamer360.github.io/)|
 | 2024 | **Semantic Score Distillation Sampling for Compositional Text-to-3D Generation**  | 11 Oct 2024 |          [Link](https://arxiv.org/abs/2410.09009)          | [Link](https://github.com/YangLing0818/SemanticSDS-3D)  | -- |
 
@@ -316,13 +315,6 @@ Generating high-quality 3D assets from textual descriptions remains a pivotal ch
 
 ```
 %axiv papers
-
-@article{fang2023ctrl,
-      title={Ctrl-Room: Controllable Text-to-3D Room Meshes Generation with Layout Constraints},
-      author={Fang, Chuan and Hu, Xiaotao and Luo, Kunming and Tan, Ping},
-      journal={arXiv preprint arXiv:2310.03602},
-      year={2023}
-}
 
 @article{ouyang2023text,
   author    = {Ouyang, Hao and Sun, Tiancheng and Lombardi, Stephen and Heal, Kathryn},
@@ -354,16 +346,6 @@ Generating high-quality 3D assets from textual descriptions remains a pivotal ch
       archivePrefix={arXiv},
       primaryClass={cs.CV},
       url={https://arxiv.org/abs/2407.15187}, 
-}
-
-@misc{yang2024scene123prompt3dscene,
-      title={Scene123: One Prompt to 3D Scene Generation via Video-Assisted and Consistency-Enhanced MAE}, 
-      author={Yiying Yang and Fukun Yin and Jiayuan Fan and Xin Chen and Wanzhang Li and Gang Yu},
-      year={2024},
-      eprint={2408.05477},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV},
-      url={https://arxiv.org/abs/2408.05477}, 
 }
 
 @misc{li2024scenedreamer360textdriven3dconsistentscene,
