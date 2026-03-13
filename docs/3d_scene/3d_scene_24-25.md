@@ -13,6 +13,7 @@
 | 2025 | **SceneGen: Single-Image 3D Scene Generation in One Feedforward Pass**  | 3DV 2026 |          [Link](https://arxiv.org/abs/2508.15769)          | [Link](https://github.com/Mengmouxu/SceneGen) | [Link](https://mengmouxu.github.io/SceneGen/)  |
 | 2025 | **WorldGrow: Generating Infinite 3D World**  | AAAI 2026 Oral |          [Link](https://arxiv.org/abs/2510.21682)          | [Link](https://github.com/world-grow/WorldGrow) | [Link](https://world-grow.github.io/)  |
 | 2025 | **Voyager: Long-Range and World-Consistent Video Diffusion for Explorable 3D Scene Generation**  | ACM TOG 2025 |          [Link](https://arxiv.org/abs/2506.04225)          | [Link](https://github.com/Voyager-World/Voyager)  | [Link](https://voyager-world.github.io/)  |
+| 2025 | **FlashWorld: High-quality 3D Scene Generation within Seconds**  | ICLR 2026 Oral |          [Link](https://arxiv.org/abs/2510.13678)          | [Link](https://github.com/imlixinyang/FlashWorld) | [Link](https://imlixinyang.github.io/FlashWorld-Project-Page/)  |
 
 <details close>
 <summary>Accepted Papers References</summary>
@@ -109,6 +110,15 @@ year={2025}
   pages={1--15},
   year={2025},
   publisher={ACM New York, NY, USA}
+}
+
+@misc{li2025flashworld,
+        title={FlashWorld: High-quality 3D Scene Generation within Seconds},
+        author={Xinyang Li and Tengfei Wang and Zixiao Gu and Shengchuan Zhang and Chunchao Guo and Liujuan Cao},
+        year={2025},
+        eprint={2510.13678},
+        archivePrefix={arXiv},
+        primaryClass={cs.CV}
 }
 
 ```
@@ -208,17 +218,7 @@ Zhongqi Yang, Wenhang Ge, Yuqi Li, Jiaqi Chen, Haoyuan Li, Mengyin An, Fei Kang,
 Explorable 3D world generation from a single image or text prompt forms a cornerstone of spatial intelligence. Recent works utilize video model to achieve wide-scope and generalizable 3D world generation. However, existing approaches often suffer from limited reconstruction scope and suboptimal visual quality. In this work, we propose Matrix-3D, a framework that utilize panoramic representation for wide-coverage omnidirectional explorable 3D world generation that combines conditional video generation and panoramic 3D reconstruction. We first train a trajectory-guided panoramic video diffusion model that employs scene mesh renders as condition, to enable high-quality and geometrically consistent scene video generation. To enable 3D world generation, we introduce two methods that lift the 2D content to 3D world, ensuring efficiency and effectiveness. To lift the panorama scene video to 3D world, we propose two separate pipelines — a feed-forward large reconstruction model for rapid 3D scene reconstruction and an optimization-based pipeline for accurate and detailed 3D scene reconstruction. For efficiency, we introduce a feed-forward panoramic 3D reconstruction model that projects video latents and camera poses to predict omni-directional 3D Gaussian Splatting attributes. To facilitate convergence, we adopt a two-stage training strategy and supervise the model using rendered panoramic novel views. For effectiveness, we also propose a optimization-based reconstruction method. However, no existing panoramic video dataset provides associated camera poses. To facilitate effective training, we also introduce the Matrix-Pano dataset — the first large-scale synthetic collection comprising 116,759 high-quality static panoramic video sequences with various annotations. Extensive experiments demonstrate the effectiveness of our proposed framework, which achieves state-of-the-art performance in panoramic video generation and 3D world generation.
 </details>
 
-#### 11. FlashWorld: High-quality 3D Scene Generation within Seconds
-Xinyang Li, Tengfei Wang, Zixiao Gu, Shengchuan Zhang, Chunchao Guo, Liujuan Cao 
-
-(MAC Lab Xiamen University, Tencent, Yes Lab Fudan University)
-
-<details span>
-<summary><b>Abstract</b></summary>
-We propose FlashWorld, a generative model that produces 3D scenes from a single image or text prompt in seconds, 10~100 faster than previous works while possessing superior rendering quality. Our approach shifts from the conventional multi-view-oriented (MV-oriented) paradigm, which generates multi-view images for subsequent 3D reconstruction, to a 3D-oriented approach where the model directly produces 3D Gaussian representations during multi-view generation. While ensuring 3D consistency, 3D-oriented method typically suffers poor visual quality. FlashWorld includes a dual-mode pre-training phase followed by a cross-mode post-training phase, effectively integrating the strengths of both paradigms. Specifically, leveraging the prior from a video diffusion model, we first pre-train a dual-mode multi-view diffusion model, which jointly supports MV-oriented and 3D-oriented generation modes. To bridge the quality gap in 3D-oriented generation, we further propose a cross-mode post-training distillation by matching distribution from consistent 3D-oriented mode to high-quality MV-oriented mode. This not only enhances visual quality while maintaining 3D consistency, but also reduces the required denoising steps for inference. Also, we propose a strategy to leverage massive single-view images and text prompts during this process to enhance the model's generalization to out-of-distribution inputs. Extensive experiments demonstrate the superiority and efficiency of our method.
-</details>
-
-#### 12. Self-Evolving 3D Scene Generation from a Single Image
+#### 11. Self-Evolving 3D Scene Generation from a Single Image
 Kaizhi Zheng, Yue Fan, Jing Gu, Zishuo Xu, Xuehai He, Xin Eric Wang
 
 (University of California Santa Cruz, University of California Santa Barbara)
@@ -228,7 +228,7 @@ Kaizhi Zheng, Yue Fan, Jing Gu, Zishuo Xu, Xuehai He, Xin Eric Wang
 Generating high-quality, textured 3D scenes from a single image remains a fundamental challenge in vision and graphics. Recent image-to-3D generators recover reasonable geometry from single views, but their object-centric training limits generalization to complex, large-scale scenes with faithful structure and texture. We present EvoScene, a self-evolving, training-free framework that progressively reconstructs complete 3D scenes from single images. The key idea is combining the complementary strengths of existing models: geometric reasoning from 3D generation models and visual knowledge from video generation models. Through three iterative stages--Spatial Prior Initialization, Visual-guided 3D Scene Mesh Generation, and Spatial-guided Novel View Generation--EvoScene alternates between 2D and 3D domains, gradually improving both structure and appearance. Experiments on diverse scenes demonstrate that EvoScene achieves superior geometric stability, view-consistent textures, and unseen-region completion compared to strong baselines, producing ready-to-use 3D meshes for practical applications.
 </details>
 
-#### 13. I-Scene: 3D Instance Models are Implicit Generalizable Spatial Learners
+#### 12. I-Scene: 3D Instance Models are Implicit Generalizable Spatial Learners
 Lu Ling, Yunhao Ge, Yichen Sheng, Aniket Bera
 
 (Purdue University, NVIDIA Research)
@@ -250,7 +250,6 @@ Generalization remains the central challenge for interactive 3D scene generation
 | 2025 | **Towards Geometric and Textural Consistency 3D Scene Generation via Single Image-guided Model Generation and Layout Optimization**  | 20 Jul 2025 |          [Link](https://arxiv.org/abs/2507.14841)          | [Link](https://github.com/xdlbw/sing3d) | [Link](https://xdlbw.github.io/sing3d/)  |
 | 2025 | **HunyuanWorld 1.0: Generating Immersive, Explorable, and Interactive 3D Worlds from Words or Pixels**  | 26 Jul 2025 |          [Technical Report](https://3d-models.hunyuan.tencent.com/world/HY_World_1_technical_report.pdf)          | [Link](https://github.com/Tencent-Hunyuan/HunyuanWorld-1.0) | [Link](https://3d-models.hunyuan.tencent.com/world/)  |
 | 2025 | **Matrix-3D: Omnidirectional Explorable 3D World Generation**  | 12 Aug 2025 |          [Technical Report](https://github.com/SkyworkAI/Matrix-3D/blob/main/asset/report.pdf)          | [Link](https://github.com/SkyworkAI/Matrix-3D) | [Link](https://matrix-3d.github.io/)  |
-| 2025 | **FlashWorld: High-quality 3D Scene Generation within Seconds**  | 15 Oct 2025 |          [Link](https://arxiv.org/abs/2510.13678)          | [Link](https://github.com/imlixinyang/FlashWorld) | [Link](https://imlixinyang.github.io/FlashWorld-Project-Page/)  |
 | 2025 | **Self-Evolving 3D Scene Generation from a Single Image**  | 9 Dec 2025 |          [Link](https://arxiv.org/abs/2512.08905)          | [Link](https://github.com/eric-ai-lab/EvoScene) | [Link](https://eric-ai-lab.github.io/evoscene.github.io/)  |
 | 2025 | **I-Scene: 3D Instance Models are Implicit Generalizable Spatial Learners**  | 15 Dec 2025 |          [Link](https://arxiv.org/abs/2512.13683)          | [Link](https://github.com/LuLing06/I-Scene-project) | [Link](https://luling06.github.io/I-Scene-project/)  |
 
@@ -338,16 +337,6 @@ Generalization remains the central challenge for interactive 3D scene generation
   title     = {Matrix-3D: Omnidirectional Explorable 3D World Generation},
   author    = {Zhongqi Yang and Wenhang Ge and Yuqi Li and Jiaqi Chen and Haoyuan Li and Mengyin An and Fei Kang and Hua Xue and Baixin Xu and Yuyang Yin and Eric Li and Yang Liu and Yikai Wang and Hao-Xiang Guo and Yahui Zhou},
   year      = {2025}
-}
-
-@misc{li2025flashworldhighquality3dscene,
-      title={FlashWorld: High-quality 3D Scene Generation within Seconds}, 
-      author={Xinyang Li and Tengfei Wang and Zixiao Gu and Shengchuan Zhang and Chunchao Guo and Liujuan Cao},
-      year={2025},
-      eprint={2510.13678},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV},
-      url={https://arxiv.org/abs/2510.13678}, 
 }
 
 @article{zheng2025self,
