@@ -487,6 +487,7 @@ Achieving spatial intelligence requires moving beyond visual plausibility to bui
 | 2026 | **Choreographing a World of Dynamic Objects**  | 7 Jan 2026 |          [Link](https://arxiv.org/pdf/2601.04194)          | --  | [Link](https://yanzhelyu.github.io/chord/)  |
 | 2026 | **Motion 3-to-4: 3D Motion Reconstruction for 4D Synthesis**  | 20 Jan 2026 |          [Link](https://arxiv.org/abs/2601.14253)          | [Link](https://github.com/Inception3D/Motion324)  | [Link](https://motion3-to-4.github.io/)  |
 | 2026 | **Code2Worlds: Empowering Coding LLMs for 4D World Generation**  | 12 Feb 2026 |          [Link](https://arxiv.org/abs/2602.11757)          | [Link](https://github.com/AIGeeksGroup/Code2Worlds)  | [Link](https://aigeeksgroup.github.io/Code2Worlds/)  |
+| 2026 | **InSpatio-World**  | 20 Mar 2026 |          [Live Demo](https://world.inspatio.com/?world=1080_00000005)          | [Link](https://github.com/inspatio/inspatio-world)  | [Link](https://inspatio.github.io/inspatio-world/)  |
 
 
 <details close>
@@ -524,6 +525,13 @@ Achieving spatial intelligence requires moving beyond visual plausibility to bui
   author={Zhang, Yi and Wang, Yunshuang and Zhang, Zeyu and Tang, Hao},
   journal={arXiv preprint arXiv:2602.11757},
   year={2026}
+}
+
+@misc{inspatio-world,
+    title={InSpatio-World},
+    author={InSpatio-World Contributors},
+    howpublished={\url{https://github.com/inspatio/inspatio-world}},
+    year={2025}
 }
 
 ```
