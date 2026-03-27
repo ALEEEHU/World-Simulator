@@ -542,10 +542,10 @@ Achieving spatial intelligence requires moving beyond visual plausibility to bui
 ### Previous Papers and Other Awesome Repos
 
 #### Year 2025
-For more details, please check the [2025 4D Papers](./docs/4d/4d_2025.md), including 23 accepted papers, 18 arXiv papers and 2 arXiv surveys.
+For more details, please check the [2025 4D Papers](./docs/4d/4d_2025.md), including 27 accepted papers, 14 arXiv papers and 2 arXiv surveys.
 
 #### Year 2024
-For more details, please check the [2024 4D Papers](./docs/4d/4d_2024.md), including 24 accepted papers and 10 arXiv papers.
+For more details, please check the [2024 4D Papers](./docs/4d/4d_2024.md), including 25 accepted papers and 9 arXiv papers.
 
 #### Year 2023
 In 2023, tasks classified as text/Image to 4D and video to 4D generally involve producing four-dimensional data from text/Image or video input. For more details, please check the [2023 4D Papers](./docs/4d/4d_2023.md), including 6 accepted papers and 3 arXiv papers.
@@ -603,10 +603,10 @@ For more details, please check the [2024 T2V Papers](./docs/video/t2v_2024.md), 
 ### Previous Papers
 
 #### Year 2025
-For more details, please check the [2025 3D Scene Papers](./docs/3d_scene/3d_scene_24-25.md), including 12 accepted papers, 13 arXiv papers and 2 arXiv surveys.
+For more details, please check the [2025 3D Scene Papers](./docs/3d_scene/3d_scene_24-25.md), including 13 accepted papers, 12 arXiv papers and 2 arXiv surveys.
 
 #### Year 2023-2024
-For more details, please check the [2023-2024 3D Scene Papers](./docs/3d_scene/3d_scene_23-24.md), including 23 accepted papers and 8 arXiv papers.
+For more details, please check the [2023-2024 3D Scene Papers](./docs/3d_scene/3d_scene_23-24.md), including 25 accepted papers and 6 arXiv papers.
 
 <details close>
 <summary>Awesome Repos</summary>
@@ -671,7 +671,7 @@ AMASS is a large database of human motion unifying different optical marker-base
 For more details, please check the [2025 3D Human Papers](./docs/3d_human/human_24-25.md), including 11 accepted papers and 2 arXiv papers.
 
 #### Year 2023-2024
-For more details, please check the [2023-2024 3D Human Papers](./docs/3d_human/human_23-24.md), including 19 accepted papers and 4 arXiv papers.
+For more details, please check the [2023-2024 3D Human Papers](./docs/3d_human/human_23-24.md), including 22 accepted papers and 1 arXiv papers.
 
 <details close>
 <summary>Survey and Awesome Repos</summary>
