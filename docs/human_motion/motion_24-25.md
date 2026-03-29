@@ -15,6 +15,9 @@
 | 2025 | **Motion Anything: Any to Motion Generation**  | NeurIPS 2025 |          [Link](https://arxiv.org/abs/2503.06955)          | [Link](https://github.com/steve-zeyu-zhang/MotionAnything)  | [Link](https://steve-zeyu-zhang.github.io/MotionAnything/)  |
 | 2025 | **MotionBind: Multi-Modal Human Motion Alignment for Retrieval, Recognition, and Generation**  | NeurIPS 2025 |          [Link](https://openreview.net/forum?id=sUjwDdyspc)          | [Link](https://github.com/vidal-lab/MotionBind)  | [Link](https://vidal-lab.github.io/MotionBind/)  |
 | 2025 | **MOSPA: Human Motion Generation Driven by Spatial Audio**  | NeurIPS 2025 |          [Link](https://arxiv.org/abs/2507.11949)          | [Link](https://github.com/xsy27/Mospa-Acoustic-driven-Motion-Generation)  | [Link](https://frank-zy-dou.github.io/projects/MOSPA/index.html)  |
+| 2025 | **Animating the Uncaptured: Humanoid Mesh Animation with Video Diffusion Models**  | ICLR 2026 |          [Link](https://arxiv.org/abs/2503.15996)          | --  | [Link](https://marcb.pro/atu/)  |
+| 2025 | **EgoTwin: Dreaming Body and View in First Person**  | ICLR 2026 |          [Link](https://arxiv.org/abs/2508.13013)          | --  | [Link](https://egotwin.pages.dev/) |
+| 2025 | **X-MoGen: Unified Motion Generation across Humans and Animals**  | AAAI 2026 |          [Link](https://www.arxiv.org/abs/2508.05162)          | --  | -- |
 
 <details close>
 <summary>Accepted Papers References</summary>
@@ -127,6 +130,30 @@
   year={2025}
 }
 
+@article{millan2025animating,
+  title={Animating the uncaptured: Humanoid mesh animation with video diffusion models},
+  author={Mill{\'a}n, Marc Bened{\'\i} San and Dai, Angela and Nie{\ss}ner, Matthias},
+  journal={arXiv preprint arXiv:2503.15996},
+  year={2025}
+}
+
+@article{xiu2025egotwin,
+  title={Egotwin: Dreaming body and view in first person},
+  author={Xiu, Jingqiao and Hong, Fangzhou and Li, Yicong and Li, Mengze and Wang, Wentao and Han, Sirui and Pan, Liang and Liu, Ziwei},
+  journal={arXiv preprint arXiv:2508.13013},
+  year={2025}
+}
+
+@inproceedings{wang2026x,
+  title={X-MoGen: Unified Motion Generation Across Humans and Animals},
+  author={Wang, Xuan and Ruan, Kai and Qian, Liyang and Zhi, Guo Zhi and Su, Chang and Wang, Gaoang},
+  booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
+  volume={40},
+  number={12},
+  pages={10234--10242},
+  year={2026}
+}
+
 ```
 </details>
 
@@ -134,16 +161,7 @@
 
 ### 💡 2025 Motion ArXiv Papers
 
-#### 1. Animating the Uncaptured: Humanoid Mesh Animation with Video Diffusion Models
-Marc Benedí San Millán, Angela Dai, Matthias Nießner
-
-(Technical University of Munich)
-<details span>
-<summary><b>Abstract</b></summary>
-Animation of humanoid characters is essential in various graphics applications, but requires significant time and cost to create realistic animations. We propose an approach to synthesize 4D animated sequences of input static 3D humanoid meshes, leveraging strong generalized motion priors from generative video models -- as such video models contain powerful motion information covering a wide variety of human motions. From an input static 3D humanoid mesh and a text prompt describing the desired animation, we synthesize a corresponding video conditioned on a rendered image of the 3D mesh. We then employ an underlying SMPL representation to animate the corresponding 3D mesh according to the video-generated motion, based on our motion optimization. This enables a cost-effective and accessible solution to enable the synthesis of diverse and realistic 4D animations.
-</details>
-
-#### 2. FlowMotion: Target-Predictive Conditional Flow Matching for Jitter-Reduced Text-Driven Human Motion Generation
+#### 1. FlowMotion: Target-Predictive Conditional Flow Matching for Jitter-Reduced Text-Driven Human Motion Generation
 Manolo Canales Cuba, Vinícius do Carmo Melício, João Paulo Gois
 
 (Universidade Federal do ABC, Santo Andr ́e, Brazil)
@@ -152,41 +170,21 @@ Manolo Canales Cuba, Vinícius do Carmo Melício, João Paulo Gois
 Achieving high-fidelity and temporally smooth 3D human motion generation remains a challenge, particularly within resource-constrained environments. We introduce FlowMotion, a novel method leveraging Conditional Flow Matching (CFM). FlowMotion incorporates a training objective within CFM that focuses on more accurately predicting target motion in 3D human motion generation, resulting in enhanced generation fidelity and temporal smoothness while maintaining the fast synthesis times characteristic of flow-matching-based methods. FlowMotion achieves state-of-the-art jitter performance, achieving the best jitter in the KIT dataset and the second-best jitter in the HumanML3D dataset, and a competitive FID value in both datasets. This combination provides robust and natural motion sequences, offering a promising equilibrium between generation quality and temporal naturalness.
 </details>
 
-#### 3. UniHM: Universal Human Motion Generation with Object Interactions in Indoor Scenes
+#### 2. UniHM: Universal Human Motion Generation with Object Interactions in Indoor Scenes
 Zichen Geng, Zeeshan Hayder, Wei Liu, Ajmal Mian (University of Western Australia, Data61 CSIRO Australia)
 <details span>
 <summary><b>Abstract</b></summary>
 Human motion synthesis in complex scenes presents a fundamental challenge, extending beyond conventional Text-to-Motion tasks by requiring the integration of diverse modalities such as static environments, movable objects, natural language prompts, and spatial waypoints. Existing language-conditioned motion models often struggle with scene-aware motion generation due to limitations in motion tokenization, which leads to information loss and fails to capture the continuous, context-dependent nature of 3D human movement. To address these issues, we propose UniHM, a unified motion language model that leverages diffusion-based generation for synthesizing scene-aware human motion. UniHM is the first framework to support both Text-to-Motion and Text-to-Human-Object Interaction (HOI) in complex 3D scenes. Our approach introduces three key contributions: (1) a mixed-motion representation that fuses continuous 6DoF motion with discrete local motion tokens to improve motion realism; (2) a novel Look-Up-Free Quantization VAE (LFQ-VAE) that surpasses traditional VQ-VAEs in both reconstruction accuracy and generative performance; and (3) an enriched version of the Lingo dataset augmented with HumanML3D annotations, providing stronger supervision for scene-specific motion learning. Experimental results demonstrate that UniHM achieves comparative performance on the OMOMO benchmark for text-to-HOI synthesis and yields competitive results on HumanML3D for general text-conditioned motion generation.
 </details>
 
-#### 4. ReMoMask: Retrieval-Augmented Masked Motion Generation
+#### 3. ReMoMask: Retrieval-Augmented Masked Motion Generation
 Zhengdao Li, Siheng Wang, Zeyu Zhang, Hao Tang (Peking University, Jiangsu University)
 <details span>
 <summary><b>Abstract</b></summary>
 Text-to-Motion (T2M) generation aims to synthesize realistic and semantically aligned human motion sequences from natural language descriptions. However, current approaches face dual challenges: Generative models (e.g., diffusion models) suffer from limited diversity, error accumulation, and physical implausibility, while Retrieval-Augmented Generation (RAG) methods exhibit diffusion inertia, partial-mode collapse, and asynchronous artifacts. To address these limitations, we propose ReMoMask, a unified framework integrating three key innovations: 1) A Bidirectional Momentum Text-Motion Model decouples negative sample scale from batch size via momentum queues, substantially improving cross-modal retrieval precision; 2) A Semantic Spatio-temporal Attention mechanism enforces biomechanical constraints during part-level fusion to eliminate asynchronous artifacts; 3) RAG-Classier-Free Guidance incorporates minor unconditional generation to enhance generalization. Built upon MoMask's RVQ-VAE, ReMoMask efficiently generates temporally coherent motions in minimal steps. Extensive experiments on standard benchmarks demonstrate the state-of-the-art performance of ReMoMask, achieving a 3.88% and 10.97% improvement in FID scores on HumanML3D and KIT-ML, respectively, compared to the previous SOTA method RAG-T2M. 
 </details>
 
-#### 5. X-MoGen: Unified Motion Generation across Humans and Animals
-Xuan Wang, Kai Ruan, Liyang Qian, Zhizhi Guo, Chang Su, Gaoang Wang
-
-(Zhejiang University, Institute of Artificial Intelligence (TeleAI) China Telecom, Renmin University of China)
-
-<details span>
-<summary><b>Abstract</b></summary>
-Text-driven motion generation has attracted increasing attention due to its broad applications in virtual reality, animation, and robotics. While existing methods typically model human and animal motion separately, a joint cross-species approach offers key advantages, such as a unified representation and improved generalization. However, morphological differences across species remain a key challenge, often compromising motion plausibility. To address this, we propose \textbf{X-MoGen}, the first unified framework for cross-species text-driven motion generation covering both humans and animals. X-MoGen adopts a two-stage architecture. First, a conditional graph variational autoencoder learns canonical T-pose priors, while an autoencoder encodes motion into a shared latent space regularized by morphological loss. In the second stage, we perform masked motion modeling to generate motion embeddings conditioned on textual descriptions. During training, a morphological consistency module is employed to promote skeletal plausibility across species. To support unified modeling, we construct \textbf{UniMo4D}, a large-scale dataset of 115 species and 119k motion sequences, which integrates human and animal motions under a shared skeletal topology for joint training. Extensive experiments on UniMo4D demonstrate that X-MoGen outperforms state-of-the-art methods on both seen and unseen species.
-</details>
-
-#### 6. EgoTwin: Dreaming Body and View in First Person
-Jingqiao Xiu, Fangzhou Hong, Yicong Li, Mengze Li, Wentao Wang, Sirui Han, Liang Pan, Ziwei Liu
-
-(National University of Singapore, Nanyang Technological University, Hong Kong University of Science and Technology, Shanghai AI Laboratory)
-
-<details span>
-<summary><b>Abstract</b></summary>
-While exocentric video synthesis has achieved great progress, egocentric video generation remains largely underexplored, which requires modeling first-person view content along with camera motion patterns induced by the wearer's body movements. To bridge this gap, we introduce a novel task of joint egocentric video and human motion generation, characterized by two key challenges: 1) Viewpoint Alignment: the camera trajectory in the generated video must accurately align with the head trajectory derived from human motion; 2) Causal Interplay: the synthesized human motion must causally align with the observed visual dynamics across adjacent video frames. To address these challenges, we propose EgoTwin, a joint video-motion generation framework built on the diffusion transformer architecture. Specifically, EgoTwin introduces a head-centric motion representation that anchors the human motion to the head joint and incorporates a cybernetics-inspired interaction mechanism that explicitly captures the causal interplay between video and motion within attention operations. For comprehensive evaluation, we curate a large-scale real-world dataset of synchronized text-video-motion triplets and design novel metrics to assess video-motion consistency. Extensive experiments demonstrate the effectiveness of the EgoTwin framework.
-</details>
-
-#### 7. Pulp Motion: Framing-aware multimodal camera and human motion generation
+#### 4. Pulp Motion: Framing-aware multimodal camera and human motion generation
 Robin Courant, Xi Wang, David Loiseaux, Marc Christie, Vicky Kalogeiton
 
 (LIX, Ecole Polytechnique, IP Paris; Inria Saclay; Inria, IRISA, CNRS, Univ. Rennes)
@@ -196,7 +194,7 @@ Robin Courant, Xi Wang, David Loiseaux, Marc Christie, Vicky Kalogeiton
 Treating human motion and camera trajectory generation separately overlooks a core principle of cinematography: the tight interplay between actor performance and camera work in the screen space. In this paper, we are the first to cast this task as a text-conditioned joint generation, aiming to maintain consistent on-screen framing while producing two heterogeneous, yet intrinsically linked, modalities: human motion and camera trajectories. We propose a simple, model-agnostic framework that enforces multimodal coherence via an auxiliary modality: the on-screen framing induced by projecting human joints onto the camera. This on-screen framing provides a natural and effective bridge between modalities, promoting consistency and leading to more precise joint distribution. We first design a joint autoencoder that learns a shared latent space, together with a lightweight linear transform from the human and camera latents to a framing latent. We then introduce auxiliary sampling, which exploits this linear transform to steer generation toward a coherent framing modality. To support this task, we also introduce the PulpMotion dataset, a human-motion and camera-trajectory dataset with rich captions, and high-quality human motions. Extensive experiments across DiT- and MAR-based architectures show the generality and effectiveness of our method in generating on-frame coherent human-camera motions, while also achieving gains on textual alignment for both modalities. Our qualitative results yield more cinematographically meaningful framings setting the new state of the art for this task. 
 </details>
 
-#### 8. Text2Interact: High-Fidelity and Diverse Text-to-Two-Person Interaction Generation
+#### 5. Text2Interact: High-Fidelity and Diverse Text-to-Two-Person Interaction Generation
 Qingxuan Wu, Zhiyang Dou, Chuan Guo, Yiming Huang, Qiao Feng, Bing Zhou, Jian Wang, Lingjie Liu
 
 (University of Pennsylvania, The University of Hong Kong, Snap Inc.)
@@ -208,12 +206,10 @@ Modeling human-human interactions from text remains challenging because it requi
 
 | Year | Title                                                        | ArXiv Time  |                           Paper                            |                      Code                      | Project Page                      |
 | ---- | ------------------------------------------------------------ | :----: | :--------------------------------------------------------: | :--------------------------------------------: | :--------------------------------------------: |
-| 2025 | **Animating the Uncaptured: Humanoid Mesh Animation with Video Diffusion Models**  | 20 Mar 2025 |          [Link](https://arxiv.org/abs/2503.15996)          | --  | [Link](https://marcb.pro/atu/)  |
-| 2025 | **FlowMotion: Target-Predictive Conditional Flow Matching for Jitter-Reduced Text-Driven Human Motion Generation**  | 20 Apr 2025 |          [Link](https://arxiv.org/abs/2504.01338)          | --  | --  |
+
+| 2025 | **FlowMotion: Target-Predictive Conditional Flow Matching for Jitter-Reduced Text-Driven Human Motion Generation**  | 20 Apr 2025 |          [Link](https://arxiv.org/abs/2504.01338)          | [Link](https://github.com/mccuba/FlowMotion)  | [Link](https://mccuba.github.io/fm-page/)  |
 | 2025 | **UniHM: Universal Human Motion Generation with Object Interactions in Indoor Scenes**  | 19 May 2025 |          [Link](https://arxiv.org/abs/2505.12774)          | --  | -- |
 | 2025 | **ReMoMask: Retrieval-Augmented Masked Motion Generation**  | 4 Aug 2025 |          [Link](https://arxiv.org/abs/2508.02605)          | [Link](https://github.com/AIGeeksGroup/ReMoMask)  | [Link](https://aigeeksgroup.github.io/ReMoMask/) |
-| 2025 | **X-MoGen: Unified Motion Generation across Humans and Animals**  | 7 Aug 2025 |          [Link](https://www.arxiv.org/abs/2508.05162)          | --  | -- |
-| 2025 | **EgoTwin: Dreaming Body and View in First Person**  | 18 Aug 2025 |          [Link](https://arxiv.org/abs/2508.13013)          | --  | [Link](https://egotwin.pages.dev/) |
 | 2025 | **Pulp Motion: Framing-aware multimodal camera and human motion generation**  | 6 Oct 2025 |          [Link](https://arxiv.org/abs/2510.05097)          | [Link](https://github.com/robincourant/pulp-motion)  | [Link](https://www.lix.polytechnique.fr/vista/projects/2025_pulpmotion_courant/) |
 | 2025 | **Text2Interact: High-Fidelity and Diverse Text-to-Two-Person Interaction Generation**  | 7 Oct 2025 |          [Link](https://arxiv.org/abs/2510.06504)          | --  | -- |
 
@@ -222,16 +218,6 @@ Modeling human-human interactions from text remains challenging because it requi
 
 ```
 %axiv papers
-
-@misc{millán2025animatinguncapturedhumanoidmesh,
-        title={Animating the Uncaptured: Humanoid Mesh Animation with Video Diffusion Models}, 
-        author={Marc Benedí San Millán and Angela Dai and Matthias Nießner},
-        year={2025},
-        eprint={2503.15996},
-        archivePrefix={arXiv},
-        primaryClass={cs.GR},
-        url={https://arxiv.org/abs/2503.15996}, 
-}
 
 @article{cuba2025flowmotion,
   title={FlowMotion: Target-Predictive Flow Matching for Realistic Text-Driven Human Motion Generation},
@@ -255,23 +241,6 @@ Modeling human-human interactions from text remains challenging because it requi
   author={Li, Zhengdao and Wang, Siheng and Zhang, Zeyu and Tang, Hao},
   journal={arXiv preprint arXiv:2508.02605},
   year={2025}
-}
-
-@article{wang2025x,
-  title={X-MoGen: Unified Motion Generation across Humans and Animals},
-  author={Wang, Xuan and Ruan, Kai and Qian, Liyang and Guo, Zhizhi and Su, Chang and Wang, Gaoang},
-  journal={arXiv preprint arXiv:2508.05162},
-  year={2025}
-}
-
-@misc{xiu2025egotwindreamingbodyview,
-      title={EgoTwin: Dreaming Body and View in First Person}, 
-      author={Jingqiao Xiu and Fangzhou Hong and Yicong Li and Mengze Li and Wentao Wang and Sirui Han and Liang Pan and Ziwei Liu},
-      year={2025},
-      eprint={2508.13013},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV},
-      url={https://arxiv.org/abs/2508.13013}, 
 }
 
 @misc{courant2025pulpmotionframingawaremultimodal,
