@@ -487,6 +487,14 @@ Zhaochong An, Orest Kupyn, Théo Uscidda, Andrea Colaco, Karan Ahuja, Serge Belo
 Large-scale video diffusion models achieve impressive visual quality, yet often fail to preserve geometric consistency. Prior approaches improve consistency either by augmenting the generator with additional modules or applying geometry-aware alignment. However, architectural modifications can compromise the generalization of internet-scale pretrained models, while existing alignment methods are limited to static scenes and rely on RGB-space rewards that require repeated VAE decoding, incurring substantial compute overhead and failing to generalize to highly dynamic real-world scenes. To preserve the pretrained capacity while improving geometric consistency, we propose VGGRPO (Visual Geometry GRPO), a latent geometry-guided framework for geometry-aware video post-training. VGGRPO introduces a Latent Geometry Model (LGM) that stitches video diffusion latents to geometry foundation models, enabling direct decoding of scene geometry from the latent space. By constructing LGM from a geometry model with 4D reconstruction capability, VGGRPO naturally extends to dynamic scenes, overcoming the static-scene limitations of prior methods. Building on this, we perform latent-space Group Relative Policy Optimization with two complementary rewards: a camera motion smoothness reward that penalizes jittery trajectories, and a geometry reprojection consistency reward that enforces cross-view geometric coherence. Experiments on both static and dynamic benchmarks show that VGGRPO improves camera stability, geometry consistency, and overall quality while eliminating costly VAE decoding, making latent-space geometry-guided reinforcement an efficient and flexible approach to world-consistent video generation.
 </details>
 
+#### 6. LivingWorld: Interactive 4D World Generation with Environmental Dynamics
+Hyeongju Mun, In-Hwan Jin, Sohyeong Kim, Kyeongbo Kong  (Pusan National University)
+
+<details span>
+<summary><b>Abstract</b></summary>
+We introduce LivingWorld, an interactive framework for generating 4D worlds with environmental dynamics from a single image. While recent advances in 3D scene generation enable large-scale environment creation, most approaches focus primarily on reconstructing static geometry, leaving scene-scale environmental dynamics such as clouds, water, or smoke largely unexplored. Modeling such dynamics is challenging because motion must remain coherent across an expanding scene while supporting low-latency user feedback. LivingWorld addresses this challenge by progressively constructing a globally coherent motion field as the scene expands. To maintain global consistency during expansion, we introduce a geometry-aware alignment module that resolves directional and scale ambiguities across views. We further represent motion using a compact hash-based motion field, enabling efficient querying and stable propagation of dynamics throughout the scene. This representation also supports bidirectional motion propagation during rendering, producing long and temporally coherent 4D sequences without relying on expensive video-based refinement. On a single RTX 5090 GPU, generating each new scene expansion step requires 9 seconds, followed by 3 seconds for motion alignment and motion field updates, enabling interactive 4D world generation with globally coherent environmental dynamics. 
+</details>
+
 -----
 
 </details>
@@ -498,7 +506,8 @@ Large-scale video diffusion models achieve impressive visual quality, yet often 
 | 2026 | **Motion 3-to-4: 3D Motion Reconstruction for 4D Synthesis**  | 20 Jan 2026 |          [Link](https://arxiv.org/abs/2601.14253)          | [Link](https://github.com/Inception3D/Motion324)  | [Link](https://motion3-to-4.github.io/)  |
 | 2026 | **Code2Worlds: Empowering Coding LLMs for 4D World Generation**  | 12 Feb 2026 |          [Link](https://arxiv.org/abs/2602.11757)          | [Link](https://github.com/AIGeeksGroup/Code2Worlds)  | [Link](https://aigeeksgroup.github.io/Code2Worlds/)  |
 | 2026 | **InSpatio-World**  | 20 Mar 2026 |          [Live Demo](https://world.inspatio.com/?world=1080_00000005)          | [Link](https://github.com/inspatio/inspatio-world)  | [Link](https://inspatio.github.io/inspatio-world/)  |
-| 2026 | **VGGRPO: Towards World-Consistent Video Generation with 4D Latent Reward**  | 27 Mar 2026 |          [Live Demo](https://arxiv.org/abs/2603.26599)          | --  | [Link](https://zhaochongan.github.io/projects/VGGRPO/)  |
+| 2026 | **VGGRPO: Towards World-Consistent Video Generation with 4D Latent Reward**  | 27 Mar 2026 |          [Link](https://arxiv.org/abs/2603.26599)          | --  | [Link](https://zhaochongan.github.io/projects/VGGRPO/)  |
+| 2026 | **LivingWorld: Interactive 4D World Generation with Environmental Dynamics**  | 2 Apr 2026  |          [Link](https://arxiv.org/abs/2604.01641)          | --  | [Link](https://paper.pnu-cvsp.com/LivingWorld/)  |
 
 <details close>
 <summary>ArXiv Papers References</summary>
@@ -552,6 +561,16 @@ Large-scale video diffusion models achieve impressive visual quality, yet often 
       archivePrefix={arXiv},
       primaryClass={cs.CV},
       url={https://arxiv.org/abs/2603.26599}, 
+}
+
+@misc{mun2026livingworldinteractive4dworld,
+      title={LivingWorld: Interactive 4D World Generation with Environmental Dynamics}, 
+      author={Hyeongju Mun and In-Hwan Jin and Sohyeong Kim and Kyeongbo Kong},
+      year={2026},
+      eprint={2604.01641},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2604.01641}, 
 }
 
 ```
