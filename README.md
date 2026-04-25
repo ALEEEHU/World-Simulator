@@ -424,6 +424,7 @@ An open collection of state-of-the-art (SOTA), novel **Text to X (X can be every
 | ---- | ------------------------------------------------------------ | :----: | :--------------------------------------------------------: | :--------------------------------------------: | :--------------------------------------------: |
 | 2026 | **PerpetualWonder: Long-Horizon Action-Conditioned 4D Scene Generation**  |  CVPR 2026|          [Link](https://arxiv.org/abs/2602.04876)          | [Link](https://github.com/JohnZhan2023/PerpetualWonder)  | [Link](https://johnzhan2023.github.io/PerpetualWonder/)  |
 | 2026 | **AvatarPointillist: Autoregressive 4D Gaussian Avatarization**  |  CVPR 2026|          [Link](https://arxiv.org/abs/2604.04787)          | [Link](https://github.com/KumapowerLIU/AvatarPointillist)  | [Link](https://kumapowerliu.github.io/AvatarPointillist/)  |
+| 2026 | **Vista4D: Video Reshooting with 4D Point Clouds**  |  CVPR 2026|          [Link](https://arxiv.org/abs/2604.21915)          | [Link](https://github.com/Eyeline-Labs/Vista4D)  | [Link](https://eyeline-labs.github.io/Vista4D/)  |
 | 2026 | **Geometry-aware 4D Video Generation for Robot Manipulation**  |  ICLR 2026|          [Link](https://arxiv.org/abs/2507.01099)          | [Link](https://github.com/lzylucy/4dgen)  | [Link](https://robot4dgen.github.io/)  |
 
 <details close>
@@ -444,6 +445,16 @@ An open collection of state-of-the-art (SOTA), novel **Text to X (X can be every
   author    = {Hongyu Liu and Xuan Wang and Yating Wang and Zijian Wu and Ziyu Wan and Yue Ma and Runtao Liu and Boyao Zhou and Yujun Shen and Qifeng Chen},
   booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
   year      = {2026}
+}
+
+@misc{lin2026vista4dvideoreshooting4d,
+      title={Vista4D: Video Reshooting with 4D Point Clouds}, 
+      author={Kuan Heng Lin and Zhizheng Liu and Pablo Salamanca and Yash Kant and Ryan Burgert and Yuancheng Xu and Koichi Namekata and Yiwei Zhao and Bolei Zhou and Micah Goldblum and Paul Debevec and Ning Yu},
+      year={2026},
+      eprint={2604.21915},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2604.21915}, 
 }
 
 @article{liu2025geometry,
