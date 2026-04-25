@@ -18,6 +18,7 @@ This repository is divided into two main sections:
 <img src="./media/add_oil.png" width=15% align="right" />
 
 ## 🔔 News
+- 🎉 [25 Apr 2026] Our survey is accepted by IEEE TPAMI!
 - ✨ [16 Feb 2026] Updated our survey (Version 3, 25 pages) on arXiv.
 - ✨ [13 Aug 2025] Updated our survey (Version 2, 25 pages) on arXiv.
 - ✨ [6 Mar 2025] Updated our survey (Version 1) on arXiv.
