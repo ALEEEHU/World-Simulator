@@ -7,7 +7,7 @@
 
 This repository is divided into two main sections:
 
-> **Our Survey Paper Collection** - This section presents our survey, _"Simulating the Real World: A Unified Survey of Multimodal Generative Models"_, which systematically unify the study of 2D, video, 3D and 4D generation within a single framework.
+> **Our Survey Paper Collection** - This section presents our survey, _"Simulating the Real World: A Unified Survey of Multimodal Generative Models"_ (IEEE TPAMI, 2026), which systematically unify the study of 2D, video, 3D and 4D generation within a single framework.
 
 > **Text2X Resources** – This section continues the original Awesome-Text2X-Resources, an open collection of state-of-the-art (SOTA) and novel Text-to-X (X can be everything) methods, including papers, codes, and datasets. The goal is to track the rapid progress in this field and provide researchers with up-to-date references.
 
@@ -29,6 +29,7 @@ This repository is divided into two main sections:
   - [Abstract](#abstract)
     * [🔥 Cite Us!](#-citation)
     * [💡 New to this field? Check this!](#-getting-started-with-key-concepts)
+  - [The Dimensional Evolution of Generative AI](#the-dimensional-evolution-of-generative-ai)   
   - [Paradigms](#paradigms)
     * [2D Generation](#2d-generation)
     * [Video Generation](#video-generation)
@@ -40,6 +41,7 @@ This repository is divided into two main sections:
     * [4D Generation](#4d-generation)
       * [Algorithms](#4d-algorithms)
       * [Applications](#4d-applications)
+  - [Datasets and Evaluations](#datasets-and-evaluations)
   - [Other Related Resources](#other-related-resources)
     * [WorldModel Benchmark](#world-model-benchmark)
     * [World Foundation Model Platform](#world-foundation-model-platform)
@@ -63,6 +65,8 @@ This repository is divided into two main sections:
 
 ## 📜 Our Survey Paper Collection 
 <p align=center> 𝐒𝐢𝐦𝐮𝐥𝐚𝐭𝐢𝐧𝐠 𝐭𝐡𝐞 𝐑𝐞𝐚𝐥 𝐖𝐨𝐫𝐥𝐝: 𝐀 𝐔𝐧𝐢𝐟𝐢𝐞𝐝 𝐒𝐮𝐫𝐯𝐞𝐲 𝐨𝐟 𝐌𝐮𝐥𝐭𝐢𝐦𝐨𝐝𝐚𝐥 𝐆𝐞𝐧𝐞𝐫𝐚𝐭𝐢𝐯𝐞 𝐌𝐨𝐝𝐞𝐥𝐬 </p>
+
+<p align=center> 𝑰𝑬𝑬𝑬 𝑻𝑷𝑨𝑴𝑰, 𝟐𝟎𝟐𝟔 </p>
 
 <div align=center>
 
@@ -105,9 +109,8 @@ If you find this paper and repo helpful for your research, please cite it below:
 > ### 🧭 Getting Started with Key Concepts
 
 > [!Note]
-> If you are new to this field, you can find clear and concise definitions of essential technical terms and concepts, such as NeRF, 3DGS, SDS, and Diffusion Models in our [Glossary](./docs/glossary/glossary.md).
+> **If you are new to this field, you can find clear and concise definitions of essential technical terms and concepts, such as NeRF, 3DGS, SDS, and Diffusion Models in our [Glossary](./docs/glossary/glossary.md).**
 
-## Paradigms
 
 > [!TIP]
 > *Feel free to pull requests or contact us if you find any related papers that are not included here.* The process to submit a pull request is as follows:
@@ -117,6 +120,23 @@ If you find this paper and repo helpful for your research, please cite it below:
 [Origin] **Paper Title** [[Paper](Paper Link)] [[GitHub](GitHub Link)] [[Project Page](Project Page Link)]
  ```
 - c. Submit the pull request to this branch.
+
+
+## The Dimensional Evolution of Generative AI
+
+<p align="center"> <img src="./media/concept.png" width="450"> </p>
+
+We present a unified framework connecting 2D, Video, 3D, and 4D generation through text-guided synthesis. This paradigm illustrates how higher-dimensional content is synthesized by extending foundational modalities along spatial and temporal axes.
+(1)**2D->3D**: Spatial lifting of 2D priors to achieve geometric consistency;
+(2)**2D->Video**: Temporal inflation of static features to capture motion dynamics;
+(3)**Video->4D**: Spatial reconstruction and stabilization of dynamic sequences;
+(4)**3D->4D**: Temporal animation and deformation of static geometry.
+This perspective underscores that higher-dimensional generation methodologies are derivatives of foundational lower-dimensional generative priors, adapted through specialized architectural extensions.
+
+
+
+
+## Paradigms
 
 ### 2D Generation
 
@@ -136,6 +156,10 @@ Here are some seminal papers and models.
 
 
 ### Video Generation
+<p align=center> Overview of text-to-video generation technologies categorized by three main approaches. </p>
+<p align="center"> <img src="./media/T2V_methods.png" width="800"> </p>
+
+
 Text-to-video generation models adapt text-to-image frameworks to handle the additional dimension of dynamics in the real world. We classify these models into _three_ categories based on different generative machine learning architectures.
 
 > ##### Survey
@@ -147,6 +171,7 @@ Text-to-video generation models adapt text-to-image frameworks to handle the add
 > ##### (1) VAE- and GAN-based Approaches.
 VAE-based Approaches.
 * **SV2P**: [ICLR 2018 Poster] **Stochastic Variational Video Prediction** [[Paper](https://arxiv.org/abs/1710.11252)] [[Project Page](https://sites.google.com/site/stochasticvideoprediction/)]
+* [arXiv 2021] **VideoGPT: Video Generation using VQ-VAE and Transformers** [[Paper](https://arxiv.org/abs/2104.10157)] [[GitHub](https://github.com/wilson1yan/VideoGPT)] [[Project Page](https://wilsonyan.com/videogpt/index.html)]
 * [arXiv 2021] **FitVid: Overfitting in Pixel-Level Video Prediction** [[Paper](https://arxiv.org/abs/2403.05131)] [[GitHub](https://github.com/google-research/fitvid)] [[Project Page](https://sites.google.com/view/fitvidpaper)]
 
 GAN-based Approaches.
@@ -157,7 +182,8 @@ GAN-based Approaches.
 
 > ##### (2) Diffusion-based Approaches.
 U-Net-based Architectures.
-* [NeurIPS 2022] **Video Diffusion Models** [[Paper](https://arxiv.org/abs/2204.03458)] [[Project Page](https://video-diffusion.github.io/)] 
+* [NeurIPS 2022] **Video Diffusion Models** [[Paper](https://arxiv.org/abs/2204.03458)] [[Project Page](https://video-diffusion.github.io/)]
+* [arXiv 2025] **UniVerse-1: Unified Audio-Video Generation via Stitching of Experts** [[Paper](https://arxiv.org/abs/2509.06155)] [[GitHub](https://github.com/Dorniwang/UniVerse-1-code/)] [[Project Page](https://dorniwang.github.io/UniVerse-1/)]
 * [arXiv 2022] **Imagen Video: High Definition Video Generation with Diffusion Models** [[Paper](https://arxiv.org/abs/2210.02303)] [[Project Page](https://imagen.research.google/video/)]
 * [arXiv 2022] **MagicVideo: Efficient Video Generation With Latent Diffusion Models** [[Paper](https://arxiv.org/abs/2211.11018)] [[Project Page](https://magicvideo.github.io/#)]
 * [ICLR 2023 Poster] **Make-A-Video: Text-to-Video Generation without Text-Video Data** [[Paper](https://arxiv.org/abs/2209.14792)] [[Project Page](https://make-a-video.github.io/)]
@@ -176,11 +202,13 @@ Transformer-based Architectures.
 * **W.A.L.T**: [ECCV 2024] **Photorealistic Video Generation with Diffusion Models** [[Paper](https://arxiv.org/abs/2312.06662)] [[Project Page](https://walt-video-diffusion.github.io/)]
 * [CVPR 2024] **Snap Video: Scaled Spatiotemporal Transformers for Text-to-Video Synthesis** [[Paper](https://arxiv.org/abs/2402.14797)] [[Project Page](https://snap-research.github.io/snapvideo/)]
 * [CVPR 2024] **GenTron: Diffusion Transformers for Image and Video Generation** [[Paper](https://arxiv.org/abs/2312.04557)] [[Project Page](https://www.shoufachen.com/gentron_website/)]
+* [Seminal Work 2024] **Sora: Video generation models as world simulators**, OpenAI Blog, vol. 1, no. 8, p. 1, 2024. [[Project Page](https://openai.com/index/video-generation-models-as-world-simulators/)]
 * [ICLR 2025 Poster] **CogVideoX: Text-to-Video Diffusion Models with An Expert Transformer** [[Paper](https://arxiv.org/abs/2408.06072)] [[GitHub](https://github.com/THUDM/CogVideo)]
 * [ICLR 2025 Spotlight] **Lumina-T2X: Transforming Text into Any Modality, Resolution, and Duration via Flow-based Large Diffusion Transformers** [[Paper](https://arxiv.org/abs/2405.05945)] [[GitHub](https://github.com/Alpha-VLLM/Lumina-T2X)]
 
 > ##### (3) Autoregressive-based Approaches.
-* **VQ-GAN**: [CVPR 2021 Oral] **Taming Transformers for High-Resolution Image Synthesis** [[Paper](https://arxiv.org/abs/2012.09841)] [[GitHub](https://github.com/CompVis/taming-transformers)] 
+* **VQ-GAN**: [CVPR 2021 Oral] **Taming Transformers for High-Resolution Image Synthesis** [[Paper](https://arxiv.org/abs/2012.09841)] [[GitHub](https://github.com/CompVis/taming-transformers)]
+* [NeurIPS 2021] **Cogview: Mastering text-to-image generation via transformers** [[Paper][https://arxiv.org/abs/2105.13290]]
 * [CVPR 2023 Highlight] **MAGVIT: Masked Generative Video Transformer** [[Paper](https://arxiv.org/abs/2212.05199)] [[GitHub](https://github.com/google-research/magvit)] [[Project Page](https://magvit.cs.cmu.edu/)]
 * [ICLR 2023 Poster] **CogVideo: Large-scale Pretraining for Text-to-Video Generation via Transformers** [[Paper](https://arxiv.org/abs/2205.15868)] [[GitHub](https://github.com/THUDM/CogVideo)]
 * [ICML 2024] **VideoPoet: A Large Language Model for Zero-Shot Video Generation** [[Paper](https://arxiv.org/abs/2312.14125)] [[Project Page](https://sites.research.google/videopoet/)]
@@ -188,11 +216,13 @@ Transformer-based Architectures.
 * [arXiv 2024] **Open-MAGVIT2: An Open-Source Project Toward Democratizing Auto-regressive Visual Generation** [[Paper](https://arxiv.org/abs/2409.04410)] [[GitHub](https://github.com/TencentARC/SEED-Voken)]
 * [arXiv 2024] **Emu3: Next-Token Prediction is All You Need** [[Paper](https://arxiv.org/abs/2409.18869)] [[GitHub](https://github.com/baaivision/Emu3)] [[Project Page](https://emu.baai.ac.cn/about)]
 * [ICLR 2025 Poster] **Accelerating Auto-regressive Text-to-Image Generation with Training-free Speculative Jacobi Decoding** [[Paper](https://arxiv.org/abs/2410.01699)] [[GitHub](https://github.com/tyshiwo1/Accelerating-T2I-AR-with-SJD/)]
+* [arXiv 2025] **Cosmos World Foundation Model Platform for Physical AI** [[Paper](https://arxiv.org/abs/2501.03575)] [[GitHub](https://github.com/nvidia-cosmos/cosmos-predict1)]
 
 #### Video Applications
 > ##### Video Editing.
 * [ICCV 2023] **Tune-A-Video: One-Shot Tuning of Image Diffusion Models for Text-to-Video Generation** [[Paper](https://arxiv.org/abs/2212.11565)] [[GitHub](https://github.com/showlab/Tune-A-Video)] [[Project Page](https://tuneavideo.github.io/)]
 * [ICCV 2023] **Pix2Video: Video Editing using Image Diffusion** [[Paper](https://arxiv.org/abs/2303.12688)] [[GitHub](https://github.com/duyguceylan/pix2video)] [[Project Page](https://duyguceylan.github.io/pix2video.github.io/)]
+* [NeurIPS 2023] **Towards consistent video editing with text-to-image diffusion models** [[Paper][https://arxiv.org/abs/2305.17431]]
 * [CVPR 2024] **VidToMe: Video Token Merging for Zero-Shot Video Editing** [[Paper](https://arxiv.org/abs/2312.10656)] [[GitHub](https://github.com/lixirui142/VidToMe)] [[Project Page](https://vidtome-diffusion.github.io/)]
 * [CVPR 2024] **Video-P2P: Video Editing with Cross-attention Control** [[Paper](https://arxiv.org/abs/2303.04761)] [[GitHub](https://github.com/dvlab-research/Video-P2P)] [[Project Page](https://video-p2p.github.io/)]
 * [CVPR 2024 Highlight] **CoDeF: Content Deformation Fields for Temporally Consistent Video Processing** [[Paper](https://arxiv.org/abs/2308.07926)] [[GitHub](https://github.com/ant-research/CoDeF)] [[Project Page](https://qiuyu96.github.io/CoDeF/)]
@@ -208,6 +238,7 @@ Transformer-based Architectures.
 * [ICLR 2025 Poster] **NVS-Solver: Video Diffusion Model as Zero-Shot Novel View Synthesizer** [[Paper](https://arxiv.org/abs/2405.15364)] [[GitHub](https://github.com/ZHU-Zhiyu/NVS_Solver)] 
 
 > ##### Human Animation in Videos.
+* [CVPR 2018] **MoCoGAN: Decomposing Motion and Content for Video Generation** [[Paper](https://arxiv.org/abs/1707.04993)] [[GitHub](https://github.com/sergeytulyakov/mocogan)]]
 * [ICCV 2019] **Everybody Dance Now** [[Paper](https://arxiv.org/abs/1808.07371)] [[GitHub](https://github.com/carolineec/EverybodyDanceNow)] [[Project Page](https://carolineec.github.io/everybody_dance_now/)]
 * [ICCV 2019] **Liquid Warping GAN: A Unified Framework for Human Motion Imitation, Appearance Transfer and Novel View Synthesis** [[Paper](https://arxiv.org/abs/1909.12224)] [[GitHub](https://github.com/svip-lab/impersonator)] [[Project Page](https://svip-lab.github.io/project/impersonator.html)] [[Dataset](https://svip-lab.github.io/dataset/iPER_dataset.html)]
 * [NeurIPS 2019] **First Order Motion Model for Image Animation** [[Paper](https://arxiv.org/abs/2003.00196)] [[GitHub](https://github.com/AliaksandrSiarohin/first-order-model)] [[Project Page](https://aliaksandrsiarohin.github.io/first-order-model-website/)]
@@ -223,6 +254,10 @@ Transformer-based Architectures.
 ----
 
 ### 3D Generation
+
+<p align=center> Recent text-to-3D, image-to-3D and video-to-3D generation methods. </p>
+<p align="center"> <img src="./media/3d_generation.png" width="600"> </p>
+
 
 #### 3D Algorithms
 ##### Text-to-3D Generation.
@@ -326,6 +361,9 @@ Transformer-based Architectures.
 
 ### 4D Generation
 
+<p align=center> Representative works of 4D generation methods. ''Rep'' stands for representations. </p>
+<p align="center"> <img src="./media/4d_generation.png" width="600"> </p>
+
 #### 4D Algorithms
 >##### Feedforward Approaches.
 * [CVPR 2024] **Control4D: Efficient 4D Portrait Editing with Text** [[Paper](https://arxiv.org/abs/2305.20082)] [[Project Page](https://control4darxiv.github.io/)]
@@ -364,7 +402,17 @@ Transformer-based Architectures.
 * [CVPR 2024] **MoMask: Generative Masked Modeling of 3D Human Motions** [[Paper](https://arxiv.org/abs/2312.00063)] [[GitHub](https://github.com/EricGuo5513/momask-codes)] [[Project Page](https://ericguo5513.github.io/momask/)]
 * [CVPR 2024] **Lodge: A Coarse to Fine Diffusion Network for Long Dance Generation Guided by the Characteristic Dance Primitives** [[Paper](https://arxiv.org/abs/2403.10518)] [[GitHub](https://github.com/li-ronghui/LODGE)] [[Project Page](https://li-ronghui.github.io/lodge)]
 
+## Datasets and Evaluations
 
+### Datasets
+
+<p align=center> Summary of the widely-used 2D, video, 3D and 4D generation datasets. [Link] directs to dataset websites.</p>
+<p align="center"> <img src="./media/Datasets.png" > </p>
+
+### Evaluation Metrics
+
+<p align=center> Summary of common evaluation metrics.</p>
+<p align="center"> <img src="./media/metrics.png" > </p>
 
 ## Other Related Resources
 
