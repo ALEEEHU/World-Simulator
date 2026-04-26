@@ -18,7 +18,7 @@ This repository is divided into two main sections:
 <img src="./media/add_oil.png" width=15% align="right" />
 
 ## 🔔 News
-- 🎉 [25 Apr 2026] Our survey is accepted by IEEE TPAMI!
+- 🎉 **[25 Apr 2026] Our survey is accepted by IEEE TPAMI 2026!**
 - ✨ [16 Feb 2026] Updated our survey (Version 3, 25 pages) on arXiv.
 - ✨ [13 Aug 2025] Updated our survey (Version 2, 25 pages) on arXiv.
 - ✨ [6 Mar 2025] Updated our survey (Version 1) on arXiv.
@@ -78,6 +78,18 @@ Understanding and replicating the real world is a critical challenge in Artifici
 > ### ⭐ Citation
 
 If you find this paper and repo helpful for your research, please cite it below:
+
+```bibtex
+
+@article{hu2025simulating,
+  title={Simulating the Real World: A Unified Survey of Multimodal Generative Models},
+  author={Hu, Yuqi and Wang, Longguang and Liu, Xian and Chen, Ling-Hao and Guo, Yuwei and Shi, Yukai and Liu, Ce and Rao, Anyi and Wang, Zeyu and Xiong, Hui},
+  journal={IEEE transactions on pattern analysis and machine intelligence},
+  year={2026},
+  publisher={IEEE}
+}
+
+```
 
 ```bibtex
 
