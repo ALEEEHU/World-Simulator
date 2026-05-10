@@ -71,6 +71,8 @@ This repository is divided into two main sections:
 <div align=center>
 
 [![arXiv](https://img.shields.io/badge/arXiv-2503.04641-b31b1b.svg)](https://arxiv.org/abs/2503.04641)
+[![IEEE TPAMI](https://img.shields.io/badge/IEEE_TPAMI-PDF-red)](https://ieeexplore.ieee.org/abstract/document/11509284)
+
 
 </div>
 
@@ -85,10 +87,10 @@ If you find this paper and repo helpful for your research, please cite it below:
 
 ```bibtex
 
-@article{hu2025simulating,
-  title={Simulating the Real World: A Unified Survey of Multimodal Generative Models},
+@article{hu2026simulating,
+  title={Simulating the real world: A unified survey of multimodal generative models},
   author={Hu, Yuqi and Wang, Longguang and Liu, Xian and Chen, Ling-Hao and Guo, Yuwei and Shi, Yukai and Liu, Ce and Rao, Anyi and Wang, Zeyu and Xiong, Hui},
-  journal={IEEE transactions on pattern analysis and machine intelligence},
+  journal={IEEE Transactions on Pattern Analysis and Machine Intelligence},
   year={2026},
   publisher={IEEE}
 }
