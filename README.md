@@ -97,17 +97,6 @@ If you find this paper and repo helpful for your research, please cite it below:
 
 ```
 
-```bibtex
-
-@article{hu2025simulating,
-  title={Simulating the Real World: A Unified Survey of Multimodal Generative Models},
-  author={Hu, Yuqi and Wang, Longguang and Liu, Xian and Chen, Ling-Hao and Guo, Yuwei and Shi, Yukai and Liu, Ce and Rao, Anyi and Wang, Zeyu and Xiong, Hui},
-  journal={arXiv preprint arXiv:2503.04641},
-  year={2025}
-}
-
-```
-
 > ### 🧭 Getting Started with Key Concepts
 
 > [!Note]
@@ -597,6 +586,24 @@ Hyeongju Mun, In-Hwan Jin, Sohyeong Kim, Kyeongbo Kong  (Pusan National Universi
 We introduce LivingWorld, an interactive framework for generating 4D worlds with environmental dynamics from a single image. While recent advances in 3D scene generation enable large-scale environment creation, most approaches focus primarily on reconstructing static geometry, leaving scene-scale environmental dynamics such as clouds, water, or smoke largely unexplored. Modeling such dynamics is challenging because motion must remain coherent across an expanding scene while supporting low-latency user feedback. LivingWorld addresses this challenge by progressively constructing a globally coherent motion field as the scene expands. To maintain global consistency during expansion, we introduce a geometry-aware alignment module that resolves directional and scale ambiguities across views. We further represent motion using a compact hash-based motion field, enabling efficient querying and stable propagation of dynamics throughout the scene. This representation also supports bidirectional motion propagation during rendering, producing long and temporally coherent 4D sequences without relying on expensive video-based refinement. On a single RTX 5090 GPU, generating each new scene expansion step requires 9 seconds, followed by 3 seconds for motion alignment and motion field updates, enabling interactive 4D world generation with globally coherent environmental dynamics. 
 </details>
 
+#### 8. ST-Gen4D: Embedding 4D Spatiotemporal Cognition into World Model for 4D Generation
+Haonan Wang, Hanyu Zhou, Tao Gu, Luxin Yan  
+
+(Huazhong University of Science and Technology, National University of Singapore, Macquarie University)
+
+<details span>
+<summary><b>Abstract</b></summary>
+Generative models have achieved success in producing apparently coherent 2D videos, but remain challenging in the physical world due to lack of 4D spatiotemporal scale. Typically, existing 4D generative models directly embed macro scale constraints to enhance overall spatiotemporal consistency. However, these methods only ensure global appearance coherence and fail to reveal the local dynamics of the physical world. Our insight is that global appearance structure and local dynamic topology empower 4D spatiotemporal cognition, thereby enabling 4D generation with spatiotemporal regularities. In this work, we propose ST-Gen4D, a 4D generation framework with 4D spatiotemporal cognition-based world model. Our model is guided by four key designs: 1) Spatiotemporal representation. We encode various modalities into multiple representations as a feature basis. 2) Spatiotemporal cognition. We sculpture these representations into global appearance graph and local dynamic graph, and fuse them via semantic-bridged spatiotemporal fusion to obtain a 4D cognition graph. 3) Spatiotemporal reasoning. We utilize a world model to derive future state based on the 4D cognition. 4) Spatiotemporal generation. We leverage the derived cognition as condition to guide latent diffusion for 4D Gaussian generation. By deeply integrating 4D intrinsic cognition with generative priors, our model guarantees the structural rationality and topological consistency of 4D generation. Moreover, we propose ST-4D datasets by aggregating public 4D datasets and self-built subset. Extensive experiments demonstrate the superiority of our ST-Gen4D across 3D and 4D generation tasks.
+</details>
+
+#### 9. Geometric 4D Stitching for Grounded 4D Generation
+Sunwoo Park, Taesung Kwon, Jong Chul Ye  (KAIST AI)
+
+<details span>
+<summary><b>Abstract</b></summary>
+Recent 4D generation methods complete scene-level missing information using generative models and reconstruct the scene into radiance-based representations. However, these pipelines often present geometric inconsistencies in the generated content, and the radiance-based reconstruction requires expensive optimization. Furthermore, radiance-based representations often absorb these geometric inconsistencies into their view-dependent nature, failing to enforce the grounded geometric consistency. To address these issues, we propose Geometric 4D Stitching, an efficient framework that explicitly identifies missing geometric regions and complements them with geometrically grounded 4D stitches. As a result, our method constructs 4D scene representations in under 10 minutes on a single NVIDIA RTX 5090 GPU per one-step scene expansion, while improving geometric consistency. Moreover, we demonstrate that our explicit 4D stitching supports interative expansion of 4D mesh as well as 4D scene editing.
+</details>
+
 -----
 
 </details>
@@ -611,6 +618,8 @@ We introduce LivingWorld, an interactive framework for generating 4D worlds with
 | 2026 | **InSpatio-World**  | 20 Mar 2026 |          [Live Demo](https://world.inspatio.com/?world=1080_00000005)          | [Link](https://github.com/inspatio/inspatio-world)  | [Link](https://inspatio.github.io/inspatio-world/)  |
 | 2026 | **VGGRPO: Towards World-Consistent Video Generation with 4D Latent Reward**  | 27 Mar 2026 |          [Link](https://arxiv.org/abs/2603.26599)          | --  | [Link](https://zhaochongan.github.io/projects/VGGRPO/)  |
 | 2026 | **LivingWorld: Interactive 4D World Generation with Environmental Dynamics**  | 2 Apr 2026  |          [Link](https://arxiv.org/abs/2604.01641)          | --  | [Link](https://paper.pnu-cvsp.com/LivingWorld/)  |
+| 2026 | **LivingWorld: Interactive 4D World Generation with Environmental Dynamics**  | 8 May 2026  |          [Link](https://arxiv.org/abs/2605.07390)          | --  | --  |
+| 2026 | **Geometric 4D Stitching for Grounded 4D Generation**  | 11 May 2026  |          [Link](https://arxiv.org/abs/2605.09984)          | --  | --  |
 
 <details close>
 <summary>ArXiv Papers References</summary>
@@ -681,6 +690,20 @@ We introduce LivingWorld, an interactive framework for generating 4D worlds with
       archivePrefix={arXiv},
       primaryClass={cs.CV},
       url={https://arxiv.org/abs/2604.01641}, 
+}
+
+@article{wang2026st,
+  title={ST-Gen4D: Embedding 4D Spatiotemporal Cognition into World Model for 4D Generation},
+  author={Wang, Haonan and Zhou, Hanyu and Gu, Tao and Yan, Luxin},
+  journal={arXiv preprint arXiv:2605.07390},
+  year={2026}
+}
+
+@article{park2026geometric,
+  title={Geometric 4D Stitching for Grounded 4D Generation},
+  author={Park, Sunwoo and Kwon, Taesung and Ye, Jong Chul},
+  journal={arXiv preprint arXiv:2605.09984},
+  year={2026}
 }
 
 ```
