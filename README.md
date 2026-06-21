@@ -729,7 +729,7 @@ Current video-to-4D methods struggle with complex topology changes, transparent 
 ### Previous Papers and Other Awesome Repos
 
 #### Year 2025
-For more details, please check the [2025 4D Papers](./docs/4d/4d_2025.md), including 27 accepted papers, 14 arXiv papers and 2 arXiv surveys.
+For more details, please check the [2025 4D Papers](./docs/4d/4d_2025.md), including 28 accepted papers, 13 arXiv papers and 2 arXiv surveys.
 
 #### Year 2024
 For more details, please check the [2024 4D Papers](./docs/4d/4d_2024.md), including 25 accepted papers and 9 arXiv papers.
