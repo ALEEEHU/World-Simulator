@@ -638,7 +638,17 @@ Yiran Wang, Zeyu Zhang, Yuanming Li, Ziming Wang, Yang Zhao
 High-quality 4D head avatars from one or a few source portraits are central to telepresence, AR/VR, and digital-human interaction. 3D Gaussian Splatting (3DGS) has emerged as the dominant representation, with two complementary regimes (generalizable feed-forward predictors and per-subject refiners) maturing in parallel. However, existing feed-forward predictors are trained on a single dataset family with a hard-coded source count, inheriting the corresponding domain bias. Per-subject refiners require 300K--600K iterations and rely on adaptive densification that destroys upstream Gaussian layouts, preventing the two regimes from sharing a representation end-to-end. To bridge both regimes we propose SpatialAvatar-0 on a shared FLAME-mesh-bound Gaussian representation: a feed-forward generator with a parameter-free K-source mean-pool and a monocular-temporal to multi-view-spatial two-phase schedule that anchors against identity-prior collapse onto the smaller multi-view set. We further introduce a 10K-iter layout-preserving per-subject refinement loop that freezes the FLAME-binding and Gaussian count and replaces densification with a three-component anti-spike regularization. On VFHQ/HDTF cross-domain zero-shot we surpass the in-domain leader GAGAvatar by +1.5 dB PSNR despite never training on either test domain, and on the SplattingAvatar monocular benchmark we lead every reported metric, surpassing the 300K-iter GeoAvatar by +1.3 dB PSNR at up to 60x shorter per-subject schedule than common SOTA baselines.
 </details>
 
-#### 10. MVTrack4Gen: Multi-View Point Tracking as Geometric Supervision for 4D Video Generation
+#### 10. IMAGIN-4D: Image-Guided Controllable Interaction Generation
+Sai Kumar Dwivedi, Federica Bogo, Buğra Tekin, Chenhongyi Yang, Nadine Bertsch, Tomas Hodan, Michael J. Black, Dimitrios Tzionas, Shreyas Hampali
+
+(Meta, Max Planck Institute for Intelligent Systems, University of Amsterdam, Aristotle University of Thessaloniki)
+
+<details span>
+<summary><b>Abstract</b></summary>
+Generating human-object interactions (HOI) is central to character animation, robotics, AR/VR, and embodied AI. Recent HOI generation methods synthesize motion from text, object geometry, and sparse waypoints, controlling action semantics and object trajectories. However, these signals underspecify interaction: the same prompt and trajectory can produce different grasps, approach directions, body poses, object poses, contacts, and body-object layouts. We address this ambiguity with a reference image as a visual specification of the desired interaction snapshot. However, a single global image representation conflates distinct cues and conditions all frames on identical visual evidence. We therefore introduce IMAGIN-4D, a diffusion-based HOI generator that decomposes image conditioning spatio-temporally. For spatial conditioning, IMAGIN-4D extracts supervised interaction-state tokens for body pose, object pose, body-object contact, and spatial relationships at the depicted frame. For temporal conditioning, it computes frame-aware tokens by querying image patches per generated frame, allowing sequence segments to attend to different visual cues from the same image. To balance image, text, and waypoint cues, IMAGIN-4D uses role-aware conditioning: text, waypoints, and interaction-state tokens use separate AdaLN streams, while frame-aware visual tokens cross-attend with motion tokens. Since HOI motion datasets lack paired images, we build a synthetic motion-to-image rendering pipeline from FullBodyManipulation (FBM) and introduce an image-adherence metric to evaluate whether generated motions match the reference snapshot. Experiments on FBM and BEHAVE show that IMAGIN-4D improves fine-grained interaction control over single-token and uniformly image-conditioned baselines while preserving waypoint-following and motion quality. 
+</details>
+
+#### 11. MVTrack4Gen: Multi-View Point Tracking as Geometric Supervision for 4D Video Generation
 JoungBin Lee, Jaewoo Jung, Jongmin Lee, Tongmin Kim, Hyunsung Kim, Takuya Narihira, Kazumi Fukuda, Jahyeok Koo, Jisang Han, Yuki Mitsufuji, Seungryong Kim
 
 (KAIST AI, Sony AI, Sony Group Corporation)
@@ -664,7 +674,9 @@ Synthesizing a novel-view video from a monocular reference video along a target 
 | 2026 | **Fast 4D Mesh Generation by Spatio-Temporal Attention Chains**  | 19 May 2026  |          [Link](https://arxiv.org/abs/2605.19786)          | --  | [Link](https://research.nvidia.com/labs/par/fast4dmesh/)  |
 | 2026 | **Helix4D: Complex 4D Mesh Generation**  | 25 May 2026  |          [Link](https://arxiv.org/abs/2605.26109)          | --  | [Link](https://snap-research.github.io/helix4d/)  |
 | 2026 | **SpatialAvatar-0: High-Quality 4D Head Avatar with Multi-Stage Reconstruction**  | 14 Jun 2026  |          [Link](https://arxiv.org/abs/2606.15659)          | --  | [Link](https://spatialwalk.github.io/SpatialAvatar-0/)  |
+| 2026 | **IMAGIN-4D: Image-Guided Controllable Interaction Generation**  | 22 Jun 2026  |          [Link](https://arxiv.org/abs/2606.23675)          | --  | [Link](https://imagin4d.github.io/)  |
 | 2026 | **MVTrack4Gen: Multi-View Point Tracking as Geometric Supervision for 4D Video Generation**  | 24 Jun 2026  |          [Link](https://arxiv.org/abs/2606.26087v1)          | [Link](https://github.com/cvlab-kaist/MVTrack4Gen)  | [Link](https://cvlab-kaist.github.io/MVTrack4Gen/)  |
+
 
 <details close>
 <summary>ArXiv Papers References</summary>
@@ -749,6 +761,16 @@ Synthesizing a novel-view video from a monocular reference video along a target 
   author={Wang, Yiran and Zhang, Zeyu and Li, Yuanming and Wang, Ziming and Zhao, Yang},
   journal={arXiv preprint arXiv:2606.15659},
   year={2026}
+}
+
+@misc{dwivedi2026imagin4dimageguidedcontrollableinteraction,
+      title={IMAGIN-4D: Image-Guided Controllable Interaction Generation}, 
+      author={Sai Kumar Dwivedi and Federica Bogo and Buğra Tekin and Chenhongyi Yang and Nadine Bertsch and Tomas Hodan and Michael J. Black and Dimitrios Tzionas and Shreyas Hampali},
+      year={2026},
+      eprint={2606.23675},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2606.23675}, 
 }
 
 @misc{lee2026mvtrack4genmultiviewpointtracking,
