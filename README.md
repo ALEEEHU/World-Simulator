@@ -482,6 +482,8 @@ An open collection of state-of-the-art (SOTA), novel **Text to X (X can be every
 | 2026 | **Vista4D: Video Reshooting with 4D Point Clouds**  |  CVPR 2026|          [Link](https://arxiv.org/abs/2604.21915)          | [Link](https://github.com/Eyeline-Labs/Vista4D)  | [Link](https://eyeline-labs.github.io/Vista4D/)  |
 | 2026 | **Motion 3-to-4: 3D Motion Reconstruction for 4D Synthesis**  | CVPR 2026 |          [Link](https://arxiv.org/abs/2601.14253)          | [Link](https://github.com/Inception3D/Motion324)  | [Link](https://motion3-to-4.github.io/)  |
 | 2026 | **NeuROK: Generative 4D Neural Object Kinematics**  | CVPR 2026 |          [Link](https://arxiv.org/abs/2605.30347)          | Coming Soon! | [Link](https://chen-geng.com/neurok)  |
+| 2026 | **MV-Forcing: Long Multi-View Video Generation via 4D-Grounded Spatio-Temporal Self-Forcing**  | ECCV 2026 |          [Link](https://arxiv.org/abs/2607.05376)          | Coming Soon! | [Link](https://galfiebelman.github.io/mv-forcing/)  |
+| 2026 | **Alignment Is All You Need For X-to-4D Generation**  | IEEE Transactions on Multimedia (TMM) 2026 |          [Link](https://arxiv.org/abs/2607.02516)          | -- | [Link](https://miaoqiaowei.github.io/Align4D/)  |
 
 <details close>
 <summary>Accepted Papers References</summary>
@@ -547,6 +549,23 @@ An open collection of state-of-the-art (SOTA), novel **Text to X (X can be every
   author={Geng, Chen and He, Guangzhao and Gao, Yue and Zhang, Yunzhi and Wu, Shangzhe and Wu, Jiajun},
   booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
   pages={39239--39251},
+  year={2026}
+}
+
+@misc{fiebelman2026mvforcinglongmultiviewvideo,
+        title={MV-Forcing: Long Multi-View Video Generation via 4D-Grounded Spatio-Temporal Self-Forcing}, 
+        author={Gal Fiebelman and Hadar Averbuch-Elor and Sagie Benaim},
+        year={2026},
+        eprint={2607.05376},
+        archivePrefix={arXiv},
+        primaryClass={cs.CV},
+        url={https://arxiv.org/abs/2607.05376}, 
+}
+
+@article{miao2026alignment,
+  title={Alignment Is All You Need For X-to-4D Generation},
+  author={Miao, Qiaowei and Li, Kehan and Luo, Yawei and Yang, Yi},
+  journal={arXiv preprint arXiv:2607.02516},
   year={2026}
 }
 ```
