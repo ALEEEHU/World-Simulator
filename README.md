@@ -677,6 +677,16 @@ JoungBin Lee, Jaewoo Jung, Jongmin Lee, Tongmin Kim, Hyunsung Kim, Takuya Narihi
 Synthesizing a novel-view video from a monocular reference video along a target camera trajectory requires both geometric consistency and motion fidelity with respect to the reference video. Existing methods based on explicit 3D representations are limited by the accuracy of off-the-shelf reconstruction modules, which often produce inaccurate geometry for dynamic objects in monocular videos. In contrast, camera-conditioning-only methods can achieve high visual quality but often struggle to preserve geometric and motion consistency. In this work, we introduce MVTrack4Gen (Multi-View point Tracking for Novel-View Generation), a motion-aware training framework that leverages multi-view point tracking as an additional geometric and motion supervision signal for camera-conditioning-only novel-view video diffusion models. Our key finding is that specific attention layers encode strong correspondence cues, where query features attend to key features at geometrically corresponding locations across views and over time, and the misalignment of these correspondences causes motion inconsistency. Based on this observation, we route these features into an auxiliary multi-view tracking head and jointly train the diffusion model with a point-tracking objective. By explicitly strengthening these motion-aware correspondences, MVTrack4Gen improves existing models to better follow the motion in the reference view and maintain cross-view geometric consistency. Across diverse benchmarks, our method achieves state-of-the-art geometric consistency and competitive camera accuracy.
 </details>
 
+#### 12. SkelGen4D: Weakly-Supervised Skeleton-Based 4D Generation for Text-Driven Mesh Animation
+Hao Feng, Zhi Zuo, Jia-Hui Pan, Ka-Hei Hui, Zhengzhe Liu, Dian Zhang, Haoran Xie, Bin Sheng, Jingyu Hu
+
+(Lingnan University, Chinese University of Hong Kong, Autodesk Research, Shanghai Jiao Tong University)
+
+<details span>
+<summary><b>Abstract</b></summary>
+We study 4D generation to synthesize temporally coherent sequences of 3D geometry for animation and content creation. In contrast to existing SDS-based optimization methods and video-driven animation approaches, we adopt a skeleton-driven animation framework aligned with standard industrial pipelines, which enables explicit control and editing. To this end, we propose SkelGen4D, a weakly supervised feed-forward framework for text-driven mesh animation that generates explicit skeleton motions without requiring per-frame skeleton annotations. SkelGen4D first recovers temporally consistent pseudo-skeletons from animated meshes via differentiable fitting, and then generates text-conditioned skeleton motion sequences in a feed-forward manner, further refined with Motion-GRPO to ensure temporally coherent, physically plausible, and articulated animation. We evaluate our method on two large-scale benchmarks, Truebones Zoo and Diffusion4D. Our results show that our weakly supervised skeleton modeling matches or surpasses fully supervised baselines while scaling to diverse object categories for high-quality text-driven mesh animation. Further, our method supports flexible motion editing and is aligned with standard animation production pipelines.
+</details>
+
 -----
 
 </details>
@@ -695,6 +705,7 @@ Synthesizing a novel-view video from a monocular reference video along a target 
 | 2026 | **SpatialAvatar-0: High-Quality 4D Head Avatar with Multi-Stage Reconstruction**  | 14 Jun 2026  |          [Link](https://arxiv.org/abs/2606.15659)          | --  | [Link](https://spatialwalk.github.io/SpatialAvatar-0/)  |
 | 2026 | **IMAGIN-4D: Image-Guided Controllable Interaction Generation**  | 22 Jun 2026  |          [Link](https://arxiv.org/abs/2606.23675)          | --  | [Link](https://imagin4d.github.io/)  |
 | 2026 | **MVTrack4Gen: Multi-View Point Tracking as Geometric Supervision for 4D Video Generation**  | 24 Jun 2026  |          [Link](https://arxiv.org/abs/2606.26087v1)          | [Link](https://github.com/cvlab-kaist/MVTrack4Gen)  | [Link](https://cvlab-kaist.github.io/MVTrack4Gen/)  |
+| 2026 | **SkelGen4D: Weakly-Supervised Skeleton-Based 4D Generation for Text-Driven Mesh Animation**  | 9 Jul 2026  |          [Link](https://arxiv.org/abs/2607.08246)          | --  | -- |
 
 
 <details close>
@@ -800,6 +811,13 @@ Synthesizing a novel-view video from a monocular reference video along a target 
       archivePrefix={arXiv},
       primaryClass={cs.CV},
       url={https://arxiv.org/abs/2606.26087},
+}
+
+@article{feng2026skelgen4d,
+  title={SkelGen4D: Weakly-Supervised Skeleton-Based 4D Generation for Text-Driven Mesh Animation},
+  author={Feng, Hao and Zuo, Zhi and Pan, Jia-Hui and Hui, Ka-Hei and Liu, Zhengzhe and Zhang, Dian and Xie, Haoran and Sheng, Bin and Hu, Jingyu},
+  journal={arXiv preprint arXiv:2607.08246},
+  year={2026}
 }
 
 ```
