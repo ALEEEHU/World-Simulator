@@ -687,6 +687,16 @@ Hao Feng, Zhi Zuo, Jia-Hui Pan, Ka-Hei Hui, Zhengzhe Liu, Dian Zhang, Haoran Xie
 We study 4D generation to synthesize temporally coherent sequences of 3D geometry for animation and content creation. In contrast to existing SDS-based optimization methods and video-driven animation approaches, we adopt a skeleton-driven animation framework aligned with standard industrial pipelines, which enables explicit control and editing. To this end, we propose SkelGen4D, a weakly supervised feed-forward framework for text-driven mesh animation that generates explicit skeleton motions without requiring per-frame skeleton annotations. SkelGen4D first recovers temporally consistent pseudo-skeletons from animated meshes via differentiable fitting, and then generates text-conditioned skeleton motion sequences in a feed-forward manner, further refined with Motion-GRPO to ensure temporally coherent, physically plausible, and articulated animation. We evaluate our method on two large-scale benchmarks, Truebones Zoo and Diffusion4D. Our results show that our weakly supervised skeleton modeling matches or surpasses fully supervised baselines while scaling to diverse object categories for high-quality text-driven mesh animation. Further, our method supports flexible motion editing and is aligned with standard animation production pipelines.
 </details>
 
+#### 13. Hallo4D: Multi-Modal Hallucination Mitigation for Consistent Spatio-Temporal Generation
+Hongbo Wang, Huaibo Huang, Jie Cao, Jin Liu, Haoyang Tong, Ran He
+
+(CASIA, UCAS, ShanghaiTech)
+
+<details span>
+<summary><b>Abstract</b></summary>
+While recent advances in 3D generation have enabled impressive visual synthesis, existing methods often rely on 2D diffusion supervision without explicit mechanisms for geometric consistency, leading to spatial hallucinations such as duplicated structures and misaligned geometry. These issues become more severe in 4D generation, where maintaining consistency across viewpoints and temporal evolution introduces additional challenges, including jitter, identity flicker, and structural drift. We present \textbf{Hallo4D}, a unified and model-agnostic framework for mitigating spatiotemporal hallucinations in 3D and 4D content generation. Hallo4D introduces a generation-detection-correction paradigm that leverages large multimodal language models (LMMs) to identify and summarize spatial and temporal inconsistencies from multi-view and multi-frame renderings. These insights guide a consensus-driven image-space consistency optimization, where an LMM-based selector evaluates candidate corrections through multi-model voting, without requiring retraining or architectural modifications. To further improve temporal consistency and optimization efficiency, Hallo4D incorporates motion-aware keyframe sampling, LMM-guided initialization, and appearance alignment. We additionally introduce exposure-aware optimization and visibility pruning to enhance robustness under challenging viewpoints. Extensive experiments demonstrate that Hallo4D consistently outperforms strong baselines across diverse 3D and 4D generation settings, providing a scalable and generalizable solution for consistency-aware content generation.
+</details>
+
 -----
 
 </details>
@@ -706,6 +716,7 @@ We study 4D generation to synthesize temporally coherent sequences of 3D geometr
 | 2026 | **IMAGIN-4D: Image-Guided Controllable Interaction Generation**  | 22 Jun 2026  |          [Link](https://arxiv.org/abs/2606.23675)          | --  | [Link](https://imagin4d.github.io/)  |
 | 2026 | **MVTrack4Gen: Multi-View Point Tracking as Geometric Supervision for 4D Video Generation**  | 24 Jun 2026  |          [Link](https://arxiv.org/abs/2606.26087v1)          | [Link](https://github.com/cvlab-kaist/MVTrack4Gen)  | [Link](https://cvlab-kaist.github.io/MVTrack4Gen/)  |
 | 2026 | **SkelGen4D: Weakly-Supervised Skeleton-Based 4D Generation for Text-Driven Mesh Animation**  | 9 Jul 2026  |          [Link](https://arxiv.org/abs/2607.08246)          | --  | -- |
+| 2026 | **Hallo4D: Multi-Modal Hallucination Mitigation for Consistent Spatio-Temporal Generation**  | 15 Jul 2026  |          [Link](https://arxiv.org/abs/2607.12752)          | [Link](https://github.com/wafer-bob/Hallo4D)  | [Link](https://wafer-bob.github.io/Hallo3D-4D/) |
 
 
 <details close>
@@ -817,6 +828,13 @@ We study 4D generation to synthesize temporally coherent sequences of 3D geometr
   title={SkelGen4D: Weakly-Supervised Skeleton-Based 4D Generation for Text-Driven Mesh Animation},
   author={Feng, Hao and Zuo, Zhi and Pan, Jia-Hui and Hui, Ka-Hei and Liu, Zhengzhe and Zhang, Dian and Xie, Haoran and Sheng, Bin and Hu, Jingyu},
   journal={arXiv preprint arXiv:2607.08246},
+  year={2026}
+}
+
+@article{wang2026hallo4d,
+  title={Hallo4D: Multi-Modal Hallucination Mitigation for Consistent Spatio-Temporal Generation},
+  author={Wang, Hongbo and Huang, Huaibo and Cao, Jie and Liu, Jin and Tong, Haoyang and He, Ran},
+  journal={arXiv preprint arXiv:2607.12752},
   year={2026}
 }
 
