@@ -846,10 +846,10 @@ While recent advances in 3D generation have enabled impressive visual synthesis,
 ### Previous Papers and Other Awesome Repos
 
 #### Year 2025
-For more details, please check the [2025 4D Papers](./docs/4d/4d_2025.md), including 28 accepted papers, 13 arXiv papers and 2 arXiv surveys.
+For more details, please check the [2025 4D Papers](./docs/4d/4d_2025.md), including 35 accepted papers, 6 arXiv papers and 2 arXiv surveys.
 
 #### Year 2024
-For more details, please check the [2024 4D Papers](./docs/4d/4d_2024.md), including 25 accepted papers and 9 arXiv papers.
+For more details, please check the [2024 4D Papers](./docs/4d/4d_2024.md), including 27 accepted papers and 7 arXiv papers.
 
 #### Year 2023
 In 2023, tasks classified as text/Image to 4D and video to 4D generally involve producing four-dimensional data from text/Image or video input. For more details, please check the [2023 4D Papers](./docs/4d/4d_2023.md), including 6 accepted papers and 3 arXiv papers.
