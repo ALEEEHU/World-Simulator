@@ -930,7 +930,7 @@ For more details, please check the [2023-2024 3D Scene Papers](./docs/3d_scene/3
 ### Previous Papers
 
 #### Year 2025
-For more details, please check the [2025 Human Motion Papers](./docs/human_motion/motion_24-25.md), including 17 accepted papers and 5 arXiv papers.
+For more details, please check the [2025 Human Motion Papers](./docs/human_motion/motion_24-25.md), including 18 accepted papers and 4 arXiv papers.
 
 #### Year 2023-2024
 For more details, please check the [2023-2024 Text to Human Motion Papers](./docs/human_motion/motion_23-24.md), including 37 accepted papers and 5 arXiv papers.
