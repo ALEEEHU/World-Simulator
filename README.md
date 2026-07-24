@@ -697,6 +697,14 @@ Hongbo Wang, Huaibo Huang, Jie Cao, Jin Liu, Haoyang Tong, Ran He
 While recent advances in 3D generation have enabled impressive visual synthesis, existing methods often rely on 2D diffusion supervision without explicit mechanisms for geometric consistency, leading to spatial hallucinations such as duplicated structures and misaligned geometry. These issues become more severe in 4D generation, where maintaining consistency across viewpoints and temporal evolution introduces additional challenges, including jitter, identity flicker, and structural drift. We present \textbf{Hallo4D}, a unified and model-agnostic framework for mitigating spatiotemporal hallucinations in 3D and 4D content generation. Hallo4D introduces a generation-detection-correction paradigm that leverages large multimodal language models (LMMs) to identify and summarize spatial and temporal inconsistencies from multi-view and multi-frame renderings. These insights guide a consensus-driven image-space consistency optimization, where an LMM-based selector evaluates candidate corrections through multi-model voting, without requiring retraining or architectural modifications. To further improve temporal consistency and optimization efficiency, Hallo4D incorporates motion-aware keyframe sampling, LMM-guided initialization, and appearance alignment. We additionally introduce exposure-aware optimization and visibility pruning to enhance robustness under challenging viewpoints. Extensive experiments demonstrate that Hallo4D consistently outperforms strong baselines across diverse 3D and 4D generation settings, providing a scalable and generalizable solution for consistency-aware content generation.
 </details>
 
+#### 14. PE-Field 4D: Video Generation Models as Canvas
+Yunpeng Bai, Haoxiang Li, Qixing Huang (UT Austin, Pixocial Technology)
+
+<details span>
+<summary><b>Abstract</b></summary>
+Diffusion Transformers have recently achieved strong performance in video generation, yet controlling scene geometry under viewpoint changes and camera motion remains challenging. In this work, we revisit the role of positional encoding in video diffusion transformers and show that it provides a useful spatial bias for geometry-aware control. Specifically, if reference tokens are encoded according to their projected locations in the target view, the denoising model is encouraged to retrieve content from position aligned regions of the input video. Building on this observation, we introduce a geometry-aware cross-attention mechanism that enables target video latent tokens to attend to structured context tokens derived from reference images or frames. To establish correspondence between the reference content and the target camera trajectory, we equip the context tokens with a projected positional encoding scheme that combines target-view 2D reprojection with depth-aware disambiguation. At the same time, we preserve the original spatiotemporal positional encoding of the generated video latent, allowing geometric guidance to be injected while maintaining consistency with the video model's native latent structure. The resulting framework provides a simple and effective approach for controllable video generation. It improves spatial controllability in viewpoint-dependent editing tasks, including camera re-trajectory, novel-view video synthesis, and geometry-aware video editing, while preserving the generative prior of the underlying video diffusion model. 
+</details>
+
 -----
 
 </details>
@@ -717,7 +725,7 @@ While recent advances in 3D generation have enabled impressive visual synthesis,
 | 2026 | **MVTrack4Gen: Multi-View Point Tracking as Geometric Supervision for 4D Video Generation**  | 24 Jun 2026  |          [Link](https://arxiv.org/abs/2606.26087v1)          | [Link](https://github.com/cvlab-kaist/MVTrack4Gen)  | [Link](https://cvlab-kaist.github.io/MVTrack4Gen/)  |
 | 2026 | **SkelGen4D: Weakly-Supervised Skeleton-Based 4D Generation for Text-Driven Mesh Animation**  | 9 Jul 2026  |          [Link](https://arxiv.org/abs/2607.08246)          | --  | -- |
 | 2026 | **Hallo4D: Multi-Modal Hallucination Mitigation for Consistent Spatio-Temporal Generation**  | 15 Jul 2026  |          [Link](https://arxiv.org/abs/2607.12752)          | [Link](https://github.com/wafer-bob/Hallo4D)  | [Link](https://wafer-bob.github.io/Hallo3D-4D/) |
-
+| 2026 | **PE-Field 4D: Video Generation Models as Canvas**  | 17 Jul 2026  |          [Link](https://arxiv.org/abs/2607.15667)          | --  | -- |
 
 <details close>
 <summary>ArXiv Papers References</summary>
@@ -835,6 +843,13 @@ While recent advances in 3D generation have enabled impressive visual synthesis,
   title={Hallo4D: Multi-Modal Hallucination Mitigation for Consistent Spatio-Temporal Generation},
   author={Wang, Hongbo and Huang, Huaibo and Cao, Jie and Liu, Jin and Tong, Haoyang and He, Ran},
   journal={arXiv preprint arXiv:2607.12752},
+  year={2026}
+}
+
+@article{bai2026pe,
+  title={PE-Field 4D: Video Generation Models as Canvas},
+  author={Bai, Yunpeng and Li, Haoxiang and Huang, Qixing},
+  journal={arXiv preprint arXiv:2607.15667},
   year={2026}
 }
 
