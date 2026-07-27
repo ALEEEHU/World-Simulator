@@ -922,7 +922,7 @@ For more details, please check the [2024 T2V Papers](./docs/video/t2v_2024.md), 
 ### Previous Papers
 
 #### Year 2025
-For more details, please check the [2025 3D Scene Papers](./docs/3d_scene/3d_scene_24-25.md), including 13 accepted papers, 12 arXiv papers and 2 arXiv surveys.
+For more details, please check the [2025 3D Scene Papers](./docs/3d_scene/3d_scene_24-25.md), including 15 accepted papers, 10 arXiv papers and 2 arXiv surveys.
 
 #### Year 2023-2024
 For more details, please check the [2023-2024 3D Scene Papers](./docs/3d_scene/3d_scene_23-24.md), including 25 accepted papers and 6 arXiv papers.
