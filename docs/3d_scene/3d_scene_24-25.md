@@ -14,6 +14,8 @@
 | 2025 | **WorldGrow: Generating Infinite 3D World**  | AAAI 2026 Oral |          [Link](https://arxiv.org/abs/2510.21682)          | [Link](https://github.com/world-grow/WorldGrow) | [Link](https://world-grow.github.io/)  |
 | 2025 | **Voyager: Long-Range and World-Consistent Video Diffusion for Explorable 3D Scene Generation**  | ACM TOG 2025 |          [Link](https://arxiv.org/abs/2506.04225)          | [Link](https://github.com/Voyager-World/Voyager)  | [Link](https://voyager-world.github.io/)  |
 | 2025 | **FlashWorld: High-quality 3D Scene Generation within Seconds**  | ICLR 2026 Oral |          [Link](https://arxiv.org/abs/2510.13678)          | [Link](https://github.com/imlixinyang/FlashWorld) | [Link](https://imlixinyang.github.io/FlashWorld-Project-Page/)  |
+| 2025 | **ImmerseGen: Agent-Guided Immersive World Generation with Alpha-Textured Proxies**  | IEEE VR 2026 and TVCG Special Issue |          [Link](https://www.arxiv.org/abs/2506.14315)          | -- | [Link](https://immersegen.github.io/)  |
+| 2025 | **DreamAnywhere: Object-Centric Panoramic 3D Scene Generation**  | WACV 2026 (Oral) |          [Link](https://arxiv.org/abs/2506.20367)          | -- | [Link](https://dedoardo.github.io/projects/dreamanywhere/)  |
 
 <details close>
 <summary>Accepted Papers References</summary>
@@ -121,6 +123,23 @@ year={2025}
         primaryClass={cs.CV}
 }
 
+@article{yuan2026immersegen,
+  title={Immersegen: Agent-guided immersive world generation with alpha-textured proxies},
+  author={Yuan, Jinyan and Yang, Bangbang and Wang, Keke and Pan, Panwang and Ma, Lin and Zhang, Xuehai and Liu, Xiao and Cui, Zhaopeng and Ma, Yuewen},
+  journal={IEEE Transactions on Visualization and Computer Graphics},
+  year={2026},
+  publisher={IEEE}
+}
+
+@inproceedings{dominici2026dreamanywhere,
+  title={DreamAnywhere: Object-Centric Panoramic 3D Scene Generation},
+  author={Dominici, Edoardo A and Hladky, Jozef and Verhoeven, Floor and Radl, Lukas and Deixelberger, Thomas and Ainetter, Stefan and Drescher, Philipp and Hauswiesner, Stefan and Coomans, Arno and Nazzaro, Giacomo and others},
+  booktitle={2026 IEEE/CVF Winter Conference on Applications of Computer Vision (WACV)},
+  pages={1--11},
+  year={2026},
+  organization={IEEE}
+}
+
 ```
 </details>
 
@@ -170,27 +189,7 @@ Xinjie Wang, Liu Liu, Yu Cao, Ruiqi Wu, Wenkang Qin, Dehui Wang, Wei Sui, Zhizho
 Constructing a physically realistic and accurately scaled simulated 3D world is crucial for the training and evaluation of embodied intelligence tasks. The diversity, realism, low cost accessibility and affordability of 3D data assets are critical for achieving generalization and scalability in embodied AI. However, most current embodied intelligence tasks still rely heavily on traditional 3D computer graphics assets manually created and annotated, which suffer from high production costs and limited realism. These limitations significantly hinder the scalability of data driven approaches. We present EmbodiedGen, a foundational platform for interactive 3D world generation. It enables the scalable generation of high-quality, controllable and photorealistic 3D assets with accurate physical properties and real-world scale in the Unified Robotics Description Format (URDF) at low cost. These assets can be directly imported into various physics simulation engines for fine-grained physical control, supporting downstream tasks in training and evaluation. EmbodiedGen is an easy-to-use, full-featured toolkit composed of six key modules: Image-to-3D, Text-to-3D, Texture Generation, Articulated Object Generation, Scene Generation and Layout Generation. EmbodiedGen generates diverse and interactive 3D worlds composed of generative 3D assets, leveraging generative AI to address the challenges of generalization and evaluation to the needs of embodied intelligence related research. 
 </details>
 
-#### 6. ImmerseGen: Agent-Guided Immersive World Generation with Alpha-Textured Proxies
-Jinyan Yuan, Bangbang Yang, Keke Wang, Panwang Pan, Lin Ma, Xuehai Zhang, Xiao Liu, Zhaopeng Cui, Yuewen Ma
-
-(PICO Bytedance, State Key Laboratory of CAD&CG Zhejiang University)
-
-<details span>
-<summary><b>Abstract</b></summary>
-Automatic creation of 3D scenes for immersive VR presence has been a significant research focus for decades. However, existing methods often rely on either high-poly mesh modeling with post-hoc simplification or massive 3D Gaussians, resulting in a complex pipeline or limited visual realism. In this paper, we demonstrate that such exhaustive modeling is unnecessary for achieving compelling immersive experience. We introduce ImmerseGen, a novel agent-guided framework for compact and photorealistic world modeling. ImmerseGen represents scenes as hierarchical compositions of lightweight geometric proxies, i.e., simplified terrain and billboard meshes, and generates photorealistic appearance by synthesizing RGBA textures onto these proxies. Specifically, we propose terrain-conditioned texturing for user-centric base world synthesis, and RGBA asset texturing for midground and foreground scenery. This reformulation offers several advantages: (i) it simplifies modeling by enabling agents to guide generative models in producing coherent textures that integrate seamlessly with the scene; (ii) it bypasses complex geometry creation and decimation by directly synthesizing photorealistic textures on proxies, preserving visual quality without degradation; (iii) it enables compact representations suitable for real-time rendering on mobile VR headsets. To automate scene creation from text prompts, we introduce VLM-based modeling agents enhanced with semantic grid-based analysis for improved spatial reasoning and accurate asset placement. ImmerseGen further enriches scenes with dynamic effects and ambient audio to support multisensory immersion. Experiments on scene generation and live VR showcases demonstrate that ImmerseGen achieves superior photorealism, spatial coherence and rendering efficiency compared to prior methods.
-</details>
-
-#### 7. DreamAnywhere: Object-Centric Panoramic 3D Scene Generation
-Edoardo Alberto Dominici, Jozef Hladky, Floor Verhoeven, Lukas Radl, Thomas Deixelberger, Stefan Ainetter, Philipp Drescher, Stefan Hauswiesner, Arno Coomans, Giacomo Nazzaro, Konstantinos Vardis, Markus Steinberger
-
-(Huawei Technologies, Graz University of Technology)
-
-<details span>
-<summary><b>Abstract</b></summary>
-Recent advances in text-to-3D scene generation have demonstrated significant potential to transform content creation across multiple industries. Although the research community has made impressive progress in addressing the challenges of this complex task, existing methods often generate environments that are only front-facing, lack visual fidelity, exhibit limited scene understanding, and are typically fine-tuned for either indoor or outdoor settings. In this work, we address these issues and propose DreamAnywhere, a modular system for the fast generation and prototyping of 3D scenes. Our system synthesizes a 360° panoramic image from text, decomposes it into background and objects, constructs a complete 3D representation through hybrid inpainting, and lifts object masks to detailed 3D objects that are placed in the virtual environment. DreamAnywhere supports immersive navigation and intuitive object-level editing, making it ideal for scene exploration, visual mock-ups, and rapid prototyping -- all with minimal manual modeling. These features make our system particularly suitable for low-budget movie production, enabling quick iteration on scene layout and visual tone without the overhead of traditional 3D workflows. Our modular pipeline is highly customizable as it allows components to be replaced independently. Compared to current state-of-the-art text and image-based 3D scene generation approaches, DreamAnywhere shows significant improvements in coherence in novel view synthesis and achieves competitive image quality, demonstrating its effectiveness across diverse and challenging scenarios. A comprehensive user study demonstrates a clear preference for our method over existing approaches, validating both its technical robustness and practical usefulness.
-</details>
-
-#### 8. Towards Geometric and Textural Consistency 3D Scene Generation via Single Image-guided Model Generation and Layout Optimization
+#### 6. Towards Geometric and Textural Consistency 3D Scene Generation via Single Image-guided Model Generation and Layout Optimization
 Xiang Tang, Ruotong Li, Xiaopeng Fan
 
 (Harbin Institute of Technology Shenzhen, Peng Cheng Laboratory, Harbin Institute of Technology, Harbin Institute of Technology Suzhou Research Institute)
@@ -200,7 +199,7 @@ Xiang Tang, Ruotong Li, Xiaopeng Fan
 In recent years, 3D generation has made great strides in both academia and industry. However, generating 3D scenes from a single RGB image remains a significant challenge, as current approaches often struggle to ensure both object generation quality and scene coherence in multi-object scenarios. To overcome these limitations, we propose a novel three-stage framework for 3D scene generation with explicit geometric representations and high-quality textural details via single image-guided model generation and spatial layout optimization. Our method begins with an image instance segmentation and inpainting phase, which recovers missing details of occluded objects in the input images, thereby achieving complete generation of foreground 3D assets. Subsequently, our approach captures the spatial geometry of reference image by constructing pseudo-stereo viewpoint for camera parameter estimation and scene depth inference, while employing a model selection strategy to ensure optimal alignment between the 3D assets generated in the previous step and the input. Finally, through model parameterization and minimization of the Chamfer distance between point clouds in 3D and 2D space, our approach optimizes layout parameters to produce an explicit 3D scene representation that maintains precise alignment with input guidance image. Extensive experiments on multi-object scene image sets have demonstrated that our approach not only outperforms state-of-the-art methods in terms of geometric accuracy and texture fidelity of individual generated 3D models, but also has significant advantages in scene layout synthesis.
 </details>
 
-#### 9. HunyuanWorld 1.0: Generating Immersive, Explorable, and Interactive 3D Worlds from Words or Pixels
+#### 7. HunyuanWorld 1.0: Generating Immersive, Explorable, and Interactive 3D Worlds from Words or Pixels
 Tencent Hunyuan
 
 <details span>
@@ -208,7 +207,7 @@ Tencent Hunyuan
 Creating immersive and playable 3D worlds from texts or images remains a fundamental challenge in computer vision and graphics. Existing world generation approaches typically fall into two categories: video-based methods that offer rich diversity but lack 3D consistency and rendering efficiency, and 3D-based methods that provide geometric consistency but struggle with limited training data and memory-inefficient representations. To address these limitations, we present HunyuanWorld 1.0, a novel framework that combines the best of both worlds for generating immersive, explorable, and interactive 3D scenes from text and image conditions. Our approach features three key advantages: 1) 360° immersive experiences via panoramic world proxies; 2) mesh export capabilities for seamless compatibility with existing computer graphics pipelines; 3) disentangled object representations for augmented interactivity. The core of our framework is a semantically layered 3D mesh representation that leverages panoramic images as 360° world proxies for semantic-aware world decomposition and reconstruction, enabling the generation of diverse 3D worlds. Extensive experiments demonstrate that our method achieves state-of-the-art performance in generating coherent, explorable, and interactive 3D worlds while enabling versatile applications in virtual reality, physical simulation, game development, and interactive content creation.
 </details>
 
-#### 10. Matrix-3D: Omnidirectional Explorable 3D World Generation
+#### 8. Matrix-3D: Omnidirectional Explorable 3D World Generation
 Zhongqi Yang, Wenhang Ge, Yuqi Li, Jiaqi Chen, Haoyuan Li, Mengyin An, Fei Kang, Hua Xue, Baixin Xu, Yuyang Yin, Eric Li, Yang Liu, Yikai Wang, Hao-Xiang Guo, Yahui Zhou
 
 (Skywork AI, Hong Kong University of Science and Technology (Guangzhou), Institute of Computing Technology Chinese Academy of Sciences, School of Artificial Intelligence Beijing Normal University)
@@ -218,7 +217,7 @@ Zhongqi Yang, Wenhang Ge, Yuqi Li, Jiaqi Chen, Haoyuan Li, Mengyin An, Fei Kang,
 Explorable 3D world generation from a single image or text prompt forms a cornerstone of spatial intelligence. Recent works utilize video model to achieve wide-scope and generalizable 3D world generation. However, existing approaches often suffer from limited reconstruction scope and suboptimal visual quality. In this work, we propose Matrix-3D, a framework that utilize panoramic representation for wide-coverage omnidirectional explorable 3D world generation that combines conditional video generation and panoramic 3D reconstruction. We first train a trajectory-guided panoramic video diffusion model that employs scene mesh renders as condition, to enable high-quality and geometrically consistent scene video generation. To enable 3D world generation, we introduce two methods that lift the 2D content to 3D world, ensuring efficiency and effectiveness. To lift the panorama scene video to 3D world, we propose two separate pipelines — a feed-forward large reconstruction model for rapid 3D scene reconstruction and an optimization-based pipeline for accurate and detailed 3D scene reconstruction. For efficiency, we introduce a feed-forward panoramic 3D reconstruction model that projects video latents and camera poses to predict omni-directional 3D Gaussian Splatting attributes. To facilitate convergence, we adopt a two-stage training strategy and supervise the model using rendered panoramic novel views. For effectiveness, we also propose a optimization-based reconstruction method. However, no existing panoramic video dataset provides associated camera poses. To facilitate effective training, we also introduce the Matrix-Pano dataset — the first large-scale synthetic collection comprising 116,759 high-quality static panoramic video sequences with various annotations. Extensive experiments demonstrate the effectiveness of our proposed framework, which achieves state-of-the-art performance in panoramic video generation and 3D world generation.
 </details>
 
-#### 11. Self-Evolving 3D Scene Generation from a Single Image
+#### 9. Self-Evolving 3D Scene Generation from a Single Image
 Kaizhi Zheng, Yue Fan, Jing Gu, Zishuo Xu, Xuehai He, Xin Eric Wang
 
 (University of California Santa Cruz, University of California Santa Barbara)
@@ -228,7 +227,7 @@ Kaizhi Zheng, Yue Fan, Jing Gu, Zishuo Xu, Xuehai He, Xin Eric Wang
 Generating high-quality, textured 3D scenes from a single image remains a fundamental challenge in vision and graphics. Recent image-to-3D generators recover reasonable geometry from single views, but their object-centric training limits generalization to complex, large-scale scenes with faithful structure and texture. We present EvoScene, a self-evolving, training-free framework that progressively reconstructs complete 3D scenes from single images. The key idea is combining the complementary strengths of existing models: geometric reasoning from 3D generation models and visual knowledge from video generation models. Through three iterative stages--Spatial Prior Initialization, Visual-guided 3D Scene Mesh Generation, and Spatial-guided Novel View Generation--EvoScene alternates between 2D and 3D domains, gradually improving both structure and appearance. Experiments on diverse scenes demonstrate that EvoScene achieves superior geometric stability, view-consistent textures, and unseen-region completion compared to strong baselines, producing ready-to-use 3D meshes for practical applications.
 </details>
 
-#### 12. I-Scene: 3D Instance Models are Implicit Generalizable Spatial Learners
+#### 10. I-Scene: 3D Instance Models are Implicit Generalizable Spatial Learners
 Lu Ling, Yunhao Ge, Yichen Sheng, Aniket Bera
 
 (Purdue University, NVIDIA Research)
@@ -245,8 +244,6 @@ Generalization remains the central challenge for interactive 3D scene generation
 | 2025 | **Agentic 3D Scene Generation with Spatially Contextualized VLMs**  | 26 May 2025 |          [Link](https://arxiv.org/abs/2505.20129)          | --  | [Link](https://spatctxvlm.github.io/project_page/)  |
 | 2025 | **ReSpace: Text-Driven 3D Scene Synthesis and Editing with Preference Alignment**  | 10 Jun 2025 |          [Link](https://arxiv.org/pdf/2506.02459)          | [Link](https://github.com/GradientSpaces/respace)  | [Link](https://respace.mnbucher.com/)  |
 | 2025 | **EmbodiedGen: Towards a Generative 3D World Engine for Embodied Intelligence**  | 16 Jun 2025 |          [Link](https://arxiv.org/abs/2506.10600)          | [Link](https://github.com/HorizonRobotics/EmbodiedGen)  | [Link](https://horizonrobotics.github.io/robot_lab/embodied_gen/index.html)  |
-| 2025 | **ImmerseGen: Agent-Guided Immersive World Generation with Alpha-Textured Proxies**  | 18 Jun 2025 |          [Link](https://www.arxiv.org/abs/2506.14315)          | Coming Soon! | [Link](https://immersegen.github.io/)  |
-| 2025 | **DreamAnywhere: Object-Centric Panoramic 3D Scene Generation**  | 25 Jun 2025 |          [Link](https://arxiv.org/abs/2506.20367)          | -- | --  |
 | 2025 | **Towards Geometric and Textural Consistency 3D Scene Generation via Single Image-guided Model Generation and Layout Optimization**  | 20 Jul 2025 |          [Link](https://arxiv.org/abs/2507.14841)          | [Link](https://github.com/xdlbw/sing3d) | [Link](https://xdlbw.github.io/sing3d/)  |
 | 2025 | **HunyuanWorld 1.0: Generating Immersive, Explorable, and Interactive 3D Worlds from Words or Pixels**  | 26 Jul 2025 |          [Technical Report](https://3d-models.hunyuan.tencent.com/world/HY_World_1_technical_report.pdf)          | [Link](https://github.com/Tencent-Hunyuan/HunyuanWorld-1.0) | [Link](https://3d-models.hunyuan.tencent.com/world/)  |
 | 2025 | **Matrix-3D: Omnidirectional Explorable 3D World Generation**  | 12 Aug 2025 |          [Technical Report](https://github.com/SkyworkAI/Matrix-3D/blob/main/asset/report.pdf)          | [Link](https://github.com/SkyworkAI/Matrix-3D) | [Link](https://matrix-3d.github.io/)  |
@@ -302,20 +299,6 @@ Generalization remains the central challenge for interactive 3D scene generation
       archivePrefix={arXiv},
       primaryClass={cs.RO},
       url={https://arxiv.org/abs/2506.10600},
-}
-
-@article{yuan2025immersegen,
-  title={ImmerseGen: Agent-Guided Immersive World Generation with Alpha-Textured Proxies},
-  author={Yuan, Jinyan and Yang, Bangbang and Wang, Keke and Pan, Panwang and Ma, Lin and Zhang, Xuehai and Liu, Xiao and Cui, Zhaopeng and Ma, Yuewen},
-  journal={arXiv preprint arXiv:2506.14315},
-  year={2025}
-}
-
-@article{dominici2025dreamanywhere,
-  title={DreamAnywhere: Object-Centric Panoramic 3D Scene Generation},
-  author={Dominici, Edoardo Alberto and Hladky, Jozef and Verhoeven, Floor and Radl, Lukas and Deixelberger, Thomas and Ainetter, Stefan and Drescher, Philipp and Hauswiesner, Stefan and Coomans, Arno and Nazzaro, Giacomo and others},
-  journal={arXiv preprint arXiv:2506.20367},
-  year={2025}
 }
 
 @article{tang2025geometrictexturalconsistency3d,
