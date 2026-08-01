@@ -484,6 +484,7 @@ An open collection of state-of-the-art (SOTA), novel **Text to X (X can be every
 | 2026 | **NeuROK: Generative 4D Neural Object Kinematics**  | CVPR 2026 |          [Link](https://arxiv.org/abs/2605.30347)          | Coming Soon! | [Link](https://chen-geng.com/neurok)  |
 | 2026 | **MV-Forcing: Long Multi-View Video Generation via 4D-Grounded Spatio-Temporal Self-Forcing**  | ECCV 2026 |          [Link](https://arxiv.org/abs/2607.05376)          | Coming Soon! | [Link](https://galfiebelman.github.io/mv-forcing/)  |
 | 2026 | **Alignment Is All You Need For X-to-4D Generation**  | IEEE Transactions on Multimedia (TMM) 2026 |          [Link](https://arxiv.org/abs/2607.02516)          | -- | [Link](https://miaoqiaowei.github.io/Align4D/)  |
+| 2026 | **Lift4D: Harmonizing Single-View 3D Estimation for 4D Reconstruction In-the-Wild**  |SIGGRAPH Asia 2026 |          [Link](https://arxiv.org/abs/2606.23688)          | [Link](https://github.com/yehonathanlitman/Lift4D) | [Link](https://lift4d.github.io/)  |
 
 <details close>
 <summary>Accepted Papers References</summary>
@@ -568,6 +569,14 @@ An open collection of state-of-the-art (SOTA), novel **Text to X (X can be every
   journal={arXiv preprint arXiv:2607.02516},
   year={2026}
 }
+
+@article{litman2026lift4d,
+  title={Lift4D: Harmonizing Single-View 3D Estimation for 4D Reconstruction In-the-Wild},
+  author={Litman, Yehonathan and Ma, Xiaoxuan and Shah, Manan and Ugrinovic, Nicolas and Kitani, Kris and De la Torre, Fernando and Tulsiani, Shubham},
+  journal={arXiv preprint arXiv:2606.23688},
+  year={2026}
+}
+
 ```
 </details>
 
