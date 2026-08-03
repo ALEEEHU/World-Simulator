@@ -71,7 +71,7 @@ This repository is divided into two main sections:
 <div align=center>
 
 [![arXiv](https://img.shields.io/badge/arXiv-2503.04641-b31b1b.svg)](https://arxiv.org/abs/2503.04641)
-[![IEEE TPAMI](https://img.shields.io/badge/IEEE_TPAMI-PDF-red)](https://ieeexplore.ieee.org/abstract/document/11509284)
+[![IEEE TPAMI](https://img.shields.io/badge/IEEE_TPAMI-PDF-red)](https://www.computer.org/csdl/journal/tp/5555/01/11509284/2ggMscoa1OM)
 
 
 </div>
