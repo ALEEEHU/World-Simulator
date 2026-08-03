@@ -12,6 +12,7 @@
 | 2025 | **AdaHuman: Animatable Detailed 3D Human Generation with Compositional Multiview Diffusion**  | ICCV 2025 |          [Link](https://arxiv.org/abs/2505.24877)          | [Link](https://github.com/NVlabs/AdaHuman)  | [Link](https://nvlabs.github.io/AdaHuman/)  |
 | 2025 | **MVP4D: Multi-View Portrait Video Diffusion for Animatable 4D Avatars**  | SIGGRAPH Asia 2025 |          [Link](https://arxiv.org/abs/2510.12785)          | [Link](https://github.com/felixtaubner/mvp4d/)  | [Link](https://felixtaubner.github.io/mvp4d/)  |
 | 2025 | **InfiniHuman: Infinite 3D Human Creation with Precise Control**  | SIGGRAPH Asia 2025 |          [Link](https://arxiv.org/abs/2510.11650)          | [Link](https://github.com/YuxuanSnow/InfiniHuman/)  | [Link](https://yuxuan-xue.com/infini-human/)  |
+| 2025 | **Live Avatar: Streaming Real-time Audio-Driven Avatar Generation with Infinite Length**  |  ECCV Oral 2026 |          [Link](https://arxiv.org/abs/2512.04677)          | [Link](https://github.com/Alibaba-Quark/LiveAvatar)  | [Link](https://liveavatar.github.io/)  |
 
 <details close>
 <summary>Accepted Papers References</summary>
@@ -107,6 +108,13 @@
   year      = {2025},
 }
 
+@article{huang2025live,
+  title={Live avatar: Streaming real-time audio-driven avatar generation with infinite length},
+  author={Huang, Yubo and Guo, Hailong and Wu, Fangtai and Wang, Weiqiang and Zhang, Shifeng and Huang, Shijie and Gan, Qijun and Liu, Lin and Zhao, Sirui and Chen, Enhong and others},
+  journal={arXiv preprint arXiv:2512.04677},
+  year={2025}
+}
+
 ```
 </details>
 
@@ -124,19 +132,9 @@ Boyuan Wang, Runqi Ouyang, Xiaofeng Wang, Zheng Zhu, Guosheng Zhao, Chaojun Ni, 
 Single-image human reconstruction is vital for digital human modeling applications but remains an extremely challenging task. Current approaches rely on generative models to synthesize multi-view images for subsequent 3D reconstruction and animation. However, directly generating multiple views from a single human image suffers from geometric inconsistencies, resulting in issues like fragmented or blurred limbs in the reconstructed models. To tackle these limitations, we introduce \textbf{HumanDreamer-X}, a novel framework that integrates multi-view human generation and reconstruction into a unified pipeline, which significantly enhances the geometric consistency and visual fidelity of the reconstructed 3D models. In this framework, 3D Gaussian Splatting serves as an explicit 3D representation to provide initial geometry and appearance priority. Building upon this foundation, \textbf{HumanFixer} is trained to restore 3DGS renderings, which guarantee photorealistic results. Furthermore, we delve into the inherent challenges associated with attention mechanisms in multi-view human generation, and propose an attention modulation strategy that effectively enhances geometric details identity consistency across multi-view. Experimental results demonstrate that our approach markedly improves generation and reconstruction PSNR quality metrics by 16.45% and 12.65%, respectively, achieving a PSNR of up to 25.62 dB, while also showing generalization capabilities on in-the-wild data and applicability to various human reconstruction backbone models.
 </details>
 
-#### 2. Live Avatar: Streaming Real-time Audio-Driven Avatar Generation with Infinite Length
-Yubo Huang, Hailong Guo, Fangtai Wu, Shifeng Zhang, Shijie Huang, Qijun Gan, Lin Liu, Sirui Zhao, Enhong Chen, Jiaming Liu, Steven Hoi
-
-(Alibaba Group, University of Science and Technology of China, Beijing University of Posts and Telecommunications, Zhejiang University)
-<details span>
-<summary><b>Abstract</b></summary>
-Existing diffusion-based video generation methods are fundamentally constrained by sequential computation and long-horizon inconsistency, limiting their practical adoption in real-time, streaming audio-driven avatar synthesis. We present Live Avatar, an algorithm-system co-designed framework that enables efficient, high-fidelity, and infinite-length avatar generation using a 14-billion-parameter diffusion model. Our approach introduces Timestep-forcing Pipeline Parallelism (TPP), a distributed inference paradigm that pipelines denoising steps across multiple GPUs, effectively breaking the autoregressive bottleneck and ensuring stable, low-latency real-time streaming. To further enhance temporal consistency and mitigate identity drift and color artifacts, we propose the Rolling Sink Frame Mechanism (RSFM), which maintains sequence fidelity by dynamically recalibrating appearance using a cached reference image. Additionally, we leverage Self-Forcing Distribution Matching Distillation to facilitate causal, streamable adaptation of large-scale models without sacrificing visual quality. Live Avatar demonstrates state-of-the-art performance, reaching 20 FPS end-to-end generation on 5 H800 GPUs, and, to the best of our knowledge, is the first to achieve practical, real-time, high-fidelity avatar generation at this scale. Our work establishes a new paradigm for deploying advanced diffusion models in industrial long-form video synthesis applications.
-</details>
-
 | Year | Title                                                        | ArXiv Time  |                           Paper                            |                      Code                      | Project Page                      |
 | ---- | ------------------------------------------------------------ | :----: | :--------------------------------------------------------: | :--------------------------------------------: | :--------------------------------------------: |
 | 2025 | **HumanDreamer-X: Photorealistic Single-image Human Avatars Reconstruction via Gaussian Restoration**  | 4 Apr 2025 |          [Link](https://arxiv.org/abs/2504.03536)          | [Link](https://github.com/GigaAI-research/HumanDreamer-X)  | [Link](https://humandreamer-x.github.io/)  |
-| 2025 | **Live Avatar: Streaming Real-time Audio-Driven Avatar Generation with Infinite Length**  |  5 Dec 2025 |          [Link](https://arxiv.org/abs/2512.04677)          | [Link](https://github.com/Alibaba-Quark/LiveAvatar)  | [Link](https://liveavatar.github.io/)  |
 
 <details close>
 <summary>ArXiv Papers References</summary>
@@ -148,13 +146,6 @@ Existing diffusion-based video generation methods are fundamentally constrained 
   title={HumanDreamer-X: Photorealistic Single-image Human Avatars Reconstruction via Gaussian Restoration}, 
   author={Boyuan Wang and Runqi Ouyang and Xiaofeng Wang and Zheng Zhu and Guosheng Zhao and Chaojun Ni and Guan Huang and Lihong Liu and Xingang Wang},
   journal={arXiv preprint arXiv:2504.03536},
-  year={2025}
-}
-
-@article{huang2025live,
-  title={Live Avatar: Streaming Real-time Audio-Driven Avatar Generation with Infinite Length},
-  author={Huang, Yubo and Guo, Hailong and Wu, Fangtai and Zhang, Shifeng and Huang, Shijie and Gan, Qijun and Liu, Lin and Zhao, Sirui and Chen, Enhong and Liu, Jiaming and others},
-  journal={arXiv preprint arXiv:2512.04677},
   year={2025}
 }
 
