@@ -1015,7 +1015,7 @@ AMASS is a large database of human motion unifying different optical marker-base
 ### Previous Papers
 
 #### Year 2025
-For more details, please check the [2025 3D Human Papers](./docs/3d_human/human_24-25.md), including 11 accepted papers and 2 arXiv papers.
+For more details, please check the [2025 3D Human Papers](./docs/3d_human/human_24-25.md), including 12 accepted papers and 1 arXiv papers.
 
 #### Year 2023-2024
 For more details, please check the [2023-2024 3D Human Papers](./docs/3d_human/human_23-24.md), including 22 accepted papers and 1 arXiv papers.
