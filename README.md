@@ -686,7 +686,17 @@ JoungBin Lee, Jaewoo Jung, Jongmin Lee, Tongmin Kim, Hyunsung Kim, Takuya Narihi
 Synthesizing a novel-view video from a monocular reference video along a target camera trajectory requires both geometric consistency and motion fidelity with respect to the reference video. Existing methods based on explicit 3D representations are limited by the accuracy of off-the-shelf reconstruction modules, which often produce inaccurate geometry for dynamic objects in monocular videos. In contrast, camera-conditioning-only methods can achieve high visual quality but often struggle to preserve geometric and motion consistency. In this work, we introduce MVTrack4Gen (Multi-View point Tracking for Novel-View Generation), a motion-aware training framework that leverages multi-view point tracking as an additional geometric and motion supervision signal for camera-conditioning-only novel-view video diffusion models. Our key finding is that specific attention layers encode strong correspondence cues, where query features attend to key features at geometrically corresponding locations across views and over time, and the misalignment of these correspondences causes motion inconsistency. Based on this observation, we route these features into an auxiliary multi-view tracking head and jointly train the diffusion model with a point-tracking objective. By explicitly strengthening these motion-aware correspondences, MVTrack4Gen improves existing models to better follow the motion in the reference view and maintain cross-view geometric consistency. Across diverse benchmarks, our method achieves state-of-the-art geometric consistency and competitive camera accuracy.
 </details>
 
-#### 12. SkelGen4D: Weakly-Supervised Skeleton-Based 4D Generation for Text-Driven Mesh Animation
+#### 12. RynnWorld-4D: 4D Embodied World Models for Robotic Manipulation
+Haoyu Zhao, Xingyue Zhao, Siteng Huang, Xin Li, Deli Zhao, Zhongyu Li
+
+(DAMO Academy Alibaba Group, Hong Kong Embodied AI Lab, CUHK, Hupan Lab)
+
+<details span>
+<summary><b>Abstract</b></summary>
+Robotic manipulation in the open world requires not only recognizing what a scene looks like, but also anticipating how its 3D structure moves under interaction. We argue that synchronized RGB, depth, and optical flow, namely RGB-DF, provide a physically grounded representation that captures the underlying 4D dynamics of a scene. Compared to 2D pixel videos, this multi-modal synergy aligns visual appearance with geometric structure and temporal motion, creating a representation space significantly closer to the low-level end-effector actions demanded by robotic systems, thereby narrowing the gap between world prediction and policy learning. Building on this insight, we introduce RynnWorld-4D, a generative model that co-produces future RGB frames, depth maps, and optical flow from a single RGB-D image and a language instruction within one unified diffusion process. This 4D world model features a tri-branch architecture that integrates cross-modal attention with frame-wise 3D RoPE, ensuring that appearance, geometry, and motion evolve consistently. To supply training data at scale, we curate Rynn4DDataset 1.0, a massive dataset of over 254.4 million frames across egocentric human and robotic manipulation videos with high-quality pseudo-labels for depth and optical flow. We further propose RynnWorld-4D-Policy, an inverse dynamics head that consumes the internal 4D representations of RynnWorld-4D in a single forward pass, bypassing expensive multi-step denoising, to output robot actions in a closed-loop manner. Experiments show that RynnWorld-4D produces temporally and spatially coherent 4D predictions, and that RynnWorld-4D-Policy achieves state-of-the-art performance on real-world dexterous bimanual manipulation tasks, particularly excelling in tasks demanding spatial precision and temporal coordination.
+</details>
+
+#### 13. SkelGen4D: Weakly-Supervised Skeleton-Based 4D Generation for Text-Driven Mesh Animation
 Hao Feng, Zhi Zuo, Jia-Hui Pan, Ka-Hei Hui, Zhengzhe Liu, Dian Zhang, Haoran Xie, Bin Sheng, Jingyu Hu
 
 (Lingnan University, Chinese University of Hong Kong, Autodesk Research, Shanghai Jiao Tong University)
@@ -696,7 +706,7 @@ Hao Feng, Zhi Zuo, Jia-Hui Pan, Ka-Hei Hui, Zhengzhe Liu, Dian Zhang, Haoran Xie
 We study 4D generation to synthesize temporally coherent sequences of 3D geometry for animation and content creation. In contrast to existing SDS-based optimization methods and video-driven animation approaches, we adopt a skeleton-driven animation framework aligned with standard industrial pipelines, which enables explicit control and editing. To this end, we propose SkelGen4D, a weakly supervised feed-forward framework for text-driven mesh animation that generates explicit skeleton motions without requiring per-frame skeleton annotations. SkelGen4D first recovers temporally consistent pseudo-skeletons from animated meshes via differentiable fitting, and then generates text-conditioned skeleton motion sequences in a feed-forward manner, further refined with Motion-GRPO to ensure temporally coherent, physically plausible, and articulated animation. We evaluate our method on two large-scale benchmarks, Truebones Zoo and Diffusion4D. Our results show that our weakly supervised skeleton modeling matches or surpasses fully supervised baselines while scaling to diverse object categories for high-quality text-driven mesh animation. Further, our method supports flexible motion editing and is aligned with standard animation production pipelines.
 </details>
 
-#### 13. InterPet4D: A Multimodal 4D Human-Pet Interaction Dataset for Pet Motion Generation
+#### 14. InterPet4D: A Multimodal 4D Human-Pet Interaction Dataset for Pet Motion Generation
 Yichen Peng, Jyun-Ting Song, Chen-Chieh Liao, Kris Kitani, Hideki Koike, Erwin Wu
 
 (Institute of Science Tokyo, Carnegie Mellon University)
@@ -707,7 +717,7 @@ Human-pet interaction estimation and generation remain underexplored due to the 
 </details>
 
 
-#### 14. Hallo4D: Multi-Modal Hallucination Mitigation for Consistent Spatio-Temporal Generation
+#### 15. Hallo4D: Multi-Modal Hallucination Mitigation for Consistent Spatio-Temporal Generation
 Hongbo Wang, Huaibo Huang, Jie Cao, Jin Liu, Haoyang Tong, Ran He
 
 (CASIA, UCAS, ShanghaiTech)
@@ -717,7 +727,7 @@ Hongbo Wang, Huaibo Huang, Jie Cao, Jin Liu, Haoyang Tong, Ran He
 While recent advances in 3D generation have enabled impressive visual synthesis, existing methods often rely on 2D diffusion supervision without explicit mechanisms for geometric consistency, leading to spatial hallucinations such as duplicated structures and misaligned geometry. These issues become more severe in 4D generation, where maintaining consistency across viewpoints and temporal evolution introduces additional challenges, including jitter, identity flicker, and structural drift. We present \textbf{Hallo4D}, a unified and model-agnostic framework for mitigating spatiotemporal hallucinations in 3D and 4D content generation. Hallo4D introduces a generation-detection-correction paradigm that leverages large multimodal language models (LMMs) to identify and summarize spatial and temporal inconsistencies from multi-view and multi-frame renderings. These insights guide a consensus-driven image-space consistency optimization, where an LMM-based selector evaluates candidate corrections through multi-model voting, without requiring retraining or architectural modifications. To further improve temporal consistency and optimization efficiency, Hallo4D incorporates motion-aware keyframe sampling, LMM-guided initialization, and appearance alignment. We additionally introduce exposure-aware optimization and visibility pruning to enhance robustness under challenging viewpoints. Extensive experiments demonstrate that Hallo4D consistently outperforms strong baselines across diverse 3D and 4D generation settings, providing a scalable and generalizable solution for consistency-aware content generation.
 </details>
 
-#### 15. PE-Field 4D: Video Generation Models as Canvas
+#### 16. PE-Field 4D: Video Generation Models as Canvas
 Yunpeng Bai, Haoxiang Li, Qixing Huang (UT Austin, Pixocial Technology)
 
 <details span>
@@ -743,6 +753,7 @@ Diffusion Transformers have recently achieved strong performance in video genera
 | 2026 | **SpatialAvatar-0: High-Quality 4D Head Avatar with Multi-Stage Reconstruction**  | 14 Jun 2026  |          [Link](https://arxiv.org/abs/2606.15659)          | --  | [Link](https://spatialwalk.github.io/SpatialAvatar-0/)  |
 | 2026 | **IMAGIN-4D: Image-Guided Controllable Interaction Generation**  | 22 Jun 2026  |          [Link](https://arxiv.org/abs/2606.23675)          | --  | [Link](https://imagin4d.github.io/)  |
 | 2026 | **MVTrack4Gen: Multi-View Point Tracking as Geometric Supervision for 4D Video Generation**  | 24 Jun 2026  |          [Link](https://arxiv.org/abs/2606.26087v1)          | [Link](https://github.com/cvlab-kaist/MVTrack4Gen)  | [Link](https://cvlab-kaist.github.io/MVTrack4Gen/)  |
+| 2026 | **RynnWorld-4D: 4D Embodied World Models for Robotic Manipulation**  | 7 Jul 2026  |          [Link](https://arxiv.org/abs/2607.06559)          | [Link](https://github.com/alibaba-damo-academy/RynnWorld-4D)  | [Link](https://alibaba-damo-academy.github.io/RynnWorld-4D.github.io/) |
 | 2026 | **SkelGen4D: Weakly-Supervised Skeleton-Based 4D Generation for Text-Driven Mesh Animation**  | 9 Jul 2026  |          [Link](https://arxiv.org/abs/2607.08246)          | --  | -- |
 | 2026 | **InterPet4D: A Multimodal 4D Human-Pet Interaction Dataset for Pet Motion Generation**  | 11 Jul 2026  |          [Link](https://arxiv.org/abs/2607.10287)          | [Datasets](https://huggingface.co/datasets)  | -- |
 | 2026 | **Hallo4D: Multi-Modal Hallucination Mitigation for Consistent Spatio-Temporal Generation**  | 15 Jul 2026  |          [Link](https://arxiv.org/abs/2607.12752)          | [Link](https://github.com/wafer-bob/Hallo4D)  | [Link](https://wafer-bob.github.io/Hallo3D-4D/) |
@@ -851,6 +862,13 @@ Diffusion Transformers have recently achieved strong performance in video genera
       archivePrefix={arXiv},
       primaryClass={cs.CV},
       url={https://arxiv.org/abs/2606.26087},
+}
+
+@article{zhao2026rynnworld,
+  title={RynnWorld-4D: 4D Embodied World Models for Robotic Manipulation},
+  author={Zhao, Haoyu and Zhao, Xingyue and Huang, Siteng and Li, Xin and Zhao, Deli and Li, Zhongyu},
+  journal={arXiv preprint arXiv:2607.06559},
+  year={2026}
 }
 
 @article{feng2026skelgen4d,
