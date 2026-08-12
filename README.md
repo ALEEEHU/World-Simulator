@@ -482,7 +482,10 @@ An open collection of state-of-the-art (SOTA), novel **Text to X (X can be every
 | 2026 | **Vista4D: Video Reshooting with 4D Point Clouds**  |  CVPR 2026|          [Link](https://arxiv.org/abs/2604.21915)          | [Link](https://github.com/Eyeline-Labs/Vista4D)  | [Link](https://eyeline-labs.github.io/Vista4D/)  |
 | 2026 | **Motion 3-to-4: 3D Motion Reconstruction for 4D Synthesis**  | CVPR 2026 |          [Link](https://arxiv.org/abs/2601.14253)          | [Link](https://github.com/Inception3D/Motion324)  | [Link](https://motion3-to-4.github.io/)  |
 | 2026 | **NeuROK: Generative 4D Neural Object Kinematics**  | CVPR 2026 |          [Link](https://arxiv.org/abs/2605.30347)          | Coming Soon! | [Link](https://chen-geng.com/neurok)  |
+| 2026 | **Choreographing a World of Dynamic Objects**  | CVPR 2026 |          [Link](https://arxiv.org/abs/2601.04194)          | [Link](https://github.com/yanzhelyu/CHORDCode) | [Link](https://yanzhelyu.github.io/chord/)  |
 | 2026 | **MV-Forcing: Long Multi-View Video Generation via 4D-Grounded Spatio-Temporal Self-Forcing**  | ECCV 2026 |          [Link](https://arxiv.org/abs/2607.05376)          | Coming Soon! | [Link](https://galfiebelman.github.io/mv-forcing/)  |
+| 2026 | **VGGRPO: Towards World-Consistent Video Generation with 4D Latent Reward**  | ECCV 2026 |          [Link](https://arxiv.org/abs/2603.26599)          | --  | [Link](https://zhaochongan.github.io/projects/VGGRPO/)  |
+| 2026 | **LivingWorld: Interactive 4D World Generation with Environmental Dynamics**  | ECCV 2026  |          [Link](https://arxiv.org/abs/2604.01641)          | [Link](https://github.com/cvsp-lab/LivingWorld)  | [Link](https://paper.pnu-cvsp.com/LivingWorld/)  |
 | 2026 | **Alignment Is All You Need For X-to-4D Generation**  | IEEE Transactions on Multimedia (TMM) 2026 |          [Link](https://arxiv.org/abs/2607.02516)          | -- | [Link](https://miaoqiaowei.github.io/Align4D/)  |
 | 2026 | **Lift4D: Harmonizing Single-View 3D Estimation for 4D Reconstruction In-the-Wild**  |SIGGRAPH Asia 2026 |          [Link](https://arxiv.org/abs/2606.23688)          | [Link](https://github.com/yehonathanlitman/Lift4D) | [Link](https://lift4d.github.io/)  |
 
@@ -553,14 +556,32 @@ An open collection of state-of-the-art (SOTA), novel **Text to X (X can be every
   year={2026}
 }
 
-@misc{fiebelman2026mvforcinglongmultiviewvideo,
-        title={MV-Forcing: Long Multi-View Video Generation via 4D-Grounded Spatio-Temporal Self-Forcing}, 
-        author={Gal Fiebelman and Hadar Averbuch-Elor and Sagie Benaim},
-        year={2026},
-        eprint={2607.05376},
-        archivePrefix={arXiv},
-        primaryClass={cs.CV},
-        url={https://arxiv.org/abs/2607.05376}, 
+@article{lyu2026choreographing,
+  title={Choreographing a World of Dynamic Objects},
+  author={Lyu, Yanzhe and Geng, Chen and Dharmarajan, Karthik and Zhang, Yunzhi and Alzayer, Hadi and Wu, Shangzhe and Wu, Jiajun},
+  journal={arXiv preprint arXiv:2601.04194},
+  year={2026}
+}
+
+@article{fiebelman2026mv,
+  title={MV-Forcing: Long Multi-View Video Generation via 4D-Grounded Spatio-Temporal Self-Forcing},
+  author={Fiebelman, Gal and Averbuch-Elor, Hadar and Benaim, Sagie},
+  journal={arXiv preprint arXiv:2607.05376},
+  year={2026}
+}
+
+@article{an2026vggrpo,
+  title={Vggrpo: Towards world-consistent video generation with 4d latent reward},
+  author={An, Zhaochong and Kupyn, Orest and Uscidda, Th{\'e}o and Colaco, Andrea and Ahuja, Karan and Belongie, Serge and Gonzalez-Franco, Mar and Gazulla, Marta Tintore},
+  journal={arXiv preprint arXiv:2603.26599},
+  year={2026}
+}
+
+@article{mun2026livingworld,
+  title={LivingWorld: Interactive 4D World Generation with Environmental Dynamics},
+  author={Mun, Hyeongju and Jin, In-Hwan and Kim, Sohyeong and Kong, Kyeongbo},
+  journal={arXiv preprint arXiv:2604.01641},
+  year={2026}
 }
 
 @article{miao2026alignment,
@@ -591,35 +612,7 @@ Melonie de Almeida, Daniela Ivanova, Tong Shi, John H. Williamson, Paul Henderso
 Humans excel at forecasting the future dynamics of a scene given just a single image. Video generation models that can mimic this ability are an essential component for intelligent systems. Recent approaches have improved temporal coherence and 3D consistency in single-image-conditioned video generation. However, these methods often lack robust user controllability, such as modifying the camera path, limiting their applicability in real-world applications. Most existing camera-controlled image-to-video models struggle with accurately modeling camera motion, maintaining temporal consistency, and preserving geometric integrity. Leveraging explicit intermediate 3D representations offers a promising solution by enabling coherent video generation aligned with a given camera trajectory. Although these methods often use 3D point clouds to render scenes and introduce object motion in a later stage, this two-step process still falls short in achieving full temporal consistency, despite allowing precise control over camera movement. We propose a novel framework that constructs a 3D Gaussian scene representation and samples plausible object motion, given a single image in a single forward pass. This enables fast, camera-guided video generation without the need for iterative denoising to inject object motion into render frames. Extensive experiments on the KITTI, Waymo, RealEstate10K and DL3DV-10K datasets demonstrate that our method achieves state-of-the-art video quality and inference efficiency. 
 </details>
 
-#### 2. Choreographing a World of Dynamic Objects
-Yanzhe Lyu, Chen Geng, Karthik Dharmarajan, Yunzhi Zhang, Hadi Alzayer, Shangzhe Wu, Jiajun Wu 
-
-(Stanford University, University of Cambridge, University of Maryland)
-
-<details span>
-<summary><b>Abstract</b></summary>
-Dynamic objects in our physical 4D (3D + time) world are constantly evolving, deforming, and interacting with other objects, leading to diverse 4D scene dynamics. In this paper, we present a universal generative pipeline, CHORD, for CHOReographing Dynamic objects and scenes and synthesizing this type of phenomena. Traditional rule-based graphics pipelines to create these dynamics are based on category-specific heuristics, yet are labor-intensive and not scalable. Recent learning-based methods typically demand large-scale datasets, which may not cover all object categories in interest. Our approach instead inherits the universality from the video generative models by proposing a distillation-based pipeline to extract the rich Lagrangian motion information hidden in the Eulerian representations of 2D videos. Our method is universal, versatile, and category-agnostic. We demonstrate its effectiveness by conducting experiments to generate a diverse range of multi-body 4D dynamics, show its advantage compared to existing methods, and demonstrate its applicability in generating robotics manipulation policies.
-</details>
-
-#### 3. VGGRPO: Towards World-Consistent Video Generation with 4D Latent Reward
-Zhaochong An, Orest Kupyn, Théo Uscidda, Andrea Colaco, Karan Ahuja, Serge Belongie, Mar Gonzalez-Franco, Marta Tintore Gazulla
-
-(Google, University of Copenhagen, University of Oxford, CREST-ENSAE Institut Polytechnique de Paris)
-
-<details span>
-<summary><b>Abstract</b></summary>
-Large-scale video diffusion models achieve impressive visual quality, yet often fail to preserve geometric consistency. Prior approaches improve consistency either by augmenting the generator with additional modules or applying geometry-aware alignment. However, architectural modifications can compromise the generalization of internet-scale pretrained models, while existing alignment methods are limited to static scenes and rely on RGB-space rewards that require repeated VAE decoding, incurring substantial compute overhead and failing to generalize to highly dynamic real-world scenes. To preserve the pretrained capacity while improving geometric consistency, we propose VGGRPO (Visual Geometry GRPO), a latent geometry-guided framework for geometry-aware video post-training. VGGRPO introduces a Latent Geometry Model (LGM) that stitches video diffusion latents to geometry foundation models, enabling direct decoding of scene geometry from the latent space. By constructing LGM from a geometry model with 4D reconstruction capability, VGGRPO naturally extends to dynamic scenes, overcoming the static-scene limitations of prior methods. Building on this, we perform latent-space Group Relative Policy Optimization with two complementary rewards: a camera motion smoothness reward that penalizes jittery trajectories, and a geometry reprojection consistency reward that enforces cross-view geometric coherence. Experiments on both static and dynamic benchmarks show that VGGRPO improves camera stability, geometry consistency, and overall quality while eliminating costly VAE decoding, making latent-space geometry-guided reinforcement an efficient and flexible approach to world-consistent video generation.
-</details>
-
-#### 4. LivingWorld: Interactive 4D World Generation with Environmental Dynamics
-Hyeongju Mun, In-Hwan Jin, Sohyeong Kim, Kyeongbo Kong  (Pusan National University)
-
-<details span>
-<summary><b>Abstract</b></summary>
-We introduce LivingWorld, an interactive framework for generating 4D worlds with environmental dynamics from a single image. While recent advances in 3D scene generation enable large-scale environment creation, most approaches focus primarily on reconstructing static geometry, leaving scene-scale environmental dynamics such as clouds, water, or smoke largely unexplored. Modeling such dynamics is challenging because motion must remain coherent across an expanding scene while supporting low-latency user feedback. LivingWorld addresses this challenge by progressively constructing a globally coherent motion field as the scene expands. To maintain global consistency during expansion, we introduce a geometry-aware alignment module that resolves directional and scale ambiguities across views. We further represent motion using a compact hash-based motion field, enabling efficient querying and stable propagation of dynamics throughout the scene. This representation also supports bidirectional motion propagation during rendering, producing long and temporally coherent 4D sequences without relying on expensive video-based refinement. On a single RTX 5090 GPU, generating each new scene expansion step requires 9 seconds, followed by 3 seconds for motion alignment and motion field updates, enabling interactive 4D world generation with globally coherent environmental dynamics. 
-</details>
-
-#### 5. ST-Gen4D: Embedding 4D Spatiotemporal Cognition into World Model for 4D Generation
+#### 2. ST-Gen4D: Embedding 4D Spatiotemporal Cognition into World Model for 4D Generation
 Haonan Wang, Hanyu Zhou, Tao Gu, Luxin Yan  
 
 (Huazhong University of Science and Technology, National University of Singapore, Macquarie University)
@@ -629,7 +622,7 @@ Haonan Wang, Hanyu Zhou, Tao Gu, Luxin Yan
 Generative models have achieved success in producing apparently coherent 2D videos, but remain challenging in the physical world due to lack of 4D spatiotemporal scale. Typically, existing 4D generative models directly embed macro scale constraints to enhance overall spatiotemporal consistency. However, these methods only ensure global appearance coherence and fail to reveal the local dynamics of the physical world. Our insight is that global appearance structure and local dynamic topology empower 4D spatiotemporal cognition, thereby enabling 4D generation with spatiotemporal regularities. In this work, we propose ST-Gen4D, a 4D generation framework with 4D spatiotemporal cognition-based world model. Our model is guided by four key designs: 1) Spatiotemporal representation. We encode various modalities into multiple representations as a feature basis. 2) Spatiotemporal cognition. We sculpture these representations into global appearance graph and local dynamic graph, and fuse them via semantic-bridged spatiotemporal fusion to obtain a 4D cognition graph. 3) Spatiotemporal reasoning. We utilize a world model to derive future state based on the 4D cognition. 4) Spatiotemporal generation. We leverage the derived cognition as condition to guide latent diffusion for 4D Gaussian generation. By deeply integrating 4D intrinsic cognition with generative priors, our model guarantees the structural rationality and topological consistency of 4D generation. Moreover, we propose ST-4D datasets by aggregating public 4D datasets and self-built subset. Extensive experiments demonstrate the superiority of our ST-Gen4D across 3D and 4D generation tasks.
 </details>
 
-#### 6. Geometric 4D Stitching for Grounded 4D Generation
+#### 3. Geometric 4D Stitching for Grounded 4D Generation
 Sunwoo Park, Taesung Kwon, Jong Chul Ye  (KAIST AI)
 
 <details span>
@@ -637,7 +630,7 @@ Sunwoo Park, Taesung Kwon, Jong Chul Ye  (KAIST AI)
 Recent 4D generation methods complete scene-level missing information using generative models and reconstruct the scene into radiance-based representations. However, these pipelines often present geometric inconsistencies in the generated content, and the radiance-based reconstruction requires expensive optimization. Furthermore, radiance-based representations often absorb these geometric inconsistencies into their view-dependent nature, failing to enforce the grounded geometric consistency. To address these issues, we propose Geometric 4D Stitching, an efficient framework that explicitly identifies missing geometric regions and complements them with geometrically grounded 4D stitches. As a result, our method constructs 4D scene representations in under 10 minutes on a single NVIDIA RTX 5090 GPU per one-step scene expansion, while improving geometric consistency. Moreover, we demonstrate that our explicit 4D stitching supports interative expansion of 4D mesh as well as 4D scene editing.
 </details>
 
-#### 7. Fast 4D Mesh Generation by Spatio-Temporal Attention Chains
+#### 4. Fast 4D Mesh Generation by Spatio-Temporal Attention Chains
 Dvir Samuel, Yuval Atzmon, Gal Chechik, Yoni Kasten  (NVIDIA Research, Bar-Ilan University)
 
 <details span>
@@ -646,7 +639,7 @@ Dvir Samuel, Yuval Atzmon, Gal Chechik, Yoni Kasten  (NVIDIA Research, Bar-Ilan 
 Compared to state-of-the-art, our method generates a 4D mesh in 9 seconds, achieving a  speedup while producing higher-quality results. Moreover, our approach scales to videos up to  longer without degrading mesh quality. Beyond generation, the improved correspondences enable competitive zero-shot performance on two downstream tasks: 2D object tracking and 4D tracking. We further show that our framework enables reliable camera estimation, a capability not supported by prior 4D mesh generation methods.
 </details>
 
-#### 8. Helix4D: Complex 4D Mesh Generation
+#### 5. Helix4D: Complex 4D Mesh Generation
 Jiraphon Yenphraphai, Jianqi Chen, Jian Wang, Gordon Qian, Sergey Tulyakov, Rameen Abdal, Raymond A. Yeh, Peter Wonka, Chaoyang Wang
 
 (Snap, Purdue University, KAUST)
@@ -656,7 +649,7 @@ Jiraphon Yenphraphai, Jianqi Chen, Jian Wang, Gordon Qian, Sergey Tulyakov, Rame
 Current video-to-4D methods struggle with complex topology changes, transparent materials, thin structures, and inner surfaces. We present Helix4D, a dynamic mesh generation framework by inheriting the expressive representation of Trellis2, adapting it from image-to-3D to video-conditioned 4D generation. Our design arises from two key questions: (a) how to enable Trellis2's frame-local attention to share information across frames while preserving its pretrained quality on rare cases such as transparent objects and inner surfaces, and (b) how to inject temporal information into a purely 3D positional encoding without breaking pretrained capabilities. We address (a) with a sliding-window cross-frame attention and anchor on the first frame. The first frame is generated by the base Trellis2 model and injected into our model, letting it inherit Trellis2's quality in rare cases through cross-frame attention. We address (b) with a 4D temporal encoding that repurposes redundant low-frequency spatial RoPE bands for time, extending the encoding from 3D with no additional parameters. Extensive experiments show the effectiveness of Helix4D for high-quality dynamic mesh generation on ActionBench and our own challenging complex dynamics set.
 </details>
 
-#### 9. SpatialAvatar-0: High-Quality 4D Head Avatar with Multi-Stage Reconstruction
+#### 6. SpatialAvatar-0: High-Quality 4D Head Avatar with Multi-Stage Reconstruction
 Yiran Wang, Zeyu Zhang, Yuanming Li, Ziming Wang, Yang Zhao
 
 (USYD, SpatialReal, ZJU, La Trobe)
@@ -666,7 +659,7 @@ Yiran Wang, Zeyu Zhang, Yuanming Li, Ziming Wang, Yang Zhao
 High-quality 4D head avatars from one or a few source portraits are central to telepresence, AR/VR, and digital-human interaction. 3D Gaussian Splatting (3DGS) has emerged as the dominant representation, with two complementary regimes (generalizable feed-forward predictors and per-subject refiners) maturing in parallel. However, existing feed-forward predictors are trained on a single dataset family with a hard-coded source count, inheriting the corresponding domain bias. Per-subject refiners require 300K--600K iterations and rely on adaptive densification that destroys upstream Gaussian layouts, preventing the two regimes from sharing a representation end-to-end. To bridge both regimes we propose SpatialAvatar-0 on a shared FLAME-mesh-bound Gaussian representation: a feed-forward generator with a parameter-free K-source mean-pool and a monocular-temporal to multi-view-spatial two-phase schedule that anchors against identity-prior collapse onto the smaller multi-view set. We further introduce a 10K-iter layout-preserving per-subject refinement loop that freezes the FLAME-binding and Gaussian count and replaces densification with a three-component anti-spike regularization. On VFHQ/HDTF cross-domain zero-shot we surpass the in-domain leader GAGAvatar by +1.5 dB PSNR despite never training on either test domain, and on the SplattingAvatar monocular benchmark we lead every reported metric, surpassing the 300K-iter GeoAvatar by +1.3 dB PSNR at up to 60x shorter per-subject schedule than common SOTA baselines.
 </details>
 
-#### 10. IMAGIN-4D: Image-Guided Controllable Interaction Generation
+#### 7. IMAGIN-4D: Image-Guided Controllable Interaction Generation
 Sai Kumar Dwivedi, Federica Bogo, Buğra Tekin, Chenhongyi Yang, Nadine Bertsch, Tomas Hodan, Michael J. Black, Dimitrios Tzionas, Shreyas Hampali
 
 (Meta, Max Planck Institute for Intelligent Systems, University of Amsterdam, Aristotle University of Thessaloniki)
@@ -676,7 +669,7 @@ Sai Kumar Dwivedi, Federica Bogo, Buğra Tekin, Chenhongyi Yang, Nadine Bertsch,
 Generating human-object interactions (HOI) is central to character animation, robotics, AR/VR, and embodied AI. Recent HOI generation methods synthesize motion from text, object geometry, and sparse waypoints, controlling action semantics and object trajectories. However, these signals underspecify interaction: the same prompt and trajectory can produce different grasps, approach directions, body poses, object poses, contacts, and body-object layouts. We address this ambiguity with a reference image as a visual specification of the desired interaction snapshot. However, a single global image representation conflates distinct cues and conditions all frames on identical visual evidence. We therefore introduce IMAGIN-4D, a diffusion-based HOI generator that decomposes image conditioning spatio-temporally. For spatial conditioning, IMAGIN-4D extracts supervised interaction-state tokens for body pose, object pose, body-object contact, and spatial relationships at the depicted frame. For temporal conditioning, it computes frame-aware tokens by querying image patches per generated frame, allowing sequence segments to attend to different visual cues from the same image. To balance image, text, and waypoint cues, IMAGIN-4D uses role-aware conditioning: text, waypoints, and interaction-state tokens use separate AdaLN streams, while frame-aware visual tokens cross-attend with motion tokens. Since HOI motion datasets lack paired images, we build a synthetic motion-to-image rendering pipeline from FullBodyManipulation (FBM) and introduce an image-adherence metric to evaluate whether generated motions match the reference snapshot. Experiments on FBM and BEHAVE show that IMAGIN-4D improves fine-grained interaction control over single-token and uniformly image-conditioned baselines while preserving waypoint-following and motion quality. 
 </details>
 
-#### 11. MVTrack4Gen: Multi-View Point Tracking as Geometric Supervision for 4D Video Generation
+#### 8. MVTrack4Gen: Multi-View Point Tracking as Geometric Supervision for 4D Video Generation
 JoungBin Lee, Jaewoo Jung, Jongmin Lee, Tongmin Kim, Hyunsung Kim, Takuya Narihira, Kazumi Fukuda, Jahyeok Koo, Jisang Han, Yuki Mitsufuji, Seungryong Kim
 
 (KAIST AI, Sony AI, Sony Group Corporation)
@@ -686,7 +679,7 @@ JoungBin Lee, Jaewoo Jung, Jongmin Lee, Tongmin Kim, Hyunsung Kim, Takuya Narihi
 Synthesizing a novel-view video from a monocular reference video along a target camera trajectory requires both geometric consistency and motion fidelity with respect to the reference video. Existing methods based on explicit 3D representations are limited by the accuracy of off-the-shelf reconstruction modules, which often produce inaccurate geometry for dynamic objects in monocular videos. In contrast, camera-conditioning-only methods can achieve high visual quality but often struggle to preserve geometric and motion consistency. In this work, we introduce MVTrack4Gen (Multi-View point Tracking for Novel-View Generation), a motion-aware training framework that leverages multi-view point tracking as an additional geometric and motion supervision signal for camera-conditioning-only novel-view video diffusion models. Our key finding is that specific attention layers encode strong correspondence cues, where query features attend to key features at geometrically corresponding locations across views and over time, and the misalignment of these correspondences causes motion inconsistency. Based on this observation, we route these features into an auxiliary multi-view tracking head and jointly train the diffusion model with a point-tracking objective. By explicitly strengthening these motion-aware correspondences, MVTrack4Gen improves existing models to better follow the motion in the reference view and maintain cross-view geometric consistency. Across diverse benchmarks, our method achieves state-of-the-art geometric consistency and competitive camera accuracy.
 </details>
 
-#### 12. RynnWorld-4D: 4D Embodied World Models for Robotic Manipulation
+#### 9. RynnWorld-4D: 4D Embodied World Models for Robotic Manipulation
 Haoyu Zhao, Xingyue Zhao, Siteng Huang, Xin Li, Deli Zhao, Zhongyu Li
 
 (DAMO Academy Alibaba Group, Hong Kong Embodied AI Lab, CUHK, Hupan Lab)
@@ -696,7 +689,7 @@ Haoyu Zhao, Xingyue Zhao, Siteng Huang, Xin Li, Deli Zhao, Zhongyu Li
 Robotic manipulation in the open world requires not only recognizing what a scene looks like, but also anticipating how its 3D structure moves under interaction. We argue that synchronized RGB, depth, and optical flow, namely RGB-DF, provide a physically grounded representation that captures the underlying 4D dynamics of a scene. Compared to 2D pixel videos, this multi-modal synergy aligns visual appearance with geometric structure and temporal motion, creating a representation space significantly closer to the low-level end-effector actions demanded by robotic systems, thereby narrowing the gap between world prediction and policy learning. Building on this insight, we introduce RynnWorld-4D, a generative model that co-produces future RGB frames, depth maps, and optical flow from a single RGB-D image and a language instruction within one unified diffusion process. This 4D world model features a tri-branch architecture that integrates cross-modal attention with frame-wise 3D RoPE, ensuring that appearance, geometry, and motion evolve consistently. To supply training data at scale, we curate Rynn4DDataset 1.0, a massive dataset of over 254.4 million frames across egocentric human and robotic manipulation videos with high-quality pseudo-labels for depth and optical flow. We further propose RynnWorld-4D-Policy, an inverse dynamics head that consumes the internal 4D representations of RynnWorld-4D in a single forward pass, bypassing expensive multi-step denoising, to output robot actions in a closed-loop manner. Experiments show that RynnWorld-4D produces temporally and spatially coherent 4D predictions, and that RynnWorld-4D-Policy achieves state-of-the-art performance on real-world dexterous bimanual manipulation tasks, particularly excelling in tasks demanding spatial precision and temporal coordination.
 </details>
 
-#### 13. SkelGen4D: Weakly-Supervised Skeleton-Based 4D Generation for Text-Driven Mesh Animation
+#### 10. SkelGen4D: Weakly-Supervised Skeleton-Based 4D Generation for Text-Driven Mesh Animation
 Hao Feng, Zhi Zuo, Jia-Hui Pan, Ka-Hei Hui, Zhengzhe Liu, Dian Zhang, Haoran Xie, Bin Sheng, Jingyu Hu
 
 (Lingnan University, Chinese University of Hong Kong, Autodesk Research, Shanghai Jiao Tong University)
@@ -706,7 +699,7 @@ Hao Feng, Zhi Zuo, Jia-Hui Pan, Ka-Hei Hui, Zhengzhe Liu, Dian Zhang, Haoran Xie
 We study 4D generation to synthesize temporally coherent sequences of 3D geometry for animation and content creation. In contrast to existing SDS-based optimization methods and video-driven animation approaches, we adopt a skeleton-driven animation framework aligned with standard industrial pipelines, which enables explicit control and editing. To this end, we propose SkelGen4D, a weakly supervised feed-forward framework for text-driven mesh animation that generates explicit skeleton motions without requiring per-frame skeleton annotations. SkelGen4D first recovers temporally consistent pseudo-skeletons from animated meshes via differentiable fitting, and then generates text-conditioned skeleton motion sequences in a feed-forward manner, further refined with Motion-GRPO to ensure temporally coherent, physically plausible, and articulated animation. We evaluate our method on two large-scale benchmarks, Truebones Zoo and Diffusion4D. Our results show that our weakly supervised skeleton modeling matches or surpasses fully supervised baselines while scaling to diverse object categories for high-quality text-driven mesh animation. Further, our method supports flexible motion editing and is aligned with standard animation production pipelines.
 </details>
 
-#### 14. InterPet4D: A Multimodal 4D Human-Pet Interaction Dataset for Pet Motion Generation
+#### 11. InterPet4D: A Multimodal 4D Human-Pet Interaction Dataset for Pet Motion Generation
 Yichen Peng, Jyun-Ting Song, Chen-Chieh Liao, Kris Kitani, Hideki Koike, Erwin Wu
 
 (Institute of Science Tokyo, Carnegie Mellon University)
@@ -717,7 +710,7 @@ Human-pet interaction estimation and generation remain underexplored due to the 
 </details>
 
 
-#### 15. Hallo4D: Multi-Modal Hallucination Mitigation for Consistent Spatio-Temporal Generation
+#### 12. Hallo4D: Multi-Modal Hallucination Mitigation for Consistent Spatio-Temporal Generation
 Hongbo Wang, Huaibo Huang, Jie Cao, Jin Liu, Haoyang Tong, Ran He
 
 (CASIA, UCAS, ShanghaiTech)
@@ -727,7 +720,7 @@ Hongbo Wang, Huaibo Huang, Jie Cao, Jin Liu, Haoyang Tong, Ran He
 While recent advances in 3D generation have enabled impressive visual synthesis, existing methods often rely on 2D diffusion supervision without explicit mechanisms for geometric consistency, leading to spatial hallucinations such as duplicated structures and misaligned geometry. These issues become more severe in 4D generation, where maintaining consistency across viewpoints and temporal evolution introduces additional challenges, including jitter, identity flicker, and structural drift. We present \textbf{Hallo4D}, a unified and model-agnostic framework for mitigating spatiotemporal hallucinations in 3D and 4D content generation. Hallo4D introduces a generation-detection-correction paradigm that leverages large multimodal language models (LMMs) to identify and summarize spatial and temporal inconsistencies from multi-view and multi-frame renderings. These insights guide a consensus-driven image-space consistency optimization, where an LMM-based selector evaluates candidate corrections through multi-model voting, without requiring retraining or architectural modifications. To further improve temporal consistency and optimization efficiency, Hallo4D incorporates motion-aware keyframe sampling, LMM-guided initialization, and appearance alignment. We additionally introduce exposure-aware optimization and visibility pruning to enhance robustness under challenging viewpoints. Extensive experiments demonstrate that Hallo4D consistently outperforms strong baselines across diverse 3D and 4D generation settings, providing a scalable and generalizable solution for consistency-aware content generation.
 </details>
 
-#### 16. PE-Field 4D: Video Generation Models as Canvas
+#### 13. PE-Field 4D: Video Generation Models as Canvas
 Yunpeng Bai, Haoxiang Li, Qixing Huang (UT Austin, Pixocial Technology)
 
 <details span>
@@ -742,10 +735,7 @@ Diffusion Transformers have recently achieved strong performance in video genera
 | Year | Title                                                        | ArXiv Time  |                           Paper                            |                      Code                      | Project Page                      |
 | ---- | ------------------------------------------------------------ | :----: | :--------------------------------------------------------: | :--------------------------------------------: | :--------------------------------------------: |
 | 2026 | **Pixel-to-4D: Camera-Controlled Image-to-Video Generation with Dynamic 3D Gaussians**  | 2 Jan 2026 |          [Link](https://arxiv.org/abs/2601.00678)          | --  | [Link](https://melonienimasha.github.io/Pixel-to-4D-Website/)  |
-| 2026 | **Choreographing a World of Dynamic Objects**  | 7 Jan 2026 |          [Link](https://arxiv.org/pdf/2601.04194)          | --  | [Link](https://yanzhelyu.github.io/chord/)  |
 | 2026 | **InSpatio-World**  | 20 Mar 2026 |          [Live Demo](https://world.inspatio.com/?world=1080_00000005)          | [Link](https://github.com/inspatio/inspatio-world)  | [Link](https://inspatio.github.io/inspatio-world/)  |
-| 2026 | **VGGRPO: Towards World-Consistent Video Generation with 4D Latent Reward**  | 27 Mar 2026 |          [Link](https://arxiv.org/abs/2603.26599)          | --  | [Link](https://zhaochongan.github.io/projects/VGGRPO/)  |
-| 2026 | **LivingWorld: Interactive 4D World Generation with Environmental Dynamics**  | 2 Apr 2026  |          [Link](https://arxiv.org/abs/2604.01641)          | --  | [Link](https://paper.pnu-cvsp.com/LivingWorld/)  |
 | 2026 | **ST-Gen4D: Embedding 4D Spatiotemporal Cognition into World Model for 4D Generation**  | 8 May 2026  |          [Link](https://arxiv.org/abs/2605.07390)          | --  | --  |
 | 2026 | **Geometric 4D Stitching for Grounded 4D Generation**  | 11 May 2026  |          [Link](https://arxiv.org/abs/2605.09984)          | --  | --  |
 | 2026 | **Fast 4D Mesh Generation by Spatio-Temporal Attention Chains**  | 19 May 2026  |          [Link](https://arxiv.org/abs/2605.19786)          | --  | [Link](https://research.nvidia.com/labs/par/fast4dmesh/)  |
@@ -772,41 +762,11 @@ Diffusion Transformers have recently achieved strong performance in video genera
   year={2026}
 }
 
-@misc{lyu2026choreographingworlddynamicobjects,
-      title={Choreographing a World of Dynamic Objects}, 
-      author={Yanzhe Lyu and Chen Geng and Karthik Dharmarajan and Yunzhi Zhang and Hadi Alzayer and Shangzhe Wu and Jiajun Wu},
-      year={2026},
-      eprint={2601.04194},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV},
-      url={https://arxiv.org/abs/2601.04194}, 
-}
-
 @misc{inspatio-world,
     title={InSpatio-World},
     author={InSpatio-World Contributors},
     howpublished={\url{https://github.com/inspatio/inspatio-world}},
     year={2025}
-}
-
-@misc{an2026vggrpoworldconsistentvideogeneration,
-      title={VGGRPO: Towards World-Consistent Video Generation with 4D Latent Reward}, 
-      author={Zhaochong An and Orest Kupyn and Théo Uscidda and Andrea Colaco and Karan Ahuja and Serge Belongie and Mar Gonzalez-Franco and Marta Tintore Gazulla},
-      year={2026},
-      eprint={2603.26599},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV},
-      url={https://arxiv.org/abs/2603.26599}, 
-}
-
-@misc{mun2026livingworldinteractive4dworld,
-      title={LivingWorld: Interactive 4D World Generation with Environmental Dynamics}, 
-      author={Hyeongju Mun and In-Hwan Jin and Sohyeong Kim and Kyeongbo Kong},
-      year={2026},
-      eprint={2604.01641},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV},
-      url={https://arxiv.org/abs/2604.01641}, 
 }
 
 @article{wang2026st,
