@@ -728,6 +728,14 @@ Yunpeng Bai, Haoxiang Li, Qixing Huang (UT Austin, Pixocial Technology)
 Diffusion Transformers have recently achieved strong performance in video generation, yet controlling scene geometry under viewpoint changes and camera motion remains challenging. In this work, we revisit the role of positional encoding in video diffusion transformers and show that it provides a useful spatial bias for geometry-aware control. Specifically, if reference tokens are encoded according to their projected locations in the target view, the denoising model is encouraged to retrieve content from position aligned regions of the input video. Building on this observation, we introduce a geometry-aware cross-attention mechanism that enables target video latent tokens to attend to structured context tokens derived from reference images or frames. To establish correspondence between the reference content and the target camera trajectory, we equip the context tokens with a projected positional encoding scheme that combines target-view 2D reprojection with depth-aware disambiguation. At the same time, we preserve the original spatiotemporal positional encoding of the generated video latent, allowing geometric guidance to be injected while maintaining consistency with the video model's native latent structure. The resulting framework provides a simple and effective approach for controllable video generation. It improves spatial controllability in viewpoint-dependent editing tasks, including camera re-trajectory, novel-view video synthesis, and geometry-aware video editing, while preserving the generative prior of the underlying video diffusion model. 
 </details>
 
+#### 14. Beyond Pixels: From Video Priors to 4D Worlds
+Zihao Liu, Xiaolong Shen, Zhenglin Zhou, Ruijie Quan, Yi Yang (Zhejiang University)
+
+<details span>
+<summary><b>Abstract</b></summary>
+4D generation synthesizes dynamic 3D scenes from conditions such as text or images. Existing methods either reconstruct generated RGB videos with a separate 4D model or adapt a particular video generator to predict geometry directly. The former suffers from distribution mismatch and error propagation, whereas the latter ties 4D prediction to a specific generator and may require retraining when the generator or conditioning regime changes. We ask whether the final denoised latents of video models that share a variational autoencoder (VAE) can instead provide a reusable interface to explicit 4D prediction. Building on this insight, we introduce direct latent-to-4D generation and instantiate it as Latent-to-4D, which bypasses RGB by aligning a video latent with the token grid of a pretrained 4D decoder and refining it through frame-wise and global spatiotemporal attention. Trained on roughly 1K existing reconstruction clips, a single checkpoint transfers unchanged across multiple video diffusion transformers within the same VAE family. On Text4D-200 and I4D-200, Latent-to-4D surpasses matched same-latent Wan+4RC cascades in projection-based DINO-F1 by 2.88--3.45 and 5.81 points, respectively, while also being preferred by human raters for geometry, temporal stability, and overall quality.
+</details>
+
 -----
 
 </details>
@@ -748,6 +756,7 @@ Diffusion Transformers have recently achieved strong performance in video genera
 | 2026 | **InterPet4D: A Multimodal 4D Human-Pet Interaction Dataset for Pet Motion Generation**  | 11 Jul 2026  |          [Link](https://arxiv.org/abs/2607.10287)          | [Datasets](https://huggingface.co/datasets)  | -- |
 | 2026 | **Hallo4D: Multi-Modal Hallucination Mitigation for Consistent Spatio-Temporal Generation**  | 15 Jul 2026  |          [Link](https://arxiv.org/abs/2607.12752)          | [Link](https://github.com/wafer-bob/Hallo4D)  | [Link](https://wafer-bob.github.io/Hallo3D-4D/) |
 | 2026 | **PE-Field 4D: Video Generation Models as Canvas**  | 17 Jul 2026  |          [Link](https://arxiv.org/abs/2607.15667)          | --  | -- |
+| 2026 | **Beyond Pixels: From Video Priors to 4D Worlds**  | 11 Aug 2026  |          [Link](https://arxiv.org/abs/2608.10744)          | [Link](https://github.com/hayd-zju/Beyond-Pixels) | [Link](https://hayd-zju.github.io/Beyond-Pixels/) |
 
 <details close>
 <summary>ArXiv Papers References</summary>
@@ -857,6 +866,16 @@ Diffusion Transformers have recently achieved strong performance in video genera
   author={Bai, Yunpeng and Li, Haoxiang and Huang, Qixing},
   journal={arXiv preprint arXiv:2607.15667},
   year={2026}
+}
+
+@misc{liu2026pixelsvideopriors4d,
+      title={Beyond Pixels: From Video Priors to 4D Worlds}, 
+      author={Zihao Liu and Xiaolong Shen and Zhenglin Zhou and Ruijie Quan and Yi Yang},
+      year={2026},
+      eprint={2608.10744},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2608.10744}, 
 }
 
 ```
