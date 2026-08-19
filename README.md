@@ -483,6 +483,7 @@ An open collection of state-of-the-art (SOTA), novel **Text to X (X can be every
 | 2026 | **Motion 3-to-4: 3D Motion Reconstruction for 4D Synthesis**  | CVPR 2026 |          [Link](https://arxiv.org/abs/2601.14253)          | [Link](https://github.com/Inception3D/Motion324)  | [Link](https://motion3-to-4.github.io/)  |
 | 2026 | **NeuROK: Generative 4D Neural Object Kinematics**  | CVPR 2026 |          [Link](https://arxiv.org/abs/2605.30347)          | Coming Soon! | [Link](https://chen-geng.com/neurok)  |
 | 2026 | **Choreographing a World of Dynamic Objects**  | CVPR 2026 |          [Link](https://arxiv.org/abs/2601.04194)          | [Link](https://github.com/yanzhelyu/CHORDCode) | [Link](https://yanzhelyu.github.io/chord/)  |
+| 2026 | **ActionMesh: Animated 3D Mesh Generation with Temporal 3D Diffusion**  | CVPR 2026 |          [Link](https://arxiv.org/abs/2601.16148)          | [Link](https://github.com/facebookresearch/actionmesh) | [Link](https://remysabathier.github.io/actionmesh/)  |
 | 2026 | **MV-Forcing: Long Multi-View Video Generation via 4D-Grounded Spatio-Temporal Self-Forcing**  | ECCV 2026 |          [Link](https://arxiv.org/abs/2607.05376)          | Coming Soon! | [Link](https://galfiebelman.github.io/mv-forcing/)  |
 | 2026 | **VGGRPO: Towards World-Consistent Video Generation with 4D Latent Reward**  | ECCV 2026 |          [Link](https://arxiv.org/abs/2603.26599)          | --  | [Link](https://zhaochongan.github.io/projects/VGGRPO/)  |
 | 2026 | **LivingWorld: Interactive 4D World Generation with Environmental Dynamics**  | ECCV 2026  |          [Link](https://arxiv.org/abs/2604.01641)          | [Link](https://github.com/cvsp-lab/LivingWorld)  | [Link](https://paper.pnu-cvsp.com/LivingWorld/)  |
@@ -560,6 +561,13 @@ An open collection of state-of-the-art (SOTA), novel **Text to X (X can be every
   title={Choreographing a World of Dynamic Objects},
   author={Lyu, Yanzhe and Geng, Chen and Dharmarajan, Karthik and Zhang, Yunzhi and Alzayer, Hadi and Wu, Shangzhe and Wu, Jiajun},
   journal={arXiv preprint arXiv:2601.04194},
+  year={2026}
+}
+
+@article{sabathier2026actionmesh,
+  title={Actionmesh: Animated 3d mesh generation with temporal 3d diffusion},
+  author={Sabathier, Remy and Novotny, David and Mitra, Niloy J and Monnier, Tom},
+  journal={arXiv preprint arXiv:2601.16148},
   year={2026}
 }
 
