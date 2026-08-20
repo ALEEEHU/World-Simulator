@@ -409,8 +409,10 @@ Transformer-based Architectures.
 
 ### World Model Benchmark
 * [NeurIPS 2026] **WorldModelBench: Judging Video Generation Models As World Models** [[Paper](https://arxiv.org/abs/2502.20694)] [[GitHub](https://github.com/WorldModelBench-Team/WorldModelBench)] [[Project Page](https://worldmodelbench-team.github.io/)]
+* [arXiv 2026] **PlayWorld: Benchmarking World Models with Agent Players over Long-Horizon Objectives** [[Paper](https://arxiv.org/abs/2608.13552)] [[GitHub](https://github.com/kxding/PlayWorld)] [[Project Page](https://kxding.github.io/project/PlayWorld/)]
 
 ### World Foundation Model Platform
+- [WorldFoundry](https://openenvision.github.io/WorldFoundry/)([[GitHub](https://github.com/OpenEnvision/WorldFoundry)]: an open-source infrastructure for world models.
 - [NVIDIA Cosmos](https://www.nvidia.com/en-us/ai/cosmos/) ([[GitHub](https://github.com/nvidia-cosmos)] [[Paper](https://arxiv.org/abs/2501.03575)]): NVIDIA Cosmos is a world foundation model platform for accelerating the development of physical AI systems.
   
 	- [Cosmos-Transfer1](https://github.com/nvidia-cosmos/cosmos-transfer1)：a world-to-world transfer model designed to bridge the perceptual divide between simulated and real-world environments.
