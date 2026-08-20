@@ -400,6 +400,8 @@ Transformer-based Architectures.
 <p align=center> Summary of the widely-used 2D, video, 3D and 4D generation datasets. [Link] directs to dataset websites.</p>
 <p align="center"> <img src="./media/Datasets.png" > </p>
 
+* [arXiv 2026] **Sekai2: From World Exploration to Interactive World Modeling** [[Sekai2 dataset technical report](https://arxiv.org/abs/2608.09449)] [[Project Page](https://kangverse.github.io/sekai2-project/)]
+
 ### Evaluation Metrics
 
 <p align=center> Summary of common evaluation metrics.</p>
@@ -412,7 +414,7 @@ Transformer-based Architectures.
 * [arXiv 2026] **PlayWorld: Benchmarking World Models with Agent Players over Long-Horizon Objectives** [[Paper](https://arxiv.org/abs/2608.13552)] [[GitHub](https://github.com/kxding/PlayWorld)] [[Project Page](https://kxding.github.io/project/PlayWorld/)]
 
 ### World Foundation Model Platform
-- [WorldFoundry](https://openenvision.github.io/WorldFoundry/)([[GitHub](https://github.com/OpenEnvision/WorldFoundry)]: an open-source infrastructure for world models.
+- [WorldFoundry](https://openenvision.github.io/WorldFoundry/)([[GitHub](https://github.com/OpenEnvision/WorldFoundry)]): an open-source infrastructure for world models.
 - [NVIDIA Cosmos](https://www.nvidia.com/en-us/ai/cosmos/) ([[GitHub](https://github.com/nvidia-cosmos)] [[Paper](https://arxiv.org/abs/2501.03575)]): NVIDIA Cosmos is a world foundation model platform for accelerating the development of physical AI systems.
   
 	- [Cosmos-Transfer1](https://github.com/nvidia-cosmos/cosmos-transfer1)：a world-to-world transfer model designed to bridge the perceptual divide between simulated and real-world environments.
