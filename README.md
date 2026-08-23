@@ -493,6 +493,7 @@ An open collection of state-of-the-art (SOTA), novel **Text to X (X can be every
 | 2026 | **LivingWorld: Interactive 4D World Generation with Environmental Dynamics**  | ECCV 2026  |          [Link](https://arxiv.org/abs/2604.01641)          | [Link](https://github.com/cvsp-lab/LivingWorld)  | [Link](https://paper.pnu-cvsp.com/LivingWorld/)  |
 | 2026 | **Alignment Is All You Need For X-to-4D Generation**  | IEEE Transactions on Multimedia (TMM) 2026 |          [Link](https://arxiv.org/abs/2607.02516)          | -- | [Link](https://miaoqiaowei.github.io/Align4D/)  |
 | 2026 | **Lift4D: Harmonizing Single-View 3D Estimation for 4D Reconstruction In-the-Wild**  |SIGGRAPH Asia 2026 |          [Link](https://arxiv.org/abs/2606.23688)          | [Link](https://github.com/yehonathanlitman/Lift4D) | [Link](https://lift4d.github.io/)  |
+| 2026 | **4DAnyone: Create Anyone in 4D from a Casual Monocular Video**  | SIGGRAPH Asia 2026  |          [Link](https://arxiv.org/abs/2608.20335)          | [Link](https://github.com/ant-research/4DAnyone) | [Link](https://4danyone.github.io/) |
 
 <details close>
 <summary>Accepted Papers References</summary>
@@ -608,6 +609,14 @@ An open collection of state-of-the-art (SOTA), novel **Text to X (X can be every
   author={Litman, Yehonathan and Ma, Xiaoxuan and Shah, Manan and Ugrinovic, Nicolas and Kitani, Kris and De la Torre, Fernando and Tulsiani, Shubham},
   journal={arXiv preprint arXiv:2606.23688},
   year={2026}
+}
+
+@article{jin2026fdanyone,
+  title={4DAnyone: Create Anyone in 4D from a Casual Monocular Video},
+  author={Jin, Yudong and Xie, Tao and Zhang, Qihang and Shen, Zehong and Xu, Zhen and Shen, Yujun and Bao, Hujun and Zhou, Xiaowei and Xu, Yinghao},
+  journal={arXiv preprint arXiv:2608.20335},
+  year={2026},
+  url={https://arxiv.org/abs/2608.20335}
 }
 
 ```
@@ -748,6 +757,16 @@ Zihao Liu, Xiaolong Shen, Zhenglin Zhou, Ruijie Quan, Yi Yang (Zhejiang Universi
 4D generation synthesizes dynamic 3D scenes from conditions such as text or images. Existing methods either reconstruct generated RGB videos with a separate 4D model or adapt a particular video generator to predict geometry directly. The former suffers from distribution mismatch and error propagation, whereas the latter ties 4D prediction to a specific generator and may require retraining when the generator or conditioning regime changes. We ask whether the final denoised latents of video models that share a variational autoencoder (VAE) can instead provide a reusable interface to explicit 4D prediction. Building on this insight, we introduce direct latent-to-4D generation and instantiate it as Latent-to-4D, which bypasses RGB by aligning a video latent with the token grid of a pretrained 4D decoder and refining it through frame-wise and global spatiotemporal attention. Trained on roughly 1K existing reconstruction clips, a single checkpoint transfers unchanged across multiple video diffusion transformers within the same VAE family. On Text4D-200 and I4D-200, Latent-to-4D surpasses matched same-latent Wan+4RC cascades in projection-based DINO-F1 by 2.88--3.45 and 5.81 points, respectively, while also being preferred by human raters for geometry, temporal stability, and overall quality.
 </details>
 
+#### 15. Stream4D: 4D-Consistency for Streaming Autoregressive Diffusion Video Models
+Yuanhao Ban, Jiaqi Feng, Hengguang Zhou, Xiaohuan Pei, Justin Cui, Cho-Jui Hsieh
+
+(UCLA, Tsinghua University)
+
+<details span>
+<summary><b>Abstract</b></summary>
+Streaming autoregressive diffusion models enable real-time, long-horizon video generation, but their training objectives optimize local frame prediction rather than the geometry and dynamics of a coherent world: long rollouts accumulate geometric drift and degrade into static or unnatural motion. Recent bidirectional approaches address this problem using rewards signals built upon 3D Gaussian-Splatting reconstruction. However, a single rigid 3d reconstruction cannot model a dynamic scene, so this critic penalizes genuine object motion as reconstruction error and is maximized by freezing the video. This shortcut is especially detrimental in the AR setting, where each chunk can propagate an already-static configuration. In this work, we propose Stream4D, which replaces the static critic with a feed-forward 4D reconstruction reward that explicitly models scene dynamics, allowing coherent motion to receive high consistency rewards. To further guide motion magnitude and quality, we add a motion prior that rewards natural scene-flow magnitude while penalizing jitter and non-rigid artifacts. Our final recipe combines these two terms with a lightweight perceptual anchor. Across various autoregressive video backbones and various generation horizons, Stream4D improves 4D reconstruction quality, preserves motion more effectively, and achieves higher human-aligned preference.
+</details>
+
 -----
 
 </details>
@@ -769,6 +788,7 @@ Zihao Liu, Xiaolong Shen, Zhenglin Zhou, Ruijie Quan, Yi Yang (Zhejiang Universi
 | 2026 | **Hallo4D: Multi-Modal Hallucination Mitigation for Consistent Spatio-Temporal Generation**  | 15 Jul 2026  |          [Link](https://arxiv.org/abs/2607.12752)          | [Link](https://github.com/wafer-bob/Hallo4D)  | [Link](https://wafer-bob.github.io/Hallo3D-4D/) |
 | 2026 | **PE-Field 4D: Video Generation Models as Canvas**  | 17 Jul 2026  |          [Link](https://arxiv.org/abs/2607.15667)          | --  | -- |
 | 2026 | **Beyond Pixels: From Video Priors to 4D Worlds**  | 11 Aug 2026  |          [Link](https://arxiv.org/abs/2608.10744)          | [Link](https://github.com/hayd-zju/Beyond-Pixels) | [Link](https://hayd-zju.github.io/Beyond-Pixels/) |
+| 2026 | **Stream4D: 4D-Consistency for Streaming Autoregressive Diffusion Video Models**  | 20 Aug 2026  |          [Link](https://arxiv.org/abs/2608.19556)          | -- | [Link](https://banyuanhao.github.io/Stream4D/) |
 
 <details close>
 <summary>ArXiv Papers References</summary>
@@ -888,6 +908,16 @@ Zihao Liu, Xiaolong Shen, Zhenglin Zhou, Ruijie Quan, Yi Yang (Zhejiang Universi
       archivePrefix={arXiv},
       primaryClass={cs.CV},
       url={https://arxiv.org/abs/2608.10744}, 
+}
+
+@misc{ban2026stream4d4dconsistencystreamingautoregressive,
+      title={Stream4D: 4D-Consistency for Streaming Autoregressive Diffusion Video Models}, 
+      author={Yuanhao Ban and Jiaqi Feng and Hengguang Zhou and Xiaohuan Pei and Justin Cui and Cho-Jui Hsieh},
+      year={2026},
+      eprint={2608.19556},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2608.19556}, 
 }
 
 ```
