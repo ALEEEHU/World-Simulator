@@ -414,6 +414,8 @@ Transformer-based Architectures.
 * [arXiv 2026] **PlayWorld: Benchmarking World Models with Agent Players over Long-Horizon Objectives** [[Paper](https://arxiv.org/abs/2608.13552)] [[GitHub](https://github.com/kxding/PlayWorld)] [[Project Page](https://kxding.github.io/project/PlayWorld/)]
 
 ### World Foundation Model Platform
+- [Atlas](https://www.worldlabs.ai/blog/atlas): the world's first multimodal world model that generates image and video frames with pixel-perfect camera control and reconstructs them in 3D, World Labs, Sept 1st, 2026.
+
 - [WorldFoundry](https://openenvision.github.io/WorldFoundry/)([[GitHub](https://github.com/OpenEnvision/WorldFoundry)]): an open-source infrastructure for world models.
 - [NVIDIA Cosmos](https://www.nvidia.com/en-us/ai/cosmos/) ([[GitHub](https://github.com/nvidia-cosmos)] [[Paper](https://arxiv.org/abs/2501.03575)]): NVIDIA Cosmos is a world foundation model platform for accelerating the development of physical AI systems.
   
@@ -767,6 +769,16 @@ Yuanhao Ban, Jiaqi Feng, Hengguang Zhou, Xiaohuan Pei, Justin Cui, Cho-Jui Hsieh
 Streaming autoregressive diffusion models enable real-time, long-horizon video generation, but their training objectives optimize local frame prediction rather than the geometry and dynamics of a coherent world: long rollouts accumulate geometric drift and degrade into static or unnatural motion. Recent bidirectional approaches address this problem using rewards signals built upon 3D Gaussian-Splatting reconstruction. However, a single rigid 3d reconstruction cannot model a dynamic scene, so this critic penalizes genuine object motion as reconstruction error and is maximized by freezing the video. This shortcut is especially detrimental in the AR setting, where each chunk can propagate an already-static configuration. In this work, we propose Stream4D, which replaces the static critic with a feed-forward 4D reconstruction reward that explicitly models scene dynamics, allowing coherent motion to receive high consistency rewards. To further guide motion magnitude and quality, we add a motion prior that rewards natural scene-flow magnitude while penalizing jitter and non-rigid artifacts. Our final recipe combines these two terms with a lightweight perceptual anchor. Across various autoregressive video backbones and various generation horizons, Stream4D improves 4D reconstruction quality, preserves motion more effectively, and achieves higher human-aligned preference.
 </details>
 
+#### 16. 4DStreamCtrl: Interactive Video Generation with Online 4D Control
+Shiqian Li, Chenguo Lin, Zhiguang Liu, Yu Tang, Jiarong Ou, Rui Chen, Yixin Zhu
+
+(Peking University, Tencent Hunyuan)
+
+<details span>
+<summary><b>Abstract</b></summary>
+Generative video models now synthesize footage nearly indistinguishable from reality. Their promise as interactive tools hinges on fine-grained control of how objects and the camera move over time, yet each existing approach captures only part of this: camera-parameter methods steer the viewpoint but cannot move objects, 2D-trajectory methods act in the image plane and ignore depth and occlusion, and recent 3D methods add geometry but run only offline at a fixed length. In particular, none combines 3D-consistent control of both camera and objects with real-time, streaming generation. Here we show that camera motion, object trajectories, and depth can be unified into a single 3D point-track representation, from which one model performs joint camera and object control, depth editing, and motion transfer in a single forward pass. To learn this interface at scale, we mine in-the-wild video for 3D motion supervision, yielding OpenVidHD-Motion3D, and encode it with a lightweight Geometric Motion Head that plugs into a pretrained video diffusion model. Because this encoder is temporally separable, we distill the model into a causal streaming student that generates arbitrarily long video in four denoising steps at memory independent of length. This unified design surpasses prior camera-only, 2D, and offline-3D methods in motion-control precision while covering modalities they address only in isolation. 4DStreamCtrl runs at 20 FPS on a single high-end GPU for 480p video and stays temporally coherent over hundreds of frames, enabling, to our knowledge, interactive 4D-controllable streaming generation for the first time. More broadly, grounding generation in explicit 3D geometry with efficient causal inference points toward interactive world models with closed-loop spatiotemporal control, from controllable simulators to real-time visual imagination for embodied agents.
+</details>
+
 -----
 
 </details>
@@ -789,6 +801,7 @@ Streaming autoregressive diffusion models enable real-time, long-horizon video g
 | 2026 | **PE-Field 4D: Video Generation Models as Canvas**  | 17 Jul 2026  |          [Link](https://arxiv.org/abs/2607.15667)          | --  | -- |
 | 2026 | **Beyond Pixels: From Video Priors to 4D Worlds**  | 11 Aug 2026  |          [Link](https://arxiv.org/abs/2608.10744)          | [Link](https://github.com/hayd-zju/Beyond-Pixels) | [Link](https://hayd-zju.github.io/Beyond-Pixels/) |
 | 2026 | **Stream4D: 4D-Consistency for Streaming Autoregressive Diffusion Video Models**  | 20 Aug 2026  |          [Link](https://arxiv.org/abs/2608.19556)          | -- | [Link](https://banyuanhao.github.io/Stream4D/) |
+| 2026 | **4DStreamCtrl: Interactive Video Generation with Online 4D Control**  | 27 Aug 2026  |          [Link](https://arxiv.org/abs/2608.25479)          | -- | [Link](https://4dstreamctrl.github.io/) |
 
 <details close>
 <summary>ArXiv Papers References</summary>
@@ -918,6 +931,13 @@ Streaming autoregressive diffusion models enable real-time, long-horizon video g
       archivePrefix={arXiv},
       primaryClass={cs.CV},
       url={https://arxiv.org/abs/2608.19556}, 
+}
+
+@article{li20264dstreamctrl,
+  title={4DStreamCtrl: Interactive Video Generation with Online 4D Control},
+  author={Li, Shiqian and Lin, Chenguo and Liu, Zhiguang and Tang, Yu and Ou, Jiarong and Chen, Rui and Zhu, Yixin},
+  journal={arXiv preprint arXiv:2608.25479},
+  year={2026}
 }
 
 ```
