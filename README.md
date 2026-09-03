@@ -779,6 +779,16 @@ Shiqian Li, Chenguo Lin, Zhiguang Liu, Yu Tang, Jiarong Ou, Rui Chen, Yixin Zhu
 Generative video models now synthesize footage nearly indistinguishable from reality. Their promise as interactive tools hinges on fine-grained control of how objects and the camera move over time, yet each existing approach captures only part of this: camera-parameter methods steer the viewpoint but cannot move objects, 2D-trajectory methods act in the image plane and ignore depth and occlusion, and recent 3D methods add geometry but run only offline at a fixed length. In particular, none combines 3D-consistent control of both camera and objects with real-time, streaming generation. Here we show that camera motion, object trajectories, and depth can be unified into a single 3D point-track representation, from which one model performs joint camera and object control, depth editing, and motion transfer in a single forward pass. To learn this interface at scale, we mine in-the-wild video for 3D motion supervision, yielding OpenVidHD-Motion3D, and encode it with a lightweight Geometric Motion Head that plugs into a pretrained video diffusion model. Because this encoder is temporally separable, we distill the model into a causal streaming student that generates arbitrarily long video in four denoising steps at memory independent of length. This unified design surpasses prior camera-only, 2D, and offline-3D methods in motion-control precision while covering modalities they address only in isolation. 4DStreamCtrl runs at 20 FPS on a single high-end GPU for 480p video and stays temporally coherent over hundreds of frames, enabling, to our knowledge, interactive 4D-controllable streaming generation for the first time. More broadly, grounding generation in explicit 3D geometry with efficient causal inference points toward interactive world models with closed-loop spatiotemporal control, from controllable simulators to real-time visual imagination for embodied agents.
 </details>
 
+#### 17. Streaming4D: Accelerate 4D World Models via Block-wise Video Generation and Incremental Reconstruction
+Xiaoyan Liu, Jiaxin Liu, Kangrui Li, Sifan Zhou
+
+(The Chinese University of Hong Kong, The Hong Kong Polytechnic University, The University of New South Wales, Southeast University)
+
+<details span>
+<summary><b>Abstract</b></summary>
+Current 4D generation paradigms are often bottlenecked by a sequential decoupling design: video is generated first, followed by 3D reconstruction, leading to high interaction latency. This limits applications in interactive real-time scenarios. To this end, we propose \textbf{Streaming4D}, a tightly coupled synchronous pipeline that integrates block-wise autoregressive video generation with incremental 3D reconstruction. Unlike traditional frame-by-frame emission and delayed geometry recovery, Streaming4D generates temporal video blocks and immediately triggers reconstruction for each completed block, enabling parallel execution between synthesis and geometric updates. This approach allows the world representation to evolve online with the video stream, reducing feedback latency while preserving geometric fidelity. We instantiate \textbf{Streaming4D} using a Self-Forcing-style autoregressive generator and an incremental reconstruction backend. Experiments show consistent runtime improvements across resolutions on a single RTX 4090 (1.24× speedup), while maintaining high-quality 4D geometry and multi-view consistency.
+</details>
+
 -----
 
 </details>
@@ -802,6 +812,7 @@ Generative video models now synthesize footage nearly indistinguishable from rea
 | 2026 | **Beyond Pixels: From Video Priors to 4D Worlds**  | 11 Aug 2026  |          [Link](https://arxiv.org/abs/2608.10744)          | [Link](https://github.com/hayd-zju/Beyond-Pixels) | [Link](https://hayd-zju.github.io/Beyond-Pixels/) |
 | 2026 | **Stream4D: 4D-Consistency for Streaming Autoregressive Diffusion Video Models**  | 20 Aug 2026  |          [Link](https://arxiv.org/abs/2608.19556)          | -- | [Link](https://banyuanhao.github.io/Stream4D/) |
 | 2026 | **4DStreamCtrl: Interactive Video Generation with Online 4D Control**  | 27 Aug 2026  |          [Link](https://arxiv.org/abs/2608.25479)          | -- | [Link](https://4dstreamctrl.github.io/) |
+| 2026 | **Streaming4D: Accelerate 4D World Models via Block-wise Video Generation and Incremental Reconstruction**  | 1 Sept 2026  |          [Link](https://arxiv.org/abs/2609.00610v1)          | -- | -- |
 
 <details close>
 <summary>ArXiv Papers References</summary>
@@ -938,6 +949,16 @@ Generative video models now synthesize footage nearly indistinguishable from rea
   author={Li, Shiqian and Lin, Chenguo and Liu, Zhiguang and Tang, Yu and Ou, Jiarong and Chen, Rui and Zhu, Yixin},
   journal={arXiv preprint arXiv:2608.25479},
   year={2026}
+}
+
+@misc{liu2026streaming4daccelerate4dworld,
+      title={Streaming4D: Accelerate 4D World Models via Block-wise Video Generation and Incremental Reconstruction}, 
+      author={Xiaoyan Liu and Jiaxin Liu and Kangrui Li and Sifan Zhou},
+      year={2026},
+      eprint={2609.00610},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2609.00610}, 
 }
 
 ```
