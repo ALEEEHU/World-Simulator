@@ -50,7 +50,9 @@ This repository is divided into two main sections:
     * [Accepted Papers](#-4d-accepted-papers)
     * [ArXiv Papers](#-4d-arxiv-papers)
     * [Additional Info](#previous-papers-and-other-awesome-repos)
-  - [T2V Subsection](#t2v-subsection)
+  - [Video Generation Subsection](#video-generation-subsection)
+    * [Accepted Papers](#-video-accepted-papers)
+    * [ArXiv Papers](#-video-arxiv-papers)
     * [Additional Info](#video-other-additional-info)
   - [3D Scene Subsection](#3d-scene-subsection)
     * [Accepted Papers](#-3d-scene-accepted-papers)
@@ -439,7 +441,7 @@ An open collection of state-of-the-art (SOTA), novel **Text to X (X can be every
 
 
 ## Update Logs
-
+* `2026.09.04` - rename previous `T2V Subsection` to `Video Generation Subsection`.
 * `2026.01.07` - update 2025 papers collection into docs.
 
   
@@ -984,7 +986,50 @@ In 2023, tasks classified as text/Image to 4D and video to 4D generally involve 
 --------------
 
 
-## T2V Subsection
+## Video Generation Subsection
+
+### 🎉 Video Accepted Papers
+
+### 💡 Video ArXiv Papers
+
+#### 1. SolarWM: Open Data and Scalable Training for Long-Horizon Video World Models
+Junchao Huang, Guian Fang, Shengju Qian, Xianghao Kong, Zhuoran Zhao, Wei Huang, Yihua Du, Zixin Zhang, Justin Cui, Yuchao Gu, Yukang Chen, Xinting Hu, Tianyu He, Shaoshuai Shi, Zhuotao Tian, Xin Wang, Mike Zheng Shou, Li Jiang
+
+(CUHK-SZ, SLAI, NUS, CUHK, HKUST, HKUST-GZ, NVIDIA, UCLA, MSRA)
+
+<details span>
+<summary><b>Abstract</b></summary>
+We introduce SolarWM, a fully open foundation for building interactive video world models from data preparation through long-horizon inference. Training across heterogeneous data sources and video backbones is challenging: datasets differ in temporal scale, camera geometry, visual quality, motion, and captioning styles, while video generators use distinct representations and architectures. Naive data mixing and model-specific implementations therefore produce inconsistent supervision and make results difficult to reproduce and compare. SolarWM addresses this coupling with a reconfigurable multi-source data engine and a backbone-native adaptation framework. The engine converts 1.43 million canonical clips from 10 datasets into a unified, frame-aligned contract covering visual observations, metric camera geometry, captions, quality metadata, selection decisions, and provenance, while decoupling source processing from mixture construction. Under shared camera-conditioning, training, and inference interfaces, we instantiate four 5B--33B models based on Wan2.2, LTX-2.5, and MiniMax-H3 while preserving their native representations and objectives. A unified three-stage recipe combines bidirectional adaptation, teacher-forced autoregressive initialization, and distribution matching distillation. The resulting causal models enable real-time interaction over rollouts ranging from minutes to hours after being trained on only 5s sequences. By releasing the resulting data, pipeline, recipes, weights, and framework, SolarWM provides a reproducible and extensible foundation for interactive world-model research.
+</details>
+
+-----
+
+</details>
+
+| Year | Title                                                        | ArXiv Time  |                           Paper                            |                      Code                      | Project Page                      |
+| ---- | ------------------------------------------------------------ | :----: | :--------------------------------------------------------: | :--------------------------------------------: | :--------------------------------------------: |
+| 2026 | **SolarWM: Open Data and Scalable Training for Long-Horizon Video World Models**  | 2 Sept 2026  |          [Link](https://arxiv.org/abs/2609.02886)          | [Link](https://github.com/Junchao-cs/SolarWM) | [Link](https://junchao-cs.github.io/SolarWM-Web/) |
+
+<details close>
+<summary>ArXiv Papers References</summary>
+
+```
+%axiv papers
+
+@misc{huang2026solarwmopendatascalable,
+      title={SolarWM: Open Data and Scalable Training for Long-Horizon Video World Models}, 
+      author={Junchao Huang and Guian Fang and Shengju Qian and Xianghao Kong and Zhuoran Zhao and Wei Huang and Yihua Du and Zixin Zhang and Justin Cui and Yuchao Gu and Yukang Chen and Xinting Hu and Tianyu He and Shaoshuai Shi and Zhuotao Tian and Xin Wang and Mike Zheng Shou and Li Jiang},
+      year={2026},
+      eprint={2609.02886},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2609.02886}, 
+}
+
+```
+</details>
+
+---
 
 ### Video Other Additional Info
 
