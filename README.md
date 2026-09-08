@@ -495,6 +495,7 @@ An open collection of state-of-the-art (SOTA), novel **Text to X (X can be every
 | 2026 | **MV-Forcing: Long Multi-View Video Generation via 4D-Grounded Spatio-Temporal Self-Forcing**  | ECCV 2026 |          [Link](https://arxiv.org/abs/2607.05376)          | Coming Soon! | [Link](https://galfiebelman.github.io/mv-forcing/)  |
 | 2026 | **VGGRPO: Towards World-Consistent Video Generation with 4D Latent Reward**  | ECCV 2026 |          [Link](https://arxiv.org/abs/2603.26599)          | --  | [Link](https://zhaochongan.github.io/projects/VGGRPO/)  |
 | 2026 | **LivingWorld: Interactive 4D World Generation with Environmental Dynamics**  | ECCV 2026  |          [Link](https://arxiv.org/abs/2604.01641)          | [Link](https://github.com/cvsp-lab/LivingWorld)  | [Link](https://paper.pnu-cvsp.com/LivingWorld/)  |
+| 2026 | **InterPet4D: A Multimodal 4D Human-Pet Interaction Dataset for Pet Motion Generation**  | ECCV 2026  |          [Link](https://arxiv.org/abs/2607.10287)          | [Datasets](https://huggingface.co/datasets)  | [Link](https://interactive-intelligence-lab.github.io/InterPet4D-Homepage/) |
 | 2026 | **Alignment Is All You Need For X-to-4D Generation**  | IEEE Transactions on Multimedia (TMM) 2026 |          [Link](https://arxiv.org/abs/2607.02516)          | -- | [Link](https://miaoqiaowei.github.io/Align4D/)  |
 | 2026 | **Lift4D: Harmonizing Single-View 3D Estimation for 4D Reconstruction In-the-Wild**  |SIGGRAPH Asia 2026 |          [Link](https://arxiv.org/abs/2606.23688)          | [Link](https://github.com/yehonathanlitman/Lift4D) | [Link](https://lift4d.github.io/)  |
 | 2026 | **4DAnyone: Create Anyone in 4D from a Casual Monocular Video**  | SIGGRAPH Asia 2026  |          [Link](https://arxiv.org/abs/2608.20335)          | [Link](https://github.com/ant-research/4DAnyone) | [Link](https://4danyone.github.io/) |
@@ -598,6 +599,13 @@ An open collection of state-of-the-art (SOTA), novel **Text to X (X can be every
   title={LivingWorld: Interactive 4D World Generation with Environmental Dynamics},
   author={Mun, Hyeongju and Jin, In-Hwan and Kim, Sohyeong and Kong, Kyeongbo},
   journal={arXiv preprint arXiv:2604.01641},
+  year={2026}
+}
+
+@article{peng2026interpet4d,
+  title={InterPet4D: A Multimodal 4D Human-Pet Interaction Dataset for Pet Motion Generation},
+  author={Peng, Yichen and Song, Jyun-Ting and Liao, Chen-Chieh and Kitani, Kris and Koike, Hideki and Wu, Erwin},
+  journal={arXiv preprint arXiv:2607.10287},
   year={2026}
 }
 
@@ -724,18 +732,8 @@ Hao Feng, Zhi Zuo, Jia-Hui Pan, Ka-Hei Hui, Zhengzhe Liu, Dian Zhang, Haoran Xie
 We study 4D generation to synthesize temporally coherent sequences of 3D geometry for animation and content creation. In contrast to existing SDS-based optimization methods and video-driven animation approaches, we adopt a skeleton-driven animation framework aligned with standard industrial pipelines, which enables explicit control and editing. To this end, we propose SkelGen4D, a weakly supervised feed-forward framework for text-driven mesh animation that generates explicit skeleton motions without requiring per-frame skeleton annotations. SkelGen4D first recovers temporally consistent pseudo-skeletons from animated meshes via differentiable fitting, and then generates text-conditioned skeleton motion sequences in a feed-forward manner, further refined with Motion-GRPO to ensure temporally coherent, physically plausible, and articulated animation. We evaluate our method on two large-scale benchmarks, Truebones Zoo and Diffusion4D. Our results show that our weakly supervised skeleton modeling matches or surpasses fully supervised baselines while scaling to diverse object categories for high-quality text-driven mesh animation. Further, our method supports flexible motion editing and is aligned with standard animation production pipelines.
 </details>
 
-#### 11. InterPet4D: A Multimodal 4D Human-Pet Interaction Dataset for Pet Motion Generation
-Yichen Peng, Jyun-Ting Song, Chen-Chieh Liao, Kris Kitani, Hideki Koike, Erwin Wu
 
-(Institute of Science Tokyo, Carnegie Mellon University)
-
-<details span>
-<summary><b>Abstract</b></summary>
-Human-pet interaction estimation and generation remain underexplored due to the absence of a high-quality large-scale dataset. We present InterPet4D, the first multimodal dataset capturing natural interactions between humans and dogs. Using a synchronized multi-view capture system, we record human-dog obedience tasks and provide annotations for both humans and dogs, including multi-view and egocentric videos, segmentations, 2D and 3D keypoints, meshes, and audio tracks. InterPet4D consists of 6.8 million frames collected from 13 dogs of 11 breeds interacting with 23 human participants. We further introduce the InterPetMoGen framework for human-pet interaction motion generation. Our proposed model achieves an FID score of 11.21 and substantially outperforms the Seq2Seq and DiT baselines, demonstrating the effectiveness of InterPet4D for modeling realistic human-pet interactions.
-</details>
-
-
-#### 12. Hallo4D: Multi-Modal Hallucination Mitigation for Consistent Spatio-Temporal Generation
+#### 11. Hallo4D: Multi-Modal Hallucination Mitigation for Consistent Spatio-Temporal Generation
 Hongbo Wang, Huaibo Huang, Jie Cao, Jin Liu, Haoyang Tong, Ran He
 
 (CASIA, UCAS, ShanghaiTech)
@@ -745,7 +743,7 @@ Hongbo Wang, Huaibo Huang, Jie Cao, Jin Liu, Haoyang Tong, Ran He
 While recent advances in 3D generation have enabled impressive visual synthesis, existing methods often rely on 2D diffusion supervision without explicit mechanisms for geometric consistency, leading to spatial hallucinations such as duplicated structures and misaligned geometry. These issues become more severe in 4D generation, where maintaining consistency across viewpoints and temporal evolution introduces additional challenges, including jitter, identity flicker, and structural drift. We present \textbf{Hallo4D}, a unified and model-agnostic framework for mitigating spatiotemporal hallucinations in 3D and 4D content generation. Hallo4D introduces a generation-detection-correction paradigm that leverages large multimodal language models (LMMs) to identify and summarize spatial and temporal inconsistencies from multi-view and multi-frame renderings. These insights guide a consensus-driven image-space consistency optimization, where an LMM-based selector evaluates candidate corrections through multi-model voting, without requiring retraining or architectural modifications. To further improve temporal consistency and optimization efficiency, Hallo4D incorporates motion-aware keyframe sampling, LMM-guided initialization, and appearance alignment. We additionally introduce exposure-aware optimization and visibility pruning to enhance robustness under challenging viewpoints. Extensive experiments demonstrate that Hallo4D consistently outperforms strong baselines across diverse 3D and 4D generation settings, providing a scalable and generalizable solution for consistency-aware content generation.
 </details>
 
-#### 13. PE-Field 4D: Video Generation Models as Canvas
+#### 12. PE-Field 4D: Video Generation Models as Canvas
 Yunpeng Bai, Haoxiang Li, Qixing Huang (UT Austin, Pixocial Technology)
 
 <details span>
@@ -753,7 +751,7 @@ Yunpeng Bai, Haoxiang Li, Qixing Huang (UT Austin, Pixocial Technology)
 Diffusion Transformers have recently achieved strong performance in video generation, yet controlling scene geometry under viewpoint changes and camera motion remains challenging. In this work, we revisit the role of positional encoding in video diffusion transformers and show that it provides a useful spatial bias for geometry-aware control. Specifically, if reference tokens are encoded according to their projected locations in the target view, the denoising model is encouraged to retrieve content from position aligned regions of the input video. Building on this observation, we introduce a geometry-aware cross-attention mechanism that enables target video latent tokens to attend to structured context tokens derived from reference images or frames. To establish correspondence between the reference content and the target camera trajectory, we equip the context tokens with a projected positional encoding scheme that combines target-view 2D reprojection with depth-aware disambiguation. At the same time, we preserve the original spatiotemporal positional encoding of the generated video latent, allowing geometric guidance to be injected while maintaining consistency with the video model's native latent structure. The resulting framework provides a simple and effective approach for controllable video generation. It improves spatial controllability in viewpoint-dependent editing tasks, including camera re-trajectory, novel-view video synthesis, and geometry-aware video editing, while preserving the generative prior of the underlying video diffusion model. 
 </details>
 
-#### 14. Beyond Pixels: From Video Priors to 4D Worlds
+#### 13. Beyond Pixels: From Video Priors to 4D Worlds
 Zihao Liu, Xiaolong Shen, Zhenglin Zhou, Ruijie Quan, Yi Yang (Zhejiang University)
 
 <details span>
@@ -761,7 +759,7 @@ Zihao Liu, Xiaolong Shen, Zhenglin Zhou, Ruijie Quan, Yi Yang (Zhejiang Universi
 4D generation synthesizes dynamic 3D scenes from conditions such as text or images. Existing methods either reconstruct generated RGB videos with a separate 4D model or adapt a particular video generator to predict geometry directly. The former suffers from distribution mismatch and error propagation, whereas the latter ties 4D prediction to a specific generator and may require retraining when the generator or conditioning regime changes. We ask whether the final denoised latents of video models that share a variational autoencoder (VAE) can instead provide a reusable interface to explicit 4D prediction. Building on this insight, we introduce direct latent-to-4D generation and instantiate it as Latent-to-4D, which bypasses RGB by aligning a video latent with the token grid of a pretrained 4D decoder and refining it through frame-wise and global spatiotemporal attention. Trained on roughly 1K existing reconstruction clips, a single checkpoint transfers unchanged across multiple video diffusion transformers within the same VAE family. On Text4D-200 and I4D-200, Latent-to-4D surpasses matched same-latent Wan+4RC cascades in projection-based DINO-F1 by 2.88--3.45 and 5.81 points, respectively, while also being preferred by human raters for geometry, temporal stability, and overall quality.
 </details>
 
-#### 15. Stream4D: 4D-Consistency for Streaming Autoregressive Diffusion Video Models
+#### 14. Stream4D: 4D-Consistency for Streaming Autoregressive Diffusion Video Models
 Yuanhao Ban, Jiaqi Feng, Hengguang Zhou, Xiaohuan Pei, Justin Cui, Cho-Jui Hsieh
 
 (UCLA, Tsinghua University)
@@ -771,7 +769,7 @@ Yuanhao Ban, Jiaqi Feng, Hengguang Zhou, Xiaohuan Pei, Justin Cui, Cho-Jui Hsieh
 Streaming autoregressive diffusion models enable real-time, long-horizon video generation, but their training objectives optimize local frame prediction rather than the geometry and dynamics of a coherent world: long rollouts accumulate geometric drift and degrade into static or unnatural motion. Recent bidirectional approaches address this problem using rewards signals built upon 3D Gaussian-Splatting reconstruction. However, a single rigid 3d reconstruction cannot model a dynamic scene, so this critic penalizes genuine object motion as reconstruction error and is maximized by freezing the video. This shortcut is especially detrimental in the AR setting, where each chunk can propagate an already-static configuration. In this work, we propose Stream4D, which replaces the static critic with a feed-forward 4D reconstruction reward that explicitly models scene dynamics, allowing coherent motion to receive high consistency rewards. To further guide motion magnitude and quality, we add a motion prior that rewards natural scene-flow magnitude while penalizing jitter and non-rigid artifacts. Our final recipe combines these two terms with a lightweight perceptual anchor. Across various autoregressive video backbones and various generation horizons, Stream4D improves 4D reconstruction quality, preserves motion more effectively, and achieves higher human-aligned preference.
 </details>
 
-#### 16. 4DStreamCtrl: Interactive Video Generation with Online 4D Control
+#### 15. 4DStreamCtrl: Interactive Video Generation with Online 4D Control
 Shiqian Li, Chenguo Lin, Zhiguang Liu, Yu Tang, Jiarong Ou, Rui Chen, Yixin Zhu
 
 (Peking University, Tencent Hunyuan)
@@ -781,7 +779,7 @@ Shiqian Li, Chenguo Lin, Zhiguang Liu, Yu Tang, Jiarong Ou, Rui Chen, Yixin Zhu
 Generative video models now synthesize footage nearly indistinguishable from reality. Their promise as interactive tools hinges on fine-grained control of how objects and the camera move over time, yet each existing approach captures only part of this: camera-parameter methods steer the viewpoint but cannot move objects, 2D-trajectory methods act in the image plane and ignore depth and occlusion, and recent 3D methods add geometry but run only offline at a fixed length. In particular, none combines 3D-consistent control of both camera and objects with real-time, streaming generation. Here we show that camera motion, object trajectories, and depth can be unified into a single 3D point-track representation, from which one model performs joint camera and object control, depth editing, and motion transfer in a single forward pass. To learn this interface at scale, we mine in-the-wild video for 3D motion supervision, yielding OpenVidHD-Motion3D, and encode it with a lightweight Geometric Motion Head that plugs into a pretrained video diffusion model. Because this encoder is temporally separable, we distill the model into a causal streaming student that generates arbitrarily long video in four denoising steps at memory independent of length. This unified design surpasses prior camera-only, 2D, and offline-3D methods in motion-control precision while covering modalities they address only in isolation. 4DStreamCtrl runs at 20 FPS on a single high-end GPU for 480p video and stays temporally coherent over hundreds of frames, enabling, to our knowledge, interactive 4D-controllable streaming generation for the first time. More broadly, grounding generation in explicit 3D geometry with efficient causal inference points toward interactive world models with closed-loop spatiotemporal control, from controllable simulators to real-time visual imagination for embodied agents.
 </details>
 
-#### 17. Streaming4D: Accelerate 4D World Models via Block-wise Video Generation and Incremental Reconstruction
+#### 16. Streaming4D: Accelerate 4D World Models via Block-wise Video Generation and Incremental Reconstruction
 Xiaoyan Liu, Jiaxin Liu, Kangrui Li, Sifan Zhou
 
 (The Chinese University of Hong Kong, The Hong Kong Polytechnic University, The University of New South Wales, Southeast University)
@@ -808,7 +806,6 @@ Current 4D generation paradigms are often bottlenecked by a sequential decouplin
 | 2026 | **MVTrack4Gen: Multi-View Point Tracking as Geometric Supervision for 4D Video Generation**  | 24 Jun 2026  |          [Link](https://arxiv.org/abs/2606.26087v1)          | [Link](https://github.com/cvlab-kaist/MVTrack4Gen)  | [Link](https://cvlab-kaist.github.io/MVTrack4Gen/)  |
 | 2026 | **RynnWorld-4D: 4D Embodied World Models for Robotic Manipulation**  | 7 Jul 2026  |          [Link](https://arxiv.org/abs/2607.06559)          | [Link](https://github.com/alibaba-damo-academy/RynnWorld-4D)  | [Link](https://alibaba-damo-academy.github.io/RynnWorld-4D.github.io/) |
 | 2026 | **SkelGen4D: Weakly-Supervised Skeleton-Based 4D Generation for Text-Driven Mesh Animation**  | 9 Jul 2026  |          [Link](https://arxiv.org/abs/2607.08246)          | --  | -- |
-| 2026 | **InterPet4D: A Multimodal 4D Human-Pet Interaction Dataset for Pet Motion Generation**  | 11 Jul 2026  |          [Link](https://arxiv.org/abs/2607.10287)          | [Datasets](https://huggingface.co/datasets)  | -- |
 | 2026 | **Hallo4D: Multi-Modal Hallucination Mitigation for Consistent Spatio-Temporal Generation**  | 15 Jul 2026  |          [Link](https://arxiv.org/abs/2607.12752)          | [Link](https://github.com/wafer-bob/Hallo4D)  | [Link](https://wafer-bob.github.io/Hallo3D-4D/) |
 | 2026 | **PE-Field 4D: Video Generation Models as Canvas**  | 17 Jul 2026  |          [Link](https://arxiv.org/abs/2607.15667)          | --  | -- |
 | 2026 | **Beyond Pixels: From Video Priors to 4D Worlds**  | 11 Aug 2026  |          [Link](https://arxiv.org/abs/2608.10744)          | [Link](https://github.com/hayd-zju/Beyond-Pixels) | [Link](https://hayd-zju.github.io/Beyond-Pixels/) |
@@ -902,13 +899,6 @@ Current 4D generation paradigms are often bottlenecked by a sequential decouplin
   title={SkelGen4D: Weakly-Supervised Skeleton-Based 4D Generation for Text-Driven Mesh Animation},
   author={Feng, Hao and Zuo, Zhi and Pan, Jia-Hui and Hui, Ka-Hei and Liu, Zhengzhe and Zhang, Dian and Xie, Haoran and Sheng, Bin and Hu, Jingyu},
   journal={arXiv preprint arXiv:2607.08246},
-  year={2026}
-}
-
-@article{peng2026interpet4d,
-  title={InterPet4D: A Multimodal 4D Human-Pet Interaction Dataset for Pet Motion Generation},
-  author={Peng, Yichen and Song, Jyun-Ting and Liao, Chen-Chieh and Kitani, Kris and Koike, Hideki and Wu, Erwin},
-  journal={arXiv preprint arXiv:2607.10287},
   year={2026}
 }
 
