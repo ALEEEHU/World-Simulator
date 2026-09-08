@@ -496,6 +496,7 @@ An open collection of state-of-the-art (SOTA), novel **Text to X (X can be every
 | 2026 | **VGGRPO: Towards World-Consistent Video Generation with 4D Latent Reward**  | ECCV 2026 |          [Link](https://arxiv.org/abs/2603.26599)          | --  | [Link](https://zhaochongan.github.io/projects/VGGRPO/)  |
 | 2026 | **LivingWorld: Interactive 4D World Generation with Environmental Dynamics**  | ECCV 2026  |          [Link](https://arxiv.org/abs/2604.01641)          | [Link](https://github.com/cvsp-lab/LivingWorld)  | [Link](https://paper.pnu-cvsp.com/LivingWorld/)  |
 | 2026 | **InterPet4D: A Multimodal 4D Human-Pet Interaction Dataset for Pet Motion Generation**  | ECCV 2026  |          [Link](https://arxiv.org/abs/2607.10287)          | [Datasets](https://huggingface.co/datasets)  | [Link](https://interactive-intelligence-lab.github.io/InterPet4D-Homepage/) |
+| 2026 | **MoGe4D: Geometry-Aware Single-Image 4D Synthesis via Dense Trajectory Generation**  | ECCV 2026  |          [Link](https://arxiv.org/abs/2512.05044)          | [Link](https://github.com/Zhangyr2022/MoGe4D)  | [Link](https://ivg-yanranzhang.github.io/MoGe4D/) |
 | 2026 | **Alignment Is All You Need For X-to-4D Generation**  | IEEE Transactions on Multimedia (TMM) 2026 |          [Link](https://arxiv.org/abs/2607.02516)          | -- | [Link](https://miaoqiaowei.github.io/Align4D/)  |
 | 2026 | **Lift4D: Harmonizing Single-View 3D Estimation for 4D Reconstruction In-the-Wild**  |SIGGRAPH Asia 2026 |          [Link](https://arxiv.org/abs/2606.23688)          | [Link](https://github.com/yehonathanlitman/Lift4D) | [Link](https://lift4d.github.io/)  |
 | 2026 | **4DAnyone: Create Anyone in 4D from a Casual Monocular Video**  | SIGGRAPH Asia 2026  |          [Link](https://arxiv.org/abs/2608.20335)          | [Link](https://github.com/ant-research/4DAnyone) | [Link](https://4danyone.github.io/) |
@@ -607,6 +608,16 @@ An open collection of state-of-the-art (SOTA), novel **Text to X (X can be every
   author={Peng, Yichen and Song, Jyun-Ting and Liao, Chen-Chieh and Kitani, Kris and Koike, Hideki and Wu, Erwin},
   journal={arXiv preprint arXiv:2607.10287},
   year={2026}
+}
+
+@misc{zhang2026geometryawaresingleimage4dsynthesis,
+      title={Geometry-Aware Single-Image 4D Synthesis via Dense Trajectory Generation}, 
+      author={Yanran Zhang and Ziyi Wang and Wenzhao Zheng and Zheng Zhu and Jie Zhou and Jiwen Lu},
+      year={2026},
+      eprint={2512.05044},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2512.05044}, 
 }
 
 @article{miao2026alignment,
