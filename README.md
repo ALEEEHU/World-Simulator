@@ -798,6 +798,16 @@ Shiqian Li, Chenguo Lin, Zhiguang Liu, Yu Tang, Jiarong Ou, Rui Chen, Yixin Zhu
 Generative video models now synthesize footage nearly indistinguishable from reality. Their promise as interactive tools hinges on fine-grained control of how objects and the camera move over time, yet each existing approach captures only part of this: camera-parameter methods steer the viewpoint but cannot move objects, 2D-trajectory methods act in the image plane and ignore depth and occlusion, and recent 3D methods add geometry but run only offline at a fixed length. In particular, none combines 3D-consistent control of both camera and objects with real-time, streaming generation. Here we show that camera motion, object trajectories, and depth can be unified into a single 3D point-track representation, from which one model performs joint camera and object control, depth editing, and motion transfer in a single forward pass. To learn this interface at scale, we mine in-the-wild video for 3D motion supervision, yielding OpenVidHD-Motion3D, and encode it with a lightweight Geometric Motion Head that plugs into a pretrained video diffusion model. Because this encoder is temporally separable, we distill the model into a causal streaming student that generates arbitrarily long video in four denoising steps at memory independent of length. This unified design surpasses prior camera-only, 2D, and offline-3D methods in motion-control precision while covering modalities they address only in isolation. 4DStreamCtrl runs at 20 FPS on a single high-end GPU for 480p video and stays temporally coherent over hundreds of frames, enabling, to our knowledge, interactive 4D-controllable streaming generation for the first time. More broadly, grounding generation in explicit 3D geometry with efficient causal inference points toward interactive world models with closed-loop spatiotemporal control, from controllable simulators to real-time visual imagination for embodied agents.
 </details>
 
+#### 16. GAE: Learning a Geometry-Native Latent Space for 3D-Consistent World Generation
+Jiahao Lu, Minghao Yin, Wenbo Hu, Hengyu Liu, Wang Zhao, Sai-Kit Yeung, Ying Shan, Yuan Liu
+
+(The Hong Kong University of Science and Technology, ARC Lab Tencent IEG, The University of Hong Kong, The University of Texas at Austin)
+
+<details span>
+<summary><b>Abstract</b></summary>
+We present a compact geometry-native latent space as a shared foundation for perception and generation. Visual generators can produce photorealistic frames without preserving a consistent 3D scene. We argue that this is not only a modeling problem but also a representation problem: generators typically evolve appearance-centric latents, while perception models recover geometry in a semantically rich space that encodes cross-view structure. Rather than adding geometry as another output, we reparameterize a geometry foundation model's features into a compact latent space for generation. We realize this shift with the geometry-native autoencoder (GAE), whose latent is jointly decodable to appearance, depth, cameras, and point maps. With this state, a standard conditional flow supports diverse generation tasks. In controlled comparisons that hold the generator and training protocol fixed, replacing the latent with GAE improves both visual quality and independently measured 3D coherence: FVD falls by 12.7% and 23.1% on RealEstate10K and DL3DV, and camera-trajectory error is halved on RealEstate10K. Together, these results show that the latent space is central to geometry-consistent generation and can serve as a shared interface between perception and generation.
+</details>
+
 -----
 
 </details>
@@ -820,6 +830,7 @@ Generative video models now synthesize footage nearly indistinguishable from rea
 | 2026 | **Beyond Pixels: From Video Priors to 4D Worlds**  | 11 Aug 2026  |          [Link](https://arxiv.org/abs/2608.10744)          | [Link](https://github.com/hayd-zju/Beyond-Pixels) | [Link](https://hayd-zju.github.io/Beyond-Pixels/) |
 | 2026 | **Stream4D: 4D-Consistency for Streaming Autoregressive Diffusion Video Models**  | 20 Aug 2026  |          [Link](https://arxiv.org/abs/2608.19556)          | -- | [Link](https://banyuanhao.github.io/Stream4D/) |
 | 2026 | **4DStreamCtrl: Interactive Video Generation with Online 4D Control**  | 27 Aug 2026  |          [Link](https://arxiv.org/abs/2608.25479)          | -- | [Link](https://4dstreamctrl.github.io/) |
+| 2026 | **GAE: Learning a Geometry-Native Latent Space for 3D-Consistent World Generation**  | 21 Sep 2026  |          [Link](https://arxiv.org/abs/2609.24981)          | [Link](https://github.com/TencentARC/GAE-GeometricAutoEncoder) | [Link](https://jiah-cloud.github.io/GAE.github.io/) |
 
 <details close>
 <summary>ArXiv Papers References</summary>
@@ -949,6 +960,16 @@ Generative video models now synthesize footage nearly indistinguishable from rea
   author={Li, Shiqian and Lin, Chenguo and Liu, Zhiguang and Tang, Yu and Ou, Jiarong and Chen, Rui and Zhu, Yixin},
   journal={arXiv preprint arXiv:2608.25479},
   year={2026}
+}
+
+@misc{lu2026gaelearninggeometrynativelatent,
+      title={GAE: Learning a Geometry-Native Latent Space for 3D-Consistent World Generation}, 
+      author={Jiahao Lu and Minghao Yin and Wenbo Hu and Hengyu Liu and Wang Zhao and Sai-Kit Yeung and Ying Shan and Yuan Liu},
+      year={2026},
+      eprint={2609.24981},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2609.24981}, 
 }
 
 ```
