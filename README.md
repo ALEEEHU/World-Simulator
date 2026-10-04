@@ -806,6 +806,16 @@ Jiahao Lu, Minghao Yin, Wenbo Hu, Hengyu Liu, Wang Zhao, Sai-Kit Yeung, Ying Sha
 We present a compact geometry-native latent space as a shared foundation for perception and generation. Visual generators can produce photorealistic frames without preserving a consistent 3D scene. We argue that this is not only a modeling problem but also a representation problem: generators typically evolve appearance-centric latents, while perception models recover geometry in a semantically rich space that encodes cross-view structure. Rather than adding geometry as another output, we reparameterize a geometry foundation model's features into a compact latent space for generation. We realize this shift with the geometry-native autoencoder (GAE), whose latent is jointly decodable to appearance, depth, cameras, and point maps. With this state, a standard conditional flow supports diverse generation tasks. In controlled comparisons that hold the generator and training protocol fixed, replacing the latent with GAE improves both visual quality and independently measured 3D coherence: FVD falls by 12.7% and 23.1% on RealEstate10K and DL3DV, and camera-trajectory error is halved on RealEstate10K. Together, these results show that the latent space is central to geometry-consistent generation and can serve as a shared interface between perception and generation.
 </details>
 
+#### 16. Generative Cinematographer: Composing Camera and Object Motion in 3D
+Jiahan Zhang, Chaohao Yang, Namitha Guruprasad, Vivekjyoti Banerjee, Trong-Tung Nguyen, Alan Yuille, Anand Bhattad
+
+(Johns Hopkins University)
+
+<details span>
+<summary><b>Abstract</b></summary>
+Current controllable video generation systems often rely on 2D motion trajectories or sparse drag signals for object motion. These controls are ambiguous because the same 2D trajectory can correspond to different 3D motions, especially when the camera and objects move simultaneously. We present Generative Cinematographer (GenCine), a system that lifts a single image into an editable 3D scene scaffold where artists jointly author camera and foreground motion. Artists specify a camera path and move selected foreground regions using local 3D motion handles. Several handles can move different parts of a subject independently, providing a piecewise-rigid approximation to non-rigid motion without a physics simulator or category-specific prior. To communicate these controls to a pretrained video model, we project them into guidance maps. These maps record where the controlled regions appear in each frame, assign each handle a fixed color across frames and encode the current 3D positions of its controlled points in the same world coordinate system as the background. This lets us describe object motion relative to the scene even as the camera moves. For training, we recover controls from the motion observed in real videos and use ground-truth geometry and trajectories from synthetic videos. We train a lightweight guidance branch and LoRA adapters on a pretrained Wan model to follow these controls. Our experiments show consistent camera-relative motion, improved geometric consistency under viewpoint changes, and strong controllability across diverse real-world scenes.
+</details>
+
 -----
 
 </details>
@@ -828,6 +838,7 @@ We present a compact geometry-native latent space as a shared foundation for per
 | 2026 | **Stream4D: 4D-Consistency for Streaming Autoregressive Diffusion Video Models**  | 20 Aug 2026  |          [Link](https://arxiv.org/abs/2608.19556)          | -- | [Link](https://banyuanhao.github.io/Stream4D/) |
 | 2026 | **4DStreamCtrl: Interactive Video Generation with Online 4D Control**  | 27 Aug 2026  |          [Link](https://arxiv.org/abs/2608.25479)          | -- | [Link](https://4dstreamctrl.github.io/) |
 | 2026 | **GAE: Learning a Geometry-Native Latent Space for 3D-Consistent World Generation**  | 21 Sep 2026  |          [Link](https://arxiv.org/abs/2609.24981)          | [Link](https://github.com/TencentARC/GAE-GeometricAutoEncoder) | [Link](https://jiah-cloud.github.io/GAE.github.io/) |
+| 2026 | **Generative Cinematographer: Composing Camera and Object Motion in 3D**  | 1 Oct 2026  |          [Link](https://arxiv.org/abs/2610.02180)          | -- | [Link](https://generative-cinematographer.github.io/) |
 
 <details close>
 <summary>ArXiv Papers References</summary>
@@ -960,6 +971,16 @@ We present a compact geometry-native latent space as a shared foundation for per
       archivePrefix={arXiv},
       primaryClass={cs.CV},
       url={https://arxiv.org/abs/2609.24981}, 
+}
+
+@misc{zhang2026generativecinematographercomposingcamera,
+      title={Generative Cinematographer: Composing Camera and Object Motion in 3D}, 
+      author={Jiahan Zhang and Chaohao Yang and Namitha Guruprasad and Vivekjyoti Banerjee and Trong-Tung Nguyen and Alan Yuille and Anand Bhattad},
+      year={2026},
+      eprint={2610.02180},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2610.02180}, 
 }
 
 ```
