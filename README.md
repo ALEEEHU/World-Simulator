@@ -816,6 +816,16 @@ Jiahan Zhang, Chaohao Yang, Namitha Guruprasad, Vivekjyoti Banerjee, Trong-Tung 
 Current controllable video generation systems often rely on 2D motion trajectories or sparse drag signals for object motion. These controls are ambiguous because the same 2D trajectory can correspond to different 3D motions, especially when the camera and objects move simultaneously. We present Generative Cinematographer (GenCine), a system that lifts a single image into an editable 3D scene scaffold where artists jointly author camera and foreground motion. Artists specify a camera path and move selected foreground regions using local 3D motion handles. Several handles can move different parts of a subject independently, providing a piecewise-rigid approximation to non-rigid motion without a physics simulator or category-specific prior. To communicate these controls to a pretrained video model, we project them into guidance maps. These maps record where the controlled regions appear in each frame, assign each handle a fixed color across frames and encode the current 3D positions of its controlled points in the same world coordinate system as the background. This lets us describe object motion relative to the scene even as the camera moves. For training, we recover controls from the motion observed in real videos and use ground-truth geometry and trajectories from synthetic videos. We train a lightweight guidance branch and LoRA adapters on a pretrained Wan model to follow these controls. Our experiments show consistent camera-relative motion, improved geometric consistency under viewpoint changes, and strong controllability across diverse real-world scenes.
 </details>
 
+#### 17. 4DCodeBench: Benchmarking Agents on Inverse Graphics of Dynamic Scenes
+Ruihong Shen, Žiga Kovačič, Peter Kulits, Xingrui Wang, Zizhang Li, Joshua B. Tenenbaum, Alan Yuille, Jieneng Chen, Jiajun Wu
+
+(Johns Hopkins University, Stanford University, Max Planck Institute for Intelligent Systems, Massachusetts Institute of Technology)
+
+<details span>
+<summary><b>Abstract</b></summary>
+We introduce 4DCodeBench, a benchmark for 4D inverse graphics through code generation, in which agents reconstruct dynamic scenes from video as executable graphics programs. To accomplish this, agents must translate visual observations into compact representations of scene structure and dynamics, by implementing abstractions such as physical simulations to reproduce complex behavior. To evaluate this capability, we curate a set of real-world videos and construct synthetic scenes spanning diverse physical phenomena, including deformation, fluid flow, and fracture. We perform extensive benchmarking of frontier models, finding that strong static reconstruction capabilities do not yet translate into reliable reconstruction of complex dynamics. 4DCodeBench provides a testbed for tracking progress toward agents that can interpret the dynamics of the world through code. 
+</details>
+
 -----
 
 </details>
@@ -839,6 +849,7 @@ Current controllable video generation systems often rely on 2D motion trajectori
 | 2026 | **4DStreamCtrl: Interactive Video Generation with Online 4D Control**  | 27 Aug 2026  |          [Link](https://arxiv.org/abs/2608.25479)          | -- | [Link](https://4dstreamctrl.github.io/) |
 | 2026 | **GAE: Learning a Geometry-Native Latent Space for 3D-Consistent World Generation**  | 21 Sep 2026  |          [Link](https://arxiv.org/abs/2609.24981)          | [Link](https://github.com/TencentARC/GAE-GeometricAutoEncoder) | [Link](https://jiah-cloud.github.io/GAE.github.io/) |
 | 2026 | **Generative Cinematographer: Composing Camera and Object Motion in 3D**  | 1 Oct 2026  |          [Link](https://arxiv.org/abs/2610.02180)          | -- | [Link](https://generative-cinematographer.github.io/) |
+| 2026 | **4DCodeBench: Benchmarking Agents on Inverse Graphics of Dynamic Scenes**  | 2 Oct 2026  |          [Link](https://arxiv.org/abs/2610.03715)          | [Link](https://github.com/4DCodeBench/4DCodeBench) | [Link](https://4dcodebench.com/) |
 
 <details close>
 <summary>ArXiv Papers References</summary>
@@ -981,6 +992,13 @@ Current controllable video generation systems often rely on 2D motion trajectori
       archivePrefix={arXiv},
       primaryClass={cs.CV},
       url={https://arxiv.org/abs/2610.02180}, 
+}
+
+@article{shen20264dcodebench,
+  title={{4DCodeBench}: Benchmarking Agents on Inverse Graphics of Dynamic Scenes},
+  author={Shen, Ruihong and Kova{\v{c}}i{\v{c}}, {\v{Z}}iga and Kulits, Peter and Wang, Xingrui and Li, Zizhang and Tenenbaum, Joshua B. and Yuille, Alan and Chen, Jieneng and Wu, Jiajun},
+  journal={arXiv preprint arXiv:2610.03715},
+  year={2026}
 }
 
 ```
