@@ -1040,6 +1040,26 @@ Junchao Huang, Guian Fang, Shengju Qian, Xianghao Kong, Zhuoran Zhao, Wei Huang,
 We introduce SolarWM, a fully open foundation for building interactive video world models from data preparation through long-horizon inference. Training across heterogeneous data sources and video backbones is challenging: datasets differ in temporal scale, camera geometry, visual quality, motion, and captioning styles, while video generators use distinct representations and architectures. Naive data mixing and model-specific implementations therefore produce inconsistent supervision and make results difficult to reproduce and compare. SolarWM addresses this coupling with a reconfigurable multi-source data engine and a backbone-native adaptation framework. The engine converts 1.43 million canonical clips from 10 datasets into a unified, frame-aligned contract covering visual observations, metric camera geometry, captions, quality metadata, selection decisions, and provenance, while decoupling source processing from mixture construction. Under shared camera-conditioning, training, and inference interfaces, we instantiate four 5B--33B models based on Wan2.2, LTX-2.5, and MiniMax-H3 while preserving their native representations and objectives. A unified three-stage recipe combines bidirectional adaptation, teacher-forced autoregressive initialization, and distribution matching distillation. The resulting causal models enable real-time interaction over rollouts ranging from minutes to hours after being trained on only 5s sequences. By releasing the resulting data, pipeline, recipes, weights, and framework, SolarWM provides a reproducible and extensible foundation for interactive world-model research.
 </details>
 
+#### 2. SemanTok: Predictable Semantic Tokens for Efficient Autoregressive Video Generation
+Mikhail Dereviannykh, Vikram Voleti, Simon Donne, Mallikarjun Byrasandra Ramalinga Reddy, Shimon Vainer, Mark Boss
+
+(Stability AI, Karlsruhe Institut fur Technologie)
+
+<details span>
+<summary><b>Abstract</b></summary>
+Recent video-based world models pair the scalability of autoregressive (AR) prediction with the visual quality of diffusion models. The choice of scene tokenizer is paramount for the optimal performance of each of these, both in terms of fidelity and semantics. Flexible-length, coarse-to-fine tokenizers yield exactly that: the first coarse tokens carry the clip's global semantics while later tokens further specify details. Existing flexible tokenizers only apply a representation-alignment (REPA) loss on early decoder hidden states, a target the decoder can partly meet from its noised input instead. We introduce SemanTok, a flexible video tokenizer that feeds frozen DINO features into its encoder and adds lightweight heads that reconstruct them from each retained token prefix alone. SemanTok achieves high semantic alignment and video fidelity at every AR model size: a 201M SemanTok AR model matches or beats a VideoFlexTok AR model 3.4× its size, and larger SemanTok AR models further improve fidelity. It keeps semantic alignment on out-of-distribution classes and gives the decoder higher semantic alignment at every noise level, including pure noise. It performs well in both reconstruction and generation, and its short token prefixes are cheaper to predict and give better generation fidelity, with pixel detail deferred to later tokens.
+</details>
+
+#### 3. LoGo: Local-Global Rewards for Consistent Long‑Horizon Video Generation
+Ziqi Ma, Shreya Sharma, Mohamed El Banani, Katja Schwarz, Chongjie Ye, Chao-Yuan Wu, Li Fei-Fei, Ben Mildenhall, Georgia Gkioxari, Justin Johnson, Gowthami Somepalli
+
+(California Institute of Technology, World Labs)
+
+<details span>
+<summary><b>Abstract</b></summary>
+Camera-controlled video models are rapidly advancing toward long generation horizons and complex camera control. A key failure mode is 3D inconsistency: as the camera moves, objects lose permanence and scene structures shift. Existing post-training techniques, which assign a single scalar reward to the entire generation, are poorly suited to correcting these inconsistencies over long horizons. We introduce LoGo, which blends global and spatially localized rewards for camera-controlled video models. The local reward provides fine-grained credit assignment, which substantially improves 3D consistency, while the global reward preserves camera following and video quality. Across three base models, LoGo shows a clear advantage on DL3DV and TrajectoryBench, a new benchmark for long-horizon, complex-camera-control generation that current evaluations lack. LoGo effectively reduces local object shifts, artifacts, and global scene changes, illustrating the importance of credit assignment in post-training video models.
+</details>
+
 -----
 
 </details>
@@ -1047,6 +1067,8 @@ We introduce SolarWM, a fully open foundation for building interactive video wor
 | Year | Title                                                        | ArXiv Time  |                           Paper                            |                      Code                      | Project Page                      |
 | ---- | ------------------------------------------------------------ | :----: | :--------------------------------------------------------: | :--------------------------------------------: | :--------------------------------------------: |
 | 2026 | **SolarWM: Open Data and Scalable Training for Long-Horizon Video World Models**  | 2 Sept 2026  |          [Link](https://arxiv.org/abs/2609.02886)          | [Link](https://github.com/Junchao-cs/SolarWM) | [Link](https://junchao-cs.github.io/SolarWM-Web/) |
+| 2026 | **SemanTok: Predictable Semantic Tokens for Efficient Autoregressive Video Generation**  | 30 Sept 2026  |          [Link](https://arxiv.org/abs/2610.00686)          | [Link](https://github.com/Stability-AI/SemanTok) | [Link](https://semantoken.github.io/) |
+| 2026 | **LoGo: Local-Global Rewards for Consistent Long-Horizon Video Generation**  | 2 Oct 2026  |          [Link](https://arxiv.org/abs/2610.03636)          | [Link](https://github.com/ziqi-ma/logo) | [Link](https://ziqi-ma.github.io/logo-website/) |
 
 <details close>
 <summary>ArXiv Papers References</summary>
@@ -1062,6 +1084,23 @@ We introduce SolarWM, a fully open foundation for building interactive video wor
       archivePrefix={arXiv},
       primaryClass={cs.CV},
       url={https://arxiv.org/abs/2609.02886}, 
+}
+
+@article{dereviannykh2026semantok,
+  title={SemanTok: Predictable Semantic Tokens for Efficient Autoregressive Video Generation},
+  author={Dereviannykh, Mikhail and Voleti, Vikram and Donne, Simon and Reddy, Mallikarjun Byrasandra Ramalinga and Vainer, Shimon and Boss, Mark},
+  journal={arXiv preprint arXiv:2610.00686},
+  year={2026}
+}
+
+@misc{ma2026logo,
+  title={LoGo: Local-Global Rewards for Consistent Long-Horizon Video Generation},
+  author={Ziqi Ma and Shreya Sharma and Mohamed El Banani and Katja Schwarz and Chongjie Ye and Chao-Yuan Wu and Li Fei-Fei and Ben Mildenhall and Georgia Gkioxari and Justin Johnson and Gowthami Somepalli},
+  year={2026},
+  eprint={2610.03636},
+  archivePrefix={arXiv},
+  primaryClass={cs.CV},
+  url={https://arxiv.org/abs/2610.03636},
 }
 
 ```
