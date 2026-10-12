@@ -1061,6 +1061,17 @@ Ziqi Ma, Shreya Sharma, Mohamed El Banani, Katja Schwarz, Chongjie Ye, Chao-Yuan
 Camera-controlled video models are rapidly advancing toward long generation horizons and complex camera control. A key failure mode is 3D inconsistency: as the camera moves, objects lose permanence and scene structures shift. Existing post-training techniques, which assign a single scalar reward to the entire generation, are poorly suited to correcting these inconsistencies over long horizons. We introduce LoGo, which blends global and spatially localized rewards for camera-controlled video models. The local reward provides fine-grained credit assignment, which substantially improves 3D consistency, while the global reward preserves camera following and video quality. Across three base models, LoGo shows a clear advantage on DL3DV and TrajectoryBench, a new benchmark for long-horizon, complex-camera-control generation that current evaluations lack. LoGo effectively reduces local object shifts, artifacts, and global scene changes, illustrating the importance of credit assignment in post-training video models.
 </details>
 
+#### 4. Code Video Model
+Code Video Model Team, Microsoft
+
+<details span>
+<summary><b>Abstract</b></summary>
+Video diffusion models generate realistic videos in a black box. Physics is imagined rather than computed; object placement, motion, and camera trajectories are resolved internally and only visible in the final clip. Inspired by film production, we present Code Video Model, which gives
+video generation an executable previs, with code as the engine. Given a prompt, Code Video Model writes a program that lays out a scene, animates objects, places a camera, and computes dynamics from equations; rendering the program yields a proxy video and a reference image. Rendering the resulting proxy video takes less than a minute, making it fast to preview; it is grounded, since dynamics are computed, and directly and precisely controllable, because code can modify each element. A pretrained video model is then conditioned on the proxy video and reference image to generate the final clip. However, we observe that existing video models tend to copy the flat appearance of the proxy video into the generated clip. To address this issue, Code Video Model further introduces early-step conditioning, a training-free schedule that attends to the proxy video only during early sampling steps when structure is established, and drops this conditioning thereafter. As a result, Code Video Model is able to generate a final clip that follows the proxy video structure while preserving the reference image appearance. We introduce CodeVideoBench to evaluate controllable video generation across diverse applications including gaming, scene editing, world-model data, physics grounding, bullet time, and 3D/4D reconstruction. On CodeVideoBench, Code Video Model with MiniMax-H3 achieves overall scores of 85.2, 82.1, and 85.8 under
+QwenVL-3.8-27B, GPT-5.6, and GPT-6, respectively, versus 74.3, 73.1, and 80.6 for VACE, the strongest learned baseline.
+	
+</details>
+
 -----
 
 </details>
@@ -1070,6 +1081,7 @@ Camera-controlled video models are rapidly advancing toward long generation hori
 | 2026 | **SolarWM: Open Data and Scalable Training for Long-Horizon Video World Models**  | 2 Sept 2026  |          [Link](https://arxiv.org/abs/2609.02886)          | [Link](https://github.com/Junchao-cs/SolarWM) | [Link](https://junchao-cs.github.io/SolarWM-Web/) |
 | 2026 | **SemanTok: Predictable Semantic Tokens for Efficient Autoregressive Video Generation**  | 30 Sept 2026  |          [Link](https://arxiv.org/abs/2610.00686)          | [Link](https://github.com/Stability-AI/SemanTok) | [Link](https://semantoken.github.io/) |
 | 2026 | **LoGo: Local-Global Rewards for Consistent Long-Horizon Video Generation**  | 2 Oct 2026  |          [Link](https://arxiv.org/abs/2610.03636)          | [Link](https://github.com/ziqi-ma/logo) | [Link](https://ziqi-ma.github.io/logo-website/) |
+| 2026 | **Code Video Model**  | 9 Oct 2026  |          [Tech Report](https://code-video-model.github.io/tech_report.pdf)          | [Link](https://github.com/code-video-model/CodeVideoModel) | [Link](https://code-video-model.github.io/) |
 
 <details close>
 <summary>ArXiv Papers References</summary>
@@ -1102,6 +1114,16 @@ Camera-controlled video models are rapidly advancing toward long generation hori
   archivePrefix={arXiv},
   primaryClass={cs.CV},
   url={https://arxiv.org/abs/2610.03636},
+}
+
+@misc{liang2026codevideomodel,
+  title        = {Code Video Model},
+  author       = {Liang, Zhiyang and Zhang, Jiawei and Qian, Guocheng and Chen, Dongdong and Wan, Ziyu},
+  year         = {2026},
+  month        = oct,
+  note         = {Preprint},
+  doi          = {10.13140/RG.2.2.34014.80961},
+  url          = {https://code-video-model.github.io/tech_report.pdf}
 }
 
 ```
