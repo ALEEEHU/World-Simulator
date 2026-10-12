@@ -57,7 +57,8 @@ This repository is divided into two main sections:
   - [3D Scene Subsection](#3d-scene-subsection)
     * [Accepted Papers](#-3d-scene-accepted-papers)
     * [Additional Info](#scene-other-additional-info)
-  - [Human Motion Subsection](#human-motion-subsection)
+  - [Motion Subsection](#motion-subsection)
+    * [Accepted Papers](#-motion-accepted-papers)
     * [Additional Info](#motion-other-additional-info)
   - [3D Human Subsection](#3d-human-subsection)
     * [Additional Info](#3d-human-additional-info)
@@ -1168,7 +1169,32 @@ For more details, please check the [2023-2024 3D Scene Papers](./docs/3d_scene/3
 
 --------------
 
-## Human Motion Subsection
+## Motion Subsection
+
+### 🎉 Motion Accepted Papers
+| Year | Title                                                        | Venue  |                           Paper                            |                      Code                      | Project Page                      |
+| ---- | ------------------------------------------------------------ | :----: | :--------------------------------------------------------: | :--------------------------------------------: | :--------------------------------------------: |
+| 2025 | **MotionBricks: Scalable Real-Time Motions with Modular Latent Generative Model and Smart Primitives**  | SIGGRAPH 2026 |          [Link](https://arxiv.org/abs/2604.24833)          | [Link](https://github.com/NVlabs/GR00T-WholeBodyControl/tree/main/motionbricks)  | [Link](https://nvlabs.github.io/motionbricks/)  |
+
+<details close>
+<summary>Accepted Papers References</summary>
+
+```
+%accepted papers
+
+@article{wang2026motionbricks,
+  title={MotionBricks: Scalable Real-Time Motions with Modular Latent Generative Model and Smart Primitives},
+  author={Wang, Tingwu and Dionne, Olivier and De Ruyter, Michael and Minor, David and Rempe, Davis and Zhao, Kaifeng and Petrovich, Mathis and Yuan, Ye and Li, Chenran and Luo, Zhengyi and others},
+  journal={ACM Transactions on Graphics (TOG)},
+  volume={45},
+  number={4},
+  pages={1--22},
+  year={2026},
+  publisher={ACM New York, NY, USA}
+}
+
+```
+</details>
 
 ### Motion Other Additional Info
 
