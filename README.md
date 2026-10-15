@@ -1061,7 +1061,17 @@ Ziqi Ma, Shreya Sharma, Mohamed El Banani, Katja Schwarz, Chongjie Ye, Chao-Yuan
 Camera-controlled video models are rapidly advancing toward long generation horizons and complex camera control. A key failure mode is 3D inconsistency: as the camera moves, objects lose permanence and scene structures shift. Existing post-training techniques, which assign a single scalar reward to the entire generation, are poorly suited to correcting these inconsistencies over long horizons. We introduce LoGo, which blends global and spatially localized rewards for camera-controlled video models. The local reward provides fine-grained credit assignment, which substantially improves 3D consistency, while the global reward preserves camera following and video quality. Across three base models, LoGo shows a clear advantage on DL3DV and TrajectoryBench, a new benchmark for long-horizon, complex-camera-control generation that current evaluations lack. LoGo effectively reduces local object shifts, artifacts, and global scene changes, illustrating the importance of credit assignment in post-training video models.
 </details>
 
-#### 4. Code Video Model
+#### 4. WorldAlign: Decoupled 4D Reward for World-Consistent Video Generation
+Jing He, Kaixin Ding, Xingye Tian, Guibao Shen, Wenhang Ge, Xin Tao, Pengfei Wan, Ying-Cong Chen
+
+(The Hong Kong University of Science and Technology (Guangzhou), The Hong Kong University of Science and Technology, KlingAI, The University of Hong Kong)
+
+<details span>
+<summary><b>Abstract</b></summary>
+Faithful visual world simulation requires generated videos to maintain 4D world consistency, encompassing both static and dynamic consistency. Static consistency requires coherent 3D structure in static environments across viewpoints, while dynamic consistency requires plausible subject motion and consistent appearance over time. Geometry-aware post-training offers a promising way to improve world consistency. However, existing methods often rely on a static-scene assumption. Even those that accommodate dynamic scenes struggle to provide reliable static-consistency feedback, while dynamic consistency is often overlooked or inadequately assessed. To address these limitations, we introduce WorldAlign, a decoupled 4D reward framework that semantically separates static regions and dynamic subjects and provides feedback by aligning each with a world prior suited to its assumptions. For static regions, WorldAlign aligns static geometry with a geometric world prior through semantically guided masked reprojection, enabling more reliable static-consistency evaluation; an auxiliary camera-motion reward discourages nearly static solutions. For dynamic subjects, WorldAlign uses a strong vision-language model (VLM) as a dynamic world prior and constructs a VLM-as-a-judge reward based on sample-specific checklists that assess dynamicity, physical plausibility, shape, and texture consistency. This decoupled design enables more effective online post-training without requiring human preference annotations. Across two pretrained image-to-video generators, Wan2.1 and Wan2.2, WorldAlign jointly improves static and dynamic consistency over existing methods without suppressing overall or subject motion. These results support decoupled world-prior alignment for more faithful visual world simulation.
+</details>
+
+#### 5. Code Video Model
 Code Video Model Team, Microsoft
 
 <details span>
@@ -1081,6 +1091,7 @@ QwenVL-3.8-27B, GPT-5.6, and GPT-6, respectively, versus 74.3, 73.1, and 80.6 fo
 | 2026 | **SolarWM: Open Data and Scalable Training for Long-Horizon Video World Models**  | 2 Sept 2026  |          [Link](https://arxiv.org/abs/2609.02886)          | [Link](https://github.com/Junchao-cs/SolarWM) | [Link](https://junchao-cs.github.io/SolarWM-Web/) |
 | 2026 | **SemanTok: Predictable Semantic Tokens for Efficient Autoregressive Video Generation**  | 30 Sept 2026  |          [Link](https://arxiv.org/abs/2610.00686)          | [Link](https://github.com/Stability-AI/SemanTok) | [Link](https://semantoken.github.io/) |
 | 2026 | **LoGo: Local-Global Rewards for Consistent Long-Horizon Video Generation**  | 2 Oct 2026  |          [Link](https://arxiv.org/abs/2610.03636)          | [Link](https://github.com/ziqi-ma/logo) | [Link](https://ziqi-ma.github.io/logo-website/) |
+| 2026 | **WorldAlign: Decoupled 4D Reward for World-Consistent Video Generation**  | 8 Oct 2026  |          [Link](https://arxiv.org/abs/2610.12382)          | -- | [Link](https://worldalign.github.io/) |
 | 2026 | **Code Video Model**  | 9 Oct 2026  |          [Tech Report](https://code-video-model.github.io/tech_report.pdf)          | [Link](https://github.com/code-video-model/CodeVideoModel) | [Link](https://code-video-model.github.io/) |
 
 <details close>
@@ -1114,6 +1125,13 @@ QwenVL-3.8-27B, GPT-5.6, and GPT-6, respectively, versus 74.3, 73.1, and 80.6 fo
   archivePrefix={arXiv},
   primaryClass={cs.CV},
   url={https://arxiv.org/abs/2610.03636},
+}
+
+@article{he2026worldalign,
+  title={WorldAlign: Decoupled 4D Reward for World-Consistent Video Generation},
+  author={He, Jing and Ding, Kaixin and Tian, Xingye and Shen, Guibao and Ge, Wenhang and Tao, Xin and Wan, Pengfei and Chen, Ying-Cong},
+  journal={arXiv preprint arXiv:2610.12382},
+  year={2026}
 }
 
 @misc{liang2026codevideomodel,
