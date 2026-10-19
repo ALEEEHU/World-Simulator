@@ -827,6 +827,16 @@ Ruihong Shen, Žiga Kovačič, Peter Kulits, Xingrui Wang, Zizhang Li, Joshua B.
 We introduce 4DCodeBench, a benchmark for 4D inverse graphics through code generation, in which agents reconstruct dynamic scenes from video as executable graphics programs. To accomplish this, agents must translate visual observations into compact representations of scene structure and dynamics, by implementing abstractions such as physical simulations to reproduce complex behavior. To evaluate this capability, we curate a set of real-world videos and construct synthetic scenes spanning diverse physical phenomena, including deformation, fluid flow, and fracture. We perform extensive benchmarking of frontier models, finding that strong static reconstruction capabilities do not yet translate into reliable reconstruction of complex dynamics. 4DCodeBench provides a testbed for tracking progress toward agents that can interpret the dynamics of the world through code. 
 </details>
 
+#### 18. Edit4D: Editable 4D Scene Generation with Textual Control
+Chanwoo Kim, Tackgeun You, Hwasup Lim
+
+(Korea Institute of Science and Technology (KIST) Republic of Korea, University of Science and Technology (UST) Republic of Korea)
+
+<details span>
+<summary><b>Abstract</b></summary>
+We introduce Edit4D, an editable text-to-4D scene generation framework that constructs 4D scenes from separate background and dynamic character representations. Recent advances in generative models have enabled text-driven dynamic scene synthesis, but editable 4D scene generation remains challenging due to the need to preserve spatial geometry and temporal dynamics. Existing approaches typically generate holistic scene videos, where the background and dynamic characters are coupled, making object-level editing and flexible camera control difficult. Edit4D addresses these limitations through a stage-specific generation pipeline. Given a user instruction, Edit4D first decomposes it into stage-specific prompts for background, dynamic character, and scene-character composition. Using these prompts, we synthesize multi-view scene images with text-to-image and camera-conditioned generative priors and reconstruct a background 3D Gaussian splatting representation. We then generate a character image, animate it with an image-conditioned video prior, reconstruct a 4D mesh, and bind Gaussian primitives to obtain a character representation. Finally, both components are composed through text-guided segmentation and contact-aware optimization. A global scene refinement is then performed to improve harmonization and rendering consistency. By integrating stage-specific components, Edit4D enables controllable camera motion, flexible object-level editing, and the practical construction of editable 4D scenes. 
+</details>
+
 -----
 
 </details>
@@ -851,6 +861,7 @@ We introduce 4DCodeBench, a benchmark for 4D inverse graphics through code gener
 | 2026 | **GAE: Learning a Geometry-Native Latent Space for 3D-Consistent World Generation**  | 21 Sep 2026  |          [Link](https://arxiv.org/abs/2609.24981)          | [Link](https://github.com/TencentARC/GAE-GeometricAutoEncoder) | [Link](https://jiah-cloud.github.io/GAE.github.io/) |
 | 2026 | **Generative Cinematographer: Composing Camera and Object Motion in 3D**  | 1 Oct 2026  |          [Link](https://arxiv.org/abs/2610.02180)          | -- | [Link](https://generative-cinematographer.github.io/) |
 | 2026 | **4DCodeBench: Benchmarking Agents on Inverse Graphics of Dynamic Scenes**  | 2 Oct 2026  |          [Link](https://arxiv.org/abs/2610.03715)          | [Link](https://github.com/4DCodeBench/4DCodeBench) | [Link](https://4dcodebench.com/) |
+| 2026 | **Edit4D: Editable 4D Scene Generation with Textual Control**  | 15 Oct 2026  |          [Link](https://arxiv.org/abs/2610.21668)          | -- | [Link](https://chanwo0kim.github.io/Edit4D/) |
 
 <details close>
 <summary>ArXiv Papers References</summary>
@@ -999,6 +1010,13 @@ We introduce 4DCodeBench, a benchmark for 4D inverse graphics through code gener
   title={{4DCodeBench}: Benchmarking Agents on Inverse Graphics of Dynamic Scenes},
   author={Shen, Ruihong and Kova{\v{c}}i{\v{c}}, {\v{Z}}iga and Kulits, Peter and Wang, Xingrui and Li, Zizhang and Tenenbaum, Joshua B. and Yuille, Alan and Chen, Jieneng and Wu, Jiajun},
   journal={arXiv preprint arXiv:2610.03715},
+  year={2026}
+}
+
+@article{kim2026edit4d,
+  title={Edit4D: Editable 4D Scene Generation with Textual Control},
+  author={Kim, Chanwoo and You, Tackgeun and Lim, Hwasup},
+  journal={arXiv preprint arXiv:2610.21668},
   year={2026}
 }
 
