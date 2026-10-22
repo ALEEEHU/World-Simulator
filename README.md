@@ -837,6 +837,14 @@ Chanwoo Kim, Tackgeun You, Hwasup Lim
 We introduce Edit4D, an editable text-to-4D scene generation framework that constructs 4D scenes from separate background and dynamic character representations. Recent advances in generative models have enabled text-driven dynamic scene synthesis, but editable 4D scene generation remains challenging due to the need to preserve spatial geometry and temporal dynamics. Existing approaches typically generate holistic scene videos, where the background and dynamic characters are coupled, making object-level editing and flexible camera control difficult. Edit4D addresses these limitations through a stage-specific generation pipeline. Given a user instruction, Edit4D first decomposes it into stage-specific prompts for background, dynamic character, and scene-character composition. Using these prompts, we synthesize multi-view scene images with text-to-image and camera-conditioned generative priors and reconstruct a background 3D Gaussian splatting representation. We then generate a character image, animate it with an image-conditioned video prior, reconstruct a 4D mesh, and bind Gaussian primitives to obtain a character representation. Finally, both components are composed through text-guided segmentation and contact-aware optimization. A global scene refinement is then performed to improve harmonization and rendering consistency. By integrating stage-specific components, Edit4D enables controllable camera motion, flexible object-level editing, and the practical construction of editable 4D scenes. 
 </details>
 
+#### 19. Gen4P: Video Generators are 4D Perceivers
+Yitong Xia, Zeren Jiang, Chuanxia Zheng (NTU, Oxford)
+
+<details span>
+<summary><b>Abstract</b></summary>
+We introduce Gen4P, a unified framework for recovering 4D geometry and motion from monocular video. We show that a pretrained video generator can be repurposed into a feed-forward 4D perceiver without iterative denoising. Building on on-demand querying, Gen4P processes clean video latents in a single encoder pass and predicts the requested 4D attributes through a lightweight cross-attention decoder. The on-demand query formulation enables flexible spatial sampling, and our proposed continuous-time queries further provide temporal flexibility. To strengthen geometric knowledge, we propose a straightforward plug-in solution by incorporating a pretrained video-depth LoRA as a frozen geometry prior, improving overall performance without adding extra trainable parameters. Gen4P achieves state-of-the-art or competitive performance on tasks of 3D point tracking, video depth and camera pose estimation. Qualitative results on in-the-wild videos illustrate its capability of tracking complex motion while maintaining the delicate structure. Together, these results demonstrate the potential of video generative pretraining for unified 4D perception.
+</details>
+
 -----
 
 </details>
@@ -862,6 +870,7 @@ We introduce Edit4D, an editable text-to-4D scene generation framework that cons
 | 2026 | **Generative Cinematographer: Composing Camera and Object Motion in 3D**  | 1 Oct 2026  |          [Link](https://arxiv.org/abs/2610.02180)          | -- | [Link](https://generative-cinematographer.github.io/) |
 | 2026 | **4DCodeBench: Benchmarking Agents on Inverse Graphics of Dynamic Scenes**  | 2 Oct 2026  |          [Link](https://arxiv.org/abs/2610.03715)          | [Link](https://github.com/4DCodeBench/4DCodeBench) | [Link](https://4dcodebench.com/) |
 | 2026 | **Edit4D: Editable 4D Scene Generation with Textual Control**  | 15 Oct 2026  |          [Link](https://arxiv.org/abs/2610.21668)          | -- | [Link](https://chanwo0kim.github.io/Edit4D/) |
+| 2026 | **Gen4P: Video Generators are 4D Perceivers**  | 15 Oct 2026  |          [Link](https://arxiv.org/abs/2610.22371)          | [Link](https://github.com/yitongx/Gen4P) | [Link](https://gen4p.github.io/) |
 
 <details close>
 <summary>ArXiv Papers References</summary>
@@ -1017,6 +1026,13 @@ We introduce Edit4D, an editable text-to-4D scene generation framework that cons
   title={Edit4D: Editable 4D Scene Generation with Textual Control},
   author={Kim, Chanwoo and You, Tackgeun and Lim, Hwasup},
   journal={arXiv preprint arXiv:2610.21668},
+  year={2026}
+}
+
+@article{xia2026gen4p,
+  title={Gen4P: Video Generators are 4D Perceivers},
+  author={Xia, Yitong and Jiang, Zeren and Zheng, Chuanxia},
+  journal={arXiv preprint arXiv:2610.22371},
   year={2026}
 }
 
