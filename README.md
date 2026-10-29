@@ -503,6 +503,7 @@ An open collection of state-of-the-art (SOTA), novel **Text to X (X can be every
 | 2026 | **4DAnyone: Create Anyone in 4D from a Casual Monocular Video**  | SIGGRAPH Asia 2026  |          [Link](https://arxiv.org/abs/2608.20335)          | [Link](https://github.com/ant-research/4DAnyone) | [Link](https://4danyone.github.io/) |
 | 2026 | **Streaming4D: Accelerate 4D World Models via Block-wise Video Generation and Incremental Reconstruction**  | CVPR 2026 4DV Workshop  |          [Link](https://arxiv.org/abs/2609.00610v1)          | -- | -- |
 | 2026 | **Helix4D: Complex 4D Mesh Generation**  | NeurIPS 2026 Oral |          [Link](https://arxiv.org/abs/2605.26109)          | --  | [Link](https://snap-research.github.io/helix4d/)  |
+| 2026 | **World from Motion: Generative Dynamic Gaussian Reconstruction from Monocular Video**  | NeurIPS 2026 |          [Link](https://arxiv.org/abs/2607.01202)          | [Link](https://github.com/GradientSpaces/World-from-Motion)  | [Link](https://research.nvidia.com/labs/amri/projects/world-from-motion/)  |
 
 <details close>
 <summary>Accepted Papers References</summary>
@@ -657,6 +658,13 @@ An open collection of state-of-the-art (SOTA), novel **Text to X (X can be every
   author={Yenphraphai, Jiraphon and Chen, Jianqi and Wang, Jian and Qian, Gordon and Tulyakov, Sergey and Abdal, Rameen and Yeh, Raymond A and Wonka, Peter and Wang, Chaoyang},
   journal={arXiv preprint arXiv:2605.26109},
   year={2026}
+}
+
+@inproceedings{zhu2026worldfrommotion,
+  title = {World from Motion: Generative Dynamic Gaussian Reconstruction from Monocular Video},
+  author = {Liyuan Zhu and Shengyu Huang and Amrita Mazumdar and Tianye Li and Zan Gojcic and Gordon Wetzstein and Iro Armeni and Shalini De Mello and Alex Trevithick},
+  booktitle = {Advances in Neural Information Processing Systems (NeurIPS)},
+  year = {2026}
 }
 
 ```
