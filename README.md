@@ -856,6 +856,14 @@ Yitong Xia, Zeren Jiang, Chuanxia Zheng (NTU, Oxford)
 We introduce Gen4P, a unified framework for recovering 4D geometry and motion from monocular video. We show that a pretrained video generator can be repurposed into a feed-forward 4D perceiver without iterative denoising. Building on on-demand querying, Gen4P processes clean video latents in a single encoder pass and predicts the requested 4D attributes through a lightweight cross-attention decoder. The on-demand query formulation enables flexible spatial sampling, and our proposed continuous-time queries further provide temporal flexibility. To strengthen geometric knowledge, we propose a straightforward plug-in solution by incorporating a pretrained video-depth LoRA as a frozen geometry prior, improving overall performance without adding extra trainable parameters. Gen4P achieves state-of-the-art or competitive performance on tasks of 3D point tracking, video depth and camera pose estimation. Qualitative results on in-the-wild videos illustrate its capability of tracking complex motion while maintaining the delicate structure. Together, these results demonstrate the potential of video generative pretraining for unified 4D perception.
 </details>
 
+#### 19. SonoWorld4D: From One Video to a 4D Audio-Visual Scene via Diffusion Synchronization
+Derong Jin, Xiyi Chen, Ming C. Lin, Ruohan Gao (University of Maryland, College Park)
+
+<details span>
+<summary><b>Abstract</b></summary>
+Recent progress in visual scene generation has extended beyond static 3D scenes toward the more challenging problem of generating dynamic 4D scenes from minimal input. However, sound, despite being intrinsically coupled with dynamic objects and events, remains largely unmodeled in prior work. We introduce Video-to-4DAVScene, a new task that turns a video into an explorable, time-varying 4D audio-visual scene, and present the SonoWorld4D framework for this task. Given a monocular video, our method generates a 360 static background, reconstructs explicit motion trajectories of dynamic, sound-emitting foreground objects, and synthesizes a physically-grounded sound field consistent across multiple sources through dual-space audio diffusion synchronization. The resulting 4D scene supports real-time novel-view visual and spatial audio rendering. Evaluation on real-world dynamic scenes and a user study demonstrates SonoWorld4D generates 4D audio-visual scenes with perceptually realistic, physically grounded spatial audio consistent with scene geometry and visual content.
+</details>
+
 -----
 
 </details>
@@ -881,6 +889,7 @@ We introduce Gen4P, a unified framework for recovering 4D geometry and motion fr
 | 2026 | **4DCodeBench: Benchmarking Agents on Inverse Graphics of Dynamic Scenes**  | 2 Oct 2026  |          [Link](https://arxiv.org/abs/2610.03715)          | [Link](https://github.com/4DCodeBench/4DCodeBench) | [Link](https://4dcodebench.com/) |
 | 2026 | **Edit4D: Editable 4D Scene Generation with Textual Control**  | 15 Oct 2026  |          [Link](https://arxiv.org/abs/2610.21668)          | -- | [Link](https://chanwo0kim.github.io/Edit4D/) |
 | 2026 | **Gen4P: Video Generators are 4D Perceivers**  | 15 Oct 2026  |          [Link](https://arxiv.org/abs/2610.22371)          | [Link](https://github.com/yitongx/Gen4P) | [Link](https://gen4p.github.io/) |
+| 2026 | **SonoWorld4D: From One Video to a 4D Audio-Visual Scene via Diffusion Synchronization**  | 29 Oct 2026  |          [Link](https://arxiv.org/abs/2610.40640)          | [Link](https://github.com/HuMathe/sonoworld4D) | [Link](https://humathe.github.io/sonoworld4d/) |
 
 <details close>
 <summary>ArXiv Papers References</summary>
@@ -1036,6 +1045,13 @@ We introduce Gen4P, a unified framework for recovering 4D geometry and motion fr
   title={Gen4P: Video Generators are 4D Perceivers},
   author={Xia, Yitong and Jiang, Zeren and Zheng, Chuanxia},
   journal={arXiv preprint arXiv:2610.22371},
+  year={2026}
+}
+
+@article{jin2026sonoworld4d,
+  title={SonoWorld4D: From One Video to a 4D Audio-Visual Scene via Diffusion Synchronization},
+  author={Jin, Derong and Chen, Xiyi and Lin, Ming C and Gao, Ruohan},
+  journal={arXiv preprint arXiv:2610.40640},
   year={2026}
 }
 
