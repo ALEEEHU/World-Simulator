@@ -864,6 +864,14 @@ Derong Jin, Xiyi Chen, Ming C. Lin, Ruohan Gao (University of Maryland, College 
 Recent progress in visual scene generation has extended beyond static 3D scenes toward the more challenging problem of generating dynamic 4D scenes from minimal input. However, sound, despite being intrinsically coupled with dynamic objects and events, remains largely unmodeled in prior work. We introduce Video-to-4DAVScene, a new task that turns a video into an explorable, time-varying 4D audio-visual scene, and present the SonoWorld4D framework for this task. Given a monocular video, our method generates a 360 static background, reconstructs explicit motion trajectories of dynamic, sound-emitting foreground objects, and synthesizes a physically-grounded sound field consistent across multiple sources through dual-space audio diffusion synchronization. The resulting 4D scene supports real-time novel-view visual and spatial audio rendering. Evaluation on real-world dynamic scenes and a user study demonstrates SonoWorld4D generates 4D audio-visual scenes with perceptually realistic, physically grounded spatial audio consistent with scene geometry and visual content.
 </details>
 
+#### 20. XM4D: 4D Reconstruction through Certifiable Geometric Optimization
+Haoyu Han, Jack Benarroch Jedlicki, Jiahui Lei, Heng Yang (Harvard University, UC Berkeley)
+
+<details span>
+<summary><b>Abstract</b></summary>
+Accurate 4D reconstruction remains challenging: jointly estimating camera motion, scene geometry, and non-rigid deformation entails highly nonconvex optimization, making global optimality difficult to guarantee. We present XM4D, a framework for accurate and efficient 4D reconstruction built upon certifiably globally optimal geometric optimization. By separating the estimation of camera motion from non-rigid deformation, we formulate both stages as structured quadratically constrained quadratic programs (QCQP) that admit semidefinite programming (SDP) relaxations and verifiable global optimality certificates. For camera motion estimation, we lift static point tracks into 3D using foundational depth prediction models and formulate a scaled bundle adjustment problem that jointly estimates camera poses, depth scales, and static landmarks. By analytically eliminating translations and landmarks, we reduce the problem to a QCQP over scaled rotations. For non-rigid reconstruction, we represent dynamic motion using an embedded deformation graph (EDG) and show that its tracking, rigidity, and temporal regularization objectives similarly reduce to a rotation-only QCQP. Both problems admit SDP relaxations that we solve efficiently with a GPU-accelerated Burer-Monteiro solver based on Riemannian optimization. The recovered geometry further initializes dynamic Gaussian splatting for photometric refinement. Extensive experiments across seven benchmarks demonstrate accurate camera motion estimation on both static and dynamic scenes, efficient optimization that scales to thousands of frames, and state-of-the-art novel-view rendering quality.
+</details>
+
 -----
 
 </details>
@@ -890,6 +898,7 @@ Recent progress in visual scene generation has extended beyond static 3D scenes 
 | 2026 | **Edit4D: Editable 4D Scene Generation with Textual Control**  | 15 Oct 2026  |          [Link](https://arxiv.org/abs/2610.21668)          | -- | [Link](https://chanwo0kim.github.io/Edit4D/) |
 | 2026 | **Gen4P: Video Generators are 4D Perceivers**  | 15 Oct 2026  |          [Link](https://arxiv.org/abs/2610.22371)          | [Link](https://github.com/yitongx/Gen4P) | [Link](https://gen4p.github.io/) |
 | 2026 | **SonoWorld4D: From One Video to a 4D Audio-Visual Scene via Diffusion Synchronization**  | 29 Oct 2026  |          [Link](https://arxiv.org/abs/2610.40640)          | [Link](https://github.com/HuMathe/sonoworld4D) | [Link](https://humathe.github.io/sonoworld4d/) |
+| 2026 | **XM4D: 4D Reconstruction through Certifiable Geometric Optimization**  | 5 Nov 2026  |          [Link](https://arxiv.org/abs/2611.07902v1)          | -- | [Link](https://computationalrobotics.seas.harvard.edu/XM4D/) |
 
 <details close>
 <summary>ArXiv Papers References</summary>
@@ -1052,6 +1061,13 @@ Recent progress in visual scene generation has extended beyond static 3D scenes 
   title={SonoWorld4D: From One Video to a 4D Audio-Visual Scene via Diffusion Synchronization},
   author={Jin, Derong and Chen, Xiyi and Lin, Ming C and Gao, Ruohan},
   journal={arXiv preprint arXiv:2610.40640},
+  year={2026}
+}
+
+@article{han26arxiv-xm4d,
+  title={XM4D: 4D Reconstruction through Certifiable Geometric Optimization},
+  author={Han, Haoyu and Jedlicki, Jack Benarroch and Lei, Jiahui and Yang, Heng},
+  journal={arXiv preprint arXiv:2611.07902},
   year={2026}
 }
 
