@@ -1151,6 +1151,16 @@ QwenVL-3.8-27B, GPT-5.6, and GPT-6, respectively, versus 74.3, 73.1, and 80.6 fo
 	
 </details>
 
+#### 6. FlockWorld: Toward Population-Scale Multi-Agent Video World Models through Artificial Life Simulation
+Meryem Koksal, Yunzhe Wang, Volkan Ustun
+
+(Grinnell College, University of Southern California, USC Institute for Creative Technologies)
+
+<details span>
+<summary><b>Abstract</b></summary>
+Most action-conditioned video world models remain limited to a single player, while existing multiplayer models support only small, fixed groups of agents. We introduce FlockWorld, an artificial-life environment built on Reynolds's Boids algorithm for studying population-scale multi-agent video world models. Specifically, FlockWorld renders synchronized egocentric crops, assigns distinct colors to preserve camera-agent identity across views, exposes rule-derived accelerations as actions, and lets the number of camera agents be configured independently of the size of the surrounding population. We further introduce FlockDiT, an action-conditioned latent diffusion transformer trained with flow matching on FlockWorld data to jointly generate synchronized egocentric videos for multiple agents. Our results suggest that joint generation benefits agent detection at density-matched settings and that diffusion forcing improves rollout fidelity. Together, FlockWorld and FlockDiT provide a controlled testbed for multi-agent video generation.
+</details>
+
 -----
 
 </details>
@@ -1162,6 +1172,7 @@ QwenVL-3.8-27B, GPT-5.6, and GPT-6, respectively, versus 74.3, 73.1, and 80.6 fo
 | 2026 | **LoGo: Local-Global Rewards for Consistent Long-Horizon Video Generation**  | 2 Oct 2026  |          [Link](https://arxiv.org/abs/2610.03636)          | [Link](https://github.com/ziqi-ma/logo) | [Link](https://ziqi-ma.github.io/logo-website/) |
 | 2026 | **WorldAlign: Decoupled 4D Reward for World-Consistent Video Generation**  | 8 Oct 2026  |          [Link](https://arxiv.org/abs/2610.12382)          | -- | [Link](https://worldalign.github.io/) |
 | 2026 | **Code Video Model**  | 9 Oct 2026  |          [Tech Report](https://code-video-model.github.io/tech_report.pdf)          | [Link](https://github.com/code-video-model/CodeVideoModel) | [Link](https://code-video-model.github.io/) |
+| 2026 | **FlockWorld: Toward Population-Scale Multi-Agent Video World Models through Artificial Life Simulation**  | 25 Oct 2026  |          [Link](https://arxiv.org/abs/2610.34564)          | [Link](https://github.com/wangyz1999/flockworld) | -- |
 
 <details close>
 <summary>ArXiv Papers References</summary>
@@ -1211,6 +1222,16 @@ QwenVL-3.8-27B, GPT-5.6, and GPT-6, respectively, versus 74.3, 73.1, and 80.6 fo
   note         = {Preprint},
   doi          = {10.13140/RG.2.2.34014.80961},
   url          = {https://code-video-model.github.io/tech_report.pdf}
+}
+
+@misc{koksal2026flockworld,
+  title={FlockWorld: Toward Population-Scale Multi-Agent Video World Models through Artificial Life Simulation},
+  author={Meryem Koksal and Yunzhe Wang and Volkan Ustun},
+  year={2026},
+  eprint={2610.34564},
+  archivePrefix={arXiv},
+  primaryClass={cs.CV},
+  url={https://arxiv.org/abs/2610.34564},
 }
 
 ```
