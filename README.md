@@ -872,6 +872,16 @@ Haoyu Han, Jack Benarroch Jedlicki, Jiahui Lei, Heng Yang (Harvard University, U
 Accurate 4D reconstruction remains challenging: jointly estimating camera motion, scene geometry, and non-rigid deformation entails highly nonconvex optimization, making global optimality difficult to guarantee. We present XM4D, a framework for accurate and efficient 4D reconstruction built upon certifiably globally optimal geometric optimization. By separating the estimation of camera motion from non-rigid deformation, we formulate both stages as structured quadratically constrained quadratic programs (QCQP) that admit semidefinite programming (SDP) relaxations and verifiable global optimality certificates. For camera motion estimation, we lift static point tracks into 3D using foundational depth prediction models and formulate a scaled bundle adjustment problem that jointly estimates camera poses, depth scales, and static landmarks. By analytically eliminating translations and landmarks, we reduce the problem to a QCQP over scaled rotations. For non-rigid reconstruction, we represent dynamic motion using an embedded deformation graph (EDG) and show that its tracking, rigidity, and temporal regularization objectives similarly reduce to a rotation-only QCQP. Both problems admit SDP relaxations that we solve efficiently with a GPU-accelerated Burer-Monteiro solver based on Riemannian optimization. The recovered geometry further initializes dynamic Gaussian splatting for photometric refinement. Extensive experiments across seven benchmarks demonstrate accurate camera motion estimation on both static and dynamic scenes, efficient optimization that scales to thousands of frames, and state-of-the-art novel-view rendering quality.
 </details>
 
+#### 21. VibePrevisBench: Evaluating Agentic Coding for 4D Scene Generation in Blender
+Yuzhe Chen, Muxi Diao, Lele Yang, Wenbin Xu, Xuyang Liu, Qile Su, Changyi Liu, Jiankang Chen, Kaiyu Jiang, Haoyu Zhang, Hongyi Fu, Jianxiong Wang, Tianke Zhang, Haonan Fan, Yingxin Li, Bingyi Li, Xu Wang, Xuanyu Zheng, Bin Wen, Tingting Gao, Wentao Zhang, Jiale Cao
+
+(Tianjin University, Beijing University of Posts and Telecommunications, The Hong Kong Polytechnic University, Kling AI)
+
+<details span>
+<summary><b>Abstract</b></summary>
+Controllable real-world video generation models can condition on a rendered graybox proxy video, which fixes layout, motion and camera. Coding agents can build such videos by reconstructing a 4D scene in Blender, yet no benchmark checks both these videos and the long, multi-shot scenes behind them. We introduce VibePrevisBench, a benchmark for 4D scene reconstruction: an agent turns a brief into an executable 4D scene and renders its proxy video. Its 242 tasks span four input kinds, including scripts, photos, continuations, and reference videos. Each delivery is scored along two evaluation dimensions. Rule-based Scene Check re-runs the code and compares the exported 4D scene with hidden ground truth facts in nine dimensions. VLM-based Screen Check asks a VLM judge whether the facts that pass can be recognized in the proxy video. We analyze the evaluation results and trajectories of 11 frontier coding agents and identify three key observations. First, multimodal understanding separates the agents, especially in understanding space and camera motion. Second, all agents seem to already master basic camera work and staging, and fail at challenging requests. Third, agents inspect their own renders but fail to correct their errors. Agents thus need better visual understanding of space and camera, explicit checks for challenging requests, and item-by-item verification of renders against the brief.
+</details>
+
 -----
 
 </details>
@@ -899,6 +909,7 @@ Accurate 4D reconstruction remains challenging: jointly estimating camera motion
 | 2026 | **Gen4P: Video Generators are 4D Perceivers**  | 15 Oct 2026  |          [Link](https://arxiv.org/abs/2610.22371)          | [Link](https://github.com/yitongx/Gen4P) | [Link](https://gen4p.github.io/) |
 | 2026 | **SonoWorld4D: From One Video to a 4D Audio-Visual Scene via Diffusion Synchronization**  | 29 Oct 2026  |          [Link](https://arxiv.org/abs/2610.40640)          | [Link](https://github.com/HuMathe/sonoworld4D) | [Link](https://humathe.github.io/sonoworld4d/) |
 | 2026 | **XM4D: 4D Reconstruction through Certifiable Geometric Optimization**  | 5 Nov 2026  |          [Link](https://arxiv.org/abs/2611.07902v1)          | -- | [Link](https://computationalrobotics.seas.harvard.edu/XM4D/) |
+| 2026 | **VibePrevisBench: Evaluating Agentic Coding for 4D Scene Generation in Blender**  | 11 Nov 2026  |          [Link](https://arxiv.org/abs/2611.15789)          | [Link](https://github.com/vibeprevisbench/vibeprevisbench) | [Link](https://vibeprevisbench.github.io/) |
 
 <details close>
 <summary>ArXiv Papers References</summary>
@@ -1068,6 +1079,13 @@ Accurate 4D reconstruction remains challenging: jointly estimating camera motion
   title={XM4D: 4D Reconstruction through Certifiable Geometric Optimization},
   author={Han, Haoyu and Jedlicki, Jack Benarroch and Lei, Jiahui and Yang, Heng},
   journal={arXiv preprint arXiv:2611.07902},
+  year={2026}
+}
+
+@article{chen2026vibeprevisbench,
+  title={VibePrevisBench: Evaluating Agentic Coding for 4D Scene Generation in Blender},
+  author={Chen, Yuzhe and Diao, Muxi and Yang, Lele and Xu, Wenbin and Liu, Xuyang and Su, Qile and Liu, Changyi and Chen, Jiankang and Jiang, Kaiyu and Zhang, Haoyu and others},
+  journal={arXiv preprint arXiv:2611.15789},
   year={2026}
 }
 
