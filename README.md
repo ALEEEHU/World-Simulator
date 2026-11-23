@@ -505,6 +505,7 @@ An open collection of state-of-the-art (SOTA), novel **Text to X (X can be every
 | 2026 | **Pixel-to-4D: Camera-Controlled Image-to-Video Generation with Dynamic 3D Gaussians**  | ICPR 2026 (Oral) |          [Link](https://arxiv.org/abs/2601.00678)          | --  | [Link](https://melonienimasha.github.io/Pixel-to-4D-Website/)  |
 | 2026 | **Helix4D: Complex 4D Mesh Generation**  | NeurIPS 2026 Oral |          [Link](https://arxiv.org/abs/2605.26109)          | --  | [Link](https://snap-research.github.io/helix4d/)  |
 | 2026 | **World from Motion: Generative Dynamic Gaussian Reconstruction from Monocular Video**  | NeurIPS 2026 |          [Link](https://arxiv.org/abs/2607.01202)          | [Link](https://github.com/GradientSpaces/World-from-Motion)  | [Link](https://research.nvidia.com/labs/amri/projects/world-from-motion/)  |
+| 2026 | **Fast 4D Mesh Generation by Spatio-Temporal Attention Chains**  | NeurIPS 2026  |          [Link](https://arxiv.org/abs/2605.19786)          | --  | [Link](https://research.nvidia.com/labs/par/fast4dmesh/)  |
 
 <details close>
 <summary>Accepted Papers References</summary>
@@ -677,6 +678,13 @@ An open collection of state-of-the-art (SOTA), novel **Text to X (X can be every
   year = {2026}
 }
 
+@article{samuel2026fast,
+  title={Fast 4D Mesh Generation by Spatio-Temporal Attention Chains},
+  author={Samuel, Dvir and Atzmon, Yuval and Chechik, Gal and Kasten, Yoni},
+  journal={arXiv preprint arXiv:2605.19786},
+  year={2026}
+}
+
 ```
 </details>
 
@@ -702,16 +710,7 @@ Sunwoo Park, Taesung Kwon, Jong Chul Ye  (KAIST AI)
 Recent 4D generation methods complete scene-level missing information using generative models and reconstruct the scene into radiance-based representations. However, these pipelines often present geometric inconsistencies in the generated content, and the radiance-based reconstruction requires expensive optimization. Furthermore, radiance-based representations often absorb these geometric inconsistencies into their view-dependent nature, failing to enforce the grounded geometric consistency. To address these issues, we propose Geometric 4D Stitching, an efficient framework that explicitly identifies missing geometric regions and complements them with geometrically grounded 4D stitches. As a result, our method constructs 4D scene representations in under 10 minutes on a single NVIDIA RTX 5090 GPU per one-step scene expansion, while improving geometric consistency. Moreover, we demonstrate that our explicit 4D stitching supports interative expansion of 4D mesh as well as 4D scene editing.
 </details>
 
-#### 3. Fast 4D Mesh Generation by Spatio-Temporal Attention Chains
-Dvir Samuel, Yuval Atzmon, Gal Chechik, Yoni Kasten  (NVIDIA Research, Bar-Ilan University)
-
-<details span>
-<summary><b>Abstract</b></summary>
-4D mesh generation has recently emerged as a powerful paradigm for recovering dynamic 3D structure from videos, but existing methods remain slow, computationally expensive, and difficult to scale to longer sequences. We introduce a training-free approach that accelerates 4D mesh generation while improving temporal correspondence quality. Our key observation is that temporal correspondences emerge inside a 4D backbone long before its generated meshes become visually accurate. We exploit this with a general framework we call Spatio-Temporal Attention Chain which propagates information across space and time. Starting from vertices on an anchor mesh, the chain maps vertices to latent tokens. It then follows temporal correspondences in latent space, and recovers frame-specific vertices through latent-to-vertex attention. This design avoids expensive explicit matching while preserving anchor mesh details and thereby improving dynamic mesh geometry and temporal consistency.
-Compared to state-of-the-art, our method generates a 4D mesh in 9 seconds, achieving a  speedup while producing higher-quality results. Moreover, our approach scales to videos up to  longer without degrading mesh quality. Beyond generation, the improved correspondences enable competitive zero-shot performance on two downstream tasks: 2D object tracking and 4D tracking. We further show that our framework enables reliable camera estimation, a capability not supported by prior 4D mesh generation methods.
-</details>
-
-#### 4. SpatialAvatar-0: High-Quality 4D Head Avatar with Multi-Stage Reconstruction
+#### 3. SpatialAvatar-0: High-Quality 4D Head Avatar with Multi-Stage Reconstruction
 Yiran Wang, Zeyu Zhang, Yuanming Li, Ziming Wang, Yang Zhao
 
 (USYD, SpatialReal, ZJU, La Trobe)
@@ -721,7 +720,7 @@ Yiran Wang, Zeyu Zhang, Yuanming Li, Ziming Wang, Yang Zhao
 High-quality 4D head avatars from one or a few source portraits are central to telepresence, AR/VR, and digital-human interaction. 3D Gaussian Splatting (3DGS) has emerged as the dominant representation, with two complementary regimes (generalizable feed-forward predictors and per-subject refiners) maturing in parallel. However, existing feed-forward predictors are trained on a single dataset family with a hard-coded source count, inheriting the corresponding domain bias. Per-subject refiners require 300K--600K iterations and rely on adaptive densification that destroys upstream Gaussian layouts, preventing the two regimes from sharing a representation end-to-end. To bridge both regimes we propose SpatialAvatar-0 on a shared FLAME-mesh-bound Gaussian representation: a feed-forward generator with a parameter-free K-source mean-pool and a monocular-temporal to multi-view-spatial two-phase schedule that anchors against identity-prior collapse onto the smaller multi-view set. We further introduce a 10K-iter layout-preserving per-subject refinement loop that freezes the FLAME-binding and Gaussian count and replaces densification with a three-component anti-spike regularization. On VFHQ/HDTF cross-domain zero-shot we surpass the in-domain leader GAGAvatar by +1.5 dB PSNR despite never training on either test domain, and on the SplattingAvatar monocular benchmark we lead every reported metric, surpassing the 300K-iter GeoAvatar by +1.3 dB PSNR at up to 60x shorter per-subject schedule than common SOTA baselines.
 </details>
 
-#### 5. IMAGIN-4D: Image-Guided Controllable Interaction Generation
+#### 4. IMAGIN-4D: Image-Guided Controllable Interaction Generation
 Sai Kumar Dwivedi, Federica Bogo, Buğra Tekin, Chenhongyi Yang, Nadine Bertsch, Tomas Hodan, Michael J. Black, Dimitrios Tzionas, Shreyas Hampali
 
 (Meta, Max Planck Institute for Intelligent Systems, University of Amsterdam, Aristotle University of Thessaloniki)
@@ -731,7 +730,7 @@ Sai Kumar Dwivedi, Federica Bogo, Buğra Tekin, Chenhongyi Yang, Nadine Bertsch,
 Generating human-object interactions (HOI) is central to character animation, robotics, AR/VR, and embodied AI. Recent HOI generation methods synthesize motion from text, object geometry, and sparse waypoints, controlling action semantics and object trajectories. However, these signals underspecify interaction: the same prompt and trajectory can produce different grasps, approach directions, body poses, object poses, contacts, and body-object layouts. We address this ambiguity with a reference image as a visual specification of the desired interaction snapshot. However, a single global image representation conflates distinct cues and conditions all frames on identical visual evidence. We therefore introduce IMAGIN-4D, a diffusion-based HOI generator that decomposes image conditioning spatio-temporally. For spatial conditioning, IMAGIN-4D extracts supervised interaction-state tokens for body pose, object pose, body-object contact, and spatial relationships at the depicted frame. For temporal conditioning, it computes frame-aware tokens by querying image patches per generated frame, allowing sequence segments to attend to different visual cues from the same image. To balance image, text, and waypoint cues, IMAGIN-4D uses role-aware conditioning: text, waypoints, and interaction-state tokens use separate AdaLN streams, while frame-aware visual tokens cross-attend with motion tokens. Since HOI motion datasets lack paired images, we build a synthetic motion-to-image rendering pipeline from FullBodyManipulation (FBM) and introduce an image-adherence metric to evaluate whether generated motions match the reference snapshot. Experiments on FBM and BEHAVE show that IMAGIN-4D improves fine-grained interaction control over single-token and uniformly image-conditioned baselines while preserving waypoint-following and motion quality. 
 </details>
 
-#### 6. MVTrack4Gen: Multi-View Point Tracking as Geometric Supervision for 4D Video Generation
+#### 5. MVTrack4Gen: Multi-View Point Tracking as Geometric Supervision for 4D Video Generation
 JoungBin Lee, Jaewoo Jung, Jongmin Lee, Tongmin Kim, Hyunsung Kim, Takuya Narihira, Kazumi Fukuda, Jahyeok Koo, Jisang Han, Yuki Mitsufuji, Seungryong Kim
 
 (KAIST AI, Sony AI, Sony Group Corporation)
@@ -741,7 +740,7 @@ JoungBin Lee, Jaewoo Jung, Jongmin Lee, Tongmin Kim, Hyunsung Kim, Takuya Narihi
 Synthesizing a novel-view video from a monocular reference video along a target camera trajectory requires both geometric consistency and motion fidelity with respect to the reference video. Existing methods based on explicit 3D representations are limited by the accuracy of off-the-shelf reconstruction modules, which often produce inaccurate geometry for dynamic objects in monocular videos. In contrast, camera-conditioning-only methods can achieve high visual quality but often struggle to preserve geometric and motion consistency. In this work, we introduce MVTrack4Gen (Multi-View point Tracking for Novel-View Generation), a motion-aware training framework that leverages multi-view point tracking as an additional geometric and motion supervision signal for camera-conditioning-only novel-view video diffusion models. Our key finding is that specific attention layers encode strong correspondence cues, where query features attend to key features at geometrically corresponding locations across views and over time, and the misalignment of these correspondences causes motion inconsistency. Based on this observation, we route these features into an auxiliary multi-view tracking head and jointly train the diffusion model with a point-tracking objective. By explicitly strengthening these motion-aware correspondences, MVTrack4Gen improves existing models to better follow the motion in the reference view and maintain cross-view geometric consistency. Across diverse benchmarks, our method achieves state-of-the-art geometric consistency and competitive camera accuracy.
 </details>
 
-#### 7. RynnWorld-4D: 4D Embodied World Models for Robotic Manipulation
+#### 6. RynnWorld-4D: 4D Embodied World Models for Robotic Manipulation
 Haoyu Zhao, Xingyue Zhao, Siteng Huang, Xin Li, Deli Zhao, Zhongyu Li
 
 (DAMO Academy Alibaba Group, Hong Kong Embodied AI Lab, CUHK, Hupan Lab)
@@ -751,7 +750,7 @@ Haoyu Zhao, Xingyue Zhao, Siteng Huang, Xin Li, Deli Zhao, Zhongyu Li
 Robotic manipulation in the open world requires not only recognizing what a scene looks like, but also anticipating how its 3D structure moves under interaction. We argue that synchronized RGB, depth, and optical flow, namely RGB-DF, provide a physically grounded representation that captures the underlying 4D dynamics of a scene. Compared to 2D pixel videos, this multi-modal synergy aligns visual appearance with geometric structure and temporal motion, creating a representation space significantly closer to the low-level end-effector actions demanded by robotic systems, thereby narrowing the gap between world prediction and policy learning. Building on this insight, we introduce RynnWorld-4D, a generative model that co-produces future RGB frames, depth maps, and optical flow from a single RGB-D image and a language instruction within one unified diffusion process. This 4D world model features a tri-branch architecture that integrates cross-modal attention with frame-wise 3D RoPE, ensuring that appearance, geometry, and motion evolve consistently. To supply training data at scale, we curate Rynn4DDataset 1.0, a massive dataset of over 254.4 million frames across egocentric human and robotic manipulation videos with high-quality pseudo-labels for depth and optical flow. We further propose RynnWorld-4D-Policy, an inverse dynamics head that consumes the internal 4D representations of RynnWorld-4D in a single forward pass, bypassing expensive multi-step denoising, to output robot actions in a closed-loop manner. Experiments show that RynnWorld-4D produces temporally and spatially coherent 4D predictions, and that RynnWorld-4D-Policy achieves state-of-the-art performance on real-world dexterous bimanual manipulation tasks, particularly excelling in tasks demanding spatial precision and temporal coordination.
 </details>
 
-#### 8. SkelGen4D: Weakly-Supervised Skeleton-Based 4D Generation for Text-Driven Mesh Animation
+#### 7. SkelGen4D: Weakly-Supervised Skeleton-Based 4D Generation for Text-Driven Mesh Animation
 Hao Feng, Zhi Zuo, Jia-Hui Pan, Ka-Hei Hui, Zhengzhe Liu, Dian Zhang, Haoran Xie, Bin Sheng, Jingyu Hu
 
 (Lingnan University, Chinese University of Hong Kong, Autodesk Research, Shanghai Jiao Tong University)
@@ -762,7 +761,7 @@ We study 4D generation to synthesize temporally coherent sequences of 3D geometr
 </details>
 
 
-#### 9. Hallo4D: Multi-Modal Hallucination Mitigation for Consistent Spatio-Temporal Generation
+#### 8. Hallo4D: Multi-Modal Hallucination Mitigation for Consistent Spatio-Temporal Generation
 Hongbo Wang, Huaibo Huang, Jie Cao, Jin Liu, Haoyang Tong, Ran He
 
 (CASIA, UCAS, ShanghaiTech)
@@ -772,7 +771,7 @@ Hongbo Wang, Huaibo Huang, Jie Cao, Jin Liu, Haoyang Tong, Ran He
 While recent advances in 3D generation have enabled impressive visual synthesis, existing methods often rely on 2D diffusion supervision without explicit mechanisms for geometric consistency, leading to spatial hallucinations such as duplicated structures and misaligned geometry. These issues become more severe in 4D generation, where maintaining consistency across viewpoints and temporal evolution introduces additional challenges, including jitter, identity flicker, and structural drift. We present \textbf{Hallo4D}, a unified and model-agnostic framework for mitigating spatiotemporal hallucinations in 3D and 4D content generation. Hallo4D introduces a generation-detection-correction paradigm that leverages large multimodal language models (LMMs) to identify and summarize spatial and temporal inconsistencies from multi-view and multi-frame renderings. These insights guide a consensus-driven image-space consistency optimization, where an LMM-based selector evaluates candidate corrections through multi-model voting, without requiring retraining or architectural modifications. To further improve temporal consistency and optimization efficiency, Hallo4D incorporates motion-aware keyframe sampling, LMM-guided initialization, and appearance alignment. We additionally introduce exposure-aware optimization and visibility pruning to enhance robustness under challenging viewpoints. Extensive experiments demonstrate that Hallo4D consistently outperforms strong baselines across diverse 3D and 4D generation settings, providing a scalable and generalizable solution for consistency-aware content generation.
 </details>
 
-#### 10. PE-Field 4D: Video Generation Models as Canvas
+#### 9. PE-Field 4D: Video Generation Models as Canvas
 Yunpeng Bai, Haoxiang Li, Qixing Huang (UT Austin, Pixocial Technology)
 
 <details span>
@@ -780,7 +779,7 @@ Yunpeng Bai, Haoxiang Li, Qixing Huang (UT Austin, Pixocial Technology)
 Diffusion Transformers have recently achieved strong performance in video generation, yet controlling scene geometry under viewpoint changes and camera motion remains challenging. In this work, we revisit the role of positional encoding in video diffusion transformers and show that it provides a useful spatial bias for geometry-aware control. Specifically, if reference tokens are encoded according to their projected locations in the target view, the denoising model is encouraged to retrieve content from position aligned regions of the input video. Building on this observation, we introduce a geometry-aware cross-attention mechanism that enables target video latent tokens to attend to structured context tokens derived from reference images or frames. To establish correspondence between the reference content and the target camera trajectory, we equip the context tokens with a projected positional encoding scheme that combines target-view 2D reprojection with depth-aware disambiguation. At the same time, we preserve the original spatiotemporal positional encoding of the generated video latent, allowing geometric guidance to be injected while maintaining consistency with the video model's native latent structure. The resulting framework provides a simple and effective approach for controllable video generation. It improves spatial controllability in viewpoint-dependent editing tasks, including camera re-trajectory, novel-view video synthesis, and geometry-aware video editing, while preserving the generative prior of the underlying video diffusion model. 
 </details>
 
-#### 11. Beyond Pixels: From Video Priors to 4D Worlds
+#### 10. Beyond Pixels: From Video Priors to 4D Worlds
 Zihao Liu, Xiaolong Shen, Zhenglin Zhou, Ruijie Quan, Yi Yang (Zhejiang University)
 
 <details span>
@@ -788,7 +787,7 @@ Zihao Liu, Xiaolong Shen, Zhenglin Zhou, Ruijie Quan, Yi Yang (Zhejiang Universi
 4D generation synthesizes dynamic 3D scenes from conditions such as text or images. Existing methods either reconstruct generated RGB videos with a separate 4D model or adapt a particular video generator to predict geometry directly. The former suffers from distribution mismatch and error propagation, whereas the latter ties 4D prediction to a specific generator and may require retraining when the generator or conditioning regime changes. We ask whether the final denoised latents of video models that share a variational autoencoder (VAE) can instead provide a reusable interface to explicit 4D prediction. Building on this insight, we introduce direct latent-to-4D generation and instantiate it as Latent-to-4D, which bypasses RGB by aligning a video latent with the token grid of a pretrained 4D decoder and refining it through frame-wise and global spatiotemporal attention. Trained on roughly 1K existing reconstruction clips, a single checkpoint transfers unchanged across multiple video diffusion transformers within the same VAE family. On Text4D-200 and I4D-200, Latent-to-4D surpasses matched same-latent Wan+4RC cascades in projection-based DINO-F1 by 2.88--3.45 and 5.81 points, respectively, while also being preferred by human raters for geometry, temporal stability, and overall quality.
 </details>
 
-#### 12. Stream4D: 4D-Consistency for Streaming Autoregressive Diffusion Video Models
+#### 11. Stream4D: 4D-Consistency for Streaming Autoregressive Diffusion Video Models
 Yuanhao Ban, Jiaqi Feng, Hengguang Zhou, Xiaohuan Pei, Justin Cui, Cho-Jui Hsieh
 
 (UCLA, Tsinghua University)
@@ -798,7 +797,7 @@ Yuanhao Ban, Jiaqi Feng, Hengguang Zhou, Xiaohuan Pei, Justin Cui, Cho-Jui Hsieh
 Streaming autoregressive diffusion models enable real-time, long-horizon video generation, but their training objectives optimize local frame prediction rather than the geometry and dynamics of a coherent world: long rollouts accumulate geometric drift and degrade into static or unnatural motion. Recent bidirectional approaches address this problem using rewards signals built upon 3D Gaussian-Splatting reconstruction. However, a single rigid 3d reconstruction cannot model a dynamic scene, so this critic penalizes genuine object motion as reconstruction error and is maximized by freezing the video. This shortcut is especially detrimental in the AR setting, where each chunk can propagate an already-static configuration. In this work, we propose Stream4D, which replaces the static critic with a feed-forward 4D reconstruction reward that explicitly models scene dynamics, allowing coherent motion to receive high consistency rewards. To further guide motion magnitude and quality, we add a motion prior that rewards natural scene-flow magnitude while penalizing jitter and non-rigid artifacts. Our final recipe combines these two terms with a lightweight perceptual anchor. Across various autoregressive video backbones and various generation horizons, Stream4D improves 4D reconstruction quality, preserves motion more effectively, and achieves higher human-aligned preference.
 </details>
 
-#### 13. 4DStreamCtrl: Interactive Video Generation with Online 4D Control
+#### 12. 4DStreamCtrl: Interactive Video Generation with Online 4D Control
 Shiqian Li, Chenguo Lin, Zhiguang Liu, Yu Tang, Jiarong Ou, Rui Chen, Yixin Zhu
 
 (Peking University, Tencent Hunyuan)
@@ -808,7 +807,7 @@ Shiqian Li, Chenguo Lin, Zhiguang Liu, Yu Tang, Jiarong Ou, Rui Chen, Yixin Zhu
 Generative video models now synthesize footage nearly indistinguishable from reality. Their promise as interactive tools hinges on fine-grained control of how objects and the camera move over time, yet each existing approach captures only part of this: camera-parameter methods steer the viewpoint but cannot move objects, 2D-trajectory methods act in the image plane and ignore depth and occlusion, and recent 3D methods add geometry but run only offline at a fixed length. In particular, none combines 3D-consistent control of both camera and objects with real-time, streaming generation. Here we show that camera motion, object trajectories, and depth can be unified into a single 3D point-track representation, from which one model performs joint camera and object control, depth editing, and motion transfer in a single forward pass. To learn this interface at scale, we mine in-the-wild video for 3D motion supervision, yielding OpenVidHD-Motion3D, and encode it with a lightweight Geometric Motion Head that plugs into a pretrained video diffusion model. Because this encoder is temporally separable, we distill the model into a causal streaming student that generates arbitrarily long video in four denoising steps at memory independent of length. This unified design surpasses prior camera-only, 2D, and offline-3D methods in motion-control precision while covering modalities they address only in isolation. 4DStreamCtrl runs at 20 FPS on a single high-end GPU for 480p video and stays temporally coherent over hundreds of frames, enabling, to our knowledge, interactive 4D-controllable streaming generation for the first time. More broadly, grounding generation in explicit 3D geometry with efficient causal inference points toward interactive world models with closed-loop spatiotemporal control, from controllable simulators to real-time visual imagination for embodied agents.
 </details>
 
-#### 14. GAE: Learning a Geometry-Native Latent Space for 3D-Consistent World Generation
+#### 13. GAE: Learning a Geometry-Native Latent Space for 3D-Consistent World Generation
 Jiahao Lu, Minghao Yin, Wenbo Hu, Hengyu Liu, Wang Zhao, Sai-Kit Yeung, Ying Shan, Yuan Liu
 
 (The Hong Kong University of Science and Technology, ARC Lab Tencent IEG, The University of Hong Kong, The University of Texas at Austin)
@@ -818,7 +817,7 @@ Jiahao Lu, Minghao Yin, Wenbo Hu, Hengyu Liu, Wang Zhao, Sai-Kit Yeung, Ying Sha
 We present a compact geometry-native latent space as a shared foundation for perception and generation. Visual generators can produce photorealistic frames without preserving a consistent 3D scene. We argue that this is not only a modeling problem but also a representation problem: generators typically evolve appearance-centric latents, while perception models recover geometry in a semantically rich space that encodes cross-view structure. Rather than adding geometry as another output, we reparameterize a geometry foundation model's features into a compact latent space for generation. We realize this shift with the geometry-native autoencoder (GAE), whose latent is jointly decodable to appearance, depth, cameras, and point maps. With this state, a standard conditional flow supports diverse generation tasks. In controlled comparisons that hold the generator and training protocol fixed, replacing the latent with GAE improves both visual quality and independently measured 3D coherence: FVD falls by 12.7% and 23.1% on RealEstate10K and DL3DV, and camera-trajectory error is halved on RealEstate10K. Together, these results show that the latent space is central to geometry-consistent generation and can serve as a shared interface between perception and generation.
 </details>
 
-#### 15. Generative Cinematographer: Composing Camera and Object Motion in 3D
+#### 14. Generative Cinematographer: Composing Camera and Object Motion in 3D
 Jiahan Zhang, Chaohao Yang, Namitha Guruprasad, Vivekjyoti Banerjee, Trong-Tung Nguyen, Alan Yuille, Anand Bhattad
 
 (Johns Hopkins University)
@@ -828,7 +827,7 @@ Jiahan Zhang, Chaohao Yang, Namitha Guruprasad, Vivekjyoti Banerjee, Trong-Tung 
 Current controllable video generation systems often rely on 2D motion trajectories or sparse drag signals for object motion. These controls are ambiguous because the same 2D trajectory can correspond to different 3D motions, especially when the camera and objects move simultaneously. We present Generative Cinematographer (GenCine), a system that lifts a single image into an editable 3D scene scaffold where artists jointly author camera and foreground motion. Artists specify a camera path and move selected foreground regions using local 3D motion handles. Several handles can move different parts of a subject independently, providing a piecewise-rigid approximation to non-rigid motion without a physics simulator or category-specific prior. To communicate these controls to a pretrained video model, we project them into guidance maps. These maps record where the controlled regions appear in each frame, assign each handle a fixed color across frames and encode the current 3D positions of its controlled points in the same world coordinate system as the background. This lets us describe object motion relative to the scene even as the camera moves. For training, we recover controls from the motion observed in real videos and use ground-truth geometry and trajectories from synthetic videos. We train a lightweight guidance branch and LoRA adapters on a pretrained Wan model to follow these controls. Our experiments show consistent camera-relative motion, improved geometric consistency under viewpoint changes, and strong controllability across diverse real-world scenes.
 </details>
 
-#### 16. 4DCodeBench: Benchmarking Agents on Inverse Graphics of Dynamic Scenes
+#### 15. 4DCodeBench: Benchmarking Agents on Inverse Graphics of Dynamic Scenes
 Ruihong Shen, Žiga Kovačič, Peter Kulits, Xingrui Wang, Zizhang Li, Joshua B. Tenenbaum, Alan Yuille, Jieneng Chen, Jiajun Wu
 
 (Johns Hopkins University, Stanford University, Max Planck Institute for Intelligent Systems, Massachusetts Institute of Technology)
@@ -838,7 +837,7 @@ Ruihong Shen, Žiga Kovačič, Peter Kulits, Xingrui Wang, Zizhang Li, Joshua B.
 We introduce 4DCodeBench, a benchmark for 4D inverse graphics through code generation, in which agents reconstruct dynamic scenes from video as executable graphics programs. To accomplish this, agents must translate visual observations into compact representations of scene structure and dynamics, by implementing abstractions such as physical simulations to reproduce complex behavior. To evaluate this capability, we curate a set of real-world videos and construct synthetic scenes spanning diverse physical phenomena, including deformation, fluid flow, and fracture. We perform extensive benchmarking of frontier models, finding that strong static reconstruction capabilities do not yet translate into reliable reconstruction of complex dynamics. 4DCodeBench provides a testbed for tracking progress toward agents that can interpret the dynamics of the world through code. 
 </details>
 
-#### 17. Edit4D: Editable 4D Scene Generation with Textual Control
+#### 16. Edit4D: Editable 4D Scene Generation with Textual Control
 Chanwoo Kim, Tackgeun You, Hwasup Lim
 
 (Korea Institute of Science and Technology (KIST) Republic of Korea, University of Science and Technology (UST) Republic of Korea)
@@ -848,7 +847,7 @@ Chanwoo Kim, Tackgeun You, Hwasup Lim
 We introduce Edit4D, an editable text-to-4D scene generation framework that constructs 4D scenes from separate background and dynamic character representations. Recent advances in generative models have enabled text-driven dynamic scene synthesis, but editable 4D scene generation remains challenging due to the need to preserve spatial geometry and temporal dynamics. Existing approaches typically generate holistic scene videos, where the background and dynamic characters are coupled, making object-level editing and flexible camera control difficult. Edit4D addresses these limitations through a stage-specific generation pipeline. Given a user instruction, Edit4D first decomposes it into stage-specific prompts for background, dynamic character, and scene-character composition. Using these prompts, we synthesize multi-view scene images with text-to-image and camera-conditioned generative priors and reconstruct a background 3D Gaussian splatting representation. We then generate a character image, animate it with an image-conditioned video prior, reconstruct a 4D mesh, and bind Gaussian primitives to obtain a character representation. Finally, both components are composed through text-guided segmentation and contact-aware optimization. A global scene refinement is then performed to improve harmonization and rendering consistency. By integrating stage-specific components, Edit4D enables controllable camera motion, flexible object-level editing, and the practical construction of editable 4D scenes. 
 </details>
 
-#### 18. Gen4P: Video Generators are 4D Perceivers
+#### 17. Gen4P: Video Generators are 4D Perceivers
 Yitong Xia, Zeren Jiang, Chuanxia Zheng (NTU, Oxford)
 
 <details span>
@@ -856,7 +855,7 @@ Yitong Xia, Zeren Jiang, Chuanxia Zheng (NTU, Oxford)
 We introduce Gen4P, a unified framework for recovering 4D geometry and motion from monocular video. We show that a pretrained video generator can be repurposed into a feed-forward 4D perceiver without iterative denoising. Building on on-demand querying, Gen4P processes clean video latents in a single encoder pass and predicts the requested 4D attributes through a lightweight cross-attention decoder. The on-demand query formulation enables flexible spatial sampling, and our proposed continuous-time queries further provide temporal flexibility. To strengthen geometric knowledge, we propose a straightforward plug-in solution by incorporating a pretrained video-depth LoRA as a frozen geometry prior, improving overall performance without adding extra trainable parameters. Gen4P achieves state-of-the-art or competitive performance on tasks of 3D point tracking, video depth and camera pose estimation. Qualitative results on in-the-wild videos illustrate its capability of tracking complex motion while maintaining the delicate structure. Together, these results demonstrate the potential of video generative pretraining for unified 4D perception.
 </details>
 
-#### 19. SonoWorld4D: From One Video to a 4D Audio-Visual Scene via Diffusion Synchronization
+#### 18. SonoWorld4D: From One Video to a 4D Audio-Visual Scene via Diffusion Synchronization
 Derong Jin, Xiyi Chen, Ming C. Lin, Ruohan Gao (University of Maryland, College Park)
 
 <details span>
@@ -864,7 +863,7 @@ Derong Jin, Xiyi Chen, Ming C. Lin, Ruohan Gao (University of Maryland, College 
 Recent progress in visual scene generation has extended beyond static 3D scenes toward the more challenging problem of generating dynamic 4D scenes from minimal input. However, sound, despite being intrinsically coupled with dynamic objects and events, remains largely unmodeled in prior work. We introduce Video-to-4DAVScene, a new task that turns a video into an explorable, time-varying 4D audio-visual scene, and present the SonoWorld4D framework for this task. Given a monocular video, our method generates a 360 static background, reconstructs explicit motion trajectories of dynamic, sound-emitting foreground objects, and synthesizes a physically-grounded sound field consistent across multiple sources through dual-space audio diffusion synchronization. The resulting 4D scene supports real-time novel-view visual and spatial audio rendering. Evaluation on real-world dynamic scenes and a user study demonstrates SonoWorld4D generates 4D audio-visual scenes with perceptually realistic, physically grounded spatial audio consistent with scene geometry and visual content.
 </details>
 
-#### 20. XM4D: 4D Reconstruction through Certifiable Geometric Optimization
+#### 19. XM4D: 4D Reconstruction through Certifiable Geometric Optimization
 Haoyu Han, Jack Benarroch Jedlicki, Jiahui Lei, Heng Yang (Harvard University, UC Berkeley)
 
 <details span>
@@ -872,7 +871,7 @@ Haoyu Han, Jack Benarroch Jedlicki, Jiahui Lei, Heng Yang (Harvard University, U
 Accurate 4D reconstruction remains challenging: jointly estimating camera motion, scene geometry, and non-rigid deformation entails highly nonconvex optimization, making global optimality difficult to guarantee. We present XM4D, a framework for accurate and efficient 4D reconstruction built upon certifiably globally optimal geometric optimization. By separating the estimation of camera motion from non-rigid deformation, we formulate both stages as structured quadratically constrained quadratic programs (QCQP) that admit semidefinite programming (SDP) relaxations and verifiable global optimality certificates. For camera motion estimation, we lift static point tracks into 3D using foundational depth prediction models and formulate a scaled bundle adjustment problem that jointly estimates camera poses, depth scales, and static landmarks. By analytically eliminating translations and landmarks, we reduce the problem to a QCQP over scaled rotations. For non-rigid reconstruction, we represent dynamic motion using an embedded deformation graph (EDG) and show that its tracking, rigidity, and temporal regularization objectives similarly reduce to a rotation-only QCQP. Both problems admit SDP relaxations that we solve efficiently with a GPU-accelerated Burer-Monteiro solver based on Riemannian optimization. The recovered geometry further initializes dynamic Gaussian splatting for photometric refinement. Extensive experiments across seven benchmarks demonstrate accurate camera motion estimation on both static and dynamic scenes, efficient optimization that scales to thousands of frames, and state-of-the-art novel-view rendering quality.
 </details>
 
-#### 21. VibePrevisBench: Evaluating Agentic Coding for 4D Scene Generation in Blender
+#### 20. VibePrevisBench: Evaluating Agentic Coding for 4D Scene Generation in Blender
 Yuzhe Chen, Muxi Diao, Lele Yang, Wenbin Xu, Xuyang Liu, Qile Su, Changyi Liu, Jiankang Chen, Kaiyu Jiang, Haoyu Zhang, Hongyi Fu, Jianxiong Wang, Tianke Zhang, Haonan Fan, Yingxin Li, Bingyi Li, Xu Wang, Xuanyu Zheng, Bin Wen, Tingting Gao, Wentao Zhang, Jiale Cao
 
 (Tianjin University, Beijing University of Posts and Telecommunications, The Hong Kong Polytechnic University, Kling AI)
@@ -891,7 +890,6 @@ Controllable real-world video generation models can condition on a rendered gray
 | 2026 | **InSpatio-World**  | 20 Mar 2026 |          [Live Demo](https://world.inspatio.com/?world=1080_00000005)          | [Link](https://github.com/inspatio/inspatio-world)  | [Link](https://inspatio.github.io/inspatio-world/)  |
 | 2026 | **ST-Gen4D: Embedding 4D Spatiotemporal Cognition into World Model for 4D Generation**  | 8 May 2026  |          [Link](https://arxiv.org/abs/2605.07390)          | --  | --  |
 | 2026 | **Geometric 4D Stitching for Grounded 4D Generation**  | 11 May 2026  |          [Link](https://arxiv.org/abs/2605.09984)          | --  | --  |
-| 2026 | **Fast 4D Mesh Generation by Spatio-Temporal Attention Chains**  | 19 May 2026  |          [Link](https://arxiv.org/abs/2605.19786)          | --  | [Link](https://research.nvidia.com/labs/par/fast4dmesh/)  |
 | 2026 | **SpatialAvatar-0: High-Quality 4D Head Avatar with Multi-Stage Reconstruction**  | 14 Jun 2026  |          [Link](https://arxiv.org/abs/2606.15659)          | --  | [Link](https://spatialwalk.github.io/SpatialAvatar-0/)  |
 | 2026 | **IMAGIN-4D: Image-Guided Controllable Interaction Generation**  | 22 Jun 2026  |          [Link](https://arxiv.org/abs/2606.23675)          | --  | [Link](https://imagin4d.github.io/)  |
 | 2026 | **MVTrack4Gen: Multi-View Point Tracking as Geometric Supervision for 4D Video Generation**  | 24 Jun 2026  |          [Link](https://arxiv.org/abs/2606.26087v1)          | [Link](https://github.com/cvlab-kaist/MVTrack4Gen)  | [Link](https://cvlab-kaist.github.io/MVTrack4Gen/)  |
@@ -935,13 +933,6 @@ Controllable real-world video generation models can condition on a rendered gray
   title={Geometric 4D Stitching for Grounded 4D Generation},
   author={Park, Sunwoo and Kwon, Taesung and Ye, Jong Chul},
   journal={arXiv preprint arXiv:2605.09984},
-  year={2026}
-}
-
-@article{samuel2026fast,
-  title={Fast 4D Mesh Generation by Spatio-Temporal Attention Chains},
-  author={Samuel, Dvir and Atzmon, Yuval and Chechik, Gal and Kasten, Yoni},
-  journal={arXiv preprint arXiv:2605.19786},
   year={2026}
 }
 
