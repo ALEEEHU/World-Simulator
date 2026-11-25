@@ -506,6 +506,7 @@ An open collection of state-of-the-art (SOTA), novel **Text to X (X can be every
 | 2026 | **Helix4D: Complex 4D Mesh Generation**  | NeurIPS 2026 Oral |          [Link](https://arxiv.org/abs/2605.26109)          | --  | [Link](https://snap-research.github.io/helix4d/)  |
 | 2026 | **World from Motion: Generative Dynamic Gaussian Reconstruction from Monocular Video**  | NeurIPS 2026 |          [Link](https://arxiv.org/abs/2607.01202)          | [Link](https://github.com/GradientSpaces/World-from-Motion)  | [Link](https://research.nvidia.com/labs/amri/projects/world-from-motion/)  |
 | 2026 | **Fast 4D Mesh Generation by Spatio-Temporal Attention Chains**  | NeurIPS 2026  |          [Link](https://arxiv.org/abs/2605.19786)          | --  | [Link](https://research.nvidia.com/labs/par/fast4dmesh/)  |
+| 2026 | **Plan4D: Generative Plannable 4D Worlds**  | NeurIPS 2026  |          [Link](https://arxiv.org/abs/2611.26516)          | [Link](https://github.com/AMAP-ML/plan4d)  | [Link](https://fogradio.github.io/plan4d-project/)  |
 
 <details close>
 <summary>Accepted Papers References</summary>
@@ -683,6 +684,14 @@ An open collection of state-of-the-art (SOTA), novel **Text to X (X can be every
   author={Samuel, Dvir and Atzmon, Yuval and Chechik, Gal and Kasten, Yoni},
   journal={arXiv preprint arXiv:2605.19786},
   year={2026}
+}
+
+@inproceedings{zhang2026plan4d,
+  title     = {Plan4D: Generative Plannable 4D Worlds},
+  author    = {Zhang, Hangwei and Dang, Rujing and Lin, Ruimin and
+               Wu, Jiahong and Chu, Xiangxiang and Zheng, Chuanxia},
+  booktitle = {Advances in Neural Information Processing Systems (NeurIPS)},
+  year      = {2026}
 }
 
 ```
@@ -881,6 +890,16 @@ Yuzhe Chen, Muxi Diao, Lele Yang, Wenbin Xu, Xuyang Liu, Qile Su, Changyi Liu, J
 Controllable real-world video generation models can condition on a rendered graybox proxy video, which fixes layout, motion and camera. Coding agents can build such videos by reconstructing a 4D scene in Blender, yet no benchmark checks both these videos and the long, multi-shot scenes behind them. We introduce VibePrevisBench, a benchmark for 4D scene reconstruction: an agent turns a brief into an executable 4D scene and renders its proxy video. Its 242 tasks span four input kinds, including scripts, photos, continuations, and reference videos. Each delivery is scored along two evaluation dimensions. Rule-based Scene Check re-runs the code and compares the exported 4D scene with hidden ground truth facts in nine dimensions. VLM-based Screen Check asks a VLM judge whether the facts that pass can be recognized in the proxy video. We analyze the evaluation results and trajectories of 11 frontier coding agents and identify three key observations. First, multimodal understanding separates the agents, especially in understanding space and camera motion. Second, all agents seem to already master basic camera work and staging, and fail at challenging requests. Third, agents inspect their own renders but fail to correct their errors. Agents thus need better visual understanding of space and camera, explicit checks for challenging requests, and item-by-item verification of renders against the brief.
 </details>
 
+#### 21. WorldLatent: A Unified 4D Latent Space for World Perception and Generation
+Jingxi Chen, Yujia Chen, Cornelia Fermuller, Yiannis Aloimonos, Wen-Sheng Chu, Du Tran
+
+(University of Maryland College Park, Google)
+
+<details span>
+<summary><b>Abstract</b></summary>
+Generative Pre-Training (GPT) represents a profound milestone in natural language processing, serving as the foundation for most of today's state-of-the-art large language models. By casting diverse understanding and generation problems into a shared token representation, GPT enables a single architecture and unified optimization loop to master heterogeneous tasks across massive corpora, giving rise to powerful foundation models for natural language. In contrast, 4D spatiotemporal vision lacks a common representational protocol: perception (such as depth and camera estimation) and generation are either handled by separate one-way pipelines or bolted together from unaligned single-modality spaces. In this work, we introduce WorldLatent, a framework that formulates a unified 4D latent space as a common protocol for both world perception and generation. Rather than relying on fragmented, task-specific models or stacked single-modality representations, our framework proposes a multimodal VAE architecture that compresses and fuses complex 4D visual appearance, geometry, and dynamics into a single structured latent representation. Within this formulation, perception and generation operate as complementary denoising processes over the same latent space, enabling one generative model to learn both capabilities simultaneously within a single training loop. Experiments across representative 4D benchmarks verify that our fused latent protocol achieves specialist-level zero-shot 4D perception, coherent 4D generation, and controllable editing from a single model. By demonstrating that diverse 4D tasks can be seamlessly unified under a shared representational protocol, our work provides a scalable foundation for general-purpose 4D spatial intelligence.
+</details>
+
 -----
 
 </details>
@@ -908,6 +927,7 @@ Controllable real-world video generation models can condition on a rendered gray
 | 2026 | **SonoWorld4D: From One Video to a 4D Audio-Visual Scene via Diffusion Synchronization**  | 29 Oct 2026  |          [Link](https://arxiv.org/abs/2610.40640)          | [Link](https://github.com/HuMathe/sonoworld4D) | [Link](https://humathe.github.io/sonoworld4d/) |
 | 2026 | **XM4D: 4D Reconstruction through Certifiable Geometric Optimization**  | 5 Nov 2026  |          [Link](https://arxiv.org/abs/2611.07902v1)          | -- | [Link](https://computationalrobotics.seas.harvard.edu/XM4D/) |
 | 2026 | **VibePrevisBench: Evaluating Agentic Coding for 4D Scene Generation in Blender**  | 11 Nov 2026  |          [Link](https://arxiv.org/abs/2611.15789)          | [Link](https://github.com/vibeprevisbench/vibeprevisbench) | [Link](https://vibeprevisbench.github.io/) |
+| 2026 | **WorldLatent: A Unified 4D Latent Space for World Perception and Generation**  | 23 Nov 2026  |          [Link](https://arxiv.org/abs/2611.31209v1)          | -- | [Link](https://worldlatent.github.io/) |
 
 <details close>
 <summary>ArXiv Papers References</summary>
@@ -1078,6 +1098,16 @@ Controllable real-world video generation models can condition on a rendered gray
   author={Chen, Yuzhe and Diao, Muxi and Yang, Lele and Xu, Wenbin and Liu, Xuyang and Su, Qile and Liu, Changyi and Chen, Jiankang and Jiang, Kaiyu and Zhang, Haoyu and others},
   journal={arXiv preprint arXiv:2611.15789},
   year={2026}
+}
+
+@misc{chen2026worldlatentunified4dlatent,
+      title={WorldLatent: A Unified 4D Latent Space for World Perception and Generation}, 
+      author={Jingxi Chen and Yujia Chen and Cornelia Fermuller and Yiannis Aloimonos and Wen-Sheng Chu and Du Tran},
+      year={2026},
+      eprint={2611.31209},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2611.31209}, 
 }
 
 ```
